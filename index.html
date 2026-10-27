@@ -836,9 +836,16 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
   }
   function kopiaBind() {
     document.getElementById("exp").onclick = function () {
-      var blob = new Blob([JSON.stringify({ app: "zdam-zawodowy", v: 1, data: S }, null, 1)], { type: "application/json" });
-      var a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "zdam-zawodowy-postepy-" + new Date().toISOString().slice(0, 10) + ".json";
-      document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+      var json = JSON.stringify({ app: "zdam-zawodowy", v: 1, data: S }, null, 1);
+      var name = "zdam-zawodowy-postepy-" + new Date().toISOString().slice(0, 10) + ".json";
+      var msg = document.getElementById("impmsg");
+      // w podglądzie Claude zapis idzie przez capability "downloads", na zwykłej stronie — przez link
+      var viaClaude = window.claude && window.claude.use ? window.claude.use("downloads") : Promise.resolve(null);
+      viaClaude.then(function (dl) {
+        if (dl) return dl.save({ filename: name, data: json }).then(function () { msg.textContent = "Zapisano plik " + name + "."; }, function (e) { if (e && e.code !== "declined") msg.textContent = "Nie udało się zapisać pliku w tym widoku."; });
+        var a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([json], { type: "application/json" })); a.download = name;
+        document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+      });
     };
     document.getElementById("imp").onchange = function () {
       var f = this.files[0], msg = document.getElementById("impmsg"); if (!f) return;
