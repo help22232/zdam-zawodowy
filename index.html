@@ -278,6 +278,15 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
 <script src="data/pytania-dod2.js" charset="utf-8"></script>
 <script src="data/pytania-dod3.js" charset="utf-8"></script>
 <script src="data/pytania-dod4.js" charset="utf-8"></script>
+<script src="data/bank-eka-spl.js" charset="utf-8"></script>
+<script src="data/bank-ele-elm.js" charset="utf-8"></script>
+<script src="data/bank-frk-rol.js" charset="utf-8"></script>
+<script src="data/bank-han-hgt1.js" charset="utf-8"></script>
+<script src="data/bank-hgt2.js" charset="utf-8"></script>
+<script src="data/bank-inf1.js" charset="utf-8"></script>
+<script src="data/bank-inf2.js" charset="utf-8"></script>
+<script src="data/bank-mec-bud.js" charset="utf-8"></script>
+<script src="data/bank-spc-mot.js" charset="utf-8"></script>
 <script src="data/praktyka.js" charset="utf-8"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/alasql/4.6.0/alasql.min.js"></script>
 <script src="data/env.js" charset="utf-8"></script>
@@ -293,7 +302,7 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
 
   /* ---------- zapis postępów ---------- */
   var KEY = "zdam-zawodowy-v1";
-  var S = { lekcje: {}, bledy: {}, wyniki: {}, prakt: {}, odp: {}, ostatnia: null };
+  var S = { lekcje: {}, bledy: {}, wyniki: {}, prakt: {}, odp: {}, widz: {}, ostatnia: null };
   try { var raw = localStorage.getItem(KEY); if (raw) { var p = JSON.parse(raw); for (var k in S) if (p[k]) S[k] = p[k]; } } catch (e) {}
   function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
 
@@ -600,10 +609,13 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
 
   /* ---------- egzamin próbny ---------- */
   function buildExam(kod) {
-    var own = kod === WSP ? [] : shuffle(poolOf(kod));
-    var w = shuffle(wspPool());
+    /* najpierw zadania jeszcze niewidziane (najrzadziej losowane), remisy losowo */
+    function fresh(a) { return shuffle(a).sort(function (x, y) { return (S.widz[x.id] || 0) - (S.widz[y.id] || 0); }); }
+    var own = kod === WSP ? [] : fresh(poolOf(kod));
+    var w = fresh(wspPool());
     var nW = kod === WSP ? 40 : Math.min(w.length, Math.max(4, 40 - own.length));
     var pick = shuffle(own.slice(0, 40 - nW).concat(w.slice(0, nW))).map(function (x) { return { q: x.q, id: x.id, kod: x.kod, ord: shuffle([0, 1, 2, 3]) }; });
+    pick.forEach(function (x) { S.widz[x.id] = (S.widz[x.id] || 0) + 1; }); save();
     return { kod: kod, pyt: pick, odp: pick.map(function () { return null; }), i: 0, start: Date.now(), limit: 60 * 60 * 1000, koniec: false, potw: false };
   }
   function renderExam(t, kod) {
@@ -612,6 +624,7 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
       var hist = (S.wyniki[kod] || []).slice(-1)[0];
       t.innerHTML = '<div class="q" style="max-width:720px"><h2>Egzamin próbny — część pisemna</h2>' +
         '<p style="margin:0">Dostajesz <b>' + n + ' losowych zadań</b> z tej kwalifikacji' + (kod === WSP ? "" : " (w tym kilka z modułu wspólnego: BHP, prawo pracy, przedsiębiorczość)") + '. Masz <b>60 minut</b>. Każde zadanie ma cztery odpowiedzi, tylko jedna jest poprawna. Na prawdziwym egzaminie wystarczy <b>50%</b>, ale tutaj Twoim celem jest <b>' + CEL + '%</b> (co najmniej 36 poprawnych odpowiedzi) w trzech kolejnych próbach — wtedy masz pewność zdania.</p>' +
+        '<p style="margin:0">Bank tej kwalifikacji: <b class="mono">' + (kod === WSP ? wspPool().length : poolOf(kod).length) + '</b> zadań. Losowanie najpierw wybiera zadania, których jeszcze nie widziałeś — po kilku próbach przejdziesz cały bank.</p>' +
         '<p style="margin:0" class="muted">Wynik zobaczysz dopiero po zakończeniu — jak na prawdziwym egzaminie. Odpowiedzi możesz zmieniać do końca czasu.</p>' +
         (hist ? '<div class="muted">Ostatni wynik: <b class="mono">' + hist.pct + '%</b> (' + hist.d + ')</div>' : "") +
         '<div class="btns"><button class="btn pri" id="st">Rozpocznij egzamin</button></div></div>';
@@ -715,7 +728,7 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
     app.innerHTML = h;
     var rb = document.getElementById("reset");
     rb.onclick = function () {
-      if (rb.dataset.c) { S = { lekcje: {}, bledy: {}, wyniki: {}, prakt: {}, odp: {}, ostatnia: null }; save(); renderPostepy(); }
+      if (rb.dataset.c) { S = { lekcje: {}, bledy: {}, wyniki: {}, prakt: {}, odp: {}, widz: {}, ostatnia: null }; save(); renderPostepy(); }
       else { rb.dataset.c = 1; rb.textContent = "Kliknij ponownie, aby potwierdzić usunięcie"; rb.classList.add("pri"); }
     };
   }
