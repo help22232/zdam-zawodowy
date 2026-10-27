@@ -225,7 +225,7 @@
       if (!tgt) return { ok: false, why: cur + ": brak odpowiedzi ARP od " + nextIp + " (inny segment / VLAN, wyłączony port lub zły adres)", hops: hops };
       hops.push(nextIp); ingress = tgt; cur = tgt.dev;
     }
-    return { ok: false, why: "Przekroczono TTL — pętla routingu", hops: hops };
+    return { ok: false, why: "Przekroczono TTL - pętla routingu", hops: hops };
   }
   function context(N) { var f = domains(N), L3 = l3ifs(N, f); return { f: f, L3: L3, T: routerTables(N, f, L3) }; }
   function ping(N, fromDev, dstIp) {
@@ -286,7 +286,7 @@
       if (all) { s += "   Serwery DNS . . . . . . . . . . . : " + (h.dns || "") + "\n"; if (D.nic.mode === "dhcp" && D.nic.lease) s += "   Serwer DHCP . . . . . . . . . . . : " + D.nic.lease.from + "\n"; }
       return s;
     }
-    if (/^ipconfig\s+\/renew$/i.test(t)) { if (D.nic.mode !== "dhcp") return "Karta ma statyczny adres IP — odnowienie dzierżawy DHCP nie dotyczy tej karty."; var l = dhcpRequest(N, D); return "Odnowiono dzierżawę.\n   Adres IPv4 . . . : " + l.ip + "\n   Źródło . . . . . : " + l.from; }
+    if (/^ipconfig\s+\/renew$/i.test(t)) { if (D.nic.mode !== "dhcp") return "Karta ma statyczny adres IP - odnowienie dzierżawy DHCP nie dotyczy tej karty."; var l = dhcpRequest(N, D); return "Odnowiono dzierżawę.\n   Adres IPv4 . . . : " + l.ip + "\n   Źródło . . . . . : " + l.from; }
     if (/^ipconfig\s+\/release$/i.test(t)) { if (D.nic.mode === "dhcp") D.nic.lease = null; return "Zwolniono dzierżawę adresu."; }
     var m;
     if ((m = /^ping\s+(?:-t\s+)?(\S+)$/i.exec(t))) {
@@ -311,7 +311,7 @@
   }
   ENV.net.prompt = prompt;
   function pm(tok, word) { return tok && word.toLowerCase().indexOf(tok.toLowerCase()) === 0; }
-  // dopasowanie wzorca: słowa kluczowe (prefiksy), <x> — parametr, ... — reszta
+  // dopasowanie wzorca: słowa kluczowe (prefiksy), <x> - parametr, ... - reszta
   function match(toks, pat) {
     var out = [];
     for (var i = 0; i < pat.length; i++) {
@@ -415,7 +415,7 @@
       return "Pro Inside global      Inside local       Outside local      Outside global\n" + tx.map(function (x, i) { return "icmp " + pad(x.outside + ":" + (i + 1), 19) + pad(x.inside + ":" + (i + 1), 19); }).join("\n");
     }
     if (match(t, ["version"])) return "Cisco IOS Software, Version 15.x (symulator Zdam Zawodowy)\n" + D.cfg.hostname + " uptime is 1 hour";
-    if (match(t, ["mac", "address-table"]) && D.type === "switch") return "          Mac Address Table\n-------------------------------------------\nVlan    Mac Address       Type        Ports\n(tablica uzupełnia się po wymianie ruchu — użyj ping z komputerów)";
+    if (match(t, ["mac", "address-table"]) && D.type === "switch") return "          Mac Address Table\n-------------------------------------------\nVlan    Mac Address       Type        Ports\n(tablica uzupełnia się po wymianie ruchu - użyj ping z komputerów)";
     return "% Invalid input detected at '^' marker.";
   }
   function pad(s, n) { s = String(s); while (s.length < n) s += " "; return s + (s.length > n ? " " : ""); }
@@ -446,7 +446,7 @@
       if ((p = match(toks, ["show", "..."]))) return show(N, D, p[0]);
       if (match(toks, ["copy", "running-config", "startup-config"]) || match(toks, ["write", "memory"]) || match(toks, ["write"])) { D.saved = JSON.parse(JSON.stringify(c)); return "Destination filename [startup-config]?\nBuilding configuration...\n[OK]"; }
       if (match(toks, ["erase", "startup-config"])) { D.saved = null; return "[OK]\nErase of nvram: complete"; }
-      if (match(toks, ["reload"])) { if (D.saved) D.cfg = JSON.parse(JSON.stringify(D.saved)); else { var fresh = makeDevice(N.cfg.devices.filter(function (x) { return x.name === D.name; })[0]); D.cfg = fresh.cfg; } D.mode = "user"; return "Proceed with reload? [confirm]\n\n*** System restarted — wczytano startup-config ***"; }
+      if (match(toks, ["reload"])) { if (D.saved) D.cfg = JSON.parse(JSON.stringify(D.saved)); else { var fresh = makeDevice(N.cfg.devices.filter(function (x) { return x.name === D.name; })[0]); D.cfg = fresh.cfg; } D.mode = "user"; return "Proceed with reload? [confirm]\n\n*** System restarted - wczytano startup-config ***"; }
       if ((p = match(toks, ["ping", "<ip>"]))) return iosPing(N, D, p[0]);
       if (match(toks, ["disable"])) { D.mode = "user"; return ""; }
       if (match(toks, [["exit", "logout"]])) { D.mode = "user"; return ""; }
@@ -494,7 +494,7 @@
         if (neg) { delete c.acls[p[0]]; return ""; }
         var body = p[1]; if (!/^(permit|deny)\b/i.test(body)) return "% Invalid input detected at '^' marker.";
         var nr = +p[0]; if (!(nr >= 1 && nr <= 199)) return "% Invalid access list number";
-        if (nr < 100 && /^(permit|deny)\s+(tcp|udp|icmp|ip)\b/i.test(body)) return "% Standardowa lista (1–99) filtruje tylko adres źródłowy";
+        if (nr < 100 && /^(permit|deny)\s+(tcp|udp|icmp|ip)\b/i.test(body)) return "% Standardowa lista (1-99) filtruje tylko adres źródłowy";
         (c.acls[p[0]] = c.acls[p[0]] || []).push(body.replace(/\s+/g, " ").toLowerCase()); D.mode = "config"; return "";
       }
       if (D.type === "router" && (p = match(tt, ["ip", "nat", "inside", "source", "list", "<n>", "interface", "<i>", "overload"])) || D.type === "router" && (p = match(tt, ["ip", "nat", "inside", "source", "list", "<n>", "interface", "<i>"]))) {
@@ -512,7 +512,7 @@
     if (D.mode === "router") {
       if ((p = match(tt, ["network", "<n>", "<w>", "area", "<a>"]))) {
         if (ip2n(p[0]) === null || ip2n(p[1]) === null) return "% Invalid input detected at '^' marker.";
-        if (isMask(p[1]) && p[1] !== "0.0.0.0" && p[1].indexOf("255") === 0) return "% Podano maskę zamiast maski odwrotnej (wildcard) — np. 0.0.0.255";
+        if (isMask(p[1]) && p[1] !== "0.0.0.0" && p[1].indexOf("255") === 0) return "% Podano maskę zamiast maski odwrotnej (wildcard) - np. 0.0.0.255";
         if (neg) { c.ospf.nets = c.ospf.nets.filter(function (x) { return !(x.net === p[0] && x.wild === p[1]); }); return ""; }
         c.ospf.nets.push({ net: p[0], wild: p[1], area: p[2] }); return "";
       }
@@ -562,7 +562,7 @@
     if (/^% Invalid input/.test(r) && D.mode === "config") { D.mode = m; D.ctx = x; }
     return r;
   }
-  function bad(raw) { return "% Invalid input detected at '^' marker.\n  (" + raw + ")  — wpisz ? aby zobaczyć polecenia dostępne w tym trybie"; }
+  function bad(raw) { return "% Invalid input detected at '^' marker.\n  (" + raw + ")  - wpisz ? aby zobaczyć polecenia dostępne w tym trybie"; }
   function iosPing(N, D, ip) {
     var r = N.ping(D.name, ip);
     return "Type escape sequence to abort.\nSending 5, 100-byte ICMP Echos to " + ip + ", timeout is 2 seconds:\n" + (r.ok ? "!!!!!\nSuccess rate is 100 percent (5/5)" : ".....\nSuccess rate is 0 percent (0/5)\n[symulator] " + r.why);
@@ -571,7 +571,7 @@
   /* ---------- interfejs aplikacji ---------- */
   var ICON = { router: "R", switch: "SW", pc: "PC", server: "SRV", homerouter: "AP", isp: "ISP", hub: "HUB" };
   ENV.apps.net = {
-    title: "Sieć — urządzenia", icon: "NET",
+    title: "Sieć - urządzenia", icon: "NET",
     mount: function (E, box) {
       var N = E.net, sel = E.netSel || Object.keys(N.dev)[0];
       box.innerHTML = '<div class="netg"><div class="eside"><div class="h">Schemat sieci</div><div id="ntopo" style="padding:6px"></div><div id="ndev"></div></div><div id="npanel" style="min-height:0;min-width:0;display:grid"></div></div>';
@@ -587,15 +587,15 @@
         box.querySelectorAll("#ntopo g").forEach(function (g) { g.onclick = function () { sel = g.dataset.d; E.netSel = sel; topo(); list(); panel(); }; });
       }
       function list() {
-        box.querySelector("#ndev").innerHTML = '<div class="h">Urządzenia</div>' + Object.keys(N.dev).map(function (k) { var d = N.dev[k]; return '<button data-d="' + esc(k) + '" class="' + (k === sel ? "on" : "") + '">[' + ICON[d.type] + '] ' + esc(k) + (d.label ? " — " + esc(d.label) : "") + '</button>'; }).join("") +
+        box.querySelector("#ndev").innerHTML = '<div class="h">Urządzenia</div>' + Object.keys(N.dev).map(function (k) { var d = N.dev[k]; return '<button data-d="' + esc(k) + '" class="' + (k === sel ? "on" : "") + '">[' + ICON[d.type] + '] ' + esc(k) + (d.label ? " - " + esc(d.label) : "") + '</button>'; }).join("") +
           '<div class="h">Połączenia</div><div style="padding:0 10px 10px;font:12px var(--f-mono);color:var(--muted)">' + N.links.map(function (l) { return esc(l[0] + " " + shortIf(l[1]) + " ↔ " + l[2] + " " + shortIf(l[3])); }).join("<br>") + '</div>';
         box.querySelectorAll("#ndev [data-d]").forEach(function (b) { b.onclick = function () { sel = b.dataset.d; E.netSel = sel; topo(); list(); panel(); }; });
       }
       function panel() {
         var D = N.dev[sel], P = box.querySelector("#npanel");
-        if (D.type === "router" || D.type === "switch") return term(P, D, function (line) { return N.cli(D.name, line); }, function () { return prompt(D); }, "Konsola " + D.name + " (Cisco IOS) — połączenie przez kabel konsolowy");
-        if (D.type === "isp") { P.innerHTML = '<div style="padding:16px">Urządzenie operatora (ISP). Adres: <code>' + esc(Object.keys(D.cfg.ifs).map(function (n) { return D.cfg.ifs[n].ip; }).join(", ")) + '</code>. Nie masz do niego dostępu — operator nie zna Twoich sieci prywatnych.</div>'; return; }
-        if (D.type === "hub") { P.innerHTML = '<div style="padding:16px">Przełącznik niezarządzalny — nie wymaga konfiguracji.</div>'; return; }
+        if (D.type === "router" || D.type === "switch") return term(P, D, function (line) { return N.cli(D.name, line); }, function () { return prompt(D); }, "Konsola " + D.name + " (Cisco IOS) - połączenie przez kabel konsolowy");
+        if (D.type === "isp") { P.innerHTML = '<div style="padding:16px">Urządzenie operatora (ISP). Adres: <code>' + esc(Object.keys(D.cfg.ifs).map(function (n) { return D.cfg.ifs[n].ip; }).join(", ")) + '</code>. Nie masz do niego dostępu - operator nie zna Twoich sieci prywatnych.</div>'; return; }
+        if (D.type === "hub") { P.innerHTML = '<div style="padding:16px">Przełącznik niezarządzalny - nie wymaga konfiguracji.</div>'; return; }
         if (D.type === "homerouter") return hrPanel(P, D);
         hostPanel(P, D);
       }
@@ -625,7 +625,7 @@
         P.innerHTML = '<div style="display:grid;grid-template-rows:auto minmax(0,1fr);min-height:0"><div class="tool">' + tabs.map(function (t) { return '<button class="tb ' + (t[0] === tab ? "on" : "") + '" data-t="' + t[0] + '">' + t[1] + '</button>'; }).join("") + '</div><div id="hp" style="min-height:0;overflow:auto;display:grid"></div></div>';
         P.querySelectorAll("[data-t]").forEach(function (b) { b.onclick = function () { D.tab = b.dataset.t; hostPanel(P, D); }; });
         var hp = P.querySelector("#hp");
-        if (tab === "cmd") return term(hp, D, function (l) { return N.pcCmd(D.name, l); }, function () { return "C:\\Users\\" + (D.type === "server" ? "Administrator" : "uczen") + ">"; }, "Wiersz poleceń — " + D.name);
+        if (tab === "cmd") return term(hp, D, function (l) { return N.pcCmd(D.name, l); }, function () { return "C:\\Users\\" + (D.type === "server" ? "Administrator" : "uczen") + ">"; }, "Wiersz poleceń - " + D.name);
         if (tab === "net") {
           var n = D.nic;
           hp.innerHTML = '<div style="padding:16px;display:grid;gap:12px;max-width:440px;align-content:start"><div class="muted" style="font-size:.84rem">' + esc(D.name) + ' · adres MAC: <code>' + esc(D.mac) + '</code></div>' +
@@ -651,7 +651,7 @@
         var sc = d.scope || { name: "", start: "", end: "", mask: "", opt003: "", opt006: "", active: false, res: [], excl: [] };
         hp.innerHTML = '<div style="padding:16px;display:grid;gap:10px;align-content:start;max-width:560px"><b>Zakres IPv4</b>' + field("sname", "Nazwa zakresu", sc.name) +
           '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">' + field("sst", "Adres początkowy", sc.start) + field("sen", "Adres końcowy", sc.end) + '</div>' + field("smk", "Maska podsieci", sc.mask) +
-          '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">' + field("s3", "Opcja 003 — Router (brama)", sc.opt003) + field("s6", "Opcja 006 — Serwery DNS", sc.opt006) + '</div>' +
+          '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">' + field("s3", "Opcja 003 - Router (brama)", sc.opt003) + field("s6", "Opcja 006 - Serwery DNS", sc.opt006) + '</div>' +
           '<label style="font-size:.88rem"><input type="checkbox" id="sact" ' + (sc.active ? "checked" : "") + '> Aktywuj zakres</label><div><button class="tb go" id="ssave">Zapisz zakres</button></div><div id="smsg"></div>' +
           '<b>Rezerwacje</b><div id="rlist" style="font:13px var(--f-mono)"></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:6px;align-items:end">' + field("rn", "Nazwa", "") + field("rm", "Adres MAC", "", "00-1A-...") + field("ri", "Adres IP", "") + '<button class="tb" id="radd">Dodaj</button></div></div>';
         function rl() { hp.querySelector("#rlist").innerHTML = (sc.res || []).map(function (r, i) { return esc(r.name + " · " + r.mac + " → " + r.ip) + ' <button class="tb" data-ri="' + i + '">Usuń</button>'; }).join("<br>") || '<span class="muted">brak rezerwacji</span>'; hp.querySelectorAll("[data-ri]").forEach(function (b) { b.onclick = function () { sc.res.splice(+b.dataset.ri, 1); rl(); }; }); }
@@ -661,7 +661,7 @@
           if (ip2n(v("#sst")) === null || ip2n(v("#sen")) === null || !isMask(v("#smk"))) { msg.innerHTML = '<div class="msg err">Uzupełnij poprawnie adresy i maskę.</div>'; return; }
           if (ip2n(v("#sst")) > ip2n(v("#sen"))) { msg.innerHTML = '<div class="msg err">Adres początkowy musi być mniejszy niż końcowy.</div>'; return; }
           sc.name = v("#sname"); sc.start = v("#sst"); sc.end = v("#sen"); sc.mask = v("#smk"); sc.opt003 = v("#s3"); sc.opt006 = v("#s6"); sc.active = hp.querySelector("#sact").checked; d.scope = sc;
-          msg.innerHTML = '<div class="msg ok">Zapisano zakres' + (sc.active ? " (aktywny)." : " — zakres jest nieaktywny.") + '</div>';
+          msg.innerHTML = '<div class="msg ok">Zapisano zakres' + (sc.active ? " (aktywny)." : " - zakres jest nieaktywny.") + '</div>';
         };
         hp.querySelector("#radd").onclick = function () {
           var nm = hp.querySelector("#rn").value.trim(), mac = hp.querySelector("#rm").value.trim(), ip = hp.querySelector("#ri").value.trim();
@@ -675,7 +675,7 @@
           '<b>Członkostwo</b><div style="display:grid;grid-template-columns:1fr 1fr auto;gap:6px;align-items:end"><label style="display:grid;gap:3px;font-size:.84rem">Użytkownik<select class="tb" id="mu"></select></label><label style="display:grid;gap:3px;font-size:.84rem">Grupa<select class="tb" id="mg"></select></label><button class="tb" id="madd">Dodaj do grupy</button></div></div>';
         function r() {
           hp.querySelector("#ul").innerHTML = s.users.map(function (u) { return esc(u.login + " (" + u.name + ")"); }).join("<br>") || '<span class="muted">brak</span>';
-          hp.querySelector("#gl").innerHTML = s.groups.map(function (g) { return esc(g.name + ": " + (g.members.join(", ") || "—")); }).join("<br>") || '<span class="muted">brak</span>';
+          hp.querySelector("#gl").innerHTML = s.groups.map(function (g) { return esc(g.name + ": " + (g.members.join(", ") || "-")); }).join("<br>") || '<span class="muted">brak</span>';
           hp.querySelector("#mu").innerHTML = s.users.map(function (u) { return '<option>' + esc(u.login) + '</option>'; }).join("");
           hp.querySelector("#mg").innerHTML = s.groups.map(function (g) { return '<option>' + esc(g.name) + '</option>'; }).join("");
         }
@@ -688,12 +688,12 @@
         var s = D.srv;
         hp.innerHTML = '<div style="padding:16px;display:grid;gap:12px;align-content:start;max-width:640px"><b>Udostępnione foldery</b><div id="sl" style="font:13px var(--f-mono)"></div>' +
           '<div style="display:grid;grid-template-columns:1fr 1fr auto;gap:6px;align-items:end">' + field("sp", "Ścieżka folderu", "", "C:\\Dane") + field("sn", "Nazwa udziału", "") + '<button class="tb" id="sadd">Udostępnij</button></div>' +
-          '<b>Uprawnienia</b><div class="muted" style="font-size:.82rem">Nowy udział ma domyślnie uprawnienie „Wszyscy — Odczyt”. Ustaw uprawnienia udziału i NTFS dla wybranego podmiotu albo usuń podmiot.</div>' +
+          '<b>Uprawnienia</b><div class="muted" style="font-size:.82rem">Nowy udział ma domyślnie uprawnienie „Wszyscy - Odczyt”. Ustaw uprawnienia udziału i NTFS dla wybranego podmiotu albo usuń podmiot.</div>' +
           '<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr auto;gap:6px;align-items:end"><label style="display:grid;gap:3px;font-size:.84rem">Udział<select class="tb" id="ps"></select></label>' + field("pp", "Podmiot (grupa/użytkownik)", "", "np. Wszyscy") +
-          '<label style="display:grid;gap:3px;font-size:.84rem">Udział<select class="tb" id="pshare"><option value="">—</option><option>Odczyt</option><option>Zmiana</option><option>Pełna kontrola</option></select></label>' +
-          '<label style="display:grid;gap:3px;font-size:.84rem">NTFS<select class="tb" id="pntfs"><option value="">—</option><option>Odczyt</option><option>Modyfikacja</option><option>Pełna kontrola</option></select></label><button class="tb" id="padd">Ustaw</button></div><div><button class="tb" id="pdel">Usuń podmiot z udziału</button></div></div>';
+          '<label style="display:grid;gap:3px;font-size:.84rem">Udział<select class="tb" id="pshare"><option value="">-</option><option>Odczyt</option><option>Zmiana</option><option>Pełna kontrola</option></select></label>' +
+          '<label style="display:grid;gap:3px;font-size:.84rem">NTFS<select class="tb" id="pntfs"><option value="">-</option><option>Odczyt</option><option>Modyfikacja</option><option>Pełna kontrola</option></select></label><button class="tb" id="padd">Ustaw</button></div><div><button class="tb" id="pdel">Usuń podmiot z udziału</button></div></div>';
         function r() {
-          hp.querySelector("#sl").innerHTML = s.shares.map(function (x) { return '<b>\\\\' + esc(D.name + "\\" + x.name) + '</b> (' + esc(x.path) + ')<br>' + Object.keys(x.perms).map(function (p) { return "&nbsp;&nbsp;" + esc(p + ": udział — " + (x.perms[p].share || "brak") + ", NTFS — " + (x.perms[p].ntfs || "brak")); }).join("<br>"); }).join("<br>") || '<span class="muted">brak udziałów</span>';
+          hp.querySelector("#sl").innerHTML = s.shares.map(function (x) { return '<b>\\\\' + esc(D.name + "\\" + x.name) + '</b> (' + esc(x.path) + ')<br>' + Object.keys(x.perms).map(function (p) { return "&nbsp;&nbsp;" + esc(p + ": udział - " + (x.perms[p].share || "brak") + ", NTFS - " + (x.perms[p].ntfs || "brak")); }).join("<br>"); }).join("<br>") || '<span class="muted">brak udziałów</span>';
           hp.querySelector("#ps").innerHTML = s.shares.map(function (x) { return '<option>' + esc(x.name) + '</option>'; }).join("");
         }
         r();
@@ -704,7 +704,7 @@
       }
       function hrPanel(P, D) {
         var c = D.hr;
-        P.innerHTML = '<div style="overflow:auto"><div style="padding:16px;display:grid;gap:10px;max-width:520px"><div style="background:#0e5a8a;color:#fff;padding:8px 12px;border-radius:6px;font-weight:600">Panel administracyjny routera — http://' + esc(c.lanIp) + '</div>' +
+        P.innerHTML = '<div style="overflow:auto"><div style="padding:16px;display:grid;gap:10px;max-width:520px"><div style="background:#0e5a8a;color:#fff;padding:8px 12px;border-radius:6px;font-weight:600">Panel administracyjny routera - http://' + esc(c.lanIp) + '</div>' +
           '<b>Sieć LAN</b><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">' + field("hip", "Adres IP routera", c.lanIp) + field("hmk", "Maska", c.lanMask) + '</div>' +
           '<label style="font-size:.88rem"><input type="checkbox" id="hdh" ' + (c.dhcp ? "checked" : "") + '> Serwer DHCP włączony</label>' +
           '<b>Sieć bezprzewodowa</b><label style="font-size:.88rem"><input type="checkbox" id="hwf" ' + (c.wifi ? "checked" : "") + '> Włącz Wi-Fi</label>' + field("hss", "Nazwa sieci (SSID)", c.ssid) +

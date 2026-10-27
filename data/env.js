@@ -1,4 +1,4 @@
-/* Stanowisko egzaminacyjne — wirtualny komputer w przeglądarce
+/* Stanowisko egzaminacyjne - wirtualny komputer w przeglądarce
    Aplikacje: edytor kodu z podglądem, baza danych SQL, arkusz kalkulacyjny,
    edytor tekstu, programowanie (JavaScript), zaciskanie kabla, sieć (env-net.js). */
 (function () {
@@ -264,7 +264,7 @@
         var v = E.answers[i] || "", ok;
         if (a.t) ok = a.t.some(function (x) { return normText(v).indexOf(normText(x)) >= 0; }) && normText(v) !== "";
         else { var n = num(v); ok = isFinite(n) && Math.abs(n - a.v) <= (a.tol != null ? a.tol : 0.01); }
-        items.push({ auto: true, g: "Karta odpowiedzi", l: a.l, ok: ok, info: "Twoja odpowiedź: " + (v || "—") + " · poprawna: " + (a.t ? a.t[0] : fmtNum(a.v)) + (a.unit ? " " + a.unit : "") });
+        items.push({ auto: true, g: "Karta odpowiedzi", l: a.l, ok: ok, info: "Twoja odpowiedź: " + (v || "-") + " · poprawna: " + (a.t ? a.t[0] : fmtNum(a.v)) + (a.unit ? " " + a.unit : "") });
       });
       var zast = spec.zastap || [];
       (P.kryteria || []).forEach(function (g) {
@@ -280,7 +280,7 @@
     var autoN = items.filter(function (x) { return x.auto; }).length;
     var lastG = null;
     var html = '<h3>Ocena pracy</h3><div class="muted">Elementy sprawdzone automatycznie mają już wynik. ' +
-      (autoN < items.length ? 'Pozostałe kryteria (wykonanie fizyczne, dokumenty opisowe) oceń uczciwie sam — zaznacz tylko to, co jest wykonane w pełni.' : '') + '</div><div class="chk">';
+      (autoN < items.length ? 'Pozostałe kryteria (wykonanie fizyczne, dokumenty opisowe) oceń uczciwie sam - zaznacz tylko to, co jest wykonane w pełni.' : '') + '</div><div class="chk">';
     items.forEach(function (x, i) {
       if (x.g !== lastG) { html += '<div class="g">' + esc(x.g) + '</div>'; lastG = x.g; }
       if (x.auto) html += '<div class="it ' + (x.ok ? "ok" : "bad") + '"><span>' + (x.ok ? "✓" : "✗") + '</span><span>' + F(x.l) + (x.info ? '<small>' + esc(x.info) + '</small>' : '') + '</span></div>';
@@ -319,7 +319,7 @@
     var src = files[name] || "";
     src = src.replace(/<link[^>]*href=["']([^"']+\.css)["'][^>]*>/gi, function (m, f) { return files[f] != null ? "<style>\n" + files[f] + "\n</style>" : m; });
     src = src.replace(/<script([^>]*)src=["']([^"']+\.js)["'][^>]*>\s*<\/script>/gi, function (m, a, f) { return files[f] != null ? "<script>\n" + files[f] + "\n<\/script>" : m; });
-    src = src.replace(/<\?php[\s\S]*?(\?>|$)/g, '<div style="border:2px dashed #999;padding:8px;margin:6px 0;font:13px monospace;color:#555;background:#f4f4f4">[ tu pojawi się wynik skryptu PHP — PHP działa na serwerze, w tym środowisku sprawdzamy jego kod ]</div>');
+    src = src.replace(/<\?php[\s\S]*?(\?>|$)/g, '<div style="border:2px dashed #999;padding:8px;margin:6px 0;font:13px monospace;color:#555;background:#f4f4f4">[ tu pojawi się wynik skryptu PHP - PHP działa na serwerze, w tym środowisku sprawdzamy jego kod ]</div>');
     return src;
   }
   ENV.buildPreview = buildPreview;
@@ -346,7 +346,7 @@
       var timer = null;
       function refresh() { if (!sel.value) { fr.srcdoc = '<p style="font:14px sans-serif;color:#666;padding:20px">Brak pliku HTML do podglądu.</p>'; return; } E.pvFile = sel.value; fr.srcdoc = buildPreview(E.files, sel.value); }
       function open() {
-        box.querySelector("#cfn").textContent = cur + (/\.txt$/.test(cur) ? " — plik tekstowy" : "");
+        box.querySelector("#cfn").textContent = cur + (/\.txt$/.test(cur) ? " - plik tekstowy" : "");
         editor(box.querySelector("#ced"), E.files[cur], function (v) { E.files[cur] = v; clearTimeout(timer); timer = setTimeout(refresh, 600); });
       }
       sel.onchange = refresh; box.querySelector("#cref").onclick = refresh;
@@ -581,7 +581,7 @@
       var S = E.sheet, sel = E.sheetSel || { c: 0, r: 0 }, anchor = null;
       box.innerHTML = '<div style="display:grid;grid-template-rows:auto auto minmax(0,1fr);height:100%"><div class="tool">' +
         '<button class="tb" id="sb" title="Pogrubienie"><b>B</b></button><button class="tb" id="s2" title="Format liczbowy 0,00">0,00</button><button class="tb" id="sfill" title="Kopiuje formułę z pierwszej komórki zaznaczenia w dół (Shift+klik zaznacza zakres)">Wypełnij w dół</button><button class="tb" id="sdel">Wyczyść</button>' +
-        '<span class="muted" style="font-size:.78rem">Funkcje: SUMA, ŚREDNIA, MIN, MAX, ZAOKR, ZAOKR.GÓRA, ZAOKR.DÓŁ, JEŻELI, ILE.LICZB, PIERWIASTEK, POTĘGA · argumenty oddzielaj średnikiem · $A$1 — adres bezwzględny</span></div>' +
+        '<span class="muted" style="font-size:.78rem">Funkcje: SUMA, ŚREDNIA, MIN, MAX, ZAOKR, ZAOKR.GÓRA, ZAOKR.DÓŁ, JEŻELI, ILE.LICZB, PIERWIASTEK, POTĘGA · argumenty oddzielaj średnikiem · $A$1 - adres bezwzględny</span></div>' +
         '<div class="fbar"><input id="sref" readonly><input id="sf" placeholder="Wpisz wartość lub formułę, np. =ZAOKR(B2*1,23;2)"></div><div id="sg" style="overflow:auto;min-height:0" tabindex="0"></div></div>';
       var grid = box.querySelector("#sg"), fb = box.querySelector("#sf"), rb = box.querySelector("#sref");
       var html = '<table class="sh"><colgroup><col style="width:38px">' + Array(COLS + 1).join('<col style="width:96px">') + '</colgroup><tr><th class="rh"></th>';
@@ -699,7 +699,7 @@
       var url = URL.createObjectURL(new Blob([body], { type: "text/javascript" }));
       var w = new Worker(url), out = [], done = false;
       function fin(st) { if (done) return; done = true; clearTimeout(to); w.terminate(); URL.revokeObjectURL(url); resolve({ status: st, out: out }); }
-      var to = setTimeout(function () { out.push({ t: "err", m: "Przekroczono czas wykonania (" + (ms / 1000) + " s) — sprawdź, czy pętla się kończy." }); fin("timeout"); }, ms || 4000);
+      var to = setTimeout(function () { out.push({ t: "err", m: "Przekroczono czas wykonania (" + (ms / 1000) + " s) - sprawdź, czy pętla się kończy." }); fin("timeout"); }, ms || 4000);
       w.onmessage = function (e) { var d = e.data; if (d.t === "done") fin("ok"); else if (d.t === "exc") { out.push({ t: "err", m: "Błąd: " + d.m }); fin("exc"); } else out.push(d); };
       w.onerror = function (e) { e.preventDefault(); out.push({ t: "err", m: "Błąd składni: " + e.message + (e.lineno ? " (linia " + (e.lineno - 2) + ")" : "") }); fin("syntax"); };
     });
@@ -709,14 +709,14 @@
     title: "Programowanie (JavaScript)", icon: "JS",
     mount: function (E, box) {
       box.innerHTML = '<div class="split"><div class="col" style="border-right:1px solid var(--line)"><div class="tool"><button class="tb go" id="jrun">▶ Uruchom</button><span class="muted" style="font-size:.78rem">Wyjście: <code>console.log()</code> · dane wejściowe: <code>prompt()</code></span></div><div id="jed" style="min-height:0"></div></div>' +
-        '<div class="col" style="grid-template-rows:auto auto minmax(0,1fr)"><div class="tool"><span style="font-size:.82rem">Dane wejściowe (jedna wartość w wierszu)</span></div><textarea id="jin" class="mono" style="height:70px;border:0;border-bottom:1px solid var(--line);padding:6px 8px;font:13px var(--f-mono);background:var(--card);color:var(--chrome-ink);resize:vertical"></textarea><div class="con" id="jout">Konsola — kliknij „Uruchom”.</div></div></div>';
+        '<div class="col" style="grid-template-rows:auto auto minmax(0,1fr)"><div class="tool"><span style="font-size:.82rem">Dane wejściowe (jedna wartość w wierszu)</span></div><textarea id="jin" class="mono" style="height:70px;border:0;border-bottom:1px solid var(--line);padding:6px 8px;font:13px var(--f-mono);background:var(--card);color:var(--chrome-ink);resize:vertical"></textarea><div class="con" id="jout">Konsola - kliknij „Uruchom”.</div></div></div>';
       editor(box.querySelector("#jed"), E.js.code, function (v) { E.js.code = v; });
       var jin = box.querySelector("#jin"), out = box.querySelector("#jout");
       jin.value = E.js.input; jin.oninput = function () { E.js.input = jin.value; };
       box.querySelector("#jrun").onclick = function () {
         out.innerHTML = '<span class="i">Uruchamianie…</span>';
         runWorker(E.js.code, E.js.input, "", 4000).then(function (r) {
-          out.innerHTML = r.out.map(function (o) { return '<div class="' + (o.t === "err" ? "e" : "") + '">' + esc(o.m) + '</div>'; }).join("") + '<div class="i">— zakończono (' + (r.status === "ok" ? "bez błędów" : r.status) + ') —</div>';
+          out.innerHTML = r.out.map(function (o) { return '<div class="' + (o.t === "err" ? "e" : "") + '">' + esc(o.m) + '</div>'; }).join("") + '<div class="i">- zakończono (' + (r.status === "ok" ? "bez błędów" : r.status) + ') -</div>';
         });
       };
     }
@@ -771,7 +771,7 @@
         var verdict = eq(a, T568B) && eq(b, T568B) ? "Kabel prosty, sekwencja T568B na obu końcach." :
           eq(a, T568A) && eq(b, T568A) ? "Kabel prosty w sekwencji T568A." :
           (eq(a, T568A) && eq(b, T568B)) || (eq(a, T568B) && eq(b, T568A)) ? "Kabel skrosowany (T568A ↔ T568B)." :
-          ok ? "Ciągłość jest poprawna, ale sekwencja kolorów nie odpowiada normie — pary są rozdzielone (split pair). Kabel nie przejdzie pomiaru przesłuchu." : "Błędne połączenie — żyły są zamienione.";
+          ok ? "Ciągłość jest poprawna, ale sekwencja kolorów nie odpowiada normie - pary są rozdzielone (split pair). Kabel nie przejdzie pomiaru przesłuchu." : "Błędne połączenie - żyły są zamienione.";
         return '<div class="muted" style="font-size:.85rem;margin-bottom:6px">Tester: pin końca A → pin końca B</div><div class="tester">' + row + '</div><div class="msg ' + (/prosty, sekwencja T568B|prosty w sekwencji|skrosowany/.test(verdict) ? "ok" : "err") + '" style="margin:10px 0 0">' + verdict + '</div>';
       }
       render();

@@ -23,7 +23,7 @@ window.KURSY = window.KURSY || {};
     { p: "Do odbioru robót zanikających zgłasza kierownik budowy, a dokonuje go", o: ["inspektor nadzoru inwestorskiego (lub inwestor)", "projektant zawsze", "nadzór budowlany", "dostawca betonu"], k: 0, w: "Odbiór wpisuje się do dziennika budowy." },
     { p: "Metoda kosztorysowania polegająca na mnożeniu ilości robót przez ceny jednostkowe to metoda", o: ["uproszczona", "szczegółowa", "analityczna", "porównawcza"], k: 0, w: "W szczegółowej rozdziela się R, M, S, Kp, Z." },
     { p: "Koszty zakupu materiałów w kosztorysie szczegółowym dolicza się do", o: ["materiałów (M)", "robocizny (R)", "sprzętu (S)", "zysku"], k: 0, w: "Zwykle jako procent wartości materiałów." },
-    { p: "Nakład sprzętu w KNR podaje się w", o: ["maszynogodzinach (m-g)", "roboczogodzinach", "metrach", "złotych"], k: 0, w: "Robocizna — w r-g." },
+    { p: "Nakład sprzętu w KNR podaje się w", o: ["maszynogodzinach (m-g)", "roboczogodzinach", "metrach", "złotych"], k: 0, w: "Robocizna - w r-g." },
     { p: "Wartość netto robót 50 000 zł, VAT 23%. Wartość brutto wynosi", o: ["61 500 zł", "50 230 zł", "38 500 zł", "65 000 zł"], k: 0, w: "50 000 × 1,23." },
     { p: "Wykres przedstawiający kolejne roboty jako paski na osi czasu to", o: ["harmonogram Gantta", "przekrój budynku", "dziennik budowy", "kosztorys"], k: 0, w: "Ułatwia koordynację brygad." },
     { p: "Strefę niebezpieczną wokół pracującego żurawia wyznacza się, aby", o: ["chronić ludzi przed spadającymi ładunkami", "oznaczyć parking", "przyspieszyć dostawy", "ułatwić pomiary geodezyjne"], k: 0, w: "Strefę wygradza się i oznakowuje." },
@@ -61,15 +61,15 @@ window.KURSY = window.KURSY || {};
   ]);
 
   add("ROL.04", [
-    { p: "Optymalny odczyn gleby dla większości roślin uprawnych to około", o: ["pH 5,5–7", "pH 3", "pH 9–10", "pH 1"], k: 0, w: "Gleby bardzo kwaśne wymagają wapnowania." },
+    { p: "Optymalny odczyn gleby dla większości roślin uprawnych to około", o: ["pH 5,5-7", "pH 3", "pH 9-10", "pH 1"], k: 0, w: "Gleby bardzo kwaśne wymagają wapnowania." },
     { p: "Fosfor wpływa przede wszystkim na", o: ["rozwój korzeni i kwitnienie", "barwę liści przez chlorofil wyłącznie", "wyleganie", "wzrost pędów bocznych tylko"], k: 0, w: "Ważny w początkowych fazach wzrostu." },
-    { p: "Nawozem azotowym jest", o: ["saletra amonowa", "superfosfat", "sól potasowa", "kreda nawozowa"], k: 0, w: "Superfosfat — fosfor, sól potasowa — potas." },
-    { p: "Orka przedzimowa wykonywana jest", o: ["jesienią, przed zimą, na głębokość ok. 25–30 cm", "wiosną bezpośrednio przed siewem", "latem po zbiorze jako płytka", "zimą na zamarzniętej glebie"], k: 0, w: "Gleba przemarza i poprawia się jej struktura." },
+    { p: "Nawozem azotowym jest", o: ["saletra amonowa", "superfosfat", "sól potasowa", "kreda nawozowa"], k: 0, w: "Superfosfat - fosfor, sól potasowa - potas." },
+    { p: "Orka przedzimowa wykonywana jest", o: ["jesienią, przed zimą, na głębokość ok. 25-30 cm", "wiosną bezpośrednio przed siewem", "latem po zbiorze jako płytka", "zimą na zamarzniętej glebie"], k: 0, w: "Gleba przemarza i poprawia się jej struktura." },
     { p: "Masa tysiąca ziaren oznacza się skrótem", o: ["MTZ", "WU", "NPK", "DJP"], k: 0, w: "Wykorzystuje się ją do obliczania normy wysiewu." },
-    { p: "Przerwy w uprawie rzepaku na tym samym polu powinny wynosić co najmniej", o: ["3–4 lata", "1 rok", "6 miesięcy", "nie są potrzebne"], k: 0, w: "Ogranicza to choroby, np. kiłę kapusty." },
+    { p: "Przerwy w uprawie rzepaku na tym samym polu powinny wynosić co najmniej", o: ["3-4 lata", "1 rok", "6 miesięcy", "nie są potrzebne"], k: 0, w: "Ogranicza to choroby, np. kiłę kapusty." },
     { p: "Próg szkodliwości to", o: ["liczebność szkodnika, przy której zabieg chemiczny staje się opłacalny", "maksymalna dawka nawozu", "termin siewu", "klasa gleby"], k: 0, w: "Element integrowanej ochrony roślin." },
     { p: "Zaświadczenie o ukończeniu szkolenia w zakresie stosowania środków ochrony roślin jest ważne", o: ["5 lat", "1 rok", "bezterminowo", "10 lat"], k: 0, w: "Potem szkolenie trzeba powtórzyć." },
-    { p: "Kiszonkę z kukurydzy zalicza się do pasz", o: ["objętościowych soczystych", "treściwych", "mineralnych", "objętościowych suchych"], k: 0, w: "Siano — objętościowa sucha." },
+    { p: "Kiszonkę z kukurydzy zalicza się do pasz", o: ["objętościowych soczystych", "treściwych", "mineralnych", "objętościowych suchych"], k: 0, w: "Siano - objętościowa sucha." },
     { p: "Wał przegubowo-teleskopowy łączący ciągnik z maszyną musi być", o: ["zabezpieczony kompletną osłoną", "bez osłony dla łatwiejszej kontroli", "smarowany w czasie pracy ręką", "używany tylko zimą"], k: 0, w: "Wciągnięcie odzieży przez wał to częsta przyczyna ciężkich wypadków." }
   ]);
 

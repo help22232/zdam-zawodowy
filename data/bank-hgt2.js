@@ -1,4 +1,4 @@
-/* Bank pytań (rozszerzenie) — HGT.03, HGT.06, HGT.07, HGT.12 */
+/* Bank pytań (rozszerzenie) - HGT.03, HGT.06, HGT.07, HGT.12 */
 window.KURSY = window.KURSY || {};
 (function (K) {
   function Q(p, a, b, c, d, w) { return { p: p, o: [a, b, c, d], k: 0, w: w || "" }; }
@@ -46,7 +46,7 @@ window.KURSY = window.KURSY || {};
     Q("Hotel ekologiczny ogranicza zużycie wody m.in. przez", "wymianę ręczników tylko na życzenie gościa", "codzienną wymianę wszystkiego", "pranie w wysokiej temperaturze zawsze", "kąpiele w wannach", ""),
     Q("Segregacja odpadów w hotelu obejmuje m.in.", "papier, tworzywa, szkło, bio i odpady zmieszane", "tylko odpady zmieszane", "spalanie śmieci", "wylewanie do kanalizacji", ""),
     Q("Pracownik służby pięter, używając środków chemicznych, musi", "stosować rękawice i postępować wg karty charakterystyki", "mieszać różne środki dla większej skuteczności", "przelewać je do butelek po napojach", "używać bez instrukcji", ""),
-    Q("Mieszanie środków z chlorem i środków kwaśnych", "jest niebezpieczne — uwalnia się toksyczny chlor", "zwiększa skuteczność bezpiecznie", "jest zalecane", "nie ma skutków", ""),
+    Q("Mieszanie środków z chlorem i środków kwaśnych", "jest niebezpieczne - uwalnia się toksyczny chlor", "zwiększa skuteczność bezpiecznie", "jest zalecane", "nie ma skutków", ""),
     Q("Do sprzątania szyb i luster stosuje się", "środek do szyb i ściereczkę z mikrofibry lub ściągaczkę", "papier ścierny", "środek do toalet", "olej", ""),
     Q("Mikrofibra jest skuteczna, ponieważ", "zatrzymuje kurz i brud dzięki mikrowłóknom, często bez chemii", "jest jednorazowa", "jest z papieru", "nie wchłania wody", ""),
     Q("Przełożona pokojowych codziennie", "kontroluje jakość sprzątania i przekazuje stan pokoi recepcji", "przyjmuje rezerwacje", "gotuje śniadania", "rozlicza VAT", ""),
@@ -72,10 +72,10 @@ window.KURSY = window.KURSY || {};
     Q("Pokój gotowy do sprzedaży sprawdza się m.in. pod kątem", "czystości, kompletności wyposażenia i działania urządzeń", "koloru zasłon", "nazwiska poprzedniego gościa", "ceny pokoju", ""),
     Q("Odświeżacz powietrza w pokoju stosuje się", "dyskretnie, uwzględniając możliwe alergie gości", "obficie w każdym pokoju", "zamiast sprzątania", "zawsze na pościel", ""),
     Q("Hałas podczas sprzątania korytarzy ogranicza się, prowadząc prace", "w godzinach dziennych i z poszanowaniem ciszy gości", "w nocy", "z głośną muzyką", "bez ograniczeń", ""),
-    Q("Sztuczna roślina w lobby a żywa — żywe rośliny wymagają", "podlewania, nawożenia i kontroli szkodników", "tylko odkurzania", "malowania", "niczego", ""),
+    Q("Sztuczna roślina w lobby a żywa - żywe rośliny wymagają", "podlewania, nawożenia i kontroli szkodników", "tylko odkurzania", "malowania", "niczego", ""),
     Q("Hotel ponosi odpowiedzialność za rzeczy wniesione przez gościa", "do wysokości określonej przepisami, chyba że zostały oddane na przechowanie", "zawsze w pełnej wartości", "nigdy", "tylko za samochody", ""),
     Q("Regulamin hotelu określa m.in.", "dobę hotelową, zasady pobytu, ciszę nocną", "pensje pracowników", "VAT", "ceny konkurencji", ""),
-    Q("Cisza nocna w hotelu zwykle obowiązuje w godzinach", "22.00–6.00 (wg regulaminu)", "12.00–14.00", "18.00–20.00", "nie obowiązuje", ""),
+    Q("Cisza nocna w hotelu zwykle obowiązuje w godzinach", "22.00-6.00 (wg regulaminu)", "12.00-14.00", "18.00-20.00", "nie obowiązuje", ""),
     Q("Uwagi gości o czystości zbiera się m.in. przez", "ankiety satysfakcji i opinie online", "rachunki", "karty meldunkowe", "listę płac", "")
   ]);
 
@@ -119,7 +119,7 @@ window.KURSY = window.KURSY || {};
     Q("Minimalna długość pobytu (MinLOS) to ograniczenie", "sprzedaży pokoi tylko na określoną minimalną liczbę nocy", "maksymalnej liczby gości", "godziny przyjazdu", "ceny śniadania", ""),
     Q("Lista przyjazdów (arrival list) zawiera", "gości przyjeżdżających danego dnia z ich rezerwacjami", "listę płac", "inwentarz minibaru", "listę usterek", ""),
     Q("Raport stanu pokoi (room status) recepcja uzgadnia z", "służbą pięter", "księgowością", "kuchnią", "ochroną", ""),
-    Q("Gość skarży się na hałas z sąsiedniego pokoju w nocy. Recepcjonista powinien", "zareagować — upomnieć sąsiadów i ewentualnie zaproponować zmianę pokoju", "zignorować", "wezwać policję bez rozmowy", "naliczyć opłatę skarżącemu", ""),
+    Q("Gość skarży się na hałas z sąsiedniego pokoju w nocy. Recepcjonista powinien", "zareagować - upomnieć sąsiadów i ewentualnie zaproponować zmianę pokoju", "zignorować", "wezwać policję bez rozmowy", "naliczyć opłatę skarżącemu", ""),
     Q("Skargę gościa należy", "wysłuchać, przeprosić, rozwiązać problem i odnotować", "zignorować", "przekazać gościowi do napisania na kartce i wyrzucić", "przerzucić winę na gościa", ""),
     Q("Recepcjonista odbiera telefon, zaczynając od", "nazwy hotelu, swojego imienia i powitania", "pytania „kto mówi?”", "milczenia", "podania numeru pokoju", ""),
     Q("Korespondencja e-mail z gościem powinna być", "uprzejma, rzeczowa, z danymi kontaktowymi hotelu", "pisana wielkimi literami", "bez podpisu", "w żargonie", ""),
@@ -150,7 +150,7 @@ window.KURSY = window.KURSY || {};
     Q("Turystyka przygodowa obejmuje", "aktywności z elementem ryzyka i wysiłku (np. rafting, trekking)", "pobyty w SPA", "zwiedzanie muzeów", "wyjazdy na konferencje", ""),
     Q("Turystyka kulturowa koncentruje się na", "zwiedzaniu zabytków, muzeów i udziale w wydarzeniach kulturalnych", "opalaniu się", "nurkowaniu", "pobytach w sanatoriach", ""),
     Q("Uzdrowiskiem jest m.in.", "Ciechocinek", "Zakopane", "Wieliczka", "Malbork", ""),
-    Q("Najwyższy szczyt Polski to", "Rysy", "Śnieżka", "Babia Góra", "Kasprowy Wierch", "Rysy — 2 499 m n.p.m."),
+    Q("Najwyższy szczyt Polski to", "Rysy", "Śnieżka", "Babia Góra", "Kasprowy Wierch", "Rysy - 2 499 m n.p.m."),
     Q("Najdłuższa rzeka Polski to", "Wisła", "Odra", "Warta", "Bug", ""),
     Q("Pustynia Błędowska położona jest w województwie", "małopolskim / śląskim (na pograniczu)", "pomorskim", "podlaskim", "lubuskim", ""),
     Q("Wydmy ruchome w Polsce występują w", "Słowińskim Parku Narodowym", "Tatrzańskim Parku Narodowym", "Ojcowskim Parku Narodowym", "Bieszczadzkim Parku Narodowym", ""),
@@ -190,9 +190,9 @@ window.KURSY = window.KURSY || {};
     Q("Ubezpieczenie kosztów rezygnacji z imprezy chroni przed", "utratą wpłat przy rezygnacji z ważnych powodów (np. choroba)", "złą pogodą", "nudą", "zmianą pilota", ""),
     Q("Voucher hotelowy zawiera m.in.", "nazwisko gościa, termin, rodzaj pokoju i wyżywienia", "cenę hurtową hotelu", "pensję recepcjonisty", "VAT biura", ""),
     Q("Bilet lotniczy elektroniczny potwierdza", "rezerwację miejsca u przewoźnika lotniczego", "rezerwację hotelu", "ubezpieczenie", "zgodę rodziców", ""),
-    Q("Odprawa biletowo-bagażowa na lotnisku nazywa się", "check-in", "boarding", "transfer", "lay-over", "Boarding — wejście na pokład."),
+    Q("Odprawa biletowo-bagażowa na lotnisku nazywa się", "check-in", "boarding", "transfer", "lay-over", "Boarding - wejście na pokład."),
     Q("Prawa pasażera linii lotniczych w UE przy opóźnieniu lotu reguluje", "rozporządzenie (WE) nr 261/2004", "Kodeks pracy", "ustawa o VAT", "konwencja CMR", ""),
-    Q("Pasażer lotu na trasie do 1 500 km opóźnionego o ponad 3 godziny może otrzymać odszkodowanie", "250 euro", "600 euro", "50 euro", "nic", "Ponad 1 500–3 500 km — 400 euro, ponad 3 500 km — 600 euro."),
+    Q("Pasażer lotu na trasie do 1 500 km opóźnionego o ponad 3 godziny może otrzymać odszkodowanie", "250 euro", "600 euro", "50 euro", "nic", "Ponad 1 500-3 500 km - 400 euro, ponad 3 500 km - 600 euro."),
     Q("Informacja turystyczna (IT) udziela m.in.", "informacji o atrakcjach, noclegach i komunikacji", "kredytów", "pozwoleń na budowę", "leczenia", ""),
     Q("System kategoryzacji punktów informacji turystycznej w Polsce prowadzi", "Polska Organizacja Turystyczna (z regionalnymi organizacjami)", "UOKiK", "GUS", "PIP", ""),
     Q("Polska Organizacja Turystyczna zajmuje się", "promocją Polski jako kraju atrakcyjnego turystycznie", "kategoryzacją hoteli", "wydawaniem paszportów", "kontrolą kierowców", ""),
@@ -230,7 +230,7 @@ window.KURSY = window.KURSY || {};
     Q("Najlepszym źródłem wapnia są", "mleko i przetwory mleczne", "ziemniaki", "jabłka", "mięso wieprzowe", ""),
     Q("Zalecane spożycie soli przez osobę dorosłą to maksymalnie około", "5 g dziennie", "20 g", "50 g", "1 kg tygodniowo", ""),
     Q("Piramida (talerz) zdrowego żywienia zaleca, aby największą część talerza stanowiły", "warzywa i owoce", "słodycze", "tłuszcze", "mięso czerwone", ""),
-    Q("Liczba posiłków dziennie zalecana osobom dorosłym to zwykle", "4–5 regularnych posiłków", "1 posiłek", "10 posiłków", "2 posiłki w nocy", ""),
+    Q("Liczba posiłków dziennie zalecana osobom dorosłym to zwykle", "4-5 regularnych posiłków", "1 posiłek", "10 posiłków", "2 posiłki w nocy", ""),
     Q("Dieta lekkostrawna wyklucza m.in.", "potrawy smażone i tłuste", "potrawy gotowane", "kleiki", "gotowane warzywa", ""),
     Q("Dieta z ograniczeniem tłuszczu zalecana jest m.in. w chorobach", "pęcherzyka żółciowego i trzustki", "anemii", "krzywicy", "niedoboru wapnia", ""),
     Q("W diecie cukrzycowej ogranicza się", "cukry proste i produkty o wysokim indeksie glikemicznym", "warzywa", "błonnik", "wodę", ""),
@@ -277,12 +277,12 @@ window.KURSY = window.KURSY || {};
     Q("Plan HACCP jest opracowywany", "dla konkretnego zakładu i jego procesów", "jeden dla całego kraju", "przez gości", "przez dostawców", ""),
     Q("Monitorowanie CCP polega na", "regularnym pomiarze parametrów (np. temperatury) i zapisie wyników", "sprzątaniu", "zamawianiu towaru", "kontroli kasy", ""),
     Q("Weryfikacja systemu HACCP to", "sprawdzenie, czy system działa skutecznie (audyty, badania)", "zamówienie surowców", "mycie rąk", "ustawienie stołów", ""),
-    Q("Gramatura porcji obiadowej mięsa (po obróbce) dla dorosłego wynosi zwykle", "100–150 g", "20 g", "500 g", "1 kg", ""),
+    Q("Gramatura porcji obiadowej mięsa (po obróbce) dla dorosłego wynosi zwykle", "100-150 g", "20 g", "500 g", "1 kg", ""),
     Q("Na 200 osób potrzeba 0,25 l zupy na osobę. Łączna ilość zupy to", "50 l", "20 l", "250 l", "25 l", ""),
     Q("Surówka 150 g na osobę dla 80 osób to", "12 kg", "1,2 kg", "15 kg", "8 kg", ""),
     Q("Masa brutto cebuli przy 15% odpadków dla 8,5 kg netto wynosi", "10 kg", "9,8 kg", "7,2 kg", "12 kg", "8,5 ÷ 0,85."),
     Q("Koszt jednego obiadu: surowce 7,20 zł. Przy stawce żywieniowej 8,00 zł oszczędność na posiłku wynosi", "0,80 zł", "1,20 zł", "8,00 zł", "15,20 zł", ""),
-    Q("Wartość energetyczna obiadu dla ucznia szkoły podstawowej powinna stanowić około", "30–35% dziennego zapotrzebowania", "5%", "80%", "100%", ""),
+    Q("Wartość energetyczna obiadu dla ucznia szkoły podstawowej powinna stanowić około", "30-35% dziennego zapotrzebowania", "5%", "80%", "100%", ""),
     Q("Napoje w stołówkach szkolnych powinny", "zawierać ograniczoną ilość cukru (np. kompot, woda, herbata)", "być mocno słodzone", "zawierać kofeinę", "być gazowane zawsze", ""),
     Q("Jadłospis dla przedszkola powinien unikać", "potraw ostrych, ciężkostrawnych i dużej ilości cukru", "warzyw", "nabiału", "pieczywa pełnoziarnistego", ""),
     Q("Zarządzanie personelem w gastronomii obejmuje m.in.", "grafik pracy, szkolenia i ocenę pracowników", "tylko wypłaty", "tylko zakupy", "tylko marketing", ""),

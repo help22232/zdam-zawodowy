@@ -1,4 +1,4 @@
-/* Bank pytań (rozszerzenie) — MEC.03, MEC.05, MEC.08, MEC.09, BUD.11, BUD.12, BUD.14 */
+/* Bank pytań (rozszerzenie) - MEC.03, MEC.05, MEC.08, MEC.09, BUD.11, BUD.12, BUD.14 */
 window.KURSY = window.KURSY || {};
 (function (K) {
   function Q(p, a, b, c, d, w) { return { p: p, o: [a, b, c, d], k: 0, w: w || "" }; }
@@ -21,7 +21,7 @@ window.KURSY = window.KURSY || {};
     Q("Stal S355J2 w porównaniu z S235JR ma", "wyższą granicę plastyczności", "niższą granicę plastyczności", "więcej węgla zawsze o 10%", "zerową wytrzymałość", ""),
     Q("Żeliwo szare charakteryzuje się", "dobrą lejnością i tłumieniem drgań, ale kruchością", "dużą plastycznością", "spawalnością jak stal niskowęglowa", "odpornością na rozciąganie lepszą niż stal", ""),
     Q("Stal nierdzewna zawiera co najmniej około", "10,5% chromu", "1% chromu", "50% niklu", "5% węgla", ""),
-    Q("Mosiądz to stop", "miedzi z cynkiem", "miedzi z cyną", "żelaza z węglem", "aluminium z krzemem", "Brąz — miedź z cyną (lub innymi)."),
+    Q("Mosiądz to stop", "miedzi z cynkiem", "miedzi z cyną", "żelaza z węglem", "aluminium z krzemem", "Brąz - miedź z cyną (lub innymi)."),
     Q("Duraluminium to stop", "aluminium z miedzią i magnezem", "miedzi z cynkiem", "żelaza z chromem", "tytanu z niklem", ""),
     Q("Twardość metali mierzy się m.in. metodą", "Brinella, Rockwella lub Vickersa", "Ohma", "Celsjusza", "Pascala", ""),
     Q("Próba rozciągania materiału pozwala wyznaczyć", "granicę plastyczności i wytrzymałość na rozciąganie", "twardość", "przewodność cieplną", "gęstość", "")
@@ -46,7 +46,7 @@ window.KURSY = window.KURSY || {};
     Q("Hamulec szczękowy działa dzięki", "tarciu szczęk o bęben", "polu elektrycznemu", "ciśnieniu powietrza w oponie", "oporowi powietrza", ""),
     Q("Łożysko ślizgowe w porównaniu z tocznym", "lepiej tłumi drgania i może przenosić duże obciążenia przy dobrym smarowaniu", "zawsze ma mniejsze opory przy rozruchu", "nie wymaga smarowania", "nie występuje w maszynach", ""),
     Q("Luz łożyska tocznego oznaczony C3 to luz", "większy od normalnego", "mniejszy od normalnego", "zerowy", "ujemny", ""),
-    Q("Łożysko z uszczelnieniem 2RS", "ma uszczelki gumowe z obu stron i jest wypełnione smarem", "jest otwarte", "ma blaszki stalowe", "jest ślizgowe", "ZZ — blaszki ochronne."),
+    Q("Łożysko z uszczelnieniem 2RS", "ma uszczelki gumowe z obu stron i jest wypełnione smarem", "jest otwarte", "ma blaszki stalowe", "jest ślizgowe", "ZZ - blaszki ochronne."),
     Q("Smar plastyczny stosuje się w łożyskach", "przy umiarkowanych prędkościach i dla prostoty uszczelnienia", "przy wszystkich prędkościach bez wyjątku", "nigdy", "tylko w hydraulice", ""),
     Q("Olej przekładniowy dobiera się według", "lepkości i klasy jakości zalecanej przez producenta", "koloru", "ceny", "zapachu", ""),
     Q("Centralne smarowanie maszyny", "dostarcza smar automatycznie do wielu punktów", "zastępuje łożyska", "chłodzi silnik", "nie wymaga obsługi", ""),
@@ -81,7 +81,7 @@ window.KURSY = window.KURSY || {};
     Q("Tokarka uniwersalna kłowa służy głównie do obróbki", "przedmiotów obrotowych", "płaskich płyt dużych", "otworów kwadratowych", "kół zębatych dłutowaniem", ""),
     Q("Konik tokarki służy do", "podparcia długich przedmiotów lub mocowania wierteł", "napędu wrzeciona", "chłodzenia", "posuwu suportu", ""),
     Q("Suport narzędziowy tokarki służy do", "mocowania noża i realizacji ruchów posuwowych", "mocowania przedmiotu", "pomiaru", "chłodzenia", ""),
-    Q("Nóż tokarski do toczenia gwintów ma kąt wierzchołkowy płytki dla gwintu metrycznego", "60°", "55°", "90°", "45°", "55° — gwint calowy Whitwortha."),
+    Q("Nóż tokarski do toczenia gwintów ma kąt wierzchołkowy płytki dla gwintu metrycznego", "60°", "55°", "90°", "45°", "55° - gwint calowy Whitwortha."),
     Q("Przecinanie na tokarce wykonuje się nożem", "przecinakiem", "wykańczakiem", "zdzierakiem", "wytaczakiem", ""),
     Q("Wytaczanie to obróbka", "powierzchni wewnętrznych (otworów) nożem", "płaszczyzn frezem", "gwintów zewnętrznych", "szlifowanie", ""),
     Q("Radełkowanie to", "wykonywanie rowków na powierzchni (np. uchwytu) przez dociskanie radełka", "toczenie stożka", "wiercenie", "szlifowanie", ""),
@@ -114,7 +114,7 @@ window.KURSY = window.KURSY || {};
     Q("Kod M00 oznacza", "programowy stop programu", "koniec programu z przewinięciem", "włączenie chłodziwa", "obroty w lewo", ""),
     Q("Cykl stały wiercenia w wielu sterowaniach programuje się kodem", "G81", "G01", "G28", "G90", ""),
     Q("Na tokarce CNC programowanie średnicowe oznacza, że współrzędna X", "jest podawana jako średnica", "jest promieniem", "jest długością", "jest kątem", ""),
-    Q("Funkcja G96 na tokarce CNC oznacza", "stałą prędkość skrawania", "stałe obroty", "posuw na minutę", "ruch szybki", "G97 — stałe obroty."),
+    Q("Funkcja G96 na tokarce CNC oznacza", "stałą prędkość skrawania", "stałe obroty", "posuw na minutę", "ruch szybki", "G97 - stałe obroty."),
     Q("Symulacja programu przed obróbką służy do", "wykrycia błędów i kolizji", "zwiększenia prędkości", "zmiany materiału", "pomiaru wyrobu", ""),
     Q("System CAM generuje", "program obróbki (kod G) na podstawie modelu", "rysunek odręczny", "fakturę", "plan BHP", ""),
     Q("Postprocesor w systemie CAM", "dostosowuje program do konkretnego sterowania obrabiarki", "drukuje rysunek", "chłodzi narzędzie", "mierzy przedmiot", ""),
@@ -136,7 +136,7 @@ window.KURSY = window.KURSY || {};
     Q("Środkownik służy do", "wyznaczania środka czoła wałka", "pomiaru długości", "cięcia", "gwintowania", ""),
     Q("Pilnik do obróbki krawędzi i powierzchni półokrągłych to pilnik", "półokrągły", "płaski", "kwadratowy", "trójkątny", ""),
     Q("Pilnik należy prowadzić", "z naciskiem przy ruchu do przodu, bez nacisku przy powrocie", "z naciskiem w obie strony", "tylko do siebie", "bez nacisku", ""),
-    Q("Pilnik bez rękojeści", "jest niebezpieczny — trzpień może skaleczyć dłoń", "jest bezpieczniejszy", "lepiej piłuje", "jest dozwolony zawsze", ""),
+    Q("Pilnik bez rękojeści", "jest niebezpieczny - trzpień może skaleczyć dłoń", "jest bezpieczniejszy", "lepiej piłuje", "jest dozwolony zawsze", ""),
     Q("Skrobanie (skrobakiem) stosuje się do", "dokładnego dopasowania powierzchni ślizgowych", "cięcia prętów", "wiercenia", "gięcia", ""),
     Q("Docieranie powierzchni wykonuje się przy użyciu", "past ściernych i docieraków", "pilnika zdzieraka", "przecinaka", "młotka", ""),
     Q("Przecinak ślusarski stosuje się z", "młotkiem ślusarskim", "wiertarką", "pilnikiem", "suwmiarką", ""),
@@ -150,7 +150,7 @@ window.KURSY = window.KURSY || {};
     Q("Oznaczenie gwintu M10×1 oznacza gwint", "metryczny drobnozwojny o skoku 1 mm", "metryczny zwykły", "calowy", "trapezowy", ""),
     Q("Gwint trapezowy symetryczny oznacza się symbolem", "Tr", "M", "G", "R", ""),
     Q("Gwint rurowy walcowy (calowy) oznacza się", "G", "M", "Tr", "S", ""),
-    Q("Narzynkę do gwintu zewnętrznego M8 nakłada się na pręt o średnicy około", "7,8–7,9 mm", "6,8 mm", "8,5 mm", "10 mm", ""),
+    Q("Narzynkę do gwintu zewnętrznego M8 nakłada się na pręt o średnicy około", "7,8-7,9 mm", "6,8 mm", "8,5 mm", "10 mm", ""),
     Q("Rozwiertak ręczny obraca się", "tylko w kierunku skrawania (nie cofa się go w lewo)", "na przemian w obie strony", "tylko w lewo", "młotkiem", ""),
     Q("Lutowanie twarde wymaga zwykle", "palnika gazowego i topnika", "lutownicy transformatorowej", "kleju", "pilnika", ""),
     Q("Spoiwo stosowane w lutowaniu miękkim to najczęściej stop", "cyny", "mosiądzu", "srebra 60%", "stali", ""),
@@ -166,8 +166,8 @@ window.KURSY = window.KURSY || {};
     Q("Spawanie w zamkniętym pomieszczeniu wymaga", "wentylacji lub odciągu dymów", "zamknięcia okien", "wyłączenia światła", "nic", ""),
     Q("Butle z gazami technicznymi przechowuje się", "w pozycji pionowej, zabezpieczone przed przewróceniem", "poziomo na słońcu", "przy grzejniku", "w biurze", ""),
     Q("Butla z tlenem nie może mieć styku z", "olejami i smarami (ryzyko samozapłonu)", "wodą", "stalą", "farbą", ""),
-    Q("Hartowanie stali C45 wymaga nagrzania do temperatury około", "830–850°C i chłodzenia w wodzie lub oleju", "200°C", "1 500°C", "50°C", ""),
-    Q("Odpuszczanie niskie (ok. 150–250°C) stosuje się do", "narzędzi — zachowuje wysoką twardość, zmniejsza naprężenia", "uzyskania maksymalnej plastyczności", "topienia stali", "nawęglania", ""),
+    Q("Hartowanie stali C45 wymaga nagrzania do temperatury około", "830-850°C i chłodzenia w wodzie lub oleju", "200°C", "1 500°C", "50°C", ""),
+    Q("Odpuszczanie niskie (ok. 150-250°C) stosuje się do", "narzędzi - zachowuje wysoką twardość, zmniejsza naprężenia", "uzyskania maksymalnej plastyczności", "topienia stali", "nawęglania", ""),
     Q("Ulepszanie cieplne to", "hartowanie i odpuszczanie wysokie", "wyżarzanie zmiękczające", "nawęglanie", "azotowanie", ""),
     Q("Azotowanie zwiększa", "twardość i odporność na ścieranie warstwy wierzchniej", "plastyczność rdzenia", "przewodność elektryczną", "masę", ""),
     Q("Korozja elektrochemiczna zachodzi w obecności", "elektrolitu (np. wilgoci)", "próżni", "suchego powietrza", "oleju", ""),
@@ -245,7 +245,7 @@ window.KURSY = window.KURSY || {};
     Q("Cement portlandzki oznacza się symbolem", "CEM I", "CEM V", "CW", "GK", ""),
     Q("Klasa cementu 42,5 oznacza", "wytrzymałość na ściskanie po 28 dniach co najmniej 42,5 MPa", "42,5 kg w worku", "czas wiązania 42,5 min", "42,5% klinkieru", ""),
     Q("Wapno hydratyzowane (gaszone) stosuje się do", "zapraw wapiennych i cementowo-wapiennych", "betonu konstrukcyjnego zamiast cementu", "klejów do płytek", "izolacji", ""),
-    Q("Kruszywo do zapraw murarskich to najczęściej", "piasek o uziarnieniu do 2 mm", "żwir 16–32 mm", "kamień łamany", "żużel", ""),
+    Q("Kruszywo do zapraw murarskich to najczęściej", "piasek o uziarnieniu do 2 mm", "żwir 16-32 mm", "kamień łamany", "żużel", ""),
     Q("Woda zarobowa do zapraw powinna być", "czysta, bez zanieczyszczeń (np. wodociągowa)", "morska", "z kałuży", "z dodatkiem oleju", ""),
     Q("Domieszka plastyfikująca w zaprawie", "poprawia urabialność", "przyspiesza korozję", "zwiększa wodochłonność", "zmienia kolor na czerwony", ""),
     Q("Proporcja objętościowa 1:4 dla zaprawy cementowej oznacza", "1 część cementu na 4 części piasku", "1 część piasku na 4 cementu", "1 litr wody na 4 kg cementu", "4 worki cementu na 1 piasku", "")
@@ -253,7 +253,7 @@ window.KURSY = window.KURSY || {};
 
   add("BUD.11", BUD_COMMON.concat([
     Q("Profil CD do sufitów podwieszanych mocuje się do stropu za pomocą", "wieszaków (np. noniuszowych lub ES)", "kleju", "gwoździ do płyty", "taśmy", ""),
-    Q("Rozstaw profili CD w suficie podwieszanym wynosi zwykle", "40–50 cm", "120 cm", "10 cm", "200 cm", ""),
+    Q("Rozstaw profili CD w suficie podwieszanym wynosi zwykle", "40-50 cm", "120 cm", "10 cm", "200 cm", ""),
     Q("Płyty g-k na suficie mocuje się wkrętami w rozstawie około", "17 cm", "50 cm", "100 cm", "5 cm", ""),
     Q("Płyty g-k na suficie montuje się", "prostopadle do profili nośnych, z przesunięciem styków", "równolegle bez przesunięcia", "na klej bez profili", "pionowo", ""),
     Q("Szczelinę między płytą g-k a podłogą pozostawia się ok.", "10 mm", "0 mm", "50 mm", "100 mm", ""),
@@ -284,7 +284,7 @@ window.KURSY = window.KURSY || {};
     Q("Farba akrylowa po wyschnięciu", "tworzy powłokę odporną na wilgoć i zmywalną (zależnie od klasy)", "zmywa się wodą całkowicie", "jest klejąca", "jest proszkiem", ""),
     Q("Farba olejna stosowana jest głównie do", "zabezpieczania drewna i metalu", "sufitów w łazience zawsze", "tapet", "płyt g-k bez gruntu", ""),
     Q("Rozcieńczalnikiem farb emulsyjnych jest", "woda", "benzyna", "terpentyna", "aceton", ""),
-    Q("Malowanie w temperaturze poniżej +5°C", "nie jest zalecane — powłoka źle schnie", "jest najlepsze", "jest obowiązkowe zimą", "nie ma znaczenia", ""),
+    Q("Malowanie w temperaturze poniżej +5°C", "nie jest zalecane - powłoka źle schnie", "jest najlepsze", "jest obowiązkowe zimą", "nie ma znaczenia", ""),
     Q("Tapeta winylowa jest", "zmywalna i odporna na wilgoć", "papierowa nieodporna", "z tkaniny wyłącznie", "z korka", ""),
     Q("Przed tapetowaniem chłonne podłoże", "gruntuje się", "moczy wodą", "maluje olejną", "pozostawia bez przygotowania", ""),
     Q("Rapport na tapecie to", "powtarzalność wzoru (dopasowanie pasów)", "szerokość rolki", "rodzaj kleju", "nazwa producenta", ""),
@@ -292,7 +292,7 @@ window.KURSY = window.KURSY || {};
     Q("Pianka montażowa niskoprężna stosowana jest do", "osadzania stolarki (aby nie wygięła ościeżnic)", "klejenia płytek", "fugowania", "malowania", ""),
     Q("Listwy przypodłogowe montuje się", "do ściany, z zachowaniem dylatacji podłogi", "do paneli na sztywno", "do sufitu", "na silikon do paneli", ""),
     Q("Obmiar ścian do malowania: pokój 4 × 5 m, wysokość 2,6 m, bez odliczeń", "46,8 m²", "20 m²", "52 m²", "26 m²", "Obwód 18 m × 2,6."),
-    Q("Pokój 4 × 5 m — powierzchnia podłogi do paneli z zapasem 5% wynosi", "21 m²", "20 m²", "25 m²", "18 m²", ""),
+    Q("Pokój 4 × 5 m - powierzchnia podłogi do paneli z zapasem 5% wynosi", "21 m²", "20 m²", "25 m²", "18 m²", ""),
     Q("Pył przy szlifowaniu gładzi wymaga stosowania", "maski przeciwpyłowej i okularów", "nauszników wyłącznie", "rękawic izolacyjnych", "kasku spawalniczego", ""),
     Q("Odpady budowlane (gruz, resztki płyt) należy", "segregować i przekazać do kontenera lub firmy odbierającej", "wyrzucać do odpadów komunalnych", "zakopywać", "spalać", ""),
     Q("Rozpuszczalniki i resztki farb olejnych to odpady", "niebezpieczne", "komunalne", "bio", "obojętne", "")
@@ -311,7 +311,7 @@ window.KURSY = window.KURSY || {};
     Q("Zaprawa do murowania powinna mieć konsystencję", "plastyczną, nie wypływającą ze spoin", "płynną jak woda", "suchą, sypką", "gumową", ""),
     Q("Zaprawę cementowo-wapienną należy zużyć w czasie około", "kilku godzin (zgodnie z zaleceniem)", "tygodnia", "miesiąca", "15 sekund", ""),
     Q("Cegły wapienno-piaskowe i ceramiczne w upały przed murowaniem", "zwilża się, aby nie odciągały wody z zaprawy", "suszy się", "smaruje olejem", "zamraża", ""),
-    Q("Grubość spoiny w murze z bloczków na zaprawę cienkowarstwową to", "1–3 mm", "10–15 mm", "20 mm", "30 mm", ""),
+    Q("Grubość spoiny w murze z bloczków na zaprawę cienkowarstwową to", "1-3 mm", "10-15 mm", "20 mm", "30 mm", ""),
     Q("Wiązanie krzyżykowe w murze to wiązanie, w którym", "warstwy wozówkowe są przesuwane względem siebie o ½ cegły co drugą warstwę", "są same główki", "nie ma przesunięć", "stosuje się tylko pustaki", ""),
     Q("Mur grubości 1 cegły w wiązaniu pospolitym w warstwie główkowej ma", "główki na całej grubości", "dwie wozówki", "tylko połówki", "pustaki", ""),
     Q("Narożnik muru wykonuje się", "przed murowaniem środkowej części, w pionie i z zachowaniem wiązania", "na końcu", "bez wiązania", "z innego materiału zawsze", ""),
@@ -321,7 +321,7 @@ window.KURSY = window.KURSY || {};
     Q("Komin murowany wymaga cegieł", "pełnych ceramicznych (lub systemowych pustaków kominowych)", "dziurawek", "silikatów zawsze", "betonu komórkowego", ""),
     Q("Przewód dymowy w kominie powinien mieć przekrój co najmniej", "14 × 14 cm (orientacyjnie, wg przepisów i urządzenia)", "5 × 5 cm", "50 × 50 cm", "dowolny", ""),
     Q("Ściany murowane wznosi się warstwami, nie przekraczając w ciągu dnia wysokości zalecanej dla danego materiału, aby", "zaprawa zdążyła związać i mur się nie odkształcił", "zaoszczędzić czas", "uniknąć malowania", "spełnić wymagania sanepidu", ""),
-    Q("Murowanie w temperaturze poniżej 0°C bez zabezpieczeń", "nie jest dozwolone — zaprawa zamarza", "jest zalecane", "przyspiesza wiązanie", "nie ma wpływu", ""),
+    Q("Murowanie w temperaturze poniżej 0°C bez zabezpieczeń", "nie jest dozwolone - zaprawa zamarza", "jest zalecane", "przyspiesza wiązanie", "nie ma wpływu", ""),
     Q("Świeży mur w upały", "zwilża się i chroni przed szybkim wysychaniem", "nagrzewa się dmuchawą", "posypuje solą", "maluje od razu", ""),
     Q("Łata murarska służy do", "sprawdzania płaskości muru i tynku", "mieszania zaprawy", "cięcia cegieł", "zbrojenia", ""),
     Q("Sznur murarski napina się", "wzdłuż lica muru na wysokości warstwy", "pionowo", "na skos", "nie stosuje się", ""),
@@ -342,7 +342,7 @@ window.KURSY = window.KURSY || {};
     Q("Rozbiórka murów wykonywana jest", "od góry do dołu, warstwami", "od dołu do góry", "przez podkopanie fundamentu", "losowo", ""),
     Q("Przy cięciu cegieł piłą tarczową należy stosować", "okulary, ochronniki słuchu i maskę przeciwpyłową", "tylko rękawice", "nic", "krawat", ""),
     Q("Cement i wapno przechowuje się", "w suchym pomieszczeniu, na paletach, chronione przed wilgocią", "na gołej ziemi", "w deszczu", "w wodzie", ""),
-    Q("Wapno działa na skórę", "drażniąco/żrąco — wymaga rękawic i okularów", "obojętnie", "leczniczo", "chłodząco bez skutków", "")
+    Q("Wapno działa na skórę", "drażniąco/żrąco - wymaga rękawic i okularów", "obojętnie", "leczniczo", "chłodząco bez skutków", "")
   ]));
 
   add("BUD.14", BUD_COMMON.concat([
@@ -366,7 +366,7 @@ window.KURSY = window.KURSY || {};
     Q("Kosztorys powykonawczy różni się od ofertowego tym, że ilości przyjmuje się z", "obmiaru wykonanych robót", "projektu", "przedmiaru", "szacunku", ""),
     Q("Wynagrodzenie ryczałtowe w umowie o roboty budowlane oznacza", "stałą kwotę za cały zakres, niezależnie od rzeczywistych ilości (co do zasady)", "rozliczenie wg obmiaru", "płatność za godziny", "brak wynagrodzenia", ""),
     Q("Wynagrodzenie kosztorysowe ustala się", "na podstawie kosztorysu powykonawczego (ilości faktyczne)", "ryczałtem", "losowo", "przez sąd", ""),
-    Q("Zabezpieczenie należytego wykonania umowy w zamówieniach publicznych może wynosić", "do 10% ceny oferty", "50%", "100%", "0,1%", "Zwykle 2–10%."),
+    Q("Zabezpieczenie należytego wykonania umowy w zamówieniach publicznych może wynosić", "do 10% ceny oferty", "50%", "100%", "0,1%", "Zwykle 2-10%."),
     Q("Specyfikacja warunków zamówienia (SWZ) dotyczy", "zamówień publicznych", "umów najmu", "umów o pracę", "darowizn", ""),
     Q("Kryterium wyboru oferty w zamówieniu publicznym to m.in.", "cena i inne kryteria jakościowe (np. termin, gwarancja)", "wyłącznie sympatia", "kolejność wpływu", "losowanie zawsze", ""),
     Q("Harmonogram rzeczowo-finansowy przedstawia", "zakres robót i ich wartość w czasie", "tylko kolory", "tylko listę pracowników", "dziennik budowy", ""),

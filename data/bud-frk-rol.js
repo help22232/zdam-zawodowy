@@ -6,12 +6,12 @@ window.KURSY["BUD.11"] = {
       tytul: "Systemy suchej zabudowy",
       tresc: `
 <ul>
-<li>Płyty gipsowo-kartonowe: typ <b>A</b> — standardowa, <b>H</b> (H2) — o zmniejszonej nasiąkliwości (zielona, do łazienek i kuchni), <b>F</b> — o zwiększonej odporności ogniowej (zwykle różowa lub czerwona), DF/DFH2 — łączone właściwości. Grubość typowa 12,5 mm.</li>
-<li>Profile ścianek: <b>UW</b> — prowadnice mocowane do podłogi i stropu, <b>CW</b> — słupki wstawiane w prowadnice; rozstaw słupków zwykle <b>60 cm</b> (przy okładzinie ceramicznej lub pojedynczym opłytowaniu w miejscach obciążonych — gęściej, np. 40 cm). Sufity podwieszane: profile <b>CD</b> i <b>UD</b>, wieszaki.</li>
+<li>Płyty gipsowo-kartonowe: typ <b>A</b> - standardowa, <b>H</b> (H2) - o zmniejszonej nasiąkliwości (zielona, do łazienek i kuchni), <b>F</b> - o zwiększonej odporności ogniowej (zwykle różowa lub czerwona), DF/DFH2 - łączone właściwości. Grubość typowa 12,5 mm.</li>
+<li>Profile ścianek: <b>UW</b> - prowadnice mocowane do podłogi i stropu, <b>CW</b> - słupki wstawiane w prowadnice; rozstaw słupków zwykle <b>60 cm</b> (przy okładzinie ceramicznej lub pojedynczym opłytowaniu w miejscach obciążonych - gęściej, np. 40 cm). Sufity podwieszane: profile <b>CD</b> i <b>UD</b>, wieszaki.</li>
 <li>Pod prowadnice stosuje się taśmę akustyczną (uszczelniającą).</li>
 <li>Płyty mocuje się wkrętami do g-k co ok. <b>25 cm</b> na ścianach (gęściej na sufitach), łby wkręcone tuż pod powierzchnię kartonu, bez jego przerywania.</li>
 <li>Spoiny płyt przesuwa się względem siebie (w dwuwarstwowym opłytowaniu i na sąsiednich arkuszach), łączy na profilach.</li>
-<li>Spoinowanie: masa szpachlowa + <b>taśma zbrojąca</b> (papierowa lub z włókna szklanego), narożniki — kątowniki ochronne, potem szlifowanie i gruntowanie.</li>
+<li>Spoinowanie: masa szpachlowa + <b>taśma zbrojąca</b> (papierowa lub z włókna szklanego), narożniki - kątowniki ochronne, potem szlifowanie i gruntowanie.</li>
 <li>Wełna mineralna w ściance poprawia izolacyjność akustyczną.</li>
 </ul>`
     },
@@ -19,9 +19,9 @@ window.KURSY["BUD.11"] = {
       tytul: "Okładziny ceramiczne",
       tresc: `
 <ul>
-<li>Podłoże: nośne, równe, czyste, zagruntowane; w strefach mokrych — <b>hydroizolacja podpłytkowa</b> (folia w płynie, dwie warstwy) i <b>taśmy uszczelniające</b> w narożnikach i przy odpływach.</li>
-<li>Kleje cementowe: <b>C1</b> (zwykły), <b>C2</b> (o podwyższonej przyczepności — duże płytki, gres, ogrzewanie podłogowe); oznaczenia dodatkowe: T (zmniejszony spływ), E (wydłużony czas otwarty), S1/S2 (odkształcalne).</li>
-<li>Klej nakłada się pacą zębatą (wielkość zęba do formatu płytki); przy dużych płytkach — metoda kombinowana (klej na podłoże i na płytkę).</li>
+<li>Podłoże: nośne, równe, czyste, zagruntowane; w strefach mokrych - <b>hydroizolacja podpłytkowa</b> (folia w płynie, dwie warstwy) i <b>taśmy uszczelniające</b> w narożnikach i przy odpływach.</li>
+<li>Kleje cementowe: <b>C1</b> (zwykły), <b>C2</b> (o podwyższonej przyczepności - duże płytki, gres, ogrzewanie podłogowe); oznaczenia dodatkowe: T (zmniejszony spływ), E (wydłużony czas otwarty), S1/S2 (odkształcalne).</li>
+<li>Klej nakłada się pacą zębatą (wielkość zęba do formatu płytki); przy dużych płytkach - metoda kombinowana (klej na podłoże i na płytkę).</li>
 <li>Płytki układa się zaczynając od wyznaczonej linii (np. od osi pomieszczenia lub od widocznej krawędzi), tak aby docinki były symetryczne i nie węższe niż ok. połowa płytki.</li>
 <li>Spoiny wyznaczają krzyżyki lub system poziomujący; fugi cementowe <b>CG2</b>, epoksydowe RG (odporne chemicznie).</li>
 <li>Szczeliny dylatacyjne przy ścianach i na dużych powierzchniach wypełnia się elastycznym silikonem sanitarnym.</li>
@@ -31,10 +31,10 @@ window.KURSY["BUD.11"] = {
       tytul: "Malowanie, tapetowanie i podłogi",
       tresc: `
 <ul>
-<li>Malowanie: przygotowanie podłoża (usunięcie starych powłok, szpachlowanie, szlifowanie), <b>gruntowanie</b> (wyrównuje chłonność), malowanie dwiema warstwami. Farby: emulsyjne (akrylowe, lateksowe — odporne na szorowanie), silikatowe i silikonowe (elewacje), olejne i ftalowe (drewno, metal). Wałek i pędzel; pierwsza warstwa „na krzyż”, ostatnią rozprowadza się w jednym kierunku (od okna).</li>
+<li>Malowanie: przygotowanie podłoża (usunięcie starych powłok, szpachlowanie, szlifowanie), <b>gruntowanie</b> (wyrównuje chłonność), malowanie dwiema warstwami. Farby: emulsyjne (akrylowe, lateksowe - odporne na szorowanie), silikatowe i silikonowe (elewacje), olejne i ftalowe (drewno, metal). Wałek i pędzel; pierwsza warstwa „na krzyż”, ostatnią rozprowadza się w jednym kierunku (od okna).</li>
 <li>Tapetowanie: tapety papierowe (klej na tapetę, czas nasiąkania), <b>flizelinowe</b> (klej nakłada się na ścianę), winylowe; pierwszy pas przykleja się wg pionu (poziomica, pion), wzór dopasowuje; pęcherze wygładza się od środka do krawędzi.</li>
-<li>Panele podłogowe: podkład (paroizolacja na podłożach mineralnych), <b>szczelina dylatacyjna ok. 10 mm</b> od ścian, przesunięcie styków czołowych co najmniej ok. 30–40 cm, listwy przypodłogowe mocowane do ściany, nie do paneli.</li>
-<li>Wykładziny PCV i dywanowe — kleje dyspersyjne, łączenie przez zgrzewanie lub spoinowanie.</li>
+<li>Panele podłogowe: podkład (paroizolacja na podłożach mineralnych), <b>szczelina dylatacyjna ok. 10 mm</b> od ścian, przesunięcie styków czołowych co najmniej ok. 30-40 cm, listwy przypodłogowe mocowane do ściany, nie do paneli.</li>
+<li>Wykładziny PCV i dywanowe - kleje dyspersyjne, łączenie przez zgrzewanie lub spoinowanie.</li>
 </ul>`
     }
   ],
@@ -51,13 +51,13 @@ płyty g-k 1,2 × 2,6 m = 3,12 m² na arkusz</pre>`
   pytania: [
     { p: "Płyta gipsowo-kartonowa do pomieszczeń o podwyższonej wilgotności to płyta typu", o: ["H (H2)", "A", "F", "D"], k: 0, w: "Zwykle ma zielony karton." },
     { p: "Płyta g-k o zwiększonej odporności ogniowej to płyta typu", o: ["F", "H", "A", "S"], k: 0, w: "Ma włókna szklane w rdzeniu." },
-    { p: "Profile mocowane do podłogi i stropu jako prowadnice ścianki działowej to", o: ["UW", "CW", "CD", "UA"], k: 0, w: "CW — słupki." },
+    { p: "Profile mocowane do podłogi i stropu jako prowadnice ścianki działowej to", o: ["UW", "CW", "CD", "UA"], k: 0, w: "CW - słupki." },
     { p: "Typowy rozstaw słupków CW w ściance działowej wynosi", o: ["60 cm", "120 cm", "20 cm", "100 cm"], k: 0, w: "Odpowiada połowie szerokości płyty 1 200 mm." },
     { p: "Wkręty mocujące płyty g-k do profili na ścianie rozmieszcza się co około", o: ["25 cm", "60 cm", "5 cm", "1 m"], k: 0, w: "Łby lekko poniżej powierzchni kartonu." },
     { p: "Do spoinowania płyt g-k, oprócz masy szpachlowej, stosuje się", o: ["taśmę zbrojącą", "taśmę izolacyjną elektryczną", "silikon", "pianę montażową"], k: 0, w: "Zapobiega pękaniu spoin." },
     { p: "Pod prowadnice UW przykleja się", o: ["taśmę akustyczną (uszczelniającą)", "folię aluminiową", "papę", "nic"], k: 0, w: "Ogranicza przenoszenie dźwięków." },
     { p: "Klej do płytek o podwyższonej przyczepności oznacza się symbolem", o: ["C2", "C1", "CG2", "RG"], k: 0, w: "CG2 i RG to oznaczenia fug." },
-    { p: "Oznaczenie T przy kleju do płytek to", o: ["zmniejszony spływ", "wydłużony czas otwarty", "odporność na mróz", "klej epoksydowy"], k: 0, w: "E — wydłużony czas otwarty." },
+    { p: "Oznaczenie T przy kleju do płytek to", o: ["zmniejszony spływ", "wydłużony czas otwarty", "odporność na mróz", "klej epoksydowy"], k: 0, w: "E - wydłużony czas otwarty." },
     { p: "W strefie prysznica pod płytkami wykonuje się", o: ["hydroizolację z taśmami uszczelniającymi w narożnikach", "warstwę styropianu", "tylko grunt", "tapetę"], k: 0, w: "Np. dwie warstwy folii w płynie." },
     { p: "Szczeliny dylatacyjne w okładzinie ceramicznej przy wannie wypełnia się", o: ["silikonem sanitarnym", "fugą cementową", "zaprawą murarską", "gipsem"], k: 0, w: "Materiał elastyczny przenosi ruchy." },
     { p: "Docinki płytek przy ścianach powinny być", o: ["symetryczne i nie węższe niż ok. połowa płytki", "jak najwęższe, np. 1 cm", "tylko po jednej stronie", "dowolne"], k: 0, w: "Dlatego układ zaczyna się od wyznaczonej osi." },
@@ -95,7 +95,7 @@ window.KURSY["BUD.14"] = {
 <ul>
 <li>Uczestnicy procesu budowlanego: <b>inwestor</b>, <b>inspektor nadzoru inwestorskiego</b>, <b>projektant</b>, <b>kierownik budowy</b> lub robót.</li>
 <li>Pozwolenie na budowę wydaje <b>starosta</b> (lub prezydent miasta na prawach powiatu); niektóre roboty wymagają tylko <b>zgłoszenia</b>.</li>
-<li><b>Dziennik budowy</b> — urzędowy dokument przebiegu robót (wydawany papierowo lub elektronicznie — EDB); wpisy dokonują m.in. kierownik budowy, inspektor nadzoru, projektant.</li>
+<li><b>Dziennik budowy</b> - urzędowy dokument przebiegu robót (wydawany papierowo lub elektronicznie - EDB); wpisy dokonują m.in. kierownik budowy, inspektor nadzoru, projektant.</li>
 <li>Kierownik budowy: protokolarne przejęcie terenu budowy, prowadzenie dziennika, sporządzenie <b>planu BIOZ</b> (bezpieczeństwa i ochrony zdrowia), zgłaszanie robót do odbioru, w tym <b>zanikających i ulegających zakryciu</b>.</li>
 <li><b>Tablica informacyjna</b> i ogłoszenie BIOZ na budowie.</li>
 <li>Odbiory: częściowe, robót zanikających, <b>końcowy</b>; zawiadomienie o zakończeniu budowy lub pozwolenie na użytkowanie (nadzór budowlany).</li>
@@ -106,59 +106,59 @@ window.KURSY["BUD.14"] = {
       tresc: `
 <ul>
 <li>Rodzaje kosztorysów: <b>inwestorski</b> (szacunek dla zamawiającego), <b>ofertowy</b> (wykonawca w przetargu), <b>powykonawczy</b> (rozliczenie wg obmiaru), zamienny, dodatkowy.</li>
-<li>Podstawy: przedmiar robót, katalogi nakładów rzeczowych <b>KNR</b> (nakłady R — robocizna w r-g, M — materiały, S — sprzęt w m-g), ceny jednostkowe.</li>
+<li>Podstawy: przedmiar robót, katalogi nakładów rzeczowych <b>KNR</b> (nakłady R - robocizna w r-g, M - materiały, S - sprzęt w m-g), ceny jednostkowe.</li>
 <li><b>Metoda uproszczona</b>: wartość = Σ (ilość robót × cena jednostkowa).</li>
 <li><b>Metoda szczegółowa</b>:</li>
 </ul>
-<pre>R — robocizna = nakład r-g × ilość × stawka
-M — materiały = nakład × ilość × cena (+ koszty zakupu)
-S — sprzęt = nakład m-g × ilość × cena m-g
-Kp — koszty pośrednie = % od (R + S)
-Z — zysk = % od (R + S + Kp)
+<pre>R - robocizna = nakład r-g × ilość × stawka
+M - materiały = nakład × ilość × cena (+ koszty zakupu)
+S - sprzęt = nakład m-g × ilość × cena m-g
+Kp - koszty pośrednie = % od (R + S)
+Z - zysk = % od (R + S + Kp)
 wartość netto = R + M + S + Kp + Z;  + VAT
 
 Przykład: R 10 000, M 25 000, S 2 000, Kp 60%, Z 10%
 Kp = 0,6 × 12 000 = 7 200
 Z = 0,1 × (12 000 + 7 200) = 1 920
 netto = 10 000 + 25 000 + 2 000 + 7 200 + 1 920 = 46 120 zł</pre>
-<p>VAT w budownictwie: podstawowa stawka 23%; 8% — m.in. dla obiektów budownictwa objętego społecznym programem mieszkaniowym (np. mieszkania do 150 m², domy do 300 m²).</p>`
+<p>VAT w budownictwie: podstawowa stawka 23%; 8% - m.in. dla obiektów budownictwa objętego społecznym programem mieszkaniowym (np. mieszkania do 150 m², domy do 300 m²).</p>`
     },
     {
       tytul: "Planowanie i kontrola robót",
       tresc: `
 <ul>
-<li><b>Harmonogram</b> (wykres Gantta) — kolejność i czas robót; <b>sieć zależności</b> — ścieżka krytyczna (zadania, których opóźnienie wydłuża całą budowę).</li>
+<li><b>Harmonogram</b> (wykres Gantta) - kolejność i czas robót; <b>sieć zależności</b> - ścieżka krytyczna (zadania, których opóźnienie wydłuża całą budowę).</li>
 <li>Czas trwania roboty = pracochłonność (r-g) ÷ (liczba pracowników × czas zmiany).</li>
 <li>Zagospodarowanie placu budowy: drogi, składowiska, zaplecze socjalne, ogrodzenie, przyłącza mediów, strefy niebezpieczne żurawia.</li>
-<li>Kontrola jakości: materiały z deklaracją właściwości użytkowych i oznakowaniem CE lub B, badania (np. próbki betonu — klasa wytrzymałości C25/30 oznacza wytrzymałość charakterystyczną na ściskanie 25 MPa dla walca / 30 MPa dla kostki), protokoły odbiorów.</li>
+<li>Kontrola jakości: materiały z deklaracją właściwości użytkowych i oznakowaniem CE lub B, badania (np. próbki betonu - klasa wytrzymałości C25/30 oznacza wytrzymałość charakterystyczną na ściskanie 25 MPa dla walca / 30 MPa dla kostki), protokoły odbiorów.</li>
 <li>Specyfikacje techniczne wykonania i odbioru robót (STWiOR) określają wymagania jakościowe.</li>
 </ul>`
     }
   ],
   rozszerzony: [
     {
-      tytul: "Zadanie praktyczne BUD.14 — przebieg",
+      tytul: "Zadanie praktyczne BUD.14: przebieg",
       tresc: `
 <p>Zadanie (model „dk”) zwykle zawiera rysunki i opis. Trzeba sporządzić przedmiar wybranych robót, kosztorys (uproszczony lub szczegółowy), harmonogram i wpis do dziennika budowy lub protokół odbioru.</p>
-<div class="tip">Sprawdź w treści, czy koszty pośrednie liczy się od R + S, a zysk od R + S + Kp — tak jest najczęściej, ale założenia mogą się różnić.</div>`
+<div class="tip">Sprawdź w treści, czy koszty pośrednie liczy się od R + S, a zysk od R + S + Kp - tak jest najczęściej, ale założenia mogą się różnić.</div>`
     }
   ],
   pytania: [
-    { p: "Pozwolenie na budowę wydaje co do zasady", o: ["starosta", "wójt", "wojewoda zawsze", "inspektor nadzoru"], k: 0, w: "W miastach na prawach powiatu — prezydent miasta." },
+    { p: "Pozwolenie na budowę wydaje co do zasady", o: ["starosta", "wójt", "wojewoda zawsze", "inspektor nadzoru"], k: 0, w: "W miastach na prawach powiatu - prezydent miasta." },
     { p: "Plan bezpieczeństwa i ochrony zdrowia na budowie (BIOZ) sporządza", o: ["kierownik budowy", "inwestor", "projektant konstrukcji", "starosta"], k: 0, w: "Na podstawie informacji BIOZ od projektanta." },
     { p: "Robotami zanikającymi są np.", o: ["zbrojenie przed zabetonowaniem", "malowanie ścian", "montaż drzwi", "układanie paneli"], k: 0, w: "Odbiera się je przed zakryciem." },
     { p: "Urzędowym dokumentem przebiegu robót budowlanych jest", o: ["dziennik budowy", "kosztorys", "plan BIOZ", "STWiOR"], k: 0, w: "Wpisy dokonują uprawnione osoby." },
     { p: "Kosztorys sporządzany przez wykonawcę w przetargu to kosztorys", o: ["ofertowy", "inwestorski", "powykonawczy", "zamienny"], k: 0, w: "Inwestorski sporządza zamawiający." },
     { p: "Kosztorys sporządzany po wykonaniu robót na podstawie obmiaru to kosztorys", o: ["powykonawczy", "inwestorski", "ofertowy", "dodatkowy"], k: 0, w: "Służy do rozliczenia." },
-    { p: "W kosztorysie szczegółowym koszty pośrednie liczy się zwykle od", o: ["R + S", "M", "R + M + S", "wartości brutto"], k: 0, w: "Zysk — od R + S + Kp." },
+    { p: "W kosztorysie szczegółowym koszty pośrednie liczy się zwykle od", o: ["R + S", "M", "R + M + S", "wartości brutto"], k: 0, w: "Zysk - od R + S + Kp." },
     { p: "R = 8 000 zł, S = 2 000 zł, Kp = 70%. Koszty pośrednie wynoszą", o: ["7 000 zł", "5 600 zł", "14 000 zł", "700 zł"], k: 0, w: "0,7 × 10 000." },
     { p: "R + S + Kp = 17 000 zł, zysk 10%. Zysk wynosi", o: ["1 700 zł", "170 zł", "1 000 zł", "17 000 zł"], k: 0, w: "Zysk od R + S + Kp." },
-    { p: "Nakład robocizny w KNR podawany jest w", o: ["roboczogodzinach (r-g)", "maszynogodzinach", "złotych", "m³"], k: 0, w: "Sprzęt — w maszynogodzinach (m-g)." },
+    { p: "Nakład robocizny w KNR podawany jest w", o: ["roboczogodzinach (r-g)", "maszynogodzinach", "złotych", "m³"], k: 0, w: "Sprzęt - w maszynogodzinach (m-g)." },
     { p: "Zadania, których opóźnienie wydłuża całą budowę, leżą na", o: ["ścieżce krytycznej", "ścieżce rezerwowej", "liście materiałów", "osi czasu dziennika"], k: 0, w: "Mają zerowy zapas czasu." },
     { p: "Pracochłonność 240 r-g, brygada 4 osób, zmiana 8 h. Czas wykonania wynosi", o: ["7,5 dnia", "30 dni", "60 dni", "4 dni"], k: 0, w: "240 ÷ (4 × 8) = 7,5." },
     { p: "Klasa betonu C25/30 oznacza", o: ["wytrzymałość charakterystyczną 25 MPa (walec) / 30 MPa (kostka)", "25% cementu i 30% wody", "mrozoodporność 25 cykli", "gęstość 2 530 kg/m³"], k: 0, w: "Badanie na próbkach po 28 dniach." },
     { p: "Dokument określający wymagania jakościowe wykonania i odbioru robót to", o: ["STWiOR", "plan BIOZ", "dziennik budowy", "KNR"], k: 0, w: "Specyfikacja techniczna wykonania i odbioru robót." },
-    { p: "Podstawowa stawka VAT na roboty budowlane to", o: ["23%", "8%", "5%", "0%"], k: 0, w: "8% — m.in. w budownictwie objętym społecznym programem mieszkaniowym." },
+    { p: "Podstawowa stawka VAT na roboty budowlane to", o: ["23%", "8%", "5%", "0%"], k: 0, w: "8% - m.in. w budownictwie objętym społecznym programem mieszkaniowym." },
     { p: "Inwestora na budowie reprezentuje w zakresie kontroli jakości i zgodności z projektem", o: ["inspektor nadzoru inwestorskiego", "kierownik budowy", "majster", "geodeta"], k: 0, w: "Kierownik budowy reprezentuje wykonawcę." },
     { p: "Ilość robót obliczona na podstawie projektu przed ich wykonaniem to", o: ["przedmiar", "obmiar", "kosztorys", "harmonogram"], k: 0, w: "Obmiar wykonuje się po wykonaniu." },
     { p: "Materiał budowlany wprowadzony do obrotu musi mieć m.in.", o: ["deklarację właściwości użytkowych i oznakowanie CE lub znak budowlany B", "tylko paragon", "zdjęcie", "opinię kierownika budowy"], k: 0, w: "Potwierdza zgodność z normą lub oceną techniczną." }
@@ -193,7 +193,7 @@ window.KURSY["FRK.03"] = {
 <ul>
 <li>Elementy kompozycji: <b>kształt</b> (sylwetka fryzury), <b>linia</b> (pozioma, pionowa, ukośna, łukowa), <b>faktura</b> (gładka, teksturowana), <b>kolor</b>, <b>objętość</b>.</li>
 <li>Zasady: <b>symetria</b> i <b>asymetria</b>, <b>proporcja</b> (fryzura w stosunku do twarzy i sylwetki), <b>rytm</b> (powtarzalność fal, loków), <b>kontrast</b> (np. krótkie boki i długa góra), <b>dominanta</b> (najważniejszy element), równowaga.</li>
-<li>Linie pionowe wysmuklają i wydłużają, poziome — poszerzają; asymetria nadaje dynamiki i maskuje niedoskonałości.</li>
+<li>Linie pionowe wysmuklają i wydłużają, poziome - poszerzają; asymetria nadaje dynamiki i maskuje niedoskonałości.</li>
 <li>Dobór do kształtu twarzy: owalna (wzorcowa), okrągła (objętość na czubku, pionowe linie), kwadratowa (miękkie fale, asymetria), trójkątna (objętość w dolnej części), pociągła (grzywka, objętość po bokach), sercowata (objętość na wysokości żuchwy).</li>
 <li>Uwzględnia się też profil (nos, podbródek, czoło), wzrost i sylwetkę, wiek, styl życia, strukturę i gęstość włosów.</li>
 </ul>`
@@ -202,9 +202,9 @@ window.KURSY["FRK.03"] = {
       tytul: "Kolor w projektowaniu",
       tresc: `
 <ul>
-<li><b>Koło barw</b>: barwy podstawowe (żółta, czerwona, niebieska), pochodne (pomarańczowa, fioletowa, zielona); <b>dopełniające</b> leżą naprzeciw siebie (neutralizują się), <b>analogiczne</b> — obok siebie (harmonia).</li>
+<li><b>Koło barw</b>: barwy podstawowe (żółta, czerwona, niebieska), pochodne (pomarańczowa, fioletowa, zielona); <b>dopełniające</b> leżą naprzeciw siebie (neutralizują się), <b>analogiczne</b> - obok siebie (harmonia).</li>
 <li>Barwy <b>ciepłe</b> (złote, miedziane, czerwone) przybliżają i optycznie powiększają; <b>zimne</b> (popielate, perłowe, fioletowe) oddalają i wyszczuplają. Jasne kolory zwiększają objętość, ciemne ją zmniejszają.</li>
-<li><b>Typy kolorystyczne urody</b>: <b>wiosna</b> i <b>jesień</b> — ciepłe (wiosna jasna, jesień głęboka); <b>lato</b> i <b>zima</b> — zimne (lato stonowane, zima kontrastowa).</li>
+<li><b>Typy kolorystyczne urody</b>: <b>wiosna</b> i <b>jesień</b> - ciepłe (wiosna jasna, jesień głęboka); <b>lato</b> i <b>zima</b> - zimne (lato stonowane, zima kontrastowa).</li>
 <li>Techniki: koloryzacja całościowa, pasemka, balejaż, ombre i sombre, babylights, kontury twarzy (face framing), koloryzacja blokowa.</li>
 </ul>`
     },
@@ -212,10 +212,10 @@ window.KURSY["FRK.03"] = {
       tytul: "Fryzury historyczne i okolicznościowe",
       tresc: `
 <ul>
-<li>Starożytny <b>Egipt</b> — peruki, geometryczne linie; <b>Grecja</b> — upięcia z opaskami, loki; <b>Rzym</b> — misterne koki, loki.</li>
-<li><b>Barok i rokoko</b> — wysokie, pudrowane fryzury i peruki (rokoko: fryzury na stelażach).</li>
-<li><b>Lata 20. XX w.</b> — krótka fryzura „na chłopczycę” (bob), fale wodne (marcelowanie); <b>lata 50.</b> — loki, pin-up; <b>lata 60.</b> — tapirowane fryzury z objętością (bouffant), geometryczne cięcia (Vidal Sassoon); <b>lata 70.</b> — afro, długie cieniowane włosy; <b>lata 80.</b> — duża objętość, trwałe ondulacje.</li>
-<li>Fryzury okolicznościowe: upięcia ślubne, koki (klasyczny, francuski — „banan”), warkocze (francuski, holenderski, kłos), fale hollywoodzkie; elementy podporowe: wałki, wypełniacze, wsuwki, szpilki.</li>
+<li>Starożytny <b>Egipt</b> - peruki, geometryczne linie; <b>Grecja</b> - upięcia z opaskami, loki; <b>Rzym</b> - misterne koki, loki.</li>
+<li><b>Barok i rokoko</b> - wysokie, pudrowane fryzury i peruki (rokoko: fryzury na stelażach).</li>
+<li><b>Lata 20. XX w.</b> - krótka fryzura „na chłopczycę” (bob), fale wodne (marcelowanie); <b>lata 50.</b> - loki, pin-up; <b>lata 60.</b> - tapirowane fryzury z objętością (bouffant), geometryczne cięcia (Vidal Sassoon); <b>lata 70.</b> - afro, długie cieniowane włosy; <b>lata 80.</b> - duża objętość, trwałe ondulacje.</li>
+<li>Fryzury okolicznościowe: upięcia ślubne, koki (klasyczny, francuski - „banan”), warkocze (francuski, holenderski, kłos), fale hollywoodzkie; elementy podporowe: wałki, wypełniacze, wsuwki, szpilki.</li>
 </ul>`
     }
   ],
@@ -225,7 +225,7 @@ window.KURSY["FRK.03"] = {
       tresc: `
 <ul><li><b>Karta projektu</b>: dane klienta, diagnoza (kształt twarzy, typ urody, stan włosów), szkic (z przodu, z boku, z tyłu), opis cięcia, koloru, stylizacji, preparaty, czas, koszt.</li>
 <li>Prezentacja: <b>moodboard</b> (tablica inspiracji), portfolio, sesja zdjęciowa (oświetlenie, tło, makijaż, stylizacja ubioru spójna z fryzurą).</li>
-<li>Trendy — śledzenie pokazów, magazynów branżowych, mediów społecznościowych.</li></ul>`
+<li>Trendy - śledzenie pokazów, magazynów branżowych, mediów społecznościowych.</li></ul>`
     }
   ],
   pytania: [
@@ -277,31 +277,31 @@ window.KURSY["FRK.04"] = {
 <li>Warstwy naskórka (od dołu): <b>podstawna</b> (rozrodcza, melanocyty), kolczysta, ziarnista, jasna (tylko na dłoniach i stopach), <b>rogowa</b>. Odnowa naskórka trwa ok. 28 dni.</li>
 <li>Typy cery: normalna, <b>sucha</b> (mało sebum, szorstka, skłonna do zmarszczek), <b>tłusta</b> (rozszerzone pory, połysk, zaskórniki), <b>mieszana</b> (strefa T tłusta), <b>wrażliwa</b>, <b>naczyniowa</b> (rumień, rozszerzone naczynka), trądzikowa.</li>
 <li>Wykwity: plama, grudka, krosta, pęcherzyk, zaskórnik otwarty i zamknięty, teleangiektazja.</li>
-<li>pH skóry ok. 4,5–5,5 (płaszcz hydrolipidowy).</li>
+<li>pH skóry ok. 4,5-5,5 (płaszcz hydrolipidowy).</li>
 </ul>`
     },
     {
       tytul: "Zabiegi pielęgnacyjne twarzy",
       tresc: `
-<ol><li><b>Demakijaż</b> (oczy i usta — osobnym preparatem), tonizacja.</li>
+<ol><li><b>Demakijaż</b> (oczy i usta - osobnym preparatem), tonizacja.</li>
 <li><b>Diagnoza</b> skóry (oględziny, lupa z lampą, wywiad, przeciwwskazania).</li>
-<li><b>Peeling</b>: mechaniczny (drobinki), enzymatyczny (dla cery wrażliwej i naczyniowej — bez pocierania), chemiczny (kwasy AHA: glikolowy, migdałowy, mlekowy; BHA: salicylowy — dla cery tłustej i trądzikowej).</li>
+<li><b>Peeling</b>: mechaniczny (drobinki), enzymatyczny (dla cery wrażliwej i naczyniowej - bez pocierania), chemiczny (kwasy AHA: glikolowy, migdałowy, mlekowy; BHA: salicylowy - dla cery tłustej i trądzikowej).</li>
 <li>Oczyszczanie manualne (w cerze tłustej), dezynfekcja.</li>
-<li><b>Masaż klasyczny twarzy</b>: ruchy — głaskanie, rozcieranie, ugniatanie, oklepywanie, wibracja; w kierunku naczyń limfatycznych (do węzłów chłonnych). Nie masuje się cery naczyniowej intensywnie ani skóry ze stanem zapalnym.</li>
+<li><b>Masaż klasyczny twarzy</b>: ruchy - głaskanie, rozcieranie, ugniatanie, oklepywanie, wibracja; w kierunku naczyń limfatycznych (do węzłów chłonnych). Nie masuje się cery naczyniowej intensywnie ani skóry ze stanem zapalnym.</li>
 <li><b>Maska</b> dobrana do cery, potem krem.</li></ol>
-<p>Przeciwwskazania ogólne: stany zapalne i infekcje skóry (opryszczka, grzybica, liszajec), świeże rany, gorączka, alergia na składniki; do części zabiegów — ciąża, rozrusznik serca (elektrostymulacja), choroby nowotworowe.</p>
+<p>Przeciwwskazania ogólne: stany zapalne i infekcje skóry (opryszczka, grzybica, liszajec), świeże rany, gorączka, alergia na składniki; do części zabiegów - ciąża, rozrusznik serca (elektrostymulacja), choroby nowotworowe.</p>
 <h4>Elektrokosmetyka</h4><p>Galwanizacja i <b>jonoforeza</b> (prąd stały, wprowadzanie substancji czynnych), darsonwalizacja (prąd wielkiej częstotliwości, działanie antybakteryjne), ultradźwięki (sonoforeza, peeling kawitacyjny), <b>mikrodermabrazja</b> (złuszczanie kryształkami lub głowicą diamentową).</p>`
     },
     {
       tytul: "Zabiegi oprawy oka, depilacja, dłonie i stopy",
       tresc: `
 <ul>
-<li><b>Henna brwi i rzęs</b> — próba uczuleniowa 48 h wcześniej; ochrona skóry wokół (wazelina, płatki pod oczy); czas działania wg producenta.</li>
-<li><b>Regulacja brwi</b> — pęsetą, zgodnie z kierunkiem wzrostu; wyznaczenie początku, łuku i końca brwi (linie od skrzydełka nosa).</li>
-<li><b>Depilacja woskiem</b> — włoski ok. 0,5 cm; wosk ciepły (miękki) nakłada się <b>zgodnie z kierunkiem wzrostu</b>, a zrywa <b>przeciwnie</b>, szybkim ruchem, równolegle do skóry, napinając skórę. Przeciwwskazania: żylaki, zmiany skórne, cukrzyca (ostrożnie), rozdrapania.</li>
-<li><b>Manicure</b>: zmycie lakieru, skracanie i piłowanie paznokci (pilnik od boku do środka, w jednym kierunku), zmiękczenie i odsunięcie skórek, pielęgnacja, lakierowanie (baza, kolor, top). Manicure hybrydowy — utwardzanie w lampie UV/LED.</li>
+<li><b>Henna brwi i rzęs</b> - próba uczuleniowa 48 h wcześniej; ochrona skóry wokół (wazelina, płatki pod oczy); czas działania wg producenta.</li>
+<li><b>Regulacja brwi</b> - pęsetą, zgodnie z kierunkiem wzrostu; wyznaczenie początku, łuku i końca brwi (linie od skrzydełka nosa).</li>
+<li><b>Depilacja woskiem</b> - włoski ok. 0,5 cm; wosk ciepły (miękki) nakłada się <b>zgodnie z kierunkiem wzrostu</b>, a zrywa <b>przeciwnie</b>, szybkim ruchem, równolegle do skóry, napinając skórę. Przeciwwskazania: żylaki, zmiany skórne, cukrzyca (ostrożnie), rozdrapania.</li>
+<li><b>Manicure</b>: zmycie lakieru, skracanie i piłowanie paznokci (pilnik od boku do środka, w jednym kierunku), zmiękczenie i odsunięcie skórek, pielęgnacja, lakierowanie (baza, kolor, top). Manicure hybrydowy - utwardzanie w lampie UV/LED.</li>
 <li>Budowa paznokcia: <b>płytka</b>, <b>macierz</b> (tworzy płytkę), łożysko, obrąbek naskórkowy, wał paznokciowy, obłączek.</li>
-<li><b>Pedicure</b>: paznokcie u stóp obcina się <b>prosto</b> (zapobiega wrastaniu), usuwanie zrogowaceń tarką; przeciwwskazania — grzybica, stopa cukrzycowa (tylko podolog).</li>
+<li><b>Pedicure</b>: paznokcie u stóp obcina się <b>prosto</b> (zapobiega wrastaniu), usuwanie zrogowaceń tarką; przeciwwskazania - grzybica, stopa cukrzycowa (tylko podolog).</li>
 </ul>`
     }
   ],
@@ -309,8 +309,8 @@ window.KURSY["FRK.04"] = {
     {
       tytul: "Makijaż i higiena gabinetu",
       tresc: `
-<ul><li>Makijaż dzienny i wieczorowy; korekta kolorem (zielony neutralizuje zaczerwienienia, fioletowy — żółtawy koloryt, brzoskwiniowy — sińce pod oczami u jaśniejszej karnacji).</li>
-<li>Konturowanie: ciemniejsze odcienie optycznie zmniejszają, jaśniejsze — wysuwają do przodu.</li>
+<ul><li>Makijaż dzienny i wieczorowy; korekta kolorem (zielony neutralizuje zaczerwienienia, fioletowy - żółtawy koloryt, brzoskwiniowy - sińce pod oczami u jaśniejszej karnacji).</li>
+<li>Konturowanie: ciemniejsze odcienie optycznie zmniejszają, jaśniejsze - wysuwają do przodu.</li>
 <li>Higiena: jednorazowe aplikatory, dezynfekcja powierzchni po każdym kliencie, <b>sterylizacja</b> narzędzi naruszających ciągłość skóry (autoklaw), pojemniki na odpady medyczne.</li>
 <li>Karta zabiegowa klienta: wywiad, przeciwwskazania, zgoda na zabieg, opis zabiegu i preparatów, zalecenia domowe.</li></ul>`
     }
@@ -340,16 +340,16 @@ window.KURSY["FRK.04"] = {
     tytul: "Zabieg pielęgnacyjny twarzy i henna brwi",
     model: "w", czas: 150,
     opis: `
-<p>Klientka, 30 lat, cera mieszana z zaskórnikami w strefie T i drobnymi naczynkami na policzkach. Wykonaj zabieg pielęgnacyjny twarzy oraz hennę i regulację brwi (próba uczuleniowa wykonana 48 h wcześniej — wynik negatywny).</p>
+<p>Klientka, 30 lat, cera mieszana z zaskórnikami w strefie T i drobnymi naczynkami na policzkach. Wykonaj zabieg pielęgnacyjny twarzy oraz hennę i regulację brwi (próba uczuleniowa wykonana 48 h wcześniej - wynik negatywny).</p>
 <ol><li>Przeprowadź wywiad, ustal przeciwwskazania, wypełnij kartę zabiegową.</li><li>Wykonaj demakijaż, diagnozę, peeling dobrany do cery, oczyszczanie strefy T, masaż (delikatny na policzkach), maskę i krem.</li><li>Wykonaj hennę i regulację brwi.</li><li>Przekaż zalecenia pielęgnacji domowej.</li></ol>`,
     kryteria: [
       { grupa: "Rezultat 1: Karta zabiegowa", pozycje: ["Wywiad i przeciwwskazania", "Diagnoza: cera mieszana, naczynka na policzkach", "Plan zabiegu z preparatami"] },
-      { grupa: "Rezultat 2: Zabieg twarzy", pozycje: ["Demakijaż oczu i ust osobnym preparatem", "Peeling enzymatyczny lub łagodny kwasowy — bez pocierania policzków", "Oczyszczanie manualne tylko strefy T, z dezynfekcją", "Masaż z pominięciem intensywnych ruchów na policzkach", "Maska i krem dobrane do cery mieszanej i naczyniowej"] },
+      { grupa: "Rezultat 2: Zabieg twarzy", pozycje: ["Demakijaż oczu i ust osobnym preparatem", "Peeling enzymatyczny lub łagodny kwasowy - bez pocierania policzków", "Oczyszczanie manualne tylko strefy T, z dezynfekcją", "Masaż z pominięciem intensywnych ruchów na policzkach", "Maska i krem dobrane do cery mieszanej i naczyniowej"] },
       { grupa: "Rezultat 3: Brwi", pozycje: ["Ochrona skóry przed henną, czas działania wg producenta", "Kształt brwi wyznaczony i symetryczny, włoski usuwane zgodnie z kierunkiem wzrostu"] },
       { grupa: "Przebieg", pozycje: ["Higiena rąk i stanowiska, jednorazowe akcesoria", "Zalecenia domowe przekazane klientce"] }
     ],
     rozwiazanie: `
-<div class="tip">Cera mieszana z naczynkami: traktuj ją strefowo — strefa T jak cera tłusta (oczyszczanie), policzki jak cera naczyniowa (bez pocierania, bez gorących okładów, preparaty łagodzące).</div>`
+<div class="tip">Cera mieszana z naczynkami: traktuj ją strefowo - strefa T jak cera tłusta (oczyszczanie), policzki jak cera naczyniowa (bez pocierania, bez gorących okładów, preparaty łagodzące).</div>`
   }
 };
 
@@ -359,9 +359,9 @@ window.KURSY["ROL.04"] = {
       tytul: "Gleba i nawożenie",
       tresc: `
 <ul>
-<li><b>Klasy bonitacyjne</b> gruntów ornych: I (najlepsze) — II — IIIa, IIIb — IVa, IVb — V — VI (najsłabsze).</li>
-<li><b>Odczyn gleby</b> (pH): większość roślin uprawnych preferuje odczyn lekko kwaśny do obojętnego (ok. 5,5–7). Kwaśne gleby <b>wapnuje się</b> (najlepiej po żniwach, osobno od nawozów azotowych i obornika).</li>
-<li>Makroelementy: <b>N</b> (azot — wzrost części zielonych), <b>P</b> (fosfor — korzenie, kwitnienie), <b>K</b> (potas — odporność, gospodarka wodna), Ca, Mg, S.</li>
+<li><b>Klasy bonitacyjne</b> gruntów ornych: I (najlepsze) - II - IIIa, IIIb - IVa, IVb - V - VI (najsłabsze).</li>
+<li><b>Odczyn gleby</b> (pH): większość roślin uprawnych preferuje odczyn lekko kwaśny do obojętnego (ok. 5,5-7). Kwaśne gleby <b>wapnuje się</b> (najlepiej po żniwach, osobno od nawozów azotowych i obornika).</li>
+<li>Makroelementy: <b>N</b> (azot - wzrost części zielonych), <b>P</b> (fosfor - korzenie, kwitnienie), <b>K</b> (potas - odporność, gospodarka wodna), Ca, Mg, S.</li>
 <li>Nawozy naturalne: obornik, gnojowica, gnojówka; organiczne: kompost; mineralne: saletra amonowa, mocznik, superfosfat, sól potasowa, nawozy wieloskładnikowe.</li>
 <li>Zgodnie z przepisami azotanowymi dawka azotu z nawozów naturalnych nie może przekroczyć <b>170 kg N/ha/rok</b>; obowiązują okresy zakazu nawożenia (późna jesień i zima) i zakaz nawożenia na gleby zamarznięte, zalane lub pokryte śniegiem.</li>
 <li>Obornik przyoruje się jak najszybciej po rozrzuceniu (straty azotu).</li>
@@ -371,11 +371,11 @@ window.KURSY["ROL.04"] = {
       tytul: "Uprawa roli i roślin",
       tresc: `
 <ul>
-<li>Zabiegi uprawowe: <b>podorywka</b> (płytka, po żniwach), <b>orka</b> (przedsiewna, przedzimowa — głęboka), bronowanie, kultywatorowanie, wałowanie, agregaty uprawowe; uproszczenia — uprawa bezorkowa, siew bezpośredni.</li>
-<li><b>Płodozmian</b> — następstwo roślin; przerwy w uprawie roślin tej samej rodziny ograniczają choroby i szkodniki; rośliny <b>bobowate</b> (motylkowe) wiążą azot z powietrza (bakterie brodawkowe).</li>
+<li>Zabiegi uprawowe: <b>podorywka</b> (płytka, po żniwach), <b>orka</b> (przedsiewna, przedzimowa - głęboka), bronowanie, kultywatorowanie, wałowanie, agregaty uprawowe; uproszczenia - uprawa bezorkowa, siew bezpośredni.</li>
+<li><b>Płodozmian</b> - następstwo roślin; przerwy w uprawie roślin tej samej rodziny ograniczają choroby i szkodniki; rośliny <b>bobowate</b> (motylkowe) wiążą azot z powietrza (bakterie brodawkowe).</li>
 <li>Rośliny: zboża ozime i jare (pszenica, żyto, jęczmień, owies, pszenżyto, kukurydza), okopowe (ziemniak, burak cukrowy), oleiste (rzepak), strączkowe, pastewne.</li>
 <li><b>Norma wysiewu</b> (kg/ha) = obsada (szt./m²) × MTZ (g) ÷ wartość użytkowa (%). Wartość użytkowa = czystość × zdolność kiełkowania ÷ 100. Przykład: 400 × 45 ÷ 90 = 200 kg/ha.</li>
-<li>Termin, głębokość siewu i rozstawa rzędów zależą od gatunku (np. pszenica ozima — wrzesień–październik, ok. 3–4 cm).</li>
+<li>Termin, głębokość siewu i rozstawa rzędów zależą od gatunku (np. pszenica ozima - wrzesień-październik, ok. 3-4 cm).</li>
 </ul>`
     },
     {
@@ -383,9 +383,9 @@ window.KURSY["ROL.04"] = {
       tresc: `
 <ul>
 <li>Środki: <b>herbicydy</b> (chwasty), <b>fungicydy</b> (choroby grzybowe), <b>insektycydy</b> (owady), zoocydy, regulatory wzrostu.</li>
-<li><b>Integrowana ochrona roślin</b> — obowiązkowa: najpierw metody niechemiczne (płodozmian, odmiany odporne, terminy siewu), monitoring i <b>progi szkodliwości</b>, chemia jako ostateczność.</li>
+<li><b>Integrowana ochrona roślin</b> - obowiązkowa: najpierw metody niechemiczne (płodozmian, odmiany odporne, terminy siewu), monitoring i <b>progi szkodliwości</b>, chemia jako ostateczność.</li>
 <li>Stosować mogą osoby z <b>ukończonym szkoleniem</b> (zaświadczenie ważne 5 lat), opryskiwaczem ze sprawdzeniem sprawności technicznej (co <b>3 lata</b>).</li>
-<li><b>Okres karencji</b> — od ostatniego zabiegu do zbioru; <b>okres prewencji</b> — gdy nie wolno wchodzić na pole (i dla pszczół).</li>
+<li><b>Okres karencji</b> - od ostatniego zabiegu do zbioru; <b>okres prewencji</b> - gdy nie wolno wchodzić na pole (i dla pszczół).</li>
 <li>Zabiegi przy prędkości wiatru do 4 m/s, w temperaturze zgodnej z etykietą, z dala od wód i pasiek; ŚOI: kombinezon, rękawice nitrylowe, okulary, maska.</li>
 <li>Puste opakowania zwraca się do punktu sprzedaży.</li>
 </ul>`
@@ -394,10 +394,10 @@ window.KURSY["ROL.04"] = {
       tytul: "Produkcja zwierzęca",
       tresc: `
 <ul>
-<li>Bydło mleczne — rasa <b>holsztyńsko-fryzyjska (HF)</b>; mięsne — m.in. limousine, charolaise, hereford.</li>
-<li>Czas ciąży: krowa ok. <b>280 dni</b>, <b>locha ok. 114 dni</b> („3 miesiące, 3 tygodnie i 3 dni”), owca ok. 150 dni, klacz ok. 340 dni; wylęg kurcząt — 21 dni.</li>
+<li>Bydło mleczne - rasa <b>holsztyńsko-fryzyjska (HF)</b>; mięsne - m.in. limousine, charolaise, hereford.</li>
+<li>Czas ciąży: krowa ok. <b>280 dni</b>, <b>locha ok. 114 dni</b> („3 miesiące, 3 tygodnie i 3 dni”), owca ok. 150 dni, klacz ok. 340 dni; wylęg kurcząt - 21 dni.</li>
 <li>Pasze: <b>objętościowe</b> soczyste (zielonki, kiszonki) i suche (siano, słoma), <b>treściwe</b> (śruty zbożowe, mieszanki), dodatki mineralno-witaminowe.</li>
-<li>Siara — pierwsze mleko po porodzie, zawiera przeciwciała; cielę powinno ją dostać jak najszybciej (w pierwszych godzinach życia).</li>
+<li>Siara - pierwsze mleko po porodzie, zawiera przeciwciała; cielę powinno ją dostać jak najszybciej (w pierwszych godzinach życia).</li>
 <li><b>Identyfikacja i rejestracja zwierząt</b> (ARiMR): bydło znakuje się dwoma kolczykami, zgłasza urodzenie, przemieszczenia; paszport bydła.</li>
 <li>Dobrostan: odpowiednia powierzchnia, ściółka, dostęp do wody i paszy, mikroklimat budynku.</li>
 <li>BHP: ostrożność przy zwierzętach (zwłaszcza buhajach), wał przegubowo-teleskopowy zawsze z osłoną, kabina lub rama ochronna ciągnika.</li>
@@ -423,15 +423,15 @@ np. 60 kg N/ha, saletra amonowa 34% N → 60 ÷ 0,34 ≈ 176 kg/ha</pre>
     { p: "Płytka uprawa wykonywana bezpośrednio po żniwach to", o: ["podorywka", "orka przedzimowa", "wałowanie", "bronowanie zimowe"], k: 0, w: "Ogranicza parowanie i niszczy chwasty." },
     { p: "Rośliny wiążące azot atmosferyczny dzięki bakteriom brodawkowym to rośliny", o: ["bobowate (motylkowe)", "zbożowe", "okopowe", "oleiste"], k: 0, w: "Np. łubin, groch, koniczyna, lucerna." },
     { p: "Obsada 500 szt./m², MTZ 40 g, wartość użytkowa 80%. Norma wysiewu wynosi", o: ["250 kg/ha", "200 kg/ha", "160 kg/ha", "320 kg/ha"], k: 0, w: "500 × 40 ÷ 80 = 250." },
-    { p: "Środek ochrony roślin zwalczający choroby grzybowe to", o: ["fungicyd", "herbicyd", "insektycyd", "regulator wzrostu"], k: 0, w: "Herbicyd — chwasty, insektycyd — owady." },
+    { p: "Środek ochrony roślin zwalczający choroby grzybowe to", o: ["fungicyd", "herbicyd", "insektycyd", "regulator wzrostu"], k: 0, w: "Herbicyd - chwasty, insektycyd - owady." },
     { p: "Okres od ostatniego zabiegu środkiem ochrony roślin do zbioru to", o: ["okres karencji", "okres prewencji", "okres wegetacji", "okres wyczekiwania ZUS"], k: 0, w: "Podany na etykiecie środka." },
-    { p: "Sprawdzenie sprawności technicznej opryskiwacza przeprowadza się co", o: ["3 lata", "rok", "10 lat", "5 lat"], k: 0, w: "Nowy sprzęt — przed upływem 5 lat od zakupu." },
+    { p: "Sprawdzenie sprawności technicznej opryskiwacza przeprowadza się co", o: ["3 lata", "rok", "10 lat", "5 lat"], k: 0, w: "Nowy sprzęt - przed upływem 5 lat od zakupu." },
     { p: "Zabiegi opryskiwania wykonuje się przy prędkości wiatru nieprzekraczającej", o: ["4 m/s", "10 m/s", "15 m/s", "bez ograniczeń"], k: 0, w: "Silniejszy wiatr powoduje znoszenie cieczy." },
     { p: "Puste opakowania po środkach ochrony roślin należy", o: ["zwrócić do punktu sprzedaży", "spalić", "wyrzucić do odpadów komunalnych", "zakopać"], k: 0, w: "System zbiórki prowadzą sprzedawcy." },
     { p: "Ciąża lochy trwa około", o: ["114 dni", "280 dni", "150 dni", "21 dni"], k: 0, w: "3 miesiące, 3 tygodnie i 3 dni." },
     { p: "Ciąża krowy trwa około", o: ["280 dni", "114 dni", "340 dni", "60 dni"], k: 0, w: "Około 9 miesięcy." },
     { p: "Rasa bydła o najwyższej wydajności mlecznej, najczęściej hodowana w Polsce, to", o: ["holsztyńsko-fryzyjska", "limousine", "hereford", "charolaise"], k: 0, w: "Pozostałe to rasy mięsne." },
-    { p: "Siano i słoma to pasze", o: ["objętościowe suche", "treściwe", "objętościowe soczyste", "mineralne"], k: 0, w: "Kiszonka — objętościowa soczysta." },
+    { p: "Siano i słoma to pasze", o: ["objętościowe suche", "treściwe", "objętościowe soczyste", "mineralne"], k: 0, w: "Kiszonka - objętościowa soczysta." },
     { p: "Pierwsze mleko po porodzie bogate w przeciwciała to", o: ["siara", "serwatka", "maślanka", "mleko pasteryzowane"], k: 0, w: "Cielę powinno ją dostać w pierwszych godzinach życia." },
     { p: "Rejestr i identyfikację bydła prowadzi", o: ["ARiMR", "KRUS", "GUS", "Sanepid"], k: 0, w: "Agencja Restrukturyzacji i Modernizacji Rolnictwa." },
     { p: "Dawka 60 kg N/ha w saletrze amonowej (34% N) wymaga nawozu w ilości około", o: ["176 kg/ha", "60 kg/ha", "20 kg/ha", "340 kg/ha"], k: 0, w: "60 ÷ 0,34." }
@@ -440,10 +440,10 @@ np. 60 kg N/ha, saletra amonowa 34% N → 60 ÷ 0,34 ≈ 176 kg/ha</pre>
     tytul: "Plan uprawy pszenicy ozimej i nawożenia",
     model: "d", czas: 120,
     opis: `
-<p>Gospodarstwo planuje zasiać pszenicę ozimą na polu 8 ha (gleba klasy IIIa, pH 5,2, przedplon — rzepak ozimy). Dane: obsada 450 szt./m², MTZ 44 g, czystość 98%, zdolność kiełkowania 92%. Planowane nawożenie: N 140 kg/ha (w dwóch dawkach wiosną), P₂O₅ 60 kg/ha, K₂O 80 kg/ha.</p>
+<p>Gospodarstwo planuje zasiać pszenicę ozimą na polu 8 ha (gleba klasy IIIa, pH 5,2, przedplon - rzepak ozimy). Dane: obsada 450 szt./m², MTZ 44 g, czystość 98%, zdolność kiełkowania 92%. Planowane nawożenie: N 140 kg/ha (w dwóch dawkach wiosną), P₂O₅ 60 kg/ha, K₂O 80 kg/ha.</p>
 <ol><li>Zaplanuj zabiegi uprawowe po rzepaku i przed siewem, termin i głębokość siewu.</li><li>Oblicz normę wysiewu i ilość materiału siewnego na pole.</li><li>Dobierz nawozy i oblicz ich ilość (saletra amonowa 34% N, superfosfat potrójny 46% P₂O₅, sól potasowa 60% K₂O) na całe pole.</li><li>Zaplanuj wapnowanie z uzasadnieniem terminu.</li><li>Zaplanuj ochronę herbicydową zgodnie z zasadami integrowanej ochrony.</li></ol>`,
     kryteria: [
-      { grupa: "Rezultat 1: Uprawa", pozycje: ["Podorywka (lub kultywator) po zbiorze rzepaku i orka siewna", "Termin siewu wrzesień–październik, głębokość ok. 3–4 cm"] },
+      { grupa: "Rezultat 1: Uprawa", pozycje: ["Podorywka (lub kultywator) po zbiorze rzepaku i orka siewna", "Termin siewu wrzesień-październik, głębokość ok. 3-4 cm"] },
       { grupa: "Rezultat 2: Wysiew", pozycje: ["Wartość użytkowa 90,16%", "Norma wysiewu ≈ 220 kg/ha (450 × 44 ÷ 90,16)", "Na pole 8 ha ≈ 1 757 kg (ok. 1,76 t)"] },
       { grupa: "Rezultat 3: Nawożenie", pozycje: ["Saletra: 140 ÷ 0,34 ≈ 412 kg/ha → ok. 3 294 kg na pole, w dwóch dawkach", "Superfosfat: 60 ÷ 0,46 ≈ 130 kg/ha → ok. 1 043 kg", "Sól potasowa: 80 ÷ 0,6 ≈ 133 kg/ha → ok. 1 067 kg", "Nawozy P i K przedsiewnie, N wiosną"] },
       { grupa: "Rezultat 4: Wapnowanie i ochrona", pozycje: ["Wapnowanie po zbiorze przedplonu, przed uprawą, nie razem z nawozami azotowymi", "Herbicyd jesienią lub wiosną po ocenie zachwaszczenia, z zachowaniem karencji i warunków pogodowych"] }
@@ -467,7 +467,7 @@ window.KURSY["ROL.10"] = {
 <li>Kierunki produkcji: roślinny, zwierzęcy, mieszany; specjalizacja a dywersyfikacja (mniejsze ryzyko).</li>
 <li><b>Nadwyżka bezpośrednia</b> = wartość produkcji (z dopłatami związanymi z produkcją) − koszty bezpośrednie (nasiona, nawozy, środki ochrony, pasze, usługi weterynaryjne). Służy do porównywania opłacalności działalności.</li>
 <li><b>Dochód rolniczy</b> = wartość produkcji + dopłaty − koszty ogółem (z kosztami pośrednimi: amortyzacja, paliwo, ubezpieczenia, podatki).</li>
-<li>Rachunkowość rolna: system <b>FADN</b> (Polski FADN) — dane z gospodarstw do analiz UE.</li>
+<li>Rachunkowość rolna: system <b>FADN</b> (Polski FADN) - dane z gospodarstw do analiz UE.</li>
 <li>Rolnicy podlegają ubezpieczeniu w <b>KRUS</b>; podatek rolny liczony od hektarów przeliczeniowych.</li>
 </ul>
 <pre>Przykład: pszenica 7 t/ha × 900 zł/t = 6 300 zł/ha
@@ -478,9 +478,9 @@ koszty bezpośrednie 2 900 zł/ha → nadwyżka bezpośrednia 3 400 zł/ha</pre>
       tresc: `
 <ul>
 <li>Płatności bezpośrednie i obszarowe wypłaca <b>ARiMR</b> na podstawie wniosku (aplikacja eWniosekPlus); płatności dla młodych rolników, <b>ekoschematy</b> (praktyki korzystne dla klimatu i środowiska).</li>
-<li><b>Warunkowość</b> — otrzymanie płatności wymaga przestrzegania norm dobrej kultury rolnej (GAEC) i wymogów w zakresie środowiska, zdrowia, dobrostanu zwierząt.</li>
+<li><b>Warunkowość</b> - otrzymanie płatności wymaga przestrzegania norm dobrej kultury rolnej (GAEC) i wymogów w zakresie środowiska, zdrowia, dobrostanu zwierząt.</li>
 <li>Rolnictwo <b>ekologiczne</b>: okres konwersji, kontrola przez jednostkę certyfikującą, zakaz syntetycznych nawozów i większości środków chemicznych, oznaczenie unijnym logo „euroliść”.</li>
-<li>Grupy i organizacje producentów — wspólna sprzedaż, lepsza pozycja negocjacyjna.</li>
+<li>Grupy i organizacje producentów - wspólna sprzedaż, lepsza pozycja negocjacyjna.</li>
 <li>Bezpieczeństwo żywności: rejestr działalności, dokumentacja zabiegów ochrony roślin (ewidencja przez 3 lata), leczenia zwierząt, identyfikowalność.</li>
 </ul>`
     },
@@ -509,10 +509,10 @@ koszty bezpośrednie 2 900 zł/ha → nadwyżka bezpośrednia 3 400 zł/ha</pre>
     { p: "Do kosztów bezpośrednich produkcji roślinnej należą", o: ["nasiona i nawozy", "amortyzacja budynków", "podatek rolny", "ubezpieczenie budynków"], k: 0, w: "Koszty pośrednie dotyczą całego gospodarstwa." },
     { p: "Rolnicy podlegają ubezpieczeniu społecznemu w", o: ["KRUS", "ZUS", "NFZ", "ARiMR"], k: 0, w: "Kasa Rolniczego Ubezpieczenia Społecznego." },
     { p: "Płatności bezpośrednie dla rolników wypłaca", o: ["ARiMR", "KRUS", "urząd gminy", "KOWR jako jedyny"], k: 0, w: "Wniosek składa się elektronicznie." },
-    { p: "Dobrowolne praktyki korzystne dla klimatu i środowiska, za które przysługują płatności, to", o: ["ekoschematy", "kwoty mleczne", "dopłaty do paliwa jako jedyne", "zasiłki KRUS"], k: 0, w: "Wprowadzone w WPR na lata 2023–2027." },
+    { p: "Dobrowolne praktyki korzystne dla klimatu i środowiska, za które przysługują płatności, to", o: ["ekoschematy", "kwoty mleczne", "dopłaty do paliwa jako jedyne", "zasiłki KRUS"], k: 0, w: "Wprowadzone w WPR na lata 2023-2027." },
     { p: "Warunkowość w WPR oznacza, że", o: ["płatności zależą od przestrzegania norm GAEC i wymogów prawnych", "rolnik musi mieć wykształcenie wyższe", "dopłaty są stałe niezależnie od praktyk", "nie trzeba prowadzić dokumentacji"], k: 0, w: "Naruszenia skutkują zmniejszeniem płatności." },
     { p: "Produkty rolnictwa ekologicznego oznacza się w UE logo", o: ["euroliść", "znakiem CE", "znakiem B", "Q jakość"], k: 0, w: "Gospodarstwo musi mieć certyfikat jednostki certyfikującej." },
-    { p: "Okres przejściowy przy przechodzeniu na produkcję ekologiczną to", o: ["okres konwersji", "okres karencji", "okres prewencji", "okres wegetacji"], k: 0, w: "Zwykle 2–3 lata w zależności od upraw." },
+    { p: "Okres przejściowy przy przechodzeniu na produkcję ekologiczną to", o: ["okres konwersji", "okres karencji", "okres prewencji", "okres wegetacji"], k: 0, w: "Zwykle 2-3 lata w zależności od upraw." },
     { p: "Ewidencję zabiegów ochrony roślin przechowuje się co najmniej", o: ["3 lata", "1 rok", "10 lat", "tydzień"], k: 0, w: "Zawiera m.in. środek, dawkę, datę, uprawę, powierzchnię." },
     { p: "Wydajność agregatu o szerokości 4 m przy 8 km/h i wykorzystaniu czasu 0,75 wynosi", o: ["2,4 ha/h", "3,2 ha/h", "24 ha/h", "0,32 ha/h"], k: 0, w: "4 × 8 × 0,1 × 0,75." },
     { p: "Kosztem stałym użytkowania maszyny jest", o: ["amortyzacja", "paliwo", "smary", "części zużywające się"], k: 0, w: "Nie zależy od liczby godzin pracy." },
@@ -526,7 +526,7 @@ koszty bezpośrednie 2 900 zł/ha → nadwyżka bezpośrednia 3 400 zł/ha</pre>
     model: "d", czas: 120,
     opis: `
 <p>Gospodarstwo 40 ha: pszenica ozima 20 ha (plon 7 t/ha, cena 950 zł/t, koszty bezpośrednie 3 100 zł/ha), rzepak ozimy 12 ha (3,5 t/ha, 2 100 zł/t, 3 600 zł/ha), kukurydza na ziarno 8 ha (9 t/ha, 800 zł/t, 4 300 zł/ha). Koszty pośrednie gospodarstwa 60 000 zł, płatności 32 000 zł.</p>
-<ol><li>Oblicz nadwyżkę bezpośrednią z 1 ha i z całej powierzchni dla każdej uprawy.</li><li>Oblicz dochód rolniczy gospodarstwa.</li><li>Wskaż najbardziej opłacalną uprawę i zaproponuj zmianę struktury zasiewów z uwzględnieniem płodozmianu.</li><li>Zaplanuj żniwa pszenicy: kombajn o szerokości 6 m, 6 km/h, wykorzystanie czasu 0,7 — oblicz czas zbioru.</li></ol>`,
+<ol><li>Oblicz nadwyżkę bezpośrednią z 1 ha i z całej powierzchni dla każdej uprawy.</li><li>Oblicz dochód rolniczy gospodarstwa.</li><li>Wskaż najbardziej opłacalną uprawę i zaproponuj zmianę struktury zasiewów z uwzględnieniem płodozmianu.</li><li>Zaplanuj żniwa pszenicy: kombajn o szerokości 6 m, 6 km/h, wykorzystanie czasu 0,7 - oblicz czas zbioru.</li></ol>`,
     kryteria: [
       { grupa: "Rezultat 1: Nadwyżki", pozycje: ["Pszenica: 6 650 − 3 100 = 3 550 zł/ha; 71 000 zł", "Rzepak: 7 350 − 3 600 = 3 750 zł/ha; 45 000 zł", "Kukurydza: 7 200 − 4 300 = 2 900 zł/ha; 23 200 zł"] },
       { grupa: "Rezultat 2: Dochód", pozycje: ["Suma nadwyżek 139 200 zł", "Dochód = 139 200 + 32 000 − 60 000 = 111 200 zł"] },

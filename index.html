@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Literata:opsz,wght@7..72,500;7..72,700&display=swap">
 <style>
-/* Układ: arkusz egzaminacyjny CKE — kartka, granatowy długopis, czerwony korektor; karta odpowiedzi z kratkami A–D */
+/* Układ: arkusz egzaminacyjny CKE - kartka, granatowy długopis, czerwony korektor; karta odpowiedzi z kratkami A-D */
 :root {
   --paper: #f3f5f9;
   --card: #ffffff;
@@ -128,6 +128,7 @@ main { padding-block: 28px 64px; display: grid; grid-template-columns: minmax(0,
 .lesson .body code, .q code { font-family: var(--f-mono); font-size: .88em; background: var(--soft); padding: 1px 5px; border-radius: 4px; }
 .lesson .body pre { font-family: var(--f-mono); font-size: .86rem; background: var(--soft); padding: 12px 14px; border-radius: 6px; overflow-x: auto; line-height: 1.45; }
 .lesson .body .tw { overflow-x: auto; }
+.lesson .body td code { white-space: nowrap; }
 .lesson .body table { border-collapse: collapse; font-size: .92rem; margin: 10px 0; min-width: 100%; }
 .lesson .body th, .lesson .body td { border: 1px solid var(--line); padding: 6px 10px; text-align: left; vertical-align: top; }
 .lesson .body th { background: var(--soft); font-weight: 600; }
@@ -321,6 +322,14 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
 <script src="data/bank-inf2.js" charset="utf-8"></script>
 <script src="data/bank-mec-bud.js" charset="utf-8"></script>
 <script src="data/bank-spc-mot.js" charset="utf-8"></script>
+<script src="data/pod-inf03.js" charset="utf-8"></script>
+<script src="data/pod-inf.js" charset="utf-8"></script>
+<script src="data/pod-eka-spl.js" charset="utf-8"></script>
+<script src="data/pod-han-hgt.js" charset="utf-8"></script>
+<script src="data/pod-hgt-spc.js" charset="utf-8"></script>
+<script src="data/pod-mot-ele.js" charset="utf-8"></script>
+<script src="data/pod-elm-mec.js" charset="utf-8"></script>
+<script src="data/pod-bud-frk-rol.js" charset="utf-8"></script>
 <script src="data/praktyka.js" charset="utf-8"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/alasql/4.6.0/alasql.min.js"></script>
 <script src="data/env.js" charset="utf-8"></script>
@@ -336,7 +345,7 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
 
   /* ---------- zapis postępów ---------- */
   var KEY = "zdam-zawodowy-v1";
-  var S = { lekcje: {}, bledy: {}, wyniki: {}, prakt: {}, odp: {}, widz: {}, ostatnia: null };
+  var S = { lekcje: {}, bledy: {}, wyniki: {}, prakt: {}, odp: {}, widz: {}, podw: {}, ostatnia: null };
   try { var raw = localStorage.getItem(KEY); if (raw) { var p = JSON.parse(raw); for (var k in S) if (p[k]) S[k] = p[k]; } } catch (e) {}
   function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
 
@@ -372,7 +381,8 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
   function token(kod) { return kod.toLowerCase(); }
   function fromToken(t) { for (var i = 0; i < KAT.length; i++) if (token(KAT[i].kod) === t) return KAT[i].kod; return t === "wsp" ? WSP : null; }
   function kurs(kod) { return KURSY[kod] || null; }
-  function lessonsOf(kod) { var c = kurs(kod); return c ? (c.podstawowy || []).length + (c.rozszerzony || []).length : 0; }
+  function podOf(kod) { var c = kurs(kod); return c && c.podkursy || []; }
+  function lessonsOf(kod) { var c = kurs(kod); return c ? (c.podstawowy || []).length + (c.rozszerzony || []).length + podOf(kod).reduce(function (s, p) { return s + p.lekcje.length; }, 0) : 0; }
   function doneOf(kod) { var n = 0; for (var k in S.lekcje) if (S.lekcje[k] && k.indexOf(kod + ":") === 0) n++; return n; }
   function pct(kod) { var t = lessonsOf(kod); return t ? Math.round(doneOf(kod) / t * 100) : 0; }
   function qid(kod, i) { return kod + "#" + i; }
@@ -408,14 +418,14 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
   }
   function gotowoscHTML(kod) {
     var g = gotowosc(kod);
-    return '<div class="ready ' + (g.ok ? "yes" : "") + '"><div class="ready-head"><span class="label">Gotowość do egzaminu — cel ' + CEL + '%</span><span class="pill ' + (g.ok ? "full" : "base") + '">' + (g.ok ? "gotowy" : "jeszcze nie") + '</span></div>' +
+    return '<div class="ready ' + (g.ok ? "yes" : "") + '"><div class="ready-head"><span class="label">Gotowość do egzaminu - cel ' + CEL + '%</span><span class="pill ' + (g.ok ? "full" : "base") + '">' + (g.ok ? "gotowy" : "jeszcze nie") + '</span></div>' +
       '<div class="ready-items">' + g.items.map(function (x) {
         return '<div class="ri ' + (x.ok ? "ok" : "") + '"><span class="tick ' + (x.ok ? "done" : "") + '"></span><span>' + esc(x.nm) + '</span><b class="mono">' + esc(x.val) + '</b></div>';
       }).join("") + '</div></div>';
   }
 
   /* ---------- nawigacja ---------- */
-  var view = { name: "start", kod: null, tab: "podst", lesson: 0, filtr: "", tylkoMoje: false, seria: 20, wantTab: null };
+  var view = { name: "start", kod: null, tab: "podst", lesson: 0, pod: null, filtr: "", tylkoMoje: false, seria: 20, wantTab: null };
   var exam = null, nauka = null, timerId = null;
 
   /* trwający egzamin przeżywa przejście na inną stronę i odświeżenie przeglądarki */
@@ -448,7 +458,7 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
   }
   setInterval(function () { var b = document.getElementById("bantm"); if (!b || !exam) return; var l = examLeft(); if (l) b.textContent = mmss(l); else renderBanner(); }, 1000);
 
-  /* skróty klawiszowe w nauce i egzaminie: A–D / 1–4 wybór, → lub Enter dalej, ← wstecz, F oznacz */
+  /* skróty klawiszowe w nauce i egzaminie: A-D / 1-4 wybór, → lub Enter dalej, ← wstecz, F oznacz */
   document.addEventListener("keydown", function (e) {
     if (e.ctrlKey || e.metaKey || e.altKey || document.getElementById("env")) return;
     var tg = e.target; if (tg && (tg.tagName === "INPUT" || tg.tagName === "TEXTAREA" || tg.tagName === "SELECT" || tg.isContentEditable)) return;
@@ -471,7 +481,7 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
     else if (h === "postepy") view.name = "postepy";
     else if (fromToken(h)) {
       var kod = fromToken(h);
-      if (view.kod !== kod) { view.tab = "podst"; view.lesson = 0; nauka = null; if (exam && exam.koniec && exam.kod !== kod) exam = null; }
+      if (view.kod !== kod) { view.tab = "podst"; view.lesson = 0; view.pod = null; podq = null; nauka = null; if (exam && exam.koniec && exam.kod !== kod) exam = null; }
       if (view.wantTab) { view.tab = view.wantTab; view.wantTab = null; }
       view.name = "kwal"; view.kod = kod;
       if (kod !== WSP && kurs(kod)) { S.ostatnia = kod; save(); }
@@ -497,10 +507,10 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
     var last = S.ostatnia && kwal(S.ostatnia);
     var h = '<section class="hero"><div><div class="label">Egzamin potwierdzający kwalifikacje w zawodzie</div>' +
       '<h1 style="margin-top:8px">Przygotuj się do egzaminu zawodowego</h1>' +
-      '<p class="lead">Wybierz swoją kwalifikację. Każdy kurs ma część podstawową, kurs rozszerzony, naukę pytań z wyjaśnieniami, egzamin teoretyczny na czas (40 zadań w 60 minut) i zadanie praktyczne oceniane według kryteriów CKE. W bazie jest <b class="mono">' + allCount() + '</b> pytań testowych.</p>' +
+      '<p class="lead">Wybierz swoją kwalifikację. Każdy kurs ma część podstawową, kurs rozszerzony, podkursy tematyczne ze sprawdzianami, naukę pytań z wyjaśnieniami, egzamin teoretyczny na czas (40 zadań w 60 minut) i zadanie praktyczne oceniane według kryteriów CKE. W bazie jest <b class="mono">' + allCount() + '</b> pytań testowych.</p>' +
       '<div class="search"><input id="q" type="search" placeholder="Szukaj: kod (np. INF.03), nazwa lub zawód" value="' + esc(view.filtr) + '" aria-label="Szukaj kwalifikacji"></div>' +
       '<div class="chips" style="margin-top:12px"><button class="chip ' + (view.tylkoMoje ? "" : "on") + '" data-f="all">Wszystkie (' + KAT.length + ')</button><button class="chip ' + (view.tylkoMoje ? "on" : "") + '" data-f="moje">Rozpoczęte (' + moje + ')</button></div></div>' +
-      '<aside class="sheet"><div class="label">Część pisemna — wymagania</div><div class="facts">' +
+      '<aside class="sheet"><div class="label">Część pisemna - wymagania</div><div class="facts">' +
       '<div class="fact"><b>40</b><span>zadań jednokrotnego wyboru</span></div><div class="fact"><b>60 min</b><span>czas trwania</span></div>' +
       '<div class="fact"><b>≥ 50%</b><span>próg zdania części pisemnej</span></div><div class="fact"><b>≥ 75%</b><span>próg zdania części praktycznej</span></div></div>' +
       '<div class="notice" style="font-size:.9rem"><b>Nasz cel: ' + CEL + '% w obu częściach.</b> Kurs uznajemy za zaliczony, gdy masz średnio ' + CEL + '%+ z trzech egzaminów teoretycznych i ' + CEL + '%+ z zadania praktycznego.</div>' +
@@ -516,7 +526,7 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
   function renderLista() {
     var f = norm(view.filtr.trim());
     var groups = {}, order = [];
-    var wsp = { kod: WSP, nazwa: "Moduł wspólny: BHP, ochrona przeciwpożarowa, pierwsza pomoc, prawo pracy i działalność gospodarcza", branza: "Dla wszystkich zawodów", zawody: ["każdy zawód — te tematy pojawiają się na każdym egzaminie"] };
+    var wsp = { kod: WSP, nazwa: "Moduł wspólny: BHP, ochrona przeciwpożarowa, pierwsza pomoc, prawo pracy i działalność gospodarcza", branza: "Dla wszystkich zawodów", zawody: ["każdy zawód - te tematy pojawiają się na każdym egzaminie"] };
     [wsp].concat(KAT).forEach(function (k) {
       if (view.tylkoMoje && !started(k.kod)) return;
       if (f && norm(k.kod + " " + k.nazwa + " " + k.zawody.join(" ") + " " + k.branza).indexOf(f) < 0) return;
@@ -547,7 +557,9 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
   function renderKwal() {
     var kod = view.kod, k = kInfo(kod), c = kurs(kod);
     var bl = poolOf(kod).filter(function (x) { return S.bledy[x.id]; }).length;
-    var tabs = [["podst", "Kurs podstawowy", c ? c.podstawowy.length : 0], ["rozsz", "Kurs rozszerzony", c ? c.rozszerzony.length : 0], ["nauka", "Nauka pytań", c ? c.pytania.length : 0], ["egzamin", "Egzamin teoretyczny", 40]];
+    var tabs = [["podst", "Kurs podstawowy", c ? c.podstawowy.length : 0], ["rozsz", "Kurs rozszerzony", c ? c.rozszerzony.length : 0]];
+    if (podOf(kod).length) tabs.push(["pod", "Podkursy", podOf(kod).length]);
+    tabs = tabs.concat([["nauka", "Nauka pytań", c ? c.pytania.length : 0], ["egzamin", "Egzamin teoretyczny", 40]]);
     if (c && c.praktyka) tabs.push(["prakt", "Egzamin praktyczny", c.praktyka.kryteria.reduce(function (s, g) { return s + g.pozycje.length; }, 0)]);
     tabs.push(["bledy", "Moje błędy", bl]);
     var h = '<section class="khead"><div class="crumbs muted"><a href="#start">Kwalifikacje</a> / ' + esc(k.branza) + '</div>' +
@@ -556,7 +568,7 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
       (c ? '<div style="display:flex;gap:12px;align-items:center;max-width:420px"><div class="bar" style="flex:1"><i style="width:' + pct(kod) + '%"></i></div><span class="mono muted" style="font-size:.85rem">' + doneOf(kod) + '/' + lessonsOf(kod) + ' lekcji</span></div>' : "") +
       '</section>' + (c ? gotowoscHTML(kod) : "");
     if (!c) {
-      h += '<div class="notice"><b>Kurs tej kwalifikacji jest w przygotowaniu.</b> Już teraz możesz przerobić moduł wspólny — BHP, ochrona przeciwpożarowa, pierwsza pomoc, prawo pracy i działalność gospodarcza. Te zagadnienia występują w części pisemnej każdego egzaminu zawodowego.' +
+      h += '<div class="notice"><b>Kurs tej kwalifikacji jest w przygotowaniu.</b> Już teraz możesz przerobić moduł wspólny - BHP, ochrona przeciwpożarowa, pierwsza pomoc, prawo pracy i działalność gospodarcza. Te zagadnienia występują w części pisemnej każdego egzaminu zawodowego.' +
         '<div class="btns" style="margin-top:12px"><a class="btn pri" style="text-decoration:none" href="#wsp">Otwórz moduł wspólny</a><a class="btn" style="text-decoration:none" href="https://cke.gov.pl" target="_blank" rel="noopener">Arkusze z poprzednich lat na cke.gov.pl</a></div></div>';
       app.innerHTML = h; return;
     }
@@ -565,11 +577,12 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
     }).join("") + '</div><div id="tab"></div>';
     app.innerHTML = h;
     app.querySelectorAll(".tabs button").forEach(function (b) {
-      b.onclick = function () { if (exam && !exam.koniec && b.dataset.t !== "egzamin") { /* egzamin trwa w tle */ } view.tab = b.dataset.t; view.lesson = 0; if (b.dataset.t === "nauka" || b.dataset.t === "bledy") nauka = null; renderKwal(); };
+      b.onclick = function () { if (exam && !exam.koniec && b.dataset.t !== "egzamin") { /* egzamin trwa w tle */ } view.tab = b.dataset.t; view.lesson = 0; view.pod = null; podq = null; if (b.dataset.t === "nauka" || b.dataset.t === "bledy") nauka = null; renderKwal(); };
     });
     var t = document.getElementById("tab");
     clearInterval(timerId);
     if (view.tab === "podst" || view.tab === "rozsz") renderLessons(t, kod, c);
+    else if (view.tab === "pod") renderPod(t, kod);
     else if (view.tab === "nauka") renderNauka(t, kod, false);
     else if (view.tab === "bledy") renderNauka(t, kod, true);
     else if (view.tab === "prakt" && c.praktyka) renderPrakt(t, kod, c.praktyka);
@@ -589,12 +602,12 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
       (R.start ? '<span class="timer" id="ptm" style="font-size:1.3rem">' + P.czas + ':00</span>' : "") + '</div>' +
       '<h2>' + esc(P.tytul) + '</h2><div class="lesson-like body">' + P.opis + '</div>';
     if (!R.start && !R.ocena) {
-      h += '<div class="notice">Wykonaj zadanie naprawdę — na komputerze, na stanowisku lub na papierze — tak jak na egzaminie. Włącz stoper, a po skończeniu oceń się według kryteriów CKE. Egzamin zdajesz od 75%, ale celem jest <b>' + CEL + '%</b>.' +
+      h += '<div class="notice">Wykonaj zadanie naprawdę - na komputerze, na stanowisku lub na papierze - tak jak na egzaminie. Włącz stoper, a po skończeniu oceń się według kryteriów CKE. Egzamin zdajesz od 75%, ale celem jest <b>' + CEL + '%</b>.' +
         (hist ? '<div class="muted" style="margin-top:6px">Ostatnia próba: <b class="mono">' + hist.pct + '%</b> (' + esc(hist.d) + ')</div>' : "") +
-        '<div class="btns" style="margin-top:10px">' + (envOk ? '<button class="btn pri" id="penv">Uruchom komputer egzaminacyjny</button>' : '') + '<button class="btn ' + (envOk ? '' : 'pri') + '" id="pst">Wykonam poza stroną — włącz stoper</button><button class="btn" id="pskip">Mam gotowe, przejdź do oceny</button></div>' +
+        '<div class="btns" style="margin-top:10px">' + (envOk ? '<button class="btn pri" id="penv">Uruchom komputer egzaminacyjny</button>' : '') + '<button class="btn ' + (envOk ? '' : 'pri') + '" id="pst">Wykonam poza stroną - włącz stoper</button><button class="btn" id="pskip">Mam gotowe, przejdź do oceny</button></div>' +
         (envOk ? '<div class="muted" style="margin-top:8px;font-size:.9rem">' + (window.ENV_ZADANIA[kod].note ? 'Komputer egzaminacyjny: dokumentacja, arkusz i karta odpowiedzi sprawdzana automatycznie.' : 'Komputer egzaminacyjny: wykonujesz całe zadanie na stronie, a większość kryteriów sprawdzamy automatycznie.') + '</div>' : '') + '</div>';
     } else if (!R.wynik) {
-      h += '<div class="label" style="margin-top:6px">Kryteria oceniania — zaznacz tylko to, co jest wykonane w pełni i bezbłędnie</div><div class="crit">' +
+      h += '<div class="label" style="margin-top:6px">Kryteria oceniania - zaznacz tylko to, co jest wykonane w pełni i bezbłędnie</div><div class="crit">' +
         P.kryteria.map(function (g, gi) {
           return '<div class="cg"><div class="cg-h">' + esc(g.grupa) + '</div>' + g.pozycje.map(function (p, pi) {
             var id = gi + "_" + pi;
@@ -604,7 +617,7 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
     } else {
       var w = R.wynik, cls = w >= CEL ? "ok" : (w >= 75 ? "mid" : "fail");
       h += '<div class="result"><div class="score ' + (w >= 75 ? "" : "fail") + '"><div><b>' + w + '%</b><span class="muted mono" style="font-size:.8rem">' + R.ile + '/' + total + '</span></div></div>' +
-        '<div style="display:grid;gap:8px"><div class="verdict ' + (w >= 75 ? "ok" : "fail") + '">' + (w >= CEL ? "Cel osiągnięty — " + CEL + "%+" : (w >= 75 ? "Zdane, ale poniżej celu " + CEL + "%" : "Część praktyczna niezdana")) + '</div>' +
+        '<div style="display:grid;gap:8px"><div class="verdict ' + (w >= 75 ? "ok" : "fail") + '">' + (w >= CEL ? "Cel osiągnięty - " + CEL + "%+" : (w >= 75 ? "Zdane, ale poniżej celu " + CEL + "%" : "Część praktyczna niezdana")) + '</div>' +
         '<div class="muted">' + (w >= CEL ? "Świetnie. Powtórz zadanie za kilka dni, żeby utrwalić wynik." : "Przejrzyj niezaznaczone kryteria i wzorcowe rozwiązanie poniżej, potem wykonaj zadanie jeszcze raz.") + '</div>' +
         '<div class="btns"><button class="btn pri" id="pagain">Spróbuj ponownie</button></div></div></div>' +
         '<div class="label">Do poprawy</div><ul class="todo">' + (R.todo ? R.todo.map(function (x) { return '<li>' + fmt(x) + '</li>'; }).join("") || '<li>Wszystkie kryteria spełnione.</li>' : P.kryteria.map(function (g, gi) {
@@ -670,6 +683,68 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
   }
   function scrollToTab() { var t = document.querySelector(".tabs"); if (t) t.scrollIntoView({ block: "start" }); window.scrollBy(0, -80); }
 
+  /* ---------- podkursy: tematyczne minikursy z lekcjami i sprawdzianem ---------- */
+  var podq = null;
+  function podDone(kod, P) { var n = 0; P.lekcje.forEach(function (l, j) { if (S.lekcje[kod + ":s:" + P.id + ":" + j]) n++; }); return n; }
+  function renderPod(t, kod) {
+    var list = podOf(kod), P = null;
+    list.forEach(function (x) { if (x.id === view.pod) P = x; });
+    if (!P) {
+      t.innerHTML = '<p class="muted" style="margin:4px 0 14px">Każdy podkurs to jeden temat, którego wymaga egzamin: kilka lekcji po kolei i krótki sprawdzian na końcu. Celuj w ' + CEL + '% w każdym sprawdzianie.</p><div class="grid">' + list.map(function (x) {
+        var d = podDone(kod, x), w = S.podw[kod + ":" + x.id], p = Math.round(d / x.lekcje.length * 100);
+        return '<button class="kcard" data-p="' + esc(x.id) + '"><div class="row"><span class="code">' + esc(x.tytul) + '</span>' +
+          (w !== undefined ? '<span class="pill ' + (w >= CEL ? "full" : "base") + '">' + (w >= CEL ? "zaliczony ✓" : "sprawdzian " + w + "%") + '</span>' : '<span class="pill base">' + x.lekcje.length + ' lekcje</span>') + '</div>' +
+          '<div class="zw">' + esc(x.opis) + '</div><div class="zw mono">' + d + '/' + x.lekcje.length + ' lekcji · ' + x.pytania.length + ' pytań</div>' +
+          (p ? '<div class="bar"><i style="width:' + p + '%"></i></div>' : "") + '</button>';
+      }).join("") + '</div>';
+      t.querySelectorAll("[data-p]").forEach(function (b) { b.onclick = function () { view.pod = b.dataset.p; view.lesson = 0; podq = null; renderKwal(); scrollToTab(); }; });
+      return;
+    }
+    var n = P.lekcje.length, i = Math.min(view.lesson, n), best = S.podw[kod + ":" + P.id];
+    var h = '<div class="btns" style="margin-bottom:12px"><button class="btn" id="podback">← Wszystkie podkursy</button></div><div class="lessons"><nav class="toc" aria-label="Spis lekcji podkursu">' +
+      P.lekcje.map(function (l, j) { return '<button data-i="' + j + '" class="' + (j === i ? "on" : "") + '"><span class="tick ' + (S.lekcje[kod + ":s:" + P.id + ":" + j] ? "done" : "") + '"></span><span>' + esc(l.tytul) + '</span></button>'; }).join("") +
+      '<button data-i="' + n + '" class="' + (i === n ? "on" : "") + '"><span class="tick ' + (best >= CEL ? "done" : "") + '"></span><span>Sprawdzian' + (best !== undefined ? ' · ' + best + '%' : "") + '</span></button></nav>';
+    if (i < n) {
+      var L = P.lekcje[i], lid = kod + ":s:" + P.id + ":" + i;
+      h += '<article class="lesson"><div class="label">' + esc(P.tytul) + ' · lekcja ' + (i + 1) + ' z ' + n + '</div><h2 style="margin:6px 0 4px">' + esc(L.tytul) + '</h2><div class="body">' + L.tresc + '</div>' +
+        '<div class="foot"><button class="btn" id="prev" ' + (i === 0 ? "disabled" : "") + '>← Poprzednia</button><div class="btns"><button class="btn ' + (S.lekcje[lid] ? "ok" : "") + '" id="done">' + (S.lekcje[lid] ? "✓ Przerobiona" : "Oznacz jako przerobioną") + '</button>' +
+        '<button class="btn pri" id="next">' + (i < n - 1 ? "Następna →" : "Sprawdzian →") + '</button></div></div></article></div>';
+      t.innerHTML = h;
+      t.querySelector("#done").onclick = function () { S.lekcje[lid] = !S.lekcje[lid]; save(); renderKwal(); };
+      t.querySelector("#prev").onclick = function () { view.lesson = i - 1; renderKwal(); scrollToTab(); };
+      t.querySelector("#next").onclick = function () { S.lekcje[lid] = true; save(); view.lesson = i + 1; podq = null; renderKwal(); scrollToTab(); };
+    } else {
+      if (!podq || podq.id !== P.id || podq.kod !== kod) podq = { kod: kod, id: P.id, q: shuffle(P.pytania).map(function (q) { return { q: q, ord: shuffle([0, 1, 2, 3]) }; }), i: 0, dobrze: 0, wybor: null };
+      var Z = podq;
+      h += '<article class="lesson">';
+      if (Z.i >= Z.q.length) {
+        var w = Math.round(Z.dobrze / Z.q.length * 100);
+        h += '<div class="label">' + esc(P.tytul) + ' · sprawdzian</div><h2 style="margin:6px 0 10px">Wynik: ' + w + '%</h2><div class="verdict ' + (w >= CEL ? "ok" : "fail") + '">' + (w >= CEL ? "Podkurs zaliczony" : "Poniżej celu " + CEL + "%. Wróć do lekcji i spróbuj jeszcze raz.") + '</div>' +
+          '<div class="btns" style="margin-top:14px"><button class="btn pri" id="pqa">Jeszcze raz</button><button class="btn" id="podback2">' + (list.indexOf(P) < list.length - 1 ? "Następny podkurs →" : "Wszystkie podkursy") + '</button></div>';
+      } else {
+        var X = Z.q[Z.i], Q = X.q, ans = Z.wybor !== null;
+        h += '<div class="label">' + esc(P.tytul) + ' · sprawdzian · pytanie ' + (Z.i + 1) + ' z ' + Z.q.length + '</div><div class="qtext" style="margin:10px 0">' + fmt(Q.p) + '</div><div class="opts">' + X.ord.map(function (o, j) {
+          var cls = ans ? (o === Q.k ? "good" : (o === Z.wybor ? "bad" : "")) : "";
+          return '<button class="opt ' + cls + '" data-o="' + o + '" ' + (ans ? "disabled" : "") + '><span class="bub">' + LETTERS[j] + '</span><span class="ot">' + fmt(Q.o[o]) + '</span></button>';
+        }).join("") + '</div>';
+        if (ans) h += '<div class="expl ' + (Z.wybor === Q.k ? "" : "bad") + '"><b>' + (Z.wybor === Q.k ? "Dobrze!" : "Źle. Poprawna odpowiedź: " + LETTERS[X.ord.indexOf(Q.k)]) + '</b><br>' + fmt(Q.w || "") + '</div><div class="btns"><button class="btn pri" id="nx">' + (Z.i < Z.q.length - 1 ? "Następne pytanie →" : "Pokaż wynik") + '</button></div>';
+      }
+      h += '</article></div>';
+      t.innerHTML = h;
+      t.querySelectorAll(".opt").forEach(function (b) { b.onclick = function () { Z.wybor = +b.dataset.o; if (Z.wybor === Z.q[Z.i].q.k) Z.dobrze++; renderKwal(); }; });
+      var nx = t.querySelector("#nx"); if (nx) nx.onclick = function () {
+        Z.i++; Z.wybor = null;
+        if (Z.i >= Z.q.length) { var w = Math.round(Z.dobrze / Z.q.length * 100), key = kod + ":" + P.id; if (S.podw[key] === undefined || w > S.podw[key]) S.podw[key] = w; save(); }
+        renderKwal();
+      };
+      var ag = t.querySelector("#pqa"); if (ag) ag.onclick = function () { podq = null; renderKwal(); };
+      var b2 = t.querySelector("#podback2"); if (b2) b2.onclick = function () { var j = list.indexOf(P); view.pod = j < list.length - 1 ? list[j + 1].id : null; view.lesson = 0; podq = null; renderKwal(); scrollToTab(); };
+    }
+    t.querySelector("#podback").onclick = function () { view.pod = null; podq = null; renderKwal(); scrollToTab(); };
+    t.querySelectorAll(".toc button").forEach(function (b) { b.onclick = function () { view.lesson = +b.dataset.i; renderKwal(); scrollToTab(); }; });
+  }
+
+
   /* ---------- nauka pytań ---------- */
   function renderNauka(t, kod, tylkoBledy) {
     if (!nauka || nauka.kod !== kod || nauka.bledy !== tylkoBledy) {
@@ -696,7 +771,7 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
         if (answered) { if (o === Q.k) cls = "good"; else if (o === N.wybor) cls = "bad"; }
         return '<button class="opt ' + cls + '" data-o="' + o + '" ' + (answered ? "disabled" : "") + '><span class="bub">' + LETTERS[j] + '</span><span class="ot">' + fmt(Q.o[o]) + '</span></button>';
       }).join("") + '</div>';
-    if (!answered) h += '<div class="hint desk">Skróty: <span class="kbd">A</span>–<span class="kbd">D</span> wybór odpowiedzi, <span class="kbd">Enter</span> następne pytanie</div>';
+    if (!answered) h += '<div class="hint desk">Skróty: <span class="kbd">A</span>-<span class="kbd">D</span> wybór odpowiedzi, <span class="kbd">Enter</span> następne pytanie</div>';
     if (answered) {
       var ok = N.wybor === Q.k;
       h += '<div class="expl ' + (ok ? "" : "bad") + '"><b>' + (ok ? "Dobrze!" : "Źle. Poprawna odpowiedź: " + LETTERS[X.ord.indexOf(Q.k)]) + '</b><br>' + fmt(Q.w || "") + '</div>' +
@@ -734,10 +809,10 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
       var inny = exam && !exam.koniec ? exam.kod : null;
       var n = kod === WSP ? Math.min(40, wspPool().length) : 40;
       var hist = (S.wyniki[kod] || []).slice(-1)[0];
-      t.innerHTML = '<div class="q" style="max-width:720px"><h2>Egzamin próbny — część pisemna</h2>' +
-        '<p style="margin:0">Dostajesz <b>' + n + ' losowych zadań</b> z tej kwalifikacji' + (kod === WSP ? "" : " (w tym kilka z modułu wspólnego: BHP, prawo pracy, przedsiębiorczość)") + '. Masz <b>60 minut</b>. Każde zadanie ma cztery odpowiedzi, tylko jedna jest poprawna. Na prawdziwym egzaminie wystarczy <b>50%</b>, ale tutaj Twoim celem jest <b>' + CEL + '%</b> (co najmniej 36 poprawnych odpowiedzi) w trzech kolejnych próbach — wtedy masz pewność zdania.</p>' +
-        '<p style="margin:0">Bank tej kwalifikacji: <b class="mono">' + (kod === WSP ? wspPool().length : poolOf(kod).length) + '</b> zadań. Losowanie najpierw wybiera zadania, których jeszcze nie widziałeś — po kilku próbach przejdziesz cały bank.</p>' +
-        '<p style="margin:0" class="muted">Wynik zobaczysz dopiero po zakończeniu — jak na prawdziwym egzaminie. Odpowiedzi możesz zmieniać do końca czasu.</p>' +
+      t.innerHTML = '<div class="q" style="max-width:720px"><h2>Egzamin próbny - część pisemna</h2>' +
+        '<p style="margin:0">Dostajesz <b>' + n + ' losowych zadań</b> z tej kwalifikacji' + (kod === WSP ? "" : " (w tym kilka z modułu wspólnego: BHP, prawo pracy, przedsiębiorczość)") + '. Masz <b>60 minut</b>. Każde zadanie ma cztery odpowiedzi, tylko jedna jest poprawna. Na prawdziwym egzaminie wystarczy <b>50%</b>, ale tutaj Twoim celem jest <b>' + CEL + '%</b> (co najmniej 36 poprawnych odpowiedzi) w trzech kolejnych próbach - wtedy masz pewność zdania.</p>' +
+        '<p style="margin:0">Bank tej kwalifikacji: <b class="mono">' + (kod === WSP ? wspPool().length : poolOf(kod).length) + '</b> zadań. Losowanie najpierw wybiera zadania, których jeszcze nie widziałeś - po kilku próbach przejdziesz cały bank.</p>' +
+        '<p style="margin:0" class="muted">Wynik zobaczysz dopiero po zakończeniu - jak na prawdziwym egzaminie. Odpowiedzi możesz zmieniać do końca czasu.</p>' +
         (hist ? '<div class="muted">Ostatni wynik: <b class="mono">' + hist.pct + '%</b> (' + hist.d + ')</div>' : "") +
         (inny ? '<div class="notice warn">Masz rozpoczęty egzamin z <b>' + esc(inny === WSP ? "modułu wspólnego" : inny) + '</b>. Rozpoczęcie nowego go przerwie (bez zapisu wyniku).</div>' : "") +
         '<div class="btns"><button class="btn pri" id="st">Rozpocznij egzamin</button></div></div>';
@@ -755,12 +830,12 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
         return '<button class="opt ' + (E.odp[E.i] === o ? "sel" : "") + '" data-o="' + o + '"><span class="bub">' + LETTERS[j] + '</span><span class="ot">' + fmt(Q.o[o]) + '</span></button>';
       }).join("") + '</div><div class="btns" style="justify-content:space-between"><button class="btn" id="pv" ' + (E.i === 0 ? "disabled" : "") + '>← Poprzednie</button>' +
       (E.i < E.pyt.length - 1 ? '<button class="btn pri" id="nx">Następne →</button>' : '<button class="btn pri" id="fin2">Zakończ egzamin</button>') + '</div>' +
-      '<div class="hint desk">Skróty: <span class="kbd">A</span>–<span class="kbd">D</span> odpowiedź, <span class="kbd">←</span> <span class="kbd">→</span> poprzednie / następne, <span class="kbd">F</span> oznacz do sprawdzenia</div></div>' +
+      '<div class="hint desk">Skróty: <span class="kbd">A</span>-<span class="kbd">D</span> odpowiedź, <span class="kbd">←</span> <span class="kbd">→</span> poprzednie / następne, <span class="kbd">F</span> oznacz do sprawdzenia</div></div>' +
       '<aside class="side sheet"><div class="label">Pozostały czas</div><div class="timer" id="tm">60:00</div>' +
       '<div class="label">Karta odpowiedzi</div><div class="card-grid">' + E.pyt.map(function (_, j) {
         return '<button class="cell ' + (E.odp[j] !== null ? "ans " : "") + (E.flag[j] ? "flag " : "") + (j === E.i ? "cur" : "") + '" data-j="' + j + '" aria-label="Zadanie ' + (j + 1) + (E.flag[j] ? ", oznaczone" : "") + '">' + (j + 1) + '</button>';
       }).join("") + '</div><div class="muted" style="font-size:.86rem">Udzielone odpowiedzi: <b class="mono">' + E.odp.filter(function (x) { return x !== null; }).length + '/' + E.pyt.length + '</b>' + (nFlag ? ' · oznaczone: <b class="mono" style="color:var(--warn)">' + nFlag + '</b>' : "") + '</div>' +
-      (E.potw ? '<div class="notice warn" style="font-size:.9rem">Na pewno zakończyć? ' + (E.odp.indexOf(null) >= 0 ? "Bez odpowiedzi: <b>" + E.odp.filter(function (x) { return x === null; }).length + "</b> — liczą się jako błędne." : "Odpowiedziałeś na wszystkie zadania.") + (nFlag ? " Oznaczone do sprawdzenia: <b>" + nFlag + "</b>." : "") + '<div class="btns" style="margin-top:8px"><button class="btn pri" id="yes">Tak, zakończ</button><button class="btn" id="no">Wróć</button></div></div>' : '<button class="btn" id="fin">Zakończ egzamin</button>') + '</aside></div>';
+      (E.potw ? '<div class="notice warn" style="font-size:.9rem">Na pewno zakończyć? ' + (E.odp.indexOf(null) >= 0 ? "Bez odpowiedzi: <b>" + E.odp.filter(function (x) { return x === null; }).length + "</b> - liczą się jako błędne." : "Odpowiedziałeś na wszystkie zadania.") + (nFlag ? " Oznaczone do sprawdzenia: <b>" + nFlag + "</b>." : "") + '<div class="btns" style="margin-top:8px"><button class="btn pri" id="yes">Tak, zakończ</button><button class="btn" id="no">Wróć</button></div></div>' : '<button class="btn" id="fin">Zakończ egzamin</button>') + '</aside></div>';
     t.innerHTML = h;
     t.querySelectorAll(".opt").forEach(function (b) { b.onclick = function () { E.odp[E.i] = +b.dataset.o; renderExam(t, kod); }; });
     t.querySelectorAll(".cell").forEach(function (b) { b.onclick = function () { E.i = +b.dataset.j; renderExam(t, kod); }; });
@@ -794,9 +869,9 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
   function renderWynik(t, kod) {
     var E = exam, pass = E.pct >= 50, cel = E.pct >= CEL, sr = teoriaSr(kod);
     var h = '<div class="q"><div class="result"><div class="score ' + (pass ? "" : "fail") + '"><div><b>' + E.pct + '%</b><span class="muted mono" style="font-size:.8rem">' + E.good + '/' + E.pyt.length + '</span></div></div>' +
-      '<div style="display:grid;gap:8px"><div class="verdict ' + (pass ? "ok" : "fail") + '">' + (cel ? "Cel osiągnięty — " + CEL + "%+" : (pass ? "Zdane, ale poniżej celu " + CEL + "%" : "Część pisemna niezdana")) + '</div>' +
-      '<div class="muted">' + (cel ? "Bardzo dobrze. " : (pass ? "Na egzaminie by wystarczyło, ale cel to " + CEL + "% — wtedy stres i trudniejszy arkusz nie są groźne. " : "Do zdania potrzeba 50%, a celem jest " + CEL + "%. ")) +
-      (sr === null ? "Zrób jeszcze " + (3 - (S.wyniki[kod] || []).length) + " egz., aby policzyć średnią." : "Średnia z 3 ostatnich prób: <b>" + sr + "%</b>.") + ' Błędne odpowiedzi trafiły do „Moje błędy” — każde pytanie musisz tam rozwiązać poprawnie dwa razy.</div>' +
+      '<div style="display:grid;gap:8px"><div class="verdict ' + (pass ? "ok" : "fail") + '">' + (cel ? "Cel osiągnięty - " + CEL + "%+" : (pass ? "Zdane, ale poniżej celu " + CEL + "%" : "Część pisemna niezdana")) + '</div>' +
+      '<div class="muted">' + (cel ? "Bardzo dobrze. " : (pass ? "Na egzaminie by wystarczyło, ale cel to " + CEL + "% - wtedy stres i trudniejszy arkusz nie są groźne. " : "Do zdania potrzeba 50%, a celem jest " + CEL + "%. ")) +
+      (sr === null ? "Zrób jeszcze " + (3 - (S.wyniki[kod] || []).length) + " egz., aby policzyć średnią." : "Średnia z 3 ostatnich prób: <b>" + sr + "%</b>.") + ' Błędne odpowiedzi trafiły do „Moje błędy” - każde pytanie musisz tam rozwiązać poprawnie dwa razy.</div>' +
       '<div class="btns"><button class="btn pri" id="again">Nowy egzamin</button><button class="btn" id="err">Powtórz błędy</button></div></div></div>' +
       '<div class="label">Karta odpowiedzi</div><div class="card-grid" style="max-width:460px">' + E.pyt.map(function (X, j) {
         return '<a class="cell ' + (E.odp[j] === X.q.k ? "good" : "bad") + '" href="#" data-j="' + j + '" style="text-decoration:none">' + (j + 1) + '</a>';
@@ -816,17 +891,17 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
   /* ---------- o egzaminie ---------- */
   function renderInfo() {
     app.innerHTML = '<section class="prose"><div class="label">Poradnik</div><h1>Jak wygląda egzamin zawodowy</h1>' +
-      '<p>Egzamin zawodowy (egzamin potwierdzający kwalifikacje w zawodzie) przeprowadza Centralna Komisja Egzaminacyjna razem z okręgowymi komisjami egzaminacyjnymi. Zdajesz go osobno z każdej kwalifikacji wyodrębnionej w Twoim zawodzie — np. technik informatyk zdaje INF.02 i INF.03.</p>' +
+      '<p>Egzamin zawodowy (egzamin potwierdzający kwalifikacje w zawodzie) przeprowadza Centralna Komisja Egzaminacyjna razem z okręgowymi komisjami egzaminacyjnymi. Zdajesz go osobno z każdej kwalifikacji wyodrębnionej w Twoim zawodzie - np. technik informatyk zdaje INF.02 i INF.03.</p>' +
       '<h2>Dwie części egzaminu</h2><div class="tw"><table><tr><th></th><th>Część pisemna</th><th>Część praktyczna</th></tr>' +
       '<tr><td>Forma</td><td>test: 40 zadań, 4 odpowiedzi do wyboru, jedna poprawna; zwykle na komputerze</td><td>zadanie praktyczne: model „w” (wykonanie), „wk” (wykonanie na komputerze), „d” (dokumentacja) lub „dk”</td></tr>' +
-      '<tr><td>Czas</td><td>60 minut</td><td>zwykle 120, 150 lub 180 minut — zależnie od kwalifikacji</td></tr>' +
+      '<tr><td>Czas</td><td>60 minut</td><td>zwykle 120, 150 lub 180 minut - zależnie od kwalifikacji</td></tr>' +
       '<tr><td>Próg zdania</td><td>co najmniej 50% punktów</td><td>co najmniej 75% punktów</td></tr>' +
       '<tr><td>Co oceniają</td><td>wiedzę z całej podstawy programowej kwalifikacji, w tym BHP i przepisy</td><td>rezultaty (efekt pracy) i przebieg (np. przestrzeganie BHP, organizacja stanowiska)</td></tr></table></div>' +
-      '<h2>Co dostajesz po zdaniu</h2><ul><li><b>Certyfikat kwalifikacji zawodowej</b> — po zdaniu obu części egzaminu z danej kwalifikacji.</li><li><b>Dyplom zawodowy</b> — gdy masz certyfikaty ze wszystkich kwalifikacji w zawodzie i odpowiednie wykształcenie (w technikum: ukończona szkoła; w zawodach z poziomem 5 PRK także np. dyplom zawodowy na poziomie technika).</li><li>Wynik z części, którą zdałeś, jest zachowany — przy kolejnym podejściu możesz zdawać tylko część niezdaną.</li></ul>' +
-      '<h2>Sesje egzaminacyjne</h2><p>Egzaminy odbywają się w dwóch sesjach w roku: <b>zimowej (styczeń–luty)</b> i <b>letniej (czerwiec–lipiec)</b>. Dokładne daty co roku podaje dyrektor CKE w komunikacie o harmonogramie — sprawdź go na <a href="https://cke.gov.pl" target="_blank" rel="noopener">cke.gov.pl</a> lub stronie swojej OKE.</p>' +
-      '<h2>Co zabrać</h2><ul><li>dokument tożsamości ze zdjęciem;</li><li>długopis lub pióro z czarnym tuszem (atramentem);</li><li>kalkulator prosty i inne przybory tylko wtedy, gdy dopuszcza je komunikat CKE dla Twojej kwalifikacji;</li><li>na część praktyczną w wielu zawodach — odzież roboczą i środki ochrony indywidualnej (np. obuwie, fartuch, czepek).</li></ul>' +
-      '<h2>Cel: 90% w obu częściach</h2><p>Progi CKE to 50% i 75%, ale kto na ćwiczeniach ma tylko tyle, łatwo nie zda przy trudniejszym arkuszu i stresie. Dlatego ta strona uznaje Cię za gotowego dopiero wtedy, gdy:</p><ul><li>przerobisz wszystkie lekcje kursu podstawowego i rozszerzonego;</li><li>średnia z <b>trzech ostatnich egzaminów teoretycznych</b> wyniesie co najmniej <b>90%</b>;</li><li>ostatnie <b>zadanie praktyczne</b>, ocenione uczciwie według kryteriów, da co najmniej <b>90%</b>;</li><li>pytanie z listy błędów znika dopiero po <b>dwóch poprawnych odpowiedziach</b>.</li></ul><h2>Jak się uczyć z tą stroną</h2><ul><li><b>Kurs podstawowy</b> — wszystko, co musisz umieć, by zdać część pisemną. Zacznij od niego.</li><li><b>Kurs rozszerzony</b> — tematy trudniejsze i przygotowanie do części praktycznej: typowe zadania, schemat pracy, najczęstsze błędy.</li><li><b>Nauka pytań</b> — od razu widzisz poprawną odpowiedź i wyjaśnienie.</li><li><b>Egzamin próbny</b> — 40 zadań na czas. Celuj w ' + CEL + '% i więcej — wtedy masz duży zapas.</li><li><b>Moje błędy</b> — wracaj tu codziennie, aż lista będzie pusta.</li><li><b>Moduł wspólny</b> — BHP, ppoż., pierwsza pomoc i prawo pracy pojawiają się na każdym egzaminie, niezależnie od zawodu.</li></ul>' +
-      '<div class="notice">Najlepszy materiał uzupełniający to oryginalne arkusze z poprzednich lat, które CKE publikuje na swojej stronie. Rozwiąż przynajmniej kilka arkuszy części praktycznej — tam najłatwiej stracić punkty na drobiazgach.</div></section>';
+      '<h2>Co dostajesz po zdaniu</h2><ul><li><b>Certyfikat kwalifikacji zawodowej</b> - po zdaniu obu części egzaminu z danej kwalifikacji.</li><li><b>Dyplom zawodowy</b> - gdy masz certyfikaty ze wszystkich kwalifikacji w zawodzie i odpowiednie wykształcenie (w technikum: ukończona szkoła; w zawodach z poziomem 5 PRK także np. dyplom zawodowy na poziomie technika).</li><li>Wynik z części, którą zdałeś, jest zachowany - przy kolejnym podejściu możesz zdawać tylko część niezdaną.</li></ul>' +
+      '<h2>Sesje egzaminacyjne</h2><p>Egzaminy odbywają się w dwóch sesjach w roku: <b>zimowej (styczeń-luty)</b> i <b>letniej (czerwiec-lipiec)</b>. Dokładne daty co roku podaje dyrektor CKE w komunikacie o harmonogramie - sprawdź go na <a href="https://cke.gov.pl" target="_blank" rel="noopener">cke.gov.pl</a> lub stronie swojej OKE.</p>' +
+      '<h2>Co zabrać</h2><ul><li>dokument tożsamości ze zdjęciem;</li><li>długopis lub pióro z czarnym tuszem (atramentem);</li><li>kalkulator prosty i inne przybory tylko wtedy, gdy dopuszcza je komunikat CKE dla Twojej kwalifikacji;</li><li>na część praktyczną w wielu zawodach - odzież roboczą i środki ochrony indywidualnej (np. obuwie, fartuch, czepek).</li></ul>' +
+      '<h2>Cel: 90% w obu częściach</h2><p>Progi CKE to 50% i 75%, ale kto na ćwiczeniach ma tylko tyle, łatwo nie zda przy trudniejszym arkuszu i stresie. Dlatego ta strona uznaje Cię za gotowego dopiero wtedy, gdy:</p><ul><li>przerobisz wszystkie lekcje kursu podstawowego i rozszerzonego;</li><li>średnia z <b>trzech ostatnich egzaminów teoretycznych</b> wyniesie co najmniej <b>90%</b>;</li><li>ostatnie <b>zadanie praktyczne</b>, ocenione uczciwie według kryteriów, da co najmniej <b>90%</b>;</li><li>pytanie z listy błędów znika dopiero po <b>dwóch poprawnych odpowiedziach</b>.</li></ul><h2>Jak się uczyć z tą stroną</h2><ul><li><b>Kurs podstawowy</b> - wszystko, co musisz umieć, by zdać część pisemną. Zacznij od niego.</li><li><b>Podkursy</b> - osobne minikursy z każdego tematu egzaminu (np. HTML, CSS, PHP, SQL, C++), każdy kończy się sprawdzianem.</li><li><b>Kurs rozszerzony</b> - tematy trudniejsze i przygotowanie do części praktycznej: typowe zadania, schemat pracy, najczęstsze błędy.</li><li><b>Nauka pytań</b> - od razu widzisz poprawną odpowiedź i wyjaśnienie.</li><li><b>Egzamin próbny</b> - 40 zadań na czas. Celuj w ' + CEL + '% i więcej - wtedy masz duży zapas.</li><li><b>Moje błędy</b> - wracaj tu codziennie, aż lista będzie pusta.</li><li><b>Moduł wspólny</b> - BHP, ppoż., pierwsza pomoc i prawo pracy pojawiają się na każdym egzaminie, niezależnie od zawodu.</li></ul>' +
+      '<div class="notice">Najlepszy materiał uzupełniający to oryginalne arkusze z poprzednich lat, które CKE publikuje na swojej stronie. Rozwiąż przynajmniej kilka arkuszy części praktycznej - tam najłatwiej stracić punkty na drobiazgach.</div></section>';
   }
 
   /* ---------- kopia zapasowa postępów (plik JSON) ---------- */
@@ -839,7 +914,7 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
       var json = JSON.stringify({ app: "zdam-zawodowy", v: 1, data: S }, null, 1);
       var name = "zdam-zawodowy-postepy-" + new Date().toISOString().slice(0, 10) + ".json";
       var msg = document.getElementById("impmsg");
-      // w podglądzie Claude zapis idzie przez capability "downloads", na zwykłej stronie — przez link
+      // w podglądzie Claude zapis idzie przez capability "downloads", na zwykłej stronie - przez link
       var viaClaude = window.claude && window.claude.use ? window.claude.use("downloads") : Promise.resolve(null);
       viaClaude.then(function (dl) {
         if (dl) return dl.save({ filename: name, data: json }).then(function () { msg.textContent = "Zapisano plik " + name + "."; }, function (e) { if (e && e.code !== "declined") msg.textContent = "Nie udało się zapisać pliku w tym widoku."; });
