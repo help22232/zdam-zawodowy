@@ -66,6 +66,8 @@ h3 { font-size: 1.12rem; font-weight: 500; }
 .nav a { text-decoration: none; color: var(--muted); padding: 6px 10px; border-radius: 6px; font-weight: 500; font-size: .95rem; }
 .nav a:hover { color: var(--ink); background: var(--soft); }
 .nav a.on { color: var(--pen); background: var(--pen-soft); }
+.nav a { white-space: nowrap; }
+.nav .ns { display: none; }
 
 main { padding-block: 28px 64px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; }
 #tab, #lista { min-width: 0; }
@@ -104,7 +106,7 @@ main { padding-block: 28px 64px; display: grid; grid-template-columns: minmax(0,
 .khead { display: grid; gap: 8px; }
 .khead .crumbs { font-size: .9rem; }
 .khead h1 { font-size: clamp(1.35rem, 3.2vw, 2.1rem); }
-.tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--line); overflow-x: auto; }
+.tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
 .tabs button { background: none; border: 0; padding: 10px 14px; cursor: pointer; color: var(--muted); font-weight: 500; border-bottom: 2.5px solid transparent; white-space: nowrap; }
 .tabs button.on { color: var(--pen); border-bottom-color: var(--pen); }
 .tabs button .n { font-family: var(--f-mono); font-size: .78rem; margin-left: 4px; }
@@ -168,6 +170,22 @@ main { padding-block: 28px 64px; display: grid; grid-template-columns: minmax(0,
 .cell { aspect-ratio: 1; max-width: 100%; border: 1px solid var(--line); background: var(--card); border-radius: 4px; font-family: var(--f-mono); font-size: .72rem; cursor: pointer; padding: 0; display: grid; place-items: center; font-variant-numeric: tabular-nums; }
 .cell.ans { background: var(--pen-soft); border-color: var(--pen); color: var(--pen); }
 .cell.cur { outline: 2px solid var(--ink); outline-offset: 0; }
+.cell.flag { box-shadow: inset 0 -3px 0 var(--warn); }
+.btn.flagon { border-color: var(--warn); color: var(--warn); }
+.kbd { font-family: var(--f-mono); font-size: .78rem; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; padding: 0 5px; color: var(--muted); }
+.hint { font-size: .82rem; color: var(--muted); }
+.theme { margin-left: 4px; background: none; border: 1px solid var(--line); border-radius: 6px; width: 34px; height: 32px; cursor: pointer; color: var(--muted); display: grid; place-items: center; }
+.theme:hover { color: var(--ink); border-color: var(--pen); }
+.theme svg { width: 17px; height: 17px; }
+.banner { background: var(--warn); color: #fff; }
+.banner .wrap { display: flex; gap: 12px; align-items: center; justify-content: space-between; padding-block: 8px; flex-wrap: wrap; font-weight: 500; }
+.banner a { color: #fff; font-weight: 700; }
+:root[data-theme="dark"] .banner, :root[data-theme="dark"] .banner a { color: #0f1219; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .banner, :root:not([data-theme="light"]) .banner a { color: #0f1219; } }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.seg button { background: var(--card); border: 0; padding: 5px 10px; cursor: pointer; font-size: .85rem; color: var(--muted); }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button.on { background: var(--pen-soft); color: var(--pen); font-weight: 600; }
 .cell.good { background: var(--ok-soft); border-color: var(--ok); color: var(--ok); }
 .cell.bad { background: var(--red-soft); border-color: var(--red); color: var(--red); }
 .stats { display: flex; gap: 18px; flex-wrap: wrap; font-variant-numeric: tabular-nums; }
@@ -231,7 +249,21 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
   .side { order: -1; }
   .card-grid { grid-template-columns: repeat(10, minmax(0, 1fr)); }
   .result { grid-template-columns: minmax(0, 1fr); justify-items: start; }
-  .nav { margin-left: 0; }
+  .top .wrap { flex-wrap: nowrap; gap: 8px; }
+  .logo { font-size: 1rem; white-space: nowrap; }
+  .nav { margin-left: auto; flex-wrap: nowrap; gap: 0; }
+  .nav a { padding: 6px 7px; font-size: .86rem; }
+  .tabs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; border-bottom: 0; }
+  .tabs button { border: 1px solid var(--line); border-radius: 8px; background: var(--card); padding: 8px 10px; text-align: left; white-space: normal; }
+  .tabs button.on { background: var(--pen-soft); border-color: var(--pen); }
+  .hint.desk { display: none; }
+}
+@media (max-width: 520px) {
+  .nav .nl { display: none; }
+  .nav .ns { display: inline; }
+}
+@media (max-width: 420px) {
+  .logo-txt { display: none; }
 }
 @media (prefers-reduced-motion: no-preference) {
   .opt, .kcard, .btn { transition: border-color .15s, background-color .15s; }
@@ -244,14 +276,16 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
 <body>
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="#start"><span class="logo-mark" aria-hidden="true"><i></i><i class="on"></i><i></i><i></i></span>Zdam Zawodowy</a>
+    <a class="logo" href="#start"><span class="logo-mark" aria-hidden="true"><i></i><i class="on"></i><i></i><i></i></span><span class="logo-txt">Zdam Zawodowy</span></a>
     <nav class="nav" id="nav">
-      <a href="#start" data-v="start">Kwalifikacje</a>
-      <a href="#o-egzaminie" data-v="o-egzaminie">O egzaminie</a>
-      <a href="#postepy" data-v="postepy">Moje postępy</a>
+      <a href="#start" data-v="start"><span class="nl">Kwalifikacje</span><span class="ns">Kursy</span></a>
+      <a href="#o-egzaminie" data-v="o-egzaminie"><span class="nl">O egzaminie</span><span class="ns">Egzamin</span></a>
+      <a href="#postepy" data-v="postepy"><span class="nl">Moje postępy</span><span class="ns">Postępy</span></a>
     </nav>
+    <button class="theme" id="theme" type="button"></button>
   </div>
 </header>
+<div id="banner"></div>
 <main class="wrap" id="app"></main>
 <footer>
   <div class="wrap">Materiały do samodzielnej nauki, przygotowane według podstawy programowej kształcenia w zawodach (od 2019 r.). Aktualne informacje o terminach, harmonogramach i wymaganiach publikuje Centralna Komisja Egzaminacyjna: <a href="https://cke.gov.pl" target="_blank" rel="noopener">cke.gov.pl</a>. Postępy zapisują się tylko w tej przeglądarce.</div>
@@ -306,6 +340,27 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
   try { var raw = localStorage.getItem(KEY); if (raw) { var p = JSON.parse(raw); for (var k in S) if (p[k]) S[k] = p[k]; } } catch (e) {}
   function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
 
+  /* ---------- motyw: auto / jasny / ciemny ---------- */
+  var THEME_KEY = "zdam-theme";
+  var ICONS = {
+    auto: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg>',
+    light: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>',
+    dark: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>'
+  };
+  var NAZWA_MOTYWU = { auto: "Motyw: jak w systemie", light: "Motyw: jasny", dark: "Motyw: ciemny" };
+  function applyTheme(m) {
+    if (m === "light" || m === "dark") document.documentElement.setAttribute("data-theme", m);
+    else { m = "auto"; document.documentElement.removeAttribute("data-theme"); }
+    var b = document.getElementById("theme");
+    if (b) { b.innerHTML = ICONS[m]; b.title = NAZWA_MOTYWU[m] + " (kliknij, aby zmienić)"; b.setAttribute("aria-label", NAZWA_MOTYWU[m]); b.dataset.m = m; }
+  }
+  var savedTheme = null; try { savedTheme = localStorage.getItem(THEME_KEY); } catch (e) {}
+  applyTheme(savedTheme);
+  document.getElementById("theme").onclick = function () {
+    var next = { auto: "light", light: "dark", dark: "auto" }[this.dataset.m || "auto"];
+    applyTheme(next); try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
+  };
+
   /* ---------- pomocnicze ---------- */
   function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function fmt(t) { return esc(t).replace(/`([^`]+)`/g, "<code>$1</code>"); }
@@ -327,6 +382,8 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
     return out;
   }
   function wspPool() { return poolOf(WSP); }
+  function qById(id) { var p = id.lastIndexOf("#"), c = kurs(id.slice(0, p)); return c ? c.pytania[+id.slice(p + 1)] : null; }
+  function allCount() { var n = 0; for (var k in KURSY) if (KURSY[k] && KURSY[k].pytania) n += KURSY[k].pytania.length; return n; }
   var LETTERS = ["A", "B", "C", "D"];
 
   /* ---------- cel 90% i gotowość ---------- */
@@ -358,19 +415,64 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
   }
 
   /* ---------- nawigacja ---------- */
-  var view = { name: "start", kod: null, tab: "podst", lesson: 0, filtr: "", tylkoPelne: false };
+  var view = { name: "start", kod: null, tab: "podst", lesson: 0, filtr: "", tylkoMoje: false, seria: 20, wantTab: null };
   var exam = null, nauka = null, timerId = null;
+
+  /* trwający egzamin przeżywa przejście na inną stronę i odświeżenie przeglądarki */
+  var EXAM_KEY = "zdam-egzamin-trwa";
+  function saveExam() {
+    try {
+      if (!exam || exam.koniec) { localStorage.removeItem(EXAM_KEY); return; }
+      localStorage.setItem(EXAM_KEY, JSON.stringify({ kod: exam.kod, ids: exam.pyt.map(function (x) { return x.id; }), ord: exam.pyt.map(function (x) { return x.ord; }), odp: exam.odp, flag: exam.flag, i: exam.i, start: exam.start, limit: exam.limit }));
+    } catch (e) {}
+  }
+  (function restoreExam() {
+    try {
+      var r = JSON.parse(localStorage.getItem(EXAM_KEY) || "null");
+      if (!r || !kurs(r.kod)) return;
+      var pyt = r.ids.map(function (id, j) { var p = id.lastIndexOf("#"); return { q: qById(id), id: id, kod: id.slice(0, p), ord: r.ord[j] }; });
+      if (pyt.some(function (x) { return !x.q; })) { localStorage.removeItem(EXAM_KEY); return; }
+      exam = { kod: r.kod, pyt: pyt, odp: r.odp, flag: r.flag || pyt.map(function () { return false; }), i: r.i || 0, start: r.start, limit: r.limit, koniec: false, potw: false };
+    } catch (e) {}
+  })();
+  function examLeft() { return exam ? Math.max(0, exam.limit - (Date.now() - exam.start)) : 0; }
+  function mmss(ms) { var m = Math.floor(ms / 60000), s = Math.floor(ms % 60000 / 1000); return (m < 10 ? "0" : "") + m + ":" + (s < 10 ? "0" : "") + s; }
+  function renderBanner() {
+    var el = document.getElementById("banner");
+    var on = exam && !exam.koniec && !(view.name === "kwal" && view.kod === exam.kod && view.tab === "egzamin");
+    if (!on) { el.innerHTML = ""; return; }
+    var left = examLeft();
+    el.innerHTML = '<div class="banner"><div class="wrap"><span>Trwa egzamin próbny <b class="mono">' + esc(exam.kod === WSP ? "moduł wspólny" : exam.kod) + '</b> · ' +
+      (left ? 'zostało <b class="mono" id="bantm">' + mmss(left) + '</b>' : "czas minął") + '</span><a href="#" id="banback">' + (left ? "Wróć do egzaminu →" : "Zobacz wynik →") + '</a></div></div>';
+    document.getElementById("banback").onclick = function (e) { e.preventDefault(); view.wantTab = "egzamin"; if (view.name === "kwal" && view.kod === exam.kod) { view.tab = "egzamin"; view.wantTab = null; render(); } else go(token(exam.kod)); };
+  }
+  setInterval(function () { var b = document.getElementById("bantm"); if (!b || !exam) return; var l = examLeft(); if (l) b.textContent = mmss(l); else renderBanner(); }, 1000);
+
+  /* skróty klawiszowe w nauce i egzaminie: A–D / 1–4 wybór, → lub Enter dalej, ← wstecz, F oznacz */
+  document.addEventListener("keydown", function (e) {
+    if (e.ctrlKey || e.metaKey || e.altKey || document.getElementById("env")) return;
+    var tg = e.target; if (tg && (tg.tagName === "INPUT" || tg.tagName === "TEXTAREA" || tg.tagName === "SELECT" || tg.isContentEditable)) return;
+    var opts = document.querySelectorAll("#tab .opt"); if (!opts.length) return;
+    var k = e.key.toLowerCase(), j = "abcd".indexOf(k); if (j < 0) j = "1234".indexOf(k);
+    var click = function (sel) { var b = document.querySelector(sel); if (b && !b.disabled) { b.click(); return true; } return false; };
+    var done = false;
+    if (k.length === 1 && j >= 0 && j < opts.length) { if (!opts[j].disabled) { opts[j].click(); done = true; } }
+    else if (k === "arrowright" || (k === "enter" && tg.tagName !== "BUTTON")) done = click("#tab #nx") || click("#tab #fin2");
+    else if (k === "arrowleft") done = click("#tab #pv");
+    else if (k === "f") done = click("#tab #flag");
+    if (done) e.preventDefault();
+  });
 
   function go(hash) { if (location.hash === "#" + hash) route(); else location.hash = hash; }
   function route() {
     clearInterval(timerId);
     var h = (location.hash || "#start").slice(1);
-    if (exam && !exam.koniec && !(view.name === "kwal" && fromToken(h) === exam.kod)) exam = null;
     if (h === "o-egzaminie") view.name = "o-egzaminie";
     else if (h === "postepy") view.name = "postepy";
     else if (fromToken(h)) {
       var kod = fromToken(h);
-      if (view.kod !== kod) { view.tab = "podst"; view.lesson = 0; nauka = null; if (!exam || exam.kod !== kod) exam = null; }
+      if (view.kod !== kod) { view.tab = "podst"; view.lesson = 0; nauka = null; if (exam && exam.koniec && exam.kod !== kod) exam = null; }
+      if (view.wantTab) { view.tab = view.wantTab; view.wantTab = null; }
       view.name = "kwal"; view.kod = kod;
       if (kod !== WSP && kurs(kod)) { S.ostatnia = kod; save(); }
     } else view.name = "start";
@@ -386,17 +488,18 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
     else if (view.name === "postepy") renderPostepy();
     else if (view.name === "kwal") renderKwal();
     else renderStart();
+    renderBanner();
   }
 
   /* ---------- strona startowa ---------- */
   function renderStart() {
-    var full = KAT.filter(function (k) { return kurs(k.kod); }).length;
+    var moje = KAT.filter(function (k) { return started(k.kod); }).length;
     var last = S.ostatnia && kwal(S.ostatnia);
     var h = '<section class="hero"><div><div class="label">Egzamin potwierdzający kwalifikacje w zawodzie</div>' +
       '<h1 style="margin-top:8px">Przygotuj się do egzaminu zawodowego</h1>' +
-      '<p class="lead">Wybierz swoją kwalifikację. Każdy kurs ma część podstawową, kurs rozszerzony, naukę pytań z wyjaśnieniami, egzamin teoretyczny na czas (40 zadań w 60 minut) i zadanie praktyczne oceniane według kryteriów CKE.</p>' +
+      '<p class="lead">Wybierz swoją kwalifikację. Każdy kurs ma część podstawową, kurs rozszerzony, naukę pytań z wyjaśnieniami, egzamin teoretyczny na czas (40 zadań w 60 minut) i zadanie praktyczne oceniane według kryteriów CKE. W bazie jest <b class="mono">' + allCount() + '</b> pytań testowych.</p>' +
       '<div class="search"><input id="q" type="search" placeholder="Szukaj: kod (np. INF.03), nazwa lub zawód" value="' + esc(view.filtr) + '" aria-label="Szukaj kwalifikacji"></div>' +
-      '<div class="chips" style="margin-top:12px"><button class="chip ' + (view.tylkoPelne ? "" : "on") + '" data-f="all">Wszystkie (' + KAT.length + ')</button><button class="chip ' + (view.tylkoPelne ? "on" : "") + '" data-f="full">Z pełnym kursem (' + full + ')</button></div></div>' +
+      '<div class="chips" style="margin-top:12px"><button class="chip ' + (view.tylkoMoje ? "" : "on") + '" data-f="all">Wszystkie (' + KAT.length + ')</button><button class="chip ' + (view.tylkoMoje ? "on" : "") + '" data-f="moje">Rozpoczęte (' + moje + ')</button></div></div>' +
       '<aside class="sheet"><div class="label">Część pisemna — wymagania</div><div class="facts">' +
       '<div class="fact"><b>40</b><span>zadań jednokrotnego wyboru</span></div><div class="fact"><b>60 min</b><span>czas trwania</span></div>' +
       '<div class="fact"><b>≥ 50%</b><span>próg zdania części pisemnej</span></div><div class="fact"><b>≥ 75%</b><span>próg zdania części praktycznej</span></div></div>' +
@@ -406,20 +509,22 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
     app.innerHTML = h;
     var inp = document.getElementById("q");
     inp.addEventListener("input", function () { view.filtr = inp.value; renderLista(); });
-    app.querySelectorAll(".chip").forEach(function (b) { b.onclick = function () { view.tylkoPelne = b.dataset.f === "full"; renderStart(); }; });
+    app.querySelectorAll(".chip").forEach(function (b) { b.onclick = function () { view.tylkoMoje = b.dataset.f === "moje"; renderStart(); }; });
     renderLista();
   }
+  function started(kod) { return !!(kurs(kod) && (doneOf(kod) || (S.wyniki[kod] || []).length || (S.prakt[kod] || []).length)); }
   function renderLista() {
     var f = norm(view.filtr.trim());
     var groups = {}, order = [];
     var wsp = { kod: WSP, nazwa: "Moduł wspólny: BHP, ochrona przeciwpożarowa, pierwsza pomoc, prawo pracy i działalność gospodarcza", branza: "Dla wszystkich zawodów", zawody: ["każdy zawód — te tematy pojawiają się na każdym egzaminie"] };
     [wsp].concat(KAT).forEach(function (k) {
-      if (view.tylkoPelne && !kurs(k.kod)) return;
+      if (view.tylkoMoje && !started(k.kod)) return;
       if (f && norm(k.kod + " " + k.nazwa + " " + k.zawody.join(" ") + " " + k.branza).indexOf(f) < 0) return;
       if (!groups[k.branza]) { groups[k.branza] = []; order.push(k.branza); }
       groups[k.branza].push(k);
     });
     var el = document.getElementById("lista");
+    if (!order.length && view.tylkoMoje && !f) { el.innerHTML = '<div class="empty">Nie zacząłeś jeszcze żadnego kursu. Wybierz „Wszystkie” i kliknij swoją kwalifikację.</div>'; return; }
     if (!order.length) { el.innerHTML = '<div class="empty">Nie znaleziono kwalifikacji dla „' + esc(view.filtr) + '”. Spróbuj wpisać sam kod, np. <span class="mono">EKA</span>, albo nazwę zawodu.</div>'; return; }
     el.innerHTML = order.map(function (b) {
       var sym = (groups[b][0].kod.split(".")[0]);
@@ -427,7 +532,7 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
         groups[b].map(function (k) {
           var has = !!kurs(k.kod), p = pct(k.kod);
           return '<a class="kcard" href="#' + token(k.kod) + '"><div class="row"><span class="code">' + esc(k.kod === WSP ? "BHP · PRAWO" : k.kod) + '</span>' +
-            (has ? '<span class="pill full">pełny kurs</span>' : '<span class="pill base">moduł wspólny</span>') + '</div>' +
+            (k.kod !== WSP && has && gotowosc(k.kod).ok ? '<span class="pill full">gotowy ✓</span>' : '<span class="pill base">' + (has ? kurs(k.kod).pytania.length + " pytań" : "moduł wspólny") + '</span>') + '</div>' +
             '<div class="nm">' + esc(k.nazwa) + '</div><div class="zw">' + esc(k.zawody.join(", ")) + '</div>' +
             (has && p ? '<div class="bar" title="Przerobione lekcje"><i style="width:' + p + '%"></i></div>' : "") + '</a>';
         }).join("") + '</div></section>';
@@ -469,6 +574,7 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
     else if (view.tab === "bledy") renderNauka(t, kod, true);
     else if (view.tab === "prakt" && c.praktyka) renderPrakt(t, kod, c.praktyka);
     else renderExam(t, kod);
+    renderBanner();
   }
 
   /* ---------- egzamin praktyczny ---------- */
@@ -569,6 +675,7 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
     if (!nauka || nauka.kod !== kod || nauka.bledy !== tylkoBledy) {
       var pool = poolOf(kod);
       if (tylkoBledy) pool = pool.filter(function (x) { return S.bledy[x.id]; });
+      if (!tylkoBledy) { pool = shuffle(pool).sort(function (x, y) { return (S.widz[x.id] || 0) - (S.widz[y.id] || 0); }); if (view.seria) pool = pool.slice(0, view.seria); }
       nauka = { kod: kod, bledy: tylkoBledy, q: shuffle(pool).map(function (x) { x.ord = shuffle([0, 1, 2, 3]); return x; }), i: 0, dobrze: 0, zle: 0, wybor: null };
     }
     var N = nauka;
@@ -589,22 +696,26 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
         if (answered) { if (o === Q.k) cls = "good"; else if (o === N.wybor) cls = "bad"; }
         return '<button class="opt ' + cls + '" data-o="' + o + '" ' + (answered ? "disabled" : "") + '><span class="bub">' + LETTERS[j] + '</span><span class="ot">' + fmt(Q.o[o]) + '</span></button>';
       }).join("") + '</div>';
+    if (!answered) h += '<div class="hint desk">Skróty: <span class="kbd">A</span>–<span class="kbd">D</span> wybór odpowiedzi, <span class="kbd">Enter</span> następne pytanie</div>';
     if (answered) {
       var ok = N.wybor === Q.k;
       h += '<div class="expl ' + (ok ? "" : "bad") + '"><b>' + (ok ? "Dobrze!" : "Źle. Poprawna odpowiedź: " + LETTERS[X.ord.indexOf(Q.k)]) + '</b><br>' + fmt(Q.w || "") + '</div>' +
         '<div class="btns"><button class="btn pri" id="nx">' + (N.i < N.q.length - 1 ? "Następne pytanie →" : "Zakończ serię") + '</button></div>';
     }
     h += '</div><aside class="side sheet"><div class="label">Ta seria</div><div class="stats"><div><b style="color:var(--ok)">' + N.dobrze + '</b>dobrze</div><div><b style="color:var(--red)">' + N.zle + '</b>źle</div></div>' +
-      '<div class="bar"><i style="width:' + Math.round(N.i / N.q.length * 100) + '%"></i></div><div class="muted" style="font-size:.88rem">Pytania, na które odpowiesz źle, trafiają do zakładki „Moje błędy”. Poprawna odpowiedź usuwa pytanie z listy błędów.</div></aside></div>';
+      '<div class="bar"><i style="width:' + Math.round(N.i / N.q.length * 100) + '%"></i></div><div class="muted" style="font-size:.88rem">Pytania, na które odpowiesz źle, trafiają do zakładki „Moje błędy”. Pytanie znika z listy błędów po dwóch poprawnych odpowiedziach.</div>' +
+      (tylkoBledy ? "" : '<div class="label">Długość serii</div><div class="seg">' + [[20, "20"], [40, "40"], [0, "Wszystkie"]].map(function (o) { return '<button data-s="' + o[0] + '" class="' + (view.seria === o[0] ? "on" : "") + '">' + o[1] + '</button>'; }).join("") + '</div><div class="muted" style="font-size:.84rem">Najpierw dostajesz pytania, których jeszcze nie widziałeś.</div>') + '</aside></div>';
     t.innerHTML = h;
     t.querySelectorAll(".opt").forEach(function (b) {
       b.onclick = function () {
         N.wybor = +b.dataset.o;
         if (N.wybor === Q.k) { N.dobrze++; hit(X.id); } else { N.zle++; miss(X.id); }
+        if (!tylkoBledy) S.widz[X.id] = (S.widz[X.id] || 0) + 1;
         save(); renderNauka(t, kod, tylkoBledy);
       };
     });
     var nx = t.querySelector("#nx"); if (nx) nx.onclick = function () { N.i++; N.wybor = null; renderNauka(t, kod, tylkoBledy); };
+    t.querySelectorAll("[data-s]").forEach(function (b) { b.onclick = function () { view.seria = +b.dataset.s; nauka = null; renderNauka(t, kod, tylkoBledy); }; });
   }
 
   /* ---------- egzamin próbny ---------- */
@@ -616,10 +727,11 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
     var nW = kod === WSP ? 40 : Math.min(w.length, Math.max(4, 40 - own.length));
     var pick = shuffle(own.slice(0, 40 - nW).concat(w.slice(0, nW))).map(function (x) { return { q: x.q, id: x.id, kod: x.kod, ord: shuffle([0, 1, 2, 3]) }; });
     pick.forEach(function (x) { S.widz[x.id] = (S.widz[x.id] || 0) + 1; }); save();
-    return { kod: kod, pyt: pick, odp: pick.map(function () { return null; }), i: 0, start: Date.now(), limit: 60 * 60 * 1000, koniec: false, potw: false };
+    return { kod: kod, pyt: pick, odp: pick.map(function () { return null; }), flag: pick.map(function () { return false; }), i: 0, start: Date.now(), limit: 60 * 60 * 1000, koniec: false, potw: false };
   }
   function renderExam(t, kod) {
     if (!exam || exam.kod !== kod) {
+      var inny = exam && !exam.koniec ? exam.kod : null;
       var n = kod === WSP ? Math.min(40, wspPool().length) : 40;
       var hist = (S.wyniki[kod] || []).slice(-1)[0];
       t.innerHTML = '<div class="q" style="max-width:720px"><h2>Egzamin próbny — część pisemna</h2>' +
@@ -627,22 +739,28 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
         '<p style="margin:0">Bank tej kwalifikacji: <b class="mono">' + (kod === WSP ? wspPool().length : poolOf(kod).length) + '</b> zadań. Losowanie najpierw wybiera zadania, których jeszcze nie widziałeś — po kilku próbach przejdziesz cały bank.</p>' +
         '<p style="margin:0" class="muted">Wynik zobaczysz dopiero po zakończeniu — jak na prawdziwym egzaminie. Odpowiedzi możesz zmieniać do końca czasu.</p>' +
         (hist ? '<div class="muted">Ostatni wynik: <b class="mono">' + hist.pct + '%</b> (' + hist.d + ')</div>' : "") +
+        (inny ? '<div class="notice warn">Masz rozpoczęty egzamin z <b>' + esc(inny === WSP ? "modułu wspólnego" : inny) + '</b>. Rozpoczęcie nowego go przerwie (bez zapisu wyniku).</div>' : "") +
         '<div class="btns"><button class="btn pri" id="st">Rozpocznij egzamin</button></div></div>';
-      t.querySelector("#st").onclick = function () { exam = buildExam(kod); renderExam(t, kod); };
+      t.querySelector("#st").onclick = function () { exam = buildExam(kod); saveExam(); renderBanner(); renderExam(t, kod); };
       return;
     }
     if (exam.koniec) return renderWynik(t, kod);
+    if (!examLeft()) return finish(t, kod);
     var E = exam, X = E.pyt[E.i], Q = X.q;
-    var h = '<div class="qwrap"><div class="q"><div class="qtop"><span class="label">Zadanie ' + (E.i + 1) + ' z ' + E.pyt.length + '</span></div>' +
+    if (!E.flag) E.flag = E.pyt.map(function () { return false; });
+    saveExam();
+    var nFlag = E.flag.filter(Boolean).length;
+    var h = '<div class="qwrap"><div class="q"><div class="qtop"><span class="label">Zadanie ' + (E.i + 1) + ' z ' + E.pyt.length + '</span><button class="btn ' + (E.flag[E.i] ? "flagon" : "") + '" id="flag" style="padding:4px 10px;font-size:.85rem">' + (E.flag[E.i] ? "⚑ Oznaczone" : "⚐ Oznacz do sprawdzenia") + '</button></div>' +
       '<div class="qtext">' + fmt(Q.p) + '</div><div class="opts">' + X.ord.map(function (o, j) {
         return '<button class="opt ' + (E.odp[E.i] === o ? "sel" : "") + '" data-o="' + o + '"><span class="bub">' + LETTERS[j] + '</span><span class="ot">' + fmt(Q.o[o]) + '</span></button>';
       }).join("") + '</div><div class="btns" style="justify-content:space-between"><button class="btn" id="pv" ' + (E.i === 0 ? "disabled" : "") + '>← Poprzednie</button>' +
-      (E.i < E.pyt.length - 1 ? '<button class="btn pri" id="nx">Następne →</button>' : '<button class="btn pri" id="fin2">Zakończ egzamin</button>') + '</div></div>' +
+      (E.i < E.pyt.length - 1 ? '<button class="btn pri" id="nx">Następne →</button>' : '<button class="btn pri" id="fin2">Zakończ egzamin</button>') + '</div>' +
+      '<div class="hint desk">Skróty: <span class="kbd">A</span>–<span class="kbd">D</span> odpowiedź, <span class="kbd">←</span> <span class="kbd">→</span> poprzednie / następne, <span class="kbd">F</span> oznacz do sprawdzenia</div></div>' +
       '<aside class="side sheet"><div class="label">Pozostały czas</div><div class="timer" id="tm">60:00</div>' +
       '<div class="label">Karta odpowiedzi</div><div class="card-grid">' + E.pyt.map(function (_, j) {
-        return '<button class="cell ' + (E.odp[j] !== null ? "ans " : "") + (j === E.i ? "cur" : "") + '" data-j="' + j + '" aria-label="Zadanie ' + (j + 1) + '">' + (j + 1) + '</button>';
-      }).join("") + '</div><div class="muted" style="font-size:.86rem">Udzielone odpowiedzi: <b class="mono">' + E.odp.filter(function (x) { return x !== null; }).length + '/' + E.pyt.length + '</b></div>' +
-      (E.potw ? '<div class="notice warn" style="font-size:.9rem">Na pewno zakończyć? Nieudzielone odpowiedzi liczą się jako błędne.<div class="btns" style="margin-top:8px"><button class="btn pri" id="yes">Tak, zakończ</button><button class="btn" id="no">Wróć</button></div></div>' : '<button class="btn" id="fin">Zakończ egzamin</button>') + '</aside></div>';
+        return '<button class="cell ' + (E.odp[j] !== null ? "ans " : "") + (E.flag[j] ? "flag " : "") + (j === E.i ? "cur" : "") + '" data-j="' + j + '" aria-label="Zadanie ' + (j + 1) + (E.flag[j] ? ", oznaczone" : "") + '">' + (j + 1) + '</button>';
+      }).join("") + '</div><div class="muted" style="font-size:.86rem">Udzielone odpowiedzi: <b class="mono">' + E.odp.filter(function (x) { return x !== null; }).length + '/' + E.pyt.length + '</b>' + (nFlag ? ' · oznaczone: <b class="mono" style="color:var(--warn)">' + nFlag + '</b>' : "") + '</div>' +
+      (E.potw ? '<div class="notice warn" style="font-size:.9rem">Na pewno zakończyć? ' + (E.odp.indexOf(null) >= 0 ? "Bez odpowiedzi: <b>" + E.odp.filter(function (x) { return x === null; }).length + "</b> — liczą się jako błędne." : "Odpowiedziałeś na wszystkie zadania.") + (nFlag ? " Oznaczone do sprawdzenia: <b>" + nFlag + "</b>." : "") + '<div class="btns" style="margin-top:8px"><button class="btn pri" id="yes">Tak, zakończ</button><button class="btn" id="no">Wróć</button></div></div>' : '<button class="btn" id="fin">Zakończ egzamin</button>') + '</aside></div>';
     t.innerHTML = h;
     t.querySelectorAll(".opt").forEach(function (b) { b.onclick = function () { E.odp[E.i] = +b.dataset.o; renderExam(t, kod); }; });
     t.querySelectorAll(".cell").forEach(function (b) { b.onclick = function () { E.i = +b.dataset.j; renderExam(t, kod); }; });
@@ -651,19 +769,20 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
     [t.querySelector("#fin"), t.querySelector("#fin2")].forEach(function (b) { if (b) b.onclick = function () { E.potw = true; renderExam(t, kod); }; });
     var y = t.querySelector("#yes"); if (y) y.onclick = function () { finish(t, kod); };
     var no = t.querySelector("#no"); if (no) no.onclick = function () { E.potw = false; renderExam(t, kod); };
+    t.querySelector("#flag").onclick = function () { E.flag[E.i] = !E.flag[E.i]; renderExam(t, kod); };
     tick(t, kod); clearInterval(timerId); timerId = setInterval(function () { tick(t, kod); }, 1000);
   }
   function tick(t, kod) {
     var el = document.getElementById("tm"); if (!el || !exam) return;
     var left = Math.max(0, exam.limit - (Date.now() - exam.start));
     var m = Math.floor(left / 60000), s = Math.floor(left % 60000 / 1000);
-    el.textContent = (m < 10 ? "0" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+    el.textContent = mmss(left);
     el.classList.toggle("low", left < 5 * 60000);
     if (left <= 0) finish(t, kod);
   }
   function finish(t, kod) {
     clearInterval(timerId);
-    var E = exam; E.koniec = true;
+    var E = exam; E.koniec = true; saveExam(); renderBanner();
     var good = 0;
     E.pyt.forEach(function (X, j) { if (E.odp[j] === X.q.k) { good++; hit(X.id); } else miss(X.id); });
     E.good = good; E.pct = Math.round(good / E.pyt.length * 100);
@@ -689,7 +808,7 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
           '<div class="ans" style="color:var(--ok)">Poprawna: ' + LETTERS[X.ord.indexOf(Q.k)] + '. ' + fmt(Q.o[Q.k]) + '</div>' + (Q.w ? '<div class="ans muted">' + fmt(Q.w) + '</div>' : "") + '</div>';
       }).join("") + '</div>';
     t.innerHTML = h;
-    t.querySelector("#again").onclick = function () { exam = null; renderKwal(); };
+    t.querySelector("#again").onclick = function () { exam = null; saveExam(); renderKwal(); };
     t.querySelector("#err").onclick = function () { exam = null; view.tab = "bledy"; nauka = null; renderKwal(); };
     t.querySelectorAll("a.cell").forEach(function (a) { a.onclick = function (e) { e.preventDefault(); var r = document.getElementById("r" + a.dataset.j); if (r) r.scrollIntoView({ block: "center" }); }; });
   }
@@ -706,15 +825,43 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
       '<h2>Co dostajesz po zdaniu</h2><ul><li><b>Certyfikat kwalifikacji zawodowej</b> — po zdaniu obu części egzaminu z danej kwalifikacji.</li><li><b>Dyplom zawodowy</b> — gdy masz certyfikaty ze wszystkich kwalifikacji w zawodzie i odpowiednie wykształcenie (w technikum: ukończona szkoła; w zawodach z poziomem 5 PRK także np. dyplom zawodowy na poziomie technika).</li><li>Wynik z części, którą zdałeś, jest zachowany — przy kolejnym podejściu możesz zdawać tylko część niezdaną.</li></ul>' +
       '<h2>Sesje egzaminacyjne</h2><p>Egzaminy odbywają się w dwóch sesjach w roku: <b>zimowej (styczeń–luty)</b> i <b>letniej (czerwiec–lipiec)</b>. Dokładne daty co roku podaje dyrektor CKE w komunikacie o harmonogramie — sprawdź go na <a href="https://cke.gov.pl" target="_blank" rel="noopener">cke.gov.pl</a> lub stronie swojej OKE.</p>' +
       '<h2>Co zabrać</h2><ul><li>dokument tożsamości ze zdjęciem;</li><li>długopis lub pióro z czarnym tuszem (atramentem);</li><li>kalkulator prosty i inne przybory tylko wtedy, gdy dopuszcza je komunikat CKE dla Twojej kwalifikacji;</li><li>na część praktyczną w wielu zawodach — odzież roboczą i środki ochrony indywidualnej (np. obuwie, fartuch, czepek).</li></ul>' +
-      '<h2>Cel: 90% w obu częściach</h2><p>Progi CKE to 50% i 75%, ale kto na ćwiczeniach ma tylko tyle, łatwo nie zda przy trudniejszym arkuszu i stresie. Dlatego ta strona uznaje Cię za gotowego dopiero wtedy, gdy:</p><ul><li>przerobisz wszystkie lekcje kursu podstawowego i rozszerzonego;</li><li>średnia z <b>trzech ostatnich egzaminów teoretycznych</b> wyniesie co najmniej <b>90%</b>;</li><li>ostatnie <b>zadanie praktyczne</b>, ocenione uczciwie według kryteriów, da co najmniej <b>90%</b>;</li><li>pytanie z listy błędów znika dopiero po <b>dwóch poprawnych odpowiedziach</b>.</li></ul><h2>Jak się uczyć z tą stroną</h2><ul><li><b>Kurs podstawowy</b> — wszystko, co musisz umieć, by zdać część pisemną. Zacznij od niego.</li><li><b>Kurs rozszerzony</b> — tematy trudniejsze i przygotowanie do części praktycznej: typowe zadania, schemat pracy, najczęstsze błędy.</li><li><b>Nauka pytań</b> — od razu widzisz poprawną odpowiedź i wyjaśnienie.</li><li><b>Egzamin próbny</b> — 40 zadań na czas. Celuj w wynik powyżej 70%, żeby mieć zapas.</li><li><b>Moje błędy</b> — wracaj tu codziennie, aż lista będzie pusta.</li><li><b>Moduł wspólny</b> — BHP, ppoż., pierwsza pomoc i prawo pracy pojawiają się na każdym egzaminie, niezależnie od zawodu.</li></ul>' +
+      '<h2>Cel: 90% w obu częściach</h2><p>Progi CKE to 50% i 75%, ale kto na ćwiczeniach ma tylko tyle, łatwo nie zda przy trudniejszym arkuszu i stresie. Dlatego ta strona uznaje Cię za gotowego dopiero wtedy, gdy:</p><ul><li>przerobisz wszystkie lekcje kursu podstawowego i rozszerzonego;</li><li>średnia z <b>trzech ostatnich egzaminów teoretycznych</b> wyniesie co najmniej <b>90%</b>;</li><li>ostatnie <b>zadanie praktyczne</b>, ocenione uczciwie według kryteriów, da co najmniej <b>90%</b>;</li><li>pytanie z listy błędów znika dopiero po <b>dwóch poprawnych odpowiedziach</b>.</li></ul><h2>Jak się uczyć z tą stroną</h2><ul><li><b>Kurs podstawowy</b> — wszystko, co musisz umieć, by zdać część pisemną. Zacznij od niego.</li><li><b>Kurs rozszerzony</b> — tematy trudniejsze i przygotowanie do części praktycznej: typowe zadania, schemat pracy, najczęstsze błędy.</li><li><b>Nauka pytań</b> — od razu widzisz poprawną odpowiedź i wyjaśnienie.</li><li><b>Egzamin próbny</b> — 40 zadań na czas. Celuj w ' + CEL + '% i więcej — wtedy masz duży zapas.</li><li><b>Moje błędy</b> — wracaj tu codziennie, aż lista będzie pusta.</li><li><b>Moduł wspólny</b> — BHP, ppoż., pierwsza pomoc i prawo pracy pojawiają się na każdym egzaminie, niezależnie od zawodu.</li></ul>' +
       '<div class="notice">Najlepszy materiał uzupełniający to oryginalne arkusze z poprzednich lat, które CKE publikuje na swojej stronie. Rozwiąż przynajmniej kilka arkuszy części praktycznej — tam najłatwiej stracić punkty na drobiazgach.</div></section>';
+  }
+
+  /* ---------- kopia zapasowa postępów (plik JSON) ---------- */
+  function kopiaHTML() {
+    return '<div class="sheet"><div class="label">Kopia zapasowa</div><div class="muted" style="font-size:.92rem">Postępy są zapisane tylko w tej przeglądarce. Zapisz je do pliku, żeby przenieść naukę na inny komputer lub telefon albo nie stracić ich po wyczyszczeniu przeglądarki.</div>' +
+      '<div class="btns"><button class="btn" id="exp">Zapisz postępy do pliku</button><label class="btn" style="display:inline-block">Wczytaj z pliku<input type="file" id="imp" accept="application/json,.json" hidden></label></div><div id="impmsg" class="muted" style="font-size:.9rem"></div></div>';
+  }
+  function kopiaBind() {
+    document.getElementById("exp").onclick = function () {
+      var blob = new Blob([JSON.stringify({ app: "zdam-zawodowy", v: 1, data: S }, null, 1)], { type: "application/json" });
+      var a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "zdam-zawodowy-postepy-" + new Date().toISOString().slice(0, 10) + ".json";
+      document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+    };
+    document.getElementById("imp").onchange = function () {
+      var f = this.files[0], msg = document.getElementById("impmsg"); if (!f) return;
+      var rd = new FileReader();
+      rd.onload = function () {
+        try {
+          var o = JSON.parse(rd.result), d = o && o.app === "zdam-zawodowy" ? o.data : null;
+          if (!d || typeof d !== "object") throw 0;
+          for (var k in S) if (d[k] && typeof d[k] === "object") S[k] = d[k];
+          if (typeof d.ostatnia === "string") S.ostatnia = d.ostatnia;
+          save(); renderPostepy();
+          var m2 = document.getElementById("impmsg"); if (m2) m2.textContent = "Wczytano postępy z pliku " + f.name + ".";
+        } catch (e) { msg.textContent = "To nie jest plik z postępami tej strony."; msg.style.color = "var(--red)"; }
+      };
+      rd.readAsText(f);
+    };
   }
 
   /* ---------- postępy ---------- */
   function renderPostepy() {
     var rows = [WSP].concat(KAT.map(function (k) { return k.kod; })).filter(function (kod) { return kurs(kod) && (doneOf(kod) || S.wyniki[kod] || S.prakt[kod] || poolOf(kod).some(function (x) { return S.bledy[x.id]; })); });
     var h = '<section style="display:grid;gap:8px"><div class="label">Zapisane w tej przeglądarce</div><h1>Moje postępy</h1></section>';
-    if (!rows.length) { app.innerHTML = h + '<div class="empty">Tu pojawią się Twoje kursy, wyniki egzaminów próbnych i liczba błędów do powtórki. <a href="#start">Wybierz kwalifikację</a>, aby zacząć.</div>'; return; }
+    if (!rows.length) { app.innerHTML = h + '<div class="empty">Tu pojawią się Twoje kursy, wyniki egzaminów próbnych i liczba błędów do powtórki. <a href="#start">Wybierz kwalifikację</a>, aby zacząć.</div>' + kopiaHTML(); kopiaBind(); return; }
     h += '<div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr))">' + rows.map(function (kod) {
       var k = kInfo(kod), w = S.wyniki[kod] || [], bl = poolOf(kod).filter(function (x) { return S.bledy[x.id]; }).length;
       var best = w.reduce(function (m, r) { return Math.max(m, r.pct); }, 0);
@@ -724,8 +871,8 @@ footer { border-top: 1px solid var(--line); padding-block: 20px 32px; font-size:
         (w.length ? '<div class="hist">' + w.slice(-5).reverse().map(function (r) {
           return '<div class="h"><span class="muted">' + esc(r.d.split(" ")[0]) + '</span><div class="bar"><i style="width:' + r.pct + '%;background:' + (r.pct >= 50 ? "var(--ok)" : "var(--red)") + '"></i></div><span class="mono">' + r.pct + '%</span></div>';
         }).join("") + '</div>' : "") + '</a>';
-    }).join("") + '</div><div><button class="btn" id="reset">Wyczyść wszystkie postępy</button></div>';
-    app.innerHTML = h;
+    }).join("") + '</div>' + kopiaHTML() + '<div><button class="btn" id="reset">Wyczyść wszystkie postępy</button></div>';
+    app.innerHTML = h; kopiaBind();
     var rb = document.getElementById("reset");
     rb.onclick = function () {
       if (rb.dataset.c) { S = { lekcje: {}, bledy: {}, wyniki: {}, prakt: {}, odp: {}, widz: {}, ostatnia: null }; save(); renderPostepy(); }
