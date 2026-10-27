@@ -90,12 +90,12 @@ window.KURSY = window.KURSY || {};
       pytania: [
         Q("Dokument, który dostawca przekazuje wraz z towarem, potwierdzający wydanie towaru z jego magazynu, to", "WZ", "PZ", "RW", "MM", "WZ: wydanie zewnętrzne. PZ wystawia odbiorca przy przyjęciu."),
         Q("Na dokumencie dostawy jest 50 opakowań, przyjechało 47. Sporządza się", "protokół rozbieżności z niedoborem 3 opakowań", "protokół nadwyżki 3 opakowań", "fakturę korygującą przez odbiorcę", "remanent", "Różnica 47 - 50 = -3, czyli niedobór."),
-        Q("Zasada FEFO oznacza wydawanie w pierwszej kolejności towaru", "z najkrótszym terminem przydatności", "przyjętego najpóźniej", "najdroższego", "najlżejszego", "First expired, first out."),
+        Q("Zasada FEFO oznacza wydawanie w pierwszej kolejności towaru", "z najkrótszym terminem przydatności", "przyjętego do magazynu najwcześniej", "z najdłuższym terminem przydatności", "o najniższej cenie zakupu", "First expired, first out."),
         Q("Banany przechowuje się w temperaturze nie niższej niż ok.", "+12°C", "0°C", "+4°C", "-2°C", "W niższej temperaturze skórka czernieje."),
         Q("Wymiary palety EUR wynoszą", "1200 × 800 mm", "1200 × 1000 mm", "1000 × 600 mm", "800 × 600 mm", "1200 × 1000 mm to paleta przemysłowa."),
         Q("Dopuszczalna masa ładunku przenoszonego ręcznie przez kobietę przy pracy stałej wynosi", "12 kg", "20 kg", "25 kg", "30 kg", "20 kg dotyczy pracy dorywczej."),
         Q("Do obsługi wózka widłowego w magazynie wymagane są", "uprawnienia UDT", "prawo jazdy kategorii B", "tylko szkolenie BHP", "zaświadczenie od sanepidu", "Wózki widłowe podlegają Urzędowi Dozoru Technicznego."),
-        Q("Pieczywa nie przechowuje się obok", "środków chemicznych i ryb", "mąki", "kaszy", "cukru", "Pieczywo chłonie obce zapachy.")
+        Q("Pieczywa nie przechowuje się obok", "środków chemicznych i ryb", "mąki i kasz w workach", "cukru w kartonach", "makaronu i płatków", "Pieczywo chłonie obce zapachy.")
       ]
     },
     {
@@ -229,7 +229,6 @@ window.KURSY = window.KURSY || {};
 <p>Klient pyta o gwarancję, dostawę, sposób płatności, ponownie ogląda towar. Wtedy sprzedawca przechodzi do <b>finalizacji</b>: technika alternatywy („Pakuję czarny czy szary?”), podsumowania korzyści lub założenia zakupu.</p>
 <h4>Sprzedaż dodatkowa</h4>
 <p><b>Cross-selling</b>: produkty uzupełniające (buty i pasta do butów). <b>Up-selling</b>: lepsza wersja (większa pojemność). Sprzedaż dodatkowa ma pomagać klientowi, a nie być nachalna.</p>
-<p>Obiekcja cenowa („za drogo”) często oznacza, że klient nie widzi wartości. Pomaga przeliczenie ceny na dzień użytkowania lub porównanie z tańszym modelem i jego ograniczeniami.</p>
 <p>Obiekcja cenowa („za drogo”) często oznacza, że klient nie widzi wartości. Pomaga przeliczenie ceny na dzień użytkowania („to 30 gr dziennie przez trzy lata”) lub porównanie z tańszym modelem i jego ograniczeniami. Nie krytykuje się produktów konkurencji ani wyboru klienta. Gdy towaru brak, proponuje się zamiennik o podobnych cechach albo zamówienie z terminem odbioru.</p>
 <div class="tip">Na egzaminie odróżnij cechę („wodoodporny do 50 m”) od korzyści („może Pan pływać z zegarkiem”). Poprawna odpowiedź zwykle mówi o korzyści dla klienta.</div>` },
         { tytul: "Klienci trudni i sytuacje szczególne", tresc: `<h4>Klient zdenerwowany</h4>
@@ -258,6 +257,14 @@ window.KURSY = window.KURSY || {};
 </ul>
 <h4>Podejrzenie kradzieży</h4>
 <p>Sprzedawca nie przeszukuje klienta. Może poprosić o pokazanie towaru, wezwać ochronę lub policję. Ujęcie obywatelskie jest dopuszczalne tylko w razie schwytania na gorącym uczynku, z niezwłocznym oddaniem w ręce policji.</p>
+<h4>Typowe pułapki egzaminacyjne</h4>
+<ul>
+<li>słowo „przepraszam” nie oznacza przyznania winy, a pomaga obniżyć emocje klienta;</li>
+<li>sprzedawca nie obiecuje tego, o czym nie może zdecydować (np. zwrotu gotówki bez zgody kierownika), tylko mówi, co sprawdzi i kiedy da odpowiedź;</li>
+<li>klientowi agresywnemu stawia się granicę asertywnie: „Chcę Panu pomóc, ale proszę nie podnosić głosu”;</li>
+<li>uwag klienta nie komentuje się przy innych kupujących i nie spiera się z nim o to, kto ma rację.</li>
+</ul>
+<p>Po trudnej rozmowie warto zapisać zgłoszenie i przekazać je kierownikowi, bo powtarzające się skargi wskazują na problem w organizacji pracy sklepu.</p>
 <div class="tip">Pytania o osoby nieletnie i alkohol to pewniak na egzaminie: odpowiedź to zawsze żądanie dokumentu i odmowa sprzedaży, gdy go brak.</div>` }
       ],
       pytania: [
@@ -317,7 +324,6 @@ window.KURSY = window.KURSY || {};
 <p>Metoda <b>„dotknij, popatrz pod światło, przechyl”</b>. Banknotu podejrzanego kasjer nie oddaje klientowi; postępuje zgodnie z instrukcją (powiadamia kierownika, policję), banknot trafia do banku i NBP.</p>
 <h4>Przyjęcie zapłaty gotówką</h4>
 <ol><li>głośno podaj kwotę do zapłaty;</li><li>przyjmij banknot, powiedz jego nominał, odłóż go na wierzch szuflady;</li><li>odlicz resztę, podaj ją z paragonem;</li><li>dopiero potem schowaj banknot do przegródki.</li></ol>
-<p>Kasjer przyjmuje także bony i karty podarunkowe według regulaminu sklepu, sprawdzając datę ważności. Reszty z bonu zwykle nie wypłaca się gotówką, jeśli regulamin tak stanowi.</p>
 <p>Kasjer przyjmuje także bony i karty podarunkowe według regulaminu sklepu, sprawdzając datę ważności. Reszty z bonu zwykle nie wypłaca się gotówką, jeśli regulamin tak stanowi. Przy płatności kartą odrzuconej przez terminal kasjer nie komentuje sytuacji głośno, tylko dyskretnie proponuje inną formę zapłaty.</p>
 <div class="tip">Kolejność z punktu 2 chroni przed sporem „dałem 200, a nie 100 zł”. To częste zadanie sytuacyjne.</div>` },
         { tytul: "Rozliczenie utargu i dokumenty kasowe", tresc: `<h4>Rozliczenie kasjera</h4>
@@ -344,13 +350,13 @@ różnica = gotówka faktyczna - gotówka należna
 <div class="tip">Przy liczeniu niedoboru nie wliczaj płatności kartą do gotówki w szufladzie. To najczęstszy błąd w zadaniach.</div>` }
       ],
       pytania: [
-        Q("Raport dobowy fiskalny sporządza się", "po zakończeniu sprzedaży, najpóźniej przed pierwszą sprzedażą następnego dnia", "raz w tygodniu", "tylko na żądanie urzędu skarbowego", "po każdym paragonie", "Raport miesięczny sporządza się po zakończeniu miesiąca."),
-        Q("Kasy online przesyłają dane do", "Centralnego Repozytorium Kas", "ZUS", "UOKiK", "GUS", "Repozytorium prowadzi Szef KAS."),
+        Q("Raport dobowy fiskalny sporządza się", "po zakończeniu sprzedaży danego dnia", "raz w tygodniu, w ostatnim dniu pracy", "tylko na żądanie urzędu skarbowego", "po każdym wydrukowanym paragonie", "Najpóźniej przed pierwszą sprzedażą następnego dnia. Raport miesięczny sporządza się po zakończeniu miesiąca."),
+        Q("Kasy online przesyłają dane do", "Centralnego Repozytorium Kas", "Zakładu Ubezpieczeń Społecznych", "Głównego Urzędu Statystycznego", "Centralnej Ewidencji Działalności", "Repozytorium prowadzi Szef KAS."),
         Q("Paragon z NIP nabywcy na kwotę do 450 zł brutto jest", "fakturą uproszczoną", "notą korygującą", "dowodem KW", "fakturą zaliczkową", "Do 450 zł brutto paragon z NIP może zastąpić fakturę."),
         Q("Pogotowie kasowe 200 zł, sprzedaż gotówkowa 1500 zł, zwrot gotówkowy 30 zł. Gotówka należna w kasie wynosi", "1670 zł", "1700 zł", "1730 zł", "1500 zł", "200 + 1500 - 30 = 1670 zł."),
         Q("Dokument potwierdzający wypłatę gotówki z kasy to", "KW", "KP", "PZ", "WZ", "KW: kasa wypłaci."),
         Q("Zabezpieczenie banknotu zmieniające barwę przy przechylaniu to", "farba zmienna optycznie", "znak wodny", "nitka zabezpieczająca", "recto-verso", "Sprawdza się je, przechylając banknot."),
-        Q("Kasjer otrzymał od klienta banknot 200 zł. Powinien", "głośno podać nominał i odłożyć banknot na wierzch do czasu wydania reszty", "od razu schować banknot pod szufladę", "oddać banknot klientowi", "wydać resztę bez komentarza", "Chroni to przed sporem o nominał."),
+        Q("Kasjer otrzymał od klienta banknot 200 zł. Powinien", "głośno podać nominał i odłożyć go na wierzch szuflady", "od razu schować banknot do przegródki szuflady", "zwrócić go i poprosić klienta o mniejszy nominał", "wydać resztę bez słowa, a banknot schować", "Banknot leży na wierzchu do czasu wydania reszty, co chroni przed sporem o nominał."),
         Q("Kwota VAT zawarta w cenie brutto 246 zł przy stawce 23% wynosi", "46 zł", "56,58 zł", "23 zł", "200 zł", "246 × 23 ÷ 123 = 46 zł.")
       ]
     },
@@ -421,10 +427,10 @@ wskaźnik rotacji w dniach = średni zapas × liczba dni ÷ sprzedaż</pre>
 <div class="tip">Zapamiętaj: w arkuszu spisowym nie używa się ołówka ani korektora. Niedobór w normach ubytków naturalnych nie obciąża pracownika.</div>` }
       ],
       pytania: [
-        Q("Sprzedawca odpowiada wobec konsumenta za brak zgodności towaru z umową ujawniony w ciągu", "2 lat od wydania towaru", "1 roku", "6 miesięcy", "14 dni", "Przez 2 lata obowiązuje też domniemanie istnienia wady."),
+        Q("Sprzedawca odpowiada wobec konsumenta za brak zgodności towaru z umową ujawniony w ciągu", "2 lat od wydania towaru", "1 roku od wydania towaru", "6 miesięcy od dnia zakupu", "14 dni od dnia zakupu", "Przez 2 lata obowiązuje też domniemanie istnienia wady."),
         Q("W pierwszej kolejności konsument reklamujący wadliwy towar może żądać", "naprawy lub wymiany", "wyłącznie zwrotu pieniędzy", "tylko obniżenia ceny", "odszkodowania od producenta", "Obniżenie ceny i odstąpienie przysługują w dalszej kolejności."),
         Q("Gdy sprzedawca nie odpowie na reklamację konsumenta w ciągu 14 dni, oznacza to", "uznanie reklamacji", "odrzucenie reklamacji", "przedłużenie terminu o 30 dni", "przekazanie sprawy do sądu", "Milczenie sprzedawcy działa na korzyść konsumenta."),
-        Q("Konsument nie może odstąpić od umowy zawartej przez internet, jeśli kupił", "garnitur szyty na jego miarę", "telewizor", "książkę", "buty sportowe", "Towar wykonany według specyfikacji konsumenta jest wyjątkiem."),
+        Q("Konsument nie może odstąpić od umowy zawartej przez internet, jeśli kupił", "garnitur szyty na jego miarę", "telewizor w oryginalnym kartonie", "książkę w twardej oprawie", "buty sportowe z wyprzedaży", "Towar wykonany według specyfikacji konsumenta jest wyjątkiem."),
         Q("Gdy sklep internetowy nie poinformował konsumenta o prawie odstąpienia, termin ten", "wydłuża się o 12 miesięcy", "skraca się do 7 dni", "nie ulega zmianie", "wygasa", "Wynika to z ustawy o prawach konsumenta."),
         Q("Podstawową metodą inwentaryzacji towarów w sklepie jest", "spis z natury", "potwierdzenie sald", "weryfikacja dokumentów", "analiza SWOT", "Polega na policzeniu, zważeniu i zmierzeniu towarów."),
         Q("Stan księgowy 840 szt., stan rzeczywisty 852 szt. Różnica inwentaryzacyjna to", "nadwyżka 12 szt.", "niedobór 12 szt.", "niedobór 852 szt.", "brak różnicy", "852 - 840 = +12, wynik dodatni to nadwyżka."),
@@ -465,6 +471,13 @@ wskaźnik rotacji w dniach = średni zapas × liczba dni ÷ sprzedaż</pre>
 <h4>Poziomy produktu</h4>
 <p><b>rdzeń</b> (podstawowa korzyść, np. komunikacja w telefonie), <b>produkt rzeczywisty</b> (marka, design, opakowanie, jakość), <b>produkt poszerzony</b> (gwarancja, dostawa, serwis, instalacja). Konkurencja na dojrzałych rynkach toczy się głównie na poziomie produktu poszerzonego.</p>
 <p>Działania w fazie dojrzałości: modyfikacja produktu, nowe zastosowania, nowe segmenty, promocje lojalnościowe, aby wydłużyć tę fazę.</p>
+<h4>Działania w fazach cyklu życia</h4>
+<div class="tw"><table><tr><th>Faza</th><th>Cena</th><th>Promocja</th></tr>
+<tr><td>wprowadzenie</td><td>wysoka (skimming) lub niska (penetracja)</td><td>informacyjna, próbki, pokazy</td></tr>
+<tr><td>wzrost</td><td>stabilna, rabaty dla pośredników</td><td>budowanie marki</td></tr>
+<tr><td>dojrzałość</td><td>obniżki, walka cenowa</td><td>przypominająca, programy lojalnościowe</td></tr>
+<tr><td>schyłek</td><td>wyprzedaże</td><td>ograniczona do minimum</td></tr></table></div>
+<p>Pułapka: reklama informacyjna jest typowa dla fazy wprowadzenia, a przypominająca dla fazy dojrzałości.</p>
 <div class="tip">Kluczowa pułapka: najwyższa sprzedaż występuje w fazie dojrzałości, a najszybszy przyrost sprzedaży w fazie wzrostu.</div>` },
         { tytul: "Segmentacja i analiza otoczenia", tresc: `<h4>Kryteria segmentacji</h4>
 <ul>
@@ -490,6 +503,9 @@ wskaźnik rotacji w dniach = średni zapas × liczba dni ÷ sprzedaż</pre>
 <h4>Wnioski z SWOT</h4>
 <p>Strategia <b>agresywna</b> (S i O): wykorzystać mocne strony do szans. <b>Konkurencyjna</b> (W i O): poprawić słabości, by skorzystać z szans. <b>Konserwatywna</b> (S i T): mocnymi stronami bronić się przed zagrożeniami. <b>Defensywna</b> (W i T): przetrwać, ograniczyć działalność.</p>
 <p><b>Pozycjonowanie</b> to budowanie wyróżniającego wizerunku w umysłach klientów, np. „najtańszy w okolicy” albo „sklep z produktami lokalnymi”.</p>
+<h4>Przykład zastosowania</h4>
+<p>Sklep sportowy dzieli rynek według kryterium behawioralnego (częstotliwość uprawiania sportu): amatorów kupujących sprzęt raz w roku i zawodników kupujących go regularnie. Amatorom oferuje tańsze zestawy, zawodnikom sprzęt specjalistyczny i doradztwo, czyli stosuje strategię zróżnicowaną.</p>
+<p>Dobry segment jest <b>mierzalny</b> (można określić jego wielkość), <b>dostępny</b> (można do niego dotrzeć), <b>wystarczająco duży</b>, aby był opłacalny, i wyraźnie różny od pozostałych.</p>
 <div class="tip">W SWOT konkurencja i przepisy to zawsze czynniki zewnętrzne (O lub T), a personel, lokal i finanse firmy to czynniki wewnętrzne (S lub W).</div>` },
         { tytul: "Metody badań rynku", tresc: `<h4>Źródła danych</h4>
 <p><b>Wtórne</b> (zza biurka, desk research): GUS, raporty branżowe, dane z kas i programu lojalnościowego. Tańsze i szybsze. <b>Pierwotne</b>: zbierane specjalnie do badania, droższe, ale dokładnie dopasowane.</p>
@@ -556,6 +572,13 @@ wskaźnik rotacji w dniach = średni zapas × liczba dni ÷ sprzedaż</pre>
 <p>Metody: procent od sprzedaży (np. 3% planowanych przychodów), dopasowanie do konkurencji, metoda zadaniowa (koszt osiągnięcia konkretnego celu), metoda „na ile nas stać”.</p>
 <h4>Promocja w miejscu sprzedaży</h4>
 <p>Materiały <b>POS</b> (point of sale): plakaty, stojaki, wobblery, shelf-linery, ekrany cyfrowe. Degustacje i pokazy prowadzi się w strefie dobrze widocznej, ale nieblokującej ruchu klientów. Skuteczność promocji ocenia się, porównując sprzedaż przed, w trakcie i po akcji (efekt „dołka” po promocji, gdy klienci zrobili zapasy).</p>
+<h4>Promocja sprzedaży: adresaci</h4>
+<ul>
+<li><b>konsumenci</b>: kupony, próbki, „2+1 gratis”, programy lojalnościowe, konkursy;</li>
+<li><b>pośrednicy</b>: rabaty ilościowe, materiały POS, szkolenia, premie za wynik;</li>
+<li><b>własni sprzedawcy</b>: konkursy sprzedażowe, prowizje.</li>
+</ul>
+<p>Przy obniżce ceny sklep podaje najniższą cenę z 30 dni przed obniżką. Regulamin konkursu lub programu lojalnościowego powinien być dostępny dla klientów przed rozpoczęciem akcji.</p>
 <div class="tip">Kupon rabatowy i degustacja to promocja sprzedaży, a nie reklama. Sponsoring lokalnego festynu to PR.</div>` },
         { tytul: "Sprzedaż internetowa", tresc: `<h4>Modele e-commerce</h4>
 <ul>
@@ -740,6 +763,13 @@ przykład: zapas pocz. 40 000 zł, końc. 50 000 zł, sprzedaż 540 000 zł
 <h4>Przygotowanie do negocjacji</h4>
 <ul><li>cele: maksymalny (idealny), realny, minimalny (punkt oporu);</li><li>informacje o partnerze: jego potrzeby, alternatywy, presja czasu;</li><li>lista możliwych ustępstw (termin płatności, wielkość partii, transport, rabat) i ich koszt dla firmy.</li></ul>
 <p>Komunikacja w negocjacjach: pytania otwarte, aktywne słuchanie, mówienie o interesach („potrzebujemy pewności dostaw”), a nie o stanowiskach („chcemy 10% rabatu”).</p>
+<h4>Win-win w praktyce</h4>
+<p>Kupujący chce niższej ceny, a sprzedawca szybszej zapłaty. Rozwiązanie: rabat 3% w zamian za płatność w 7 dni zamiast w 30. Obie strony coś zyskują, a współpraca trwa dalej.</p>
+<ul>
+<li>błąd: ujawnienie własnego punktu oporu na początku rozmowy;</li>
+<li>błąd: przyjęcie pierwszej oferty bez rozmowy o warunkach dodatkowych;</li>
+<li>dobra praktyka: spisanie ustaleń w notatce lub protokole i potwierdzenie ich e-mailem.</li>
+</ul>
 <div class="tip">Zasada ustępstw: nigdy nie ustępuj za darmo („obniżymy cenę o 2%, jeśli zwiększą Państwo zamówienie do 500 sztuk”).</div>` },
         { tytul: "Faktury i dokumenty sprzedaży", tresc: `<h4>Elementy faktury VAT</h4>
 <ul>
@@ -777,7 +807,7 @@ VAT 23% = 345 zł, brutto = 1845 zł</pre>
         Q("Negocjator, który wymusza drobne ustępstwa jedno po drugim, stosuje taktykę", "salami", "dobrego i złego policjanta", "ograniczonego pełnomocnictwa", "kotwicy", "Ustępstwa wycina się jak plasterki salami."),
         Q("Błąd w adresie nabywcy na fakturze papierowej może poprawić nabywca, wystawiając", "notę korygującą", "fakturę korygującą", "dowód KW", "fakturę proforma", "Nota korygująca dotyczy danych niekwotowych."),
         Q("Cena katalogowa 200 zł, rabaty łańcuchowe 10% i 5%. Cena po rabatach wynosi", "171 zł", "170 zł", "180 zł", "190 zł", "200 × 0,9 × 0,95 = 171 zł."),
-        Q("Warunek płatności „2/10, netto 30” oznacza", "2% skonta przy zapłacie w 10 dni, inaczej pełna kwota w 30 dni", "2% odsetek po 10 dniach", "zapłatę w 2 ratach co 10 dni", "rabat 30% przy zapłacie w 2 dni", "To skonto za wcześniejszą zapłatę.")
+        Q("Warunek płatności „2/10, netto 30” oznacza", "2% skonta za zapłatę w 10 dni, termin 30 dni", "2% odsetek za każde 10 dni zwłoki", "zapłatę w 2 ratach co 10 dni, do 30 dni", "rabat 30% przy zapłacie w ciągu 2 dni", "To skonto za wcześniejszą zapłatę: bez niego płaci się pełną kwotę w 30 dni.")
       ]
     },
     {
@@ -828,6 +858,12 @@ np. plan 1000 szt.: (1000 - 600) ÷ 1000 × 100% = 40%</pre>
 <p>Sprzedaż może spaść o 40%, zanim firma zacznie ponosić stratę.</p>
 <p>Na wykresie progu rentowności linia przychodów przecina linię kosztów całkowitych (stałe + zmienne) właśnie w punkcie BEP.</p>
 <p>Obniżenie kosztów zmiennych (np. tańszy dostawca) zwiększa marżę na pokrycie i obniża próg rentowności.</p>
+<h4>Koszty całkowite i jednostkowe</h4>
+<pre>koszty całkowite = KS + KZj × Q
+koszt jednostkowy = koszty całkowite ÷ Q
+np. Q = 800 szt.: 12 000 + 30 × 800 = 36 000 zł
+koszt jednostkowy = 36 000 ÷ 800 = 45 zł</pre>
+<p>Wraz ze wzrostem sprzedaży koszt stały przypadający na jedną sztukę maleje, a koszt zmienny jednostkowy pozostaje taki sam. Dlatego większa sprzedaż obniża koszt jednostkowy (efekt skali).</p>
 <div class="tip">Wzrost kosztów stałych podnosi próg rentowności, a wzrost ceny przy tych samych kosztach go obniża. Takie pytania pojawiają się na egzaminie bez liczb.</div>` },
         { tytul: "Wskaźniki działalności handlowej", tresc: `<h4>Struktura i dynamika</h4>
 <pre>wskaźnik struktury = część ÷ całość × 100%
@@ -892,6 +928,14 @@ sprzedaż z 1 m² = sprzedaż ÷ powierzchnia sali sprzedaży</pre>
 <li>przejście dla kelnera między stołami: co najmniej ok. 1 m.</li>
 </ul>
 <p>Przed otwarciem kelner sprawdza też rezerwacje (liczba osób, godzina, życzenia specjalne) i dostosowuje do nich ustawienie stołów. Stoliki zarezerwowane oznacza się tabliczką „rezerwacja”.</p>
+<h4>Lista kontrolna przed otwarciem</h4>
+<ul>
+<li>stoły stabilne (podkładki pod nogi chwiejnych stołów), krzesła czyste i jednakowo ustawione;</li>
+<li>karty menu czyste, aktualne, bez skreśleń, z informacją o alergenach;</li>
+<li>serwantka uzupełniona tak, aby w czasie serwisu nie chodzić na zaplecze;</li>
+<li>sprawdzone podgrzewacze talerzy i ekspres do kawy, schłodzone wina białe;</li>
+<li>wygląd kelnera: czysty uniform, wygodne obuwie, korkociąg i notes przy sobie.</li>
+</ul>
 <div class="tip">Zabrudzony obrus podczas serwisu przykrywa się czystą serwetą lub napperonem, a przy wymianie obrusa nie odsłania się blatu przed gośćmi.</div>` },
         { tytul: "Nakrycie zasadnicze i do potraw", tresc: `<h4>Zasady nakrycia</h4>
 <ul>
@@ -951,7 +995,7 @@ stół dwustronny dla 24 osób: 12 po każdej stronie, ok. 8,4 m</pre>
         Q("Łyżkę do zupy w nakryciu układa się", "z prawej strony, na zewnątrz od noży", "z lewej strony, obok widelców", "nad talerzem", "na talerzyku do pieczywa", "Używa się jej przed daniem głównym, więc leży na zewnątrz."),
         Q("Sztućce deserowe ułożone nad talerzem: łyżeczka ma trzonek skierowany", "w prawo", "w lewo", "do gościa", "do środka stołu", "Widelczyk deserowy ma trzonek w lewo."),
         Q("Talerzyk do pieczywa ustawia się w nakryciu", "z lewej strony, nad widelcami", "z prawej strony, nad nożami", "na talerzu zastępczym", "nad talerzem, za sztućcami deserowymi", "Pieczywo podaje się z lewej strony."),
-        Q("Miseczkę z wodą i plasterkiem cytryny (fingerbowl) podaje się do", "owoców morza jedzonych palcami", "zupy kremu", "deseru lodowego", "kawy", "Służy do opłukania palców."),
+        Q("Miseczkę z wodą i plasterkiem cytryny (fingerbowl) podaje się do", "owoców morza jedzonych palcami", "zupy kremu podanej w bulionówce", "deseru lodowego w pucharku", "kawy podanej po deserze", "Służy do opłukania palców."),
         Q("Gość honorowy na przyjęciu zajmuje miejsce", "po prawej stronie gospodarza", "po lewej stronie gospodarza", "naprzeciw wejścia, z dala od gospodarza", "na końcu stołu", "To zasada precedencji przy stole."),
         Q("Przy szerokości miejsca 0,7 m długość jednostronnego stołu dla 10 osób wynosi", "7 m", "10 m", "3,5 m", "14 m", "10 × 0,7 m = 7 m.")
       ]
@@ -1032,8 +1076,8 @@ stół dwustronny dla 24 osób: 12 po każdej stronie, ok. 8,4 m</pre>
         Q("Wokół stołu kelner porusza się", "zgodnie z ruchem wskazówek zegara", "przeciwnie do ruchu wskazówek zegara", "dowolnie, najkrótszą drogą", "tylko wzdłuż jednej strony", "Przy podawaniu z prawej idzie do przodu."),
         Q("Talerz z porcją mięsa i dodatkami stawia się przed gościem tak, aby mięso było", "najbliżej gościa", "najdalej od gościa", "po lewej stronie talerza", "zakryte dodatkami", "Pozycja „na godzinie 6”."),
         Q("Naczynia po daniu głównym zbiera się", "gdy wszyscy goście przy stole skończą jeść", "od razu po skończeniu przez każdego gościa", "po podaniu deseru", "tylko na prośbę gospodarza", "Wyjątek: wyraźna prośba gościa."),
-        Q("W klasycznym menu sorbet podaje się", "między daniem rybnym a mięsnym", "przed przekąską", "po kawie", "razem z zupą", "Sorbet oczyszcza smak."),
-        Q("Zamówienie przy stole przyjmuje się w kolejności", "panie i gość honorowy, potem panowie, gospodarz na końcu", "najpierw gospodarz", "od gościa siedzącego najbliżej kuchni", "najpierw panowie", "Gospodarz jest obsługiwany jako ostatni.")
+        Q("W klasycznym menu sorbet podaje się", "między daniem rybnym a mięsnym", "przed przekąską zimną", "po kawie, na zakończenie", "razem z zupą, jako dodatek", "Sorbet oczyszcza smak."),
+        Q("Zamówienie przy stole przyjmuje się w kolejności", "panie, gość honorowy, panowie, gospodarz na końcu", "gospodarz, gość honorowy, panowie, na końcu panie", "kolejno od osoby siedzącej najbliżej wejścia", "panowie, potem panie, gospodarz i gość honorowy", "Gospodarz jest obsługiwany jako ostatni.")
       ]
     },
     {
@@ -1093,6 +1137,12 @@ stół dwustronny dla 24 osób: 12 po każdej stronie, ok. 8,4 m</pre>
 <p>Zabrania się sprzedaży i podawania alkoholu osobom <b>do 18 lat</b>, osobom <b>nietrzeźwym</b>, a także <b>na kredyt lub pod zastaw</b> (ustawa o wychowaniu w trzeźwości). Sprzedaż alkoholu wymaga zezwolenia gminy.</p>
 <p>Szkło do napojów zimnych może być schłodzone (frappowanie: schłodzenie kieliszka lodem). Garnirunek (dekoracja) to plasterek cytrusa, oliwka, wisienka koktajlowa, gałązka mięty.</p>
 <p>Piwo nalewa się do pochylonej szklanki, prostując ją pod koniec, aby powstała piana ok. 2-3 cm.</p>
+<h4>Dobór napoju do momentu posiłku</h4>
+<div class="tw"><table><tr><th>Moment</th><th>Propozycja</th></tr>
+<tr><td>przed posiłkiem</td><td>aperitif: wino musujące wytrawne, wermut, sherry wytrawne</td></tr>
+<tr><td>do posiłku</td><td>wino, piwo, woda mineralna</td></tr>
+<tr><td>po posiłku</td><td>digestif: koniak, likier, porto, grappa</td></tr></table></div>
+<p>Pułapka: słodkie likiery nie są aperitifem, bo słodycz tłumi apetyt. Wina słodkie pasują do deserów. Barman prowadzi ewidencję rozchodu alkoholu, porównując zużycie butelek z liczbą sprzedanych porcji.</p>
 <div class="tip">Koniaku nie chłodzi się. Kieliszek koniakówki ogrzewa się dłonią, aby wydobyć aromat.</div>` },
         { tytul: "Kawa, herbata i napoje bezalkoholowe", tresc: `<h4>Espresso</h4>
 <ul>
@@ -1155,6 +1205,14 @@ stół dwustronny dla 24 osób: 12 po każdej stronie, ok. 8,4 m</pre>
 </ul>
 <p>Przy przyjęciu bufetowym zasiadanym goście mają nakryte stoły, ale potrawy biorą z bufetu. Przy przyjęciu na stojąco ustawia się wysokie stoliki koktajlowe, krzesła tylko dla osób starszych.</p>
 <p>Rodzaj przyjęcia dobiera się do okazji, pory dnia, liczby gości i budżetu zamawiającego.</p>
+<h4>Dobór przyjęcia do okazji</h4>
+<ul>
+<li>wesele, jubileusz, komunia: bankiet zasiadany lub przyjęcie bufetowe zasiadane;</li>
+<li>konferencja, szkolenie: przerwa kawowa (coffee break) i lunch bufetowy;</li>
+<li>otwarcie wystawy, premiera: lampka wina lub koktajl;</li>
+<li>gala, wizyta delegacji zagranicznej: raut.</li>
+</ul>
+<p>Przerwa kawowa trwa zwykle 15-30 minut: kawa, herbata, woda, soki, drobne ciasteczka. Na przyjęciu na stojąco planuje się mniej powierzchni na osobę niż na bankiecie zasiadanym, bo nie ma stołów z krzesłami dla wszystkich gości.</p>
 <div class="tip">Koktajl party i raut są na stojąco, bankiet jest zasiadany. Na egzaminie łatwo pomylić raut (wieczorny, uroczysty) z koktajlem (krótki, popołudniowy).</div>` },
         { tytul: "Zamówienie i organizacja przyjęcia", tresc: `<h4>Zamówienie przyjęcia zawiera</h4>
 <ul>
@@ -1179,6 +1237,13 @@ stół dwustronny dla 24 osób: 12 po każdej stronie, ok. 8,4 m</pre>
 <h4>Odprawa przed przyjęciem</h4>
 <p>Kierownik sali omawia z kelnerami: menu i składniki potraw (alergeny), kolejność i godziny serwisu, przydział rewirów i stołów, rozmieszczenie gości honorowych, sygnały do rozpoczęcia podawania kolejnych dań, sposób serwisu napojów. Każdy kelner zna swój rewir i zastępstwo na wypadek przerwy.</p>
 <p>Po przyjęciu sporządza się rozliczenie z zamawiającym i protokół ewentualnych szkód (stłuczona zastawa, zniszczona bielizna).</p>
+<h4>Układy stołów</h4>
+<div class="tw"><table><tr><th>Układ</th><th>Zastosowanie</th></tr>
+<tr><td>stół prosty (I)</td><td>małe grupy, do ok. 20 osób</td></tr>
+<tr><td>podkowa (U)</td><td>konferencje, przyjęcia z prezentacją</td></tr>
+<tr><td>grzebień (E)</td><td>duże wesela i bankiety</td></tr>
+<tr><td>stoły okrągłe</td><td>gale, wesela, zwykle 8-10 osób przy stole</td></tr></table></div>
+<p>Zaliczka zabezpiecza lokal na wypadek rezygnacji klienta. Warunki jej zwrotu wpisuje się do umowy, aby uniknąć sporu. Ostateczną liczbę gości klient potwierdza na piśmie, a rozliczenie zwykle odbywa się według tej liczby, nawet gdy część gości nie przyjdzie.</p>
 <div class="tip">W zadaniu praktycznym zawsze zapisz w zamówieniu godzinę rozpoczęcia i zakończenia oraz liczbę gości. Brak tych danych to częsta strata punktów.</div>` },
         { tytul: "Kalkulacja przyjęcia", tresc: `<h4>Kosztorys</h4>
 <pre>wartość przyjęcia = cena menu za osobę × liczba gości
@@ -1209,7 +1274,7 @@ np. 50 gości, talerz płytki do przekąski i dania (2 użycia):
         Q("Przyjęcie na stojąco, krótkie, popołudniowe, z przekąskami roznoszonymi na tacach, to", "koktajl party", "bankiet", "przyjęcie bufetowe zasiadane", "obiad rodzinny", "Raut jest wieczorny i bardziej uroczysty."),
         Q("Przyjęcie zasiadane z ustalonym menu i pełną obsługą kelnerską to", "bankiet", "koktajl party", "lampka wina", "raut", "Goście siedzą przy nakrytych stołach."),
         Q("Podgrzewacz do utrzymywania potraw gorących na bufecie to", "chafing dish", "gueridon", "shaker", "molton", "Utrzymuje temperaturę powyżej +63°C."),
-        Q("Przekąski na przyjęcie na stojąco powinny", "mieścić się w jednym kęsie i nie wymagać noża", "być podawane z nożem i widelcem", "być gorące, z sosem", "mieć gramaturę co najmniej 200 g", "Np. koreczki, tartinki, finger food."),
+        Q("Przekąski na przyjęcie na stojąco powinny", "mieścić się w jednym kęsie i nie wymagać noża", "być podawane na talerzu z nożem i widelcem", "być gorące i podane w gęstym sosie", "ważyć co najmniej 200 g na jedną sztukę", "Np. koreczki, tartinki, finger food."),
         Q("Menu kosztuje 150 zł za osobę, gości jest 40, napoje 1 800 zł. Wartość przyjęcia wynosi", "7 800 zł", "6 000 zł", "7 200 zł", "1 950 zł", "40 × 150 + 1 800 = 7 800 zł."),
         Q("Ile butelek szampana potrzeba na toast dla 56 osób, jeśli butelka wystarcza dla 8 osób?", "7", "8", "6", "56", "56 ÷ 8 = 7."),
         Q("Dla 60 gości potrzebne są 2 talerze na osobę i 10% zapasu. Należy przygotować", "132 talerze", "120 talerzy", "66 talerzy", "126 talerzy", "60 × 2 = 120, plus 10% = 132."),
@@ -1264,6 +1329,14 @@ gotówka = 3 200 - 2 150 - 150 = 900 zł</pre>
 <p>Gość, który wychodzi bez zapłaty, nie może być zatrzymywany siłą przez kelnera. Należy powiadomić kierownika i policję.</p>
 <p>Kelner nie dyskutuje przy stole o winie personelu kuchni. Zapisuje zgłoszenie w rejestrze reklamacji, co pozwala kierownikowi analizować powtarzające się problemy.</p>
 <p>Rzeczy pozostawione przez gości na sali kelner przekazuje kierownikowi, a ten wpisuje je do rejestru rzeczy znalezionych.</p>
+<h4>Czego nie robić</h4>
+<ul>
+<li>nie zaprzeczać i nie mówić „inni goście nie narzekali”;</li>
+<li>nie zostawiać reklamowanej potrawy na stole podczas wyjaśnień;</li>
+<li>nie doliczać do rachunku wymienionej potrawy, gdy reklamacja była zasadna;</li>
+<li>nie obiecywać rabatu bez uprawnień do jego udzielenia.</li>
+</ul>
+<p>Reklamację usługi gastronomicznej gość może złożyć także po wizycie, np. e-mailem. Lokal powinien odpowiedzieć na nią w ciągu 14 dni, a gość niezadowolony z odpowiedzi może zwrócić się do rzecznika konsumentów.</p>
 <div class="tip">Na egzaminie zawsze wybieraj odpowiedź, w której kelner przeprasza i od razu proponuje rozwiązanie, a nie tłumaczy się lub obwinia kuchnię.</div>` },
         { tytul: "BHP i sytuacje awaryjne na sali", tresc: `<h4>Zagrożenia w pracy kelnera</h4>
 <ul>
@@ -1285,15 +1358,22 @@ gotówka = 3 200 - 2 150 - 150 = 900 zł</pre>
 <h4>Higiena kelnera</h4>
 <p>Czysty strój, krótkie paznokcie, brak intensywnych perfum, włosy spięte. Szkło trzyma się za nóżkę, filiżanki za ucho, sztućce za rękojeść, nigdy za część dotykającą ust gościa.</p>
 <p>Apteczka pierwszej pomocy musi być łatwo dostępna, a personel zna numer alarmowy i miejsce AED.</p>
+<h4>Pożar i ewakuacja</h4>
+<ul>
+<li>palący się tłuszcz gasi się kocem gaśniczym albo gaśnicą, nigdy wodą;</li>
+<li>przy ewakuacji kelnerzy kierują gości do najbliższego wyjścia, nie pozwalają wracać po rzeczy i sprawdzają toalety;</li>
+<li>po ewakuacji sprawdza się w miejscu zbiórki, czy są wszyscy goście i pracownicy.</li>
+</ul>
+<p>O każdym wypadku przy pracy pracownik informuje przełożonego. Wypadek wpisuje się do rejestru, a zespół powypadkowy ustala jego okoliczności i przyczyny.</p>
 <div class="tip">Pytania o pierwszą pomoc są wspólne dla wielu kwalifikacji: zapamiętaj 30:2 dla RKO i chłodzenie oparzenia letnią wodą.</div>` }
       ],
       pytania: [
-        Q("Opłatę serwisową można doliczyć do rachunku, jeśli", "informacja o niej była podana w karcie przed zamówieniem", "kelner uzna obsługę za trudną", "gość zapłaci kartą", "przyjęcie trwało dłużej niż 2 godziny", "Gość musi znać ją z góry."),
+        Q("Opłatę serwisową można doliczyć do rachunku, jeśli", "informacja o niej była w karcie przed zamówieniem", "kelner uznał obsługę za szczególnie trudną", "gość płaci kartą płatniczą lub BLIK-iem", "przyjęcie trwało dłużej niż dwie godziny", "Gość musi znać ją z góry."),
         Q("Sprzedaż kelnera 2 600 zł, płatności kartą 1 900 zł, vouchery 100 zł. Gotówka do rozliczenia wynosi", "600 zł", "700 zł", "800 zł", "2 600 zł", "2 600 - 1 900 - 100 = 600 zł."),
-        Q("Gość zgłasza, że stek jest zbyt krwisty. Kelner powinien", "przeprosić, zabrać danie i zaproponować dosmażenie lub wymianę", "wyjaśnić, że taki jest przepis szefa kuchni", "doliczyć opłatę za ponowną obróbkę", "zignorować uwagę", "Liczy się szybkie rozwiązanie problemu."),
+        Q("Gość zgłasza, że stek jest zbyt krwisty. Kelner powinien", "przeprosić, zabrać danie i zaproponować dosmażenie", "wyjaśnić, że taki jest przepis szefa kuchni", "doliczyć opłatę za ponowną obróbkę dania", "zignorować uwagę i podać kolejne danie", "Można też zaproponować wymianę dania. Liczy się szybkie rozwiązanie problemu."),
         Q("Gość z alergią na orzechy pyta o deser. Kelner powinien", "sprawdzić skład w dokumentacji i uprzedzić kuchnię", "zapewnić, że orzechów na pewno nie ma, bez sprawdzania", "odmówić podania deseru", "zaproponować usunięcie orzechów z wierzchu", "Informacja o alergenach musi być rzetelna."),
         Q("Stłuczone szkło na sali kelner usuwa", "szufelką i zmiotką", "gołymi rękami", "serwetą gościa", "nogą pod stół", "Chroni to przed skaleczeniem."),
-        Q("Gościowi, który się zadławił i nie może oddychać, należy", "wykonać 5 uderzeń między łopatki, a potem 5 uciśnięć nadbrzusza", "podać wodę do picia", "położyć go na plecach", "czekać na przyjazd karetki bez działania", "Postępowanie naprzemienne, z wezwaniem 112."),
+        Q("Gościowi, który się zadławił i nie może oddychać, należy", "wykonać 5 uderzeń w plecy i 5 uciśnięć nadbrzusza", "podać szklankę wody do szybkiego popicia", "położyć go na plecach i unieść mu nogi", "czekać spokojnie na karetkę bez działania", "Uderzenia między łopatki i uciśnięcia nadbrzusza wykonuje się naprzemiennie, z wezwaniem 112."),
         Q("Oparzenie termiczne dłoni kelnera należy", "chłodzić letnią wodą przez ok. 15-20 minut", "posmarować masłem", "przekłuć pęcherze", "obłożyć lodem bezpośrednio na skórę", "Nie przekłuwa się pęcherzy."),
         Q("Kieliszek z napojem kelner trzyma", "za nóżkę", "za brzeg czaszy", "od środka palcami", "za czaszę całą dłonią", "Nie dotyka się części, z której gość pije.")
       ]
@@ -1343,6 +1423,12 @@ gotówka = 3 200 - 2 150 - 150 = 900 zł</pre>
 <p>Karty kontroli temperatur, rejestry mycia i dezynfekcji, rejestr szkoleń, wyniki badań wody, rejestr dostaw. Nadzór sprawuje <b>Państwowa Inspekcja Sanitarna</b> (sanepid).</p>
 <p>Zespół HACCP tworzą osoby znające proces (szef kuchni, technolog, kierownik). Plan HACCP opracowuje się na podstawie <b>schematu technologicznego</b> (diagramu przepływu) sprawdzonego w praktyce.</p>
 <p>Dokumenty HACCP przechowuje się co najmniej przez okres przydatności produktów, a w praktyce zwykle rok lub dłużej, na potrzeby kontroli sanepidu.</p>
+<h4>Przykład: przekroczony limit</h4>
+<p>Pomiar w chłodni o 8:00 pokazuje +9°C. Działanie korygujące: przeniesienie produktów do sprawnej chłodni, ocena, czy nadają się jeszcze do użycia (jak długo były powyżej +4°C), wezwanie serwisu i <b>zapis</b> w karcie kontroli z podpisem. Brak zapisu podczas kontroli sanepidu traktuje się tak, jakby działania nie podjęto.</p>
+<ul>
+<li>CCP to etap, na którym zagrożenie można wyeliminować lub ograniczyć, a na dalszych etapach nie ma już takiej możliwości;</li>
+<li>limit krytyczny musi być mierzalny (temperatura, czas, pH), a nie opisowy („dobrze ugotowane”).</li>
+</ul>
 <div class="tip">Na egzaminie łatwo pomylić monitorowanie (bieżący pomiar, np. termometrem) z weryfikacją (sprawdzenie, czy cały system działa, np. audyt lub badanie laboratoryjne).</div>` },
         { tytul: "Mycie, dezynfekcja i odpady", tresc: `<h4>Etapy mycia i dezynfekcji</h4>
 <ol>
@@ -1373,13 +1459,20 @@ gotówka = 3 200 - 2 150 - 150 = 900 zł</pre>
 </ul>
 <p>Plan higieny określa: co myć, czym (środek, stężenie), jak często, kto odpowiada i kto kontroluje. Sprzęt drobny (deski, noże) myje się i dezynfekuje po każdym użyciu do innego surowca.</p>
 <p>Szkodniki (gryzonie, owady) zwalcza firma DDD na podstawie umowy. Pułapki i lampy owadobójcze oznacza się na planie zakładu, a ich kontrolę dokumentuje się w rejestrze.</p>
+<h4>Najczęstsze błędy</h4>
+<div class="tw"><table><tr><th>Błąd</th><th>Skutek</th></tr>
+<tr><td>dezynfekcja bez wcześniejszego mycia</td><td>środek nie dociera do drobnoustrojów pod warstwą brudu</td></tr>
+<tr><td>za krótki czas kontaktu środka</td><td>niepełna dezynfekcja</td></tr>
+<tr><td>przelewanie chemii do butelek po napojach</td><td>ryzyko pomyłki i zatrucia</td></tr>
+<tr><td>jedna ściereczka do całej kuchni</td><td>zakażenie krzyżowe</td></tr></table></div>
+<p>Ściereczki wielorazowe zastępuje się w kuchni ręcznikami jednorazowymi lub pierze w wysokiej temperaturze. Każde mycie przewidziane w planie higieny potwierdza się wpisem w rejestrze.</p>
 <div class="tip">Dezynfekcja zawsze następuje po myciu. Środek dezynfekujący na brudnej powierzchni nie działa skutecznie.</div>` }
       ],
       pytania: [
         Q("Bakteria, która może się rozwijać w temperaturze chłodniczej, to", "Listeria monocytogenes", "Clostridium perfringens", "Salmonella w temperaturze zamrażania", "Bacillus cereus w temperaturze wrzenia", "Listeria rośnie w lodówce, groźna dla kobiet w ciąży."),
         Q("Ciepłooporną toksynę wytwarza", "gronkowiec złocisty", "Listeria", "Salmonella", "drożdże piekarskie", "Podgrzanie potrawy nie niszczy tej toksyny."),
         Q("Wybrzuszona puszka konserwy (bombaż) może wskazywać na obecność", "Clostridium botulinum", "pleśni na powierzchni", "Listeria", "norowirusów", "Bakteria rozwija się beztlenowo i wytwarza gaz."),
-        Q("Drugą zasadą HACCP jest", "wyznaczenie krytycznych punktów kontroli", "dokumentacja", "weryfikacja", "działania korygujące", "Pierwsza to analiza zagrożeń."),
+        Q("Drugą zasadą HACCP jest", "wyznaczenie krytycznych punktów kontroli", "prowadzenie dokumentacji i zapisów", "ustalenie procedur weryfikacji", "podjęcie działań korygujących", "Pierwsza to analiza zagrożeń."),
         Q("Potrawę należy schłodzić z +63°C do +10°C w czasie ok.", "90 minut", "6 godzin", "12 godzin", "24 godzin", "Szybkie schładzanie ogranicza rozwój bakterii."),
         Q("Deskę w kolorze niebieskim stosuje się do", "surowych ryb", "surowego mięsa", "pieczywa", "warzyw", "Czerwona: mięso, żółta: drób, zielona: warzywa."),
         Q("Dezynfekcję powierzchni przeprowadza się", "po umyciu i spłukaniu", "przed usunięciem resztek", "zamiast mycia", "tylko raz w tygodniu", "Na brudnej powierzchni środek działa słabo."),
@@ -1440,6 +1533,13 @@ przykład 2: potrzeba 6 kg obranej marchwi, odpadki 25%
 <h4>Pieczenie mięsa</h4>
 <p>Duże kawałki obsmaża się lub piecze najpierw w wysokiej temperaturze (ok. 220°C), potem w niższej (ok. 160-180°C), polewając wytopionym sosem. Po upieczeniu mięso odpoczywa ok. 10-15 min, aby soki się rozeszły.</p>
 <p>Duszenie mięsa trwa zwykle od 1 do 3 godzin.</p>
+<h4>Porównanie wybranych technik</h4>
+<div class="tw"><table><tr><th>Technika</th><th>Warunki</th><th>Przykład</th></tr>
+<tr><td>blanszowanie</td><td>krótko we wrzątku, potem zimna woda</td><td>warzywa przed mrożeniem, pomidory do obrania</td></tr>
+<tr><td>poszowanie</td><td>ok. 70-90°C, bez wrzenia</td><td>jaja w koszulkach, filety rybne</td></tr>
+<tr><td>smażenie głębokie</td><td>160-180°C</td><td>frytki, pączki, ryba w cieście</td></tr>
+<tr><td>duszenie</td><td>obsmażenie, potem wolne gotowanie w małej ilości płynu</td><td>gulasz, zrazy, bitki</td></tr></table></div>
+<p>Pułapka: blanszowanie nie jest pełną obróbką cieplną, tylko krótkim zabiegiem wstępnym.</p>
 <div class="tip">Typowe pytanie: mięso do rosołu do zimnej wody, mięso do podania jako sztuka mięsa do wrzątku.</div>` },
         { tytul: "Przemiany składników podczas obróbki", tresc: `<h4>Białka</h4>
 <ul>
@@ -1463,6 +1563,14 @@ przykład 2: potrzeba 6 kg obranej marchwi, odpadki 25%
 <li>barwniki: chlorofil brązowieje w kwaśnym środowisku i przy długim gotowaniu; antocyjany (czerwona kapusta) zachowują barwę po dodaniu kwasu (octu, cytryny).</li>
 </ul>
 <p>Długie trzymanie potraw w cieple również niszczy witaminy.</p>
+<h4>Zestawienie przemian</h4>
+<div class="tw"><table><tr><th>Przemiana</th><th>Składnik</th><th>Przykład w kuchni</th></tr>
+<tr><td>denaturacja</td><td>białko</td><td>ścinanie jaja, kurczenie się steku</td></tr>
+<tr><td>przejście kolagenu w żelatynę</td><td>tkanka łączna</td><td>galareta z nóżek, miękka goleń</td></tr>
+<tr><td>kleikowanie</td><td>skrobia w wodzie</td><td>gęstnienie sosu, budyń</td></tr>
+<tr><td>karmelizacja</td><td>cukier</td><td>karmel do deserów</td></tr>
+<tr><td>reakcja Maillarda</td><td>cukry i aminokwasy</td><td>skórka chleba, rumiana pieczeń</td></tr></table></div>
+<p>Aby ograniczyć straty witamin, warzywa obiera się i kroi tuż przed gotowaniem, gotuje w małej ilości wody i podaje od razu.</p>
 <div class="tip">Czerwona kapusta z octem zostaje czerwona, a fasolka szparagowa gotowana z kwasem lub pod przykryciem szarzeje. To klasyczne pytanie egzaminacyjne.</div>` }
       ],
       pytania: [
@@ -1473,7 +1581,7 @@ przykład 2: potrzeba 6 kg obranej marchwi, odpadki 25%
         Q("Gotowanie w próżniowym woreczku, w kąpieli wodnej o stałej i dokładnej temperaturze, to", "sous-vide", "poszowanie", "blanszowanie", "braising", "Wymaga ścisłej kontroli czasu i temperatury."),
         Q("Zamiana kolagenu w żelatynę podczas długiego gotowania sprawia, że mięso", "staje się miękkie", "twardnieje", "traci barwę na zieloną", "staje się bardziej tłuste", "Dlatego mięsa z tkanką łączną dusi się długo."),
         Q("Brązowienie skórki pieczeni w wysokiej temperaturze wynika z", "reakcji Maillarda", "kleikowania skrobi", "retrogradacji skrobi", "denaturacji białka na zimno", "To reakcja cukrów z aminokwasami."),
-        Q("Aby czerwona kapusta zachowała barwę, podczas duszenia dodaje się", "kwas, np. ocet lub sok z cytryny", "sodę oczyszczoną", "dużą ilość wody", "zasmażkę ciemną", "Antocyjany są czerwone w środowisku kwaśnym.")
+        Q("Aby czerwona kapusta zachowała barwę, podczas duszenia dodaje się", "kwas, np. ocet lub sok z cytryny", "sodę oczyszczoną dla miękkości", "dużą ilość zimnej wody", "zasmażkę ciemną na maśle", "Antocyjany są czerwone w środowisku kwaśnym.")
       ]
     },
     {
@@ -1504,6 +1612,13 @@ przykład 2: potrzeba 6 kg obranej marchwi, odpadki 25%
 <h4>Cielęcina i jagnięcina</h4>
 <p>Cielęcina jest jasnoróżowa, delikatna, chuda: sznycle, eskalopki, potrawki, pieczeń z udźca, goleń na osso buco. Jagnięcina: comber, kotlety z kością (carré), udziec na pieczeń, łopatka na gulasz. Mięso jagnięce podaje się często z miętą, rozmarynem, czosnkiem.</p>
 <p>Mięso mielone przygotowuje się w dniu użycia i przechowuje krótko w chłodni, bo duża powierzchnia sprzyja rozwojowi bakterii.</p>
+<h4>Drób i podroby</h4>
+<ul>
+<li>kurczak: pierś (filet) do smażenia i grillowania, udka i podudzia do pieczenia i duszenia, korpus i skrzydła na rosół;</li>
+<li>wątróbkę smaży się krótko, aby nie stwardniała, i soli dopiero po usmażeniu;</li>
+<li>ozory, serca, żołądki gotuje się lub dusi długo.</li>
+</ul>
+<p>Pułapka egzaminacyjna: elementy na rosół (mostek, szponder, goleń) wybiera się ze względu na smak i kolagen, a nie delikatność. Z polędwicy rosołu się nie gotuje, bo to element najdroższy i najdelikatniejszy, przeznaczony do krótkiego smażenia lub na tatar.</p>
 <div class="tip">Elementy z dużą ilością tkanki łącznej (łopatka, goleń, mostek) gotuje się lub dusi. Elementy delikatne (polędwica, rostbef) smaży się krótko lub piecze.</div>` },
         { tytul: "Temperatury i stopnie wysmażenia", tresc: `<h4>Stopnie wysmażenia steku wołowego</h4>
 <div class="tw"><table><tr><th>Stopień</th><th>Temperatura w środku</th><th>Wygląd</th></tr>
@@ -1533,6 +1648,13 @@ przykład 2: potrzeba 6 kg obranej marchwi, odpadki 25%
 </ul>
 <p>Steki przed smażeniem wyjmuje się z chłodni ok. 30 min wcześniej, osusza, soli tuż przed smażeniem lub po nim. Smaży się na mocno rozgrzanej patelni lub grillu, odwracając szczypcami (nakłuwanie widelcem powoduje wyciek soku). Po smażeniu stek odpoczywa kilka minut.</p>
 <p>Klient zamawiający stek jest zawsze pytany o stopień wysmażenia.</p>
+<h4>Ryby i bezpieczeństwo</h4>
+<ul>
+<li>ryba jest gotowa, gdy mięso staje się matowe i łatwo oddziela się od ości;</li>
+<li>potrawy gorące do wydania utrzymuje się powyżej +63°C, a podgrzewane ponownie doprowadza się do ok. +75°C w środku;</li>
+<li>termometr szpilkowy myje się i dezynfekuje po każdym pomiarze, aby nie przenosić bakterii z surowego mięsa.</li>
+</ul>
+<p>Stek wołowy może być podany krwisty, bo bakterie znajdują się głównie na powierzchni mięsa, którą obsmaża się w wysokiej temperaturze. W mięsie mielonym bakterie są w całej masie, dlatego wymaga ono pełnego dogotowania.</p>
 <div class="tip">Na egzaminie stopień „medium” to różowy środek, a nie krwisty. Drób nigdy nie jest podawany na różowo.</div>` },
         { tytul: "Ryby i owoce morza", tresc: `<h4>Ocena świeżości ryby</h4>
 <ul>
@@ -1567,7 +1689,7 @@ przykład 2: potrzeba 6 kg obranej marchwi, odpadki 25%
         Q("Stek w stopniu „medium” ma w środku temperaturę ok.", "60-63°C", "45-48°C", "75-80°C", "35-40°C", "W środku jest różowy."),
         Q("Drób i mięso mielone muszą osiągnąć w środku co najmniej", "+75°C", "+50°C", "+60°C", "+40°C", "To zapobiega zatruciom Salmonellą."),
         Q("Panierowanie w mące, jajku i bułce tartej to panierowanie", "potrójne (angielskie)", "pojedyncze", "podwójne", "na mokro", "Stosowane m.in. do kotleta schabowego."),
-        Q("Świeża ryba ma", "oczy wypukłe i skrzela jasnoczerwone", "oczy zapadnięte i mętne", "skrzela szare", "zapach amoniaku", "To podstawowa ocena organoleptyczna."),
+        Q("Świeża ryba ma", "oczy wypukłe i skrzela jasnoczerwone", "oczy zapadnięte, mętne i matowe", "skrzela szare, pokryte śluzem", "miękkie mięso i zapach amoniaku", "To podstawowa ocena organoleptyczna."),
         Q("Rybą chudą jest", "dorsz", "węgorz", "łosoś", "makrela", "Chude ryby mają do ok. 2% tłuszczu."),
         Q("Po ugotowaniu małży odrzuca się te, które", "mają zamknięte muszle", "mają otwarte muszle", "zmieniły kolor", "mają piasek w środku", "Zamknięta muszla po gotowaniu oznacza martwego małża przed obróbką.")
       ]
@@ -1620,6 +1742,14 @@ przykład 2: potrzeba 6 kg obranej marchwi, odpadki 25%
 <li>sosy na bazie jogurtu, śmietany (do surówek).</li>
 </ul>
 <p>Sosy ciepłe utrzymuje się w bemarze powyżej +63°C, przykryte, aby nie tworzył się kożuch (można też posmarować powierzchnię masłem).</p>
+<h4>Zagęszczanie bez zasmażki</h4>
+<ul>
+<li><b>zawiesina</b>: mąka lub skrobia rozprowadzona zimnym płynem, wlewana do wrzącego sosu;</li>
+<li><b>redukcja</b>: odparowanie płynu, zagęszcza i wzmacnia smak;</li>
+<li><b>liaison</b>: żółtko ze śmietanką, dodawane na końcu, bez gotowania;</li>
+<li><b>beurre manié</b>: masło zagniecione z mąką, dodawane w kawałkach do gorącego sosu.</li>
+</ul>
+<p>Sos dobiera się do potrawy: koperkowy do jaj i ryb, chrzanowy do sztuki mięsa, grzybowy do zrazów i kasz, holenderski do szparagów i ryb.</p>
 <div class="tip">Przy majonezie i holenderskim, emulsja psuje się przez zbyt szybkie dodawanie tłuszczu. Ratunek: nowe żółtko i stopniowe dodawanie zważonej masy.</div>` },
         { tytul: "Ziemniaki, kasze, makarony", tresc: `<h4>Ziemniaki</h4>
 <ul>
@@ -1644,12 +1774,20 @@ przykład 2: potrzeba 6 kg obranej marchwi, odpadki 25%
 </ul>
 <h4>Kluski i pierogi</h4>
 <p>Ciasto pierogowe: mąka, ciepła woda, odrobina tłuszczu, sól; krótko wyrabiane. Pierogi wrzuca się do wrzącej osolonej wody i gotuje ok. 2-3 min od wypłynięcia. Kluski śląskie: ziemniaki gotowane i skrobia ziemniaczana (ok. 1/4 masy ziemniaków).</p>
+<h4>Potrawy z ziemniaków</h4>
+<div class="tw"><table><tr><th>Potrawa</th><th>Technika</th></tr>
+<tr><td>frytki</td><td>smażenie dwuetapowe w głębokim tłuszczu</td></tr>
+<tr><td>ziemniaki opiekane</td><td>gotowane, potem rumienione na tłuszczu</td></tr>
+<tr><td>placki ziemniaczane</td><td>tarte surowe ziemniaki, smażenie płytkie</td></tr>
+<tr><td>kopytka</td><td>ziemniaki gotowane, mąka, jajo, gotowanie w wodzie</td></tr>
+<tr><td>zapiekanka (gratin)</td><td>plastry ze śmietaną i serem, zapiekanie</td></tr></table></div>
+<p>Obrane ziemniaki przechowuje się krótko w zimnej wodzie, bo na powietrzu ciemnieją. Zbyt długie moczenie wypłukuje skrobię i witaminę C.</p>
 <div class="tip">Do purée wybierz ziemniaki typu C (mączyste), do sałatki typu A. Ten podział pojawia się w testach.</div>` }
       ],
       pytania: [
         Q("Wywar rybny gotuje się ok.", "20-30 minut", "2-3 godziny", "5 minut", "całą noc", "Dłuższe gotowanie daje gorycz i mętność."),
-        Q("Do klarowania rosołu na consommé używa się", "mięsa mielonego z białkiem jaja", "zasmażki ciemnej", "żelatyny i octu", "mąki ziemniaczanej", "Ścinające się białko wiąże zmętnienia."),
-        Q("Śmietanę przed dodaniem do gorącej zupy należy", "zahartować niewielką ilością gorącej zupy", "zagotować osobno", "zamrozić", "wymieszać z octem", "Zapobiega to zważeniu śmietany."),
+        Q("Do klarowania rosołu na consommé używa się", "mięsa mielonego z białkiem jaja", "ciemnej zasmażki na maśle", "żelatyny rozpuszczonej w occie", "mąki ziemniaczanej z wodą", "Ścinające się białko wiąże zmętnienia."),
+        Q("Śmietanę przed dodaniem do gorącej zupy należy", "zahartować odrobiną gorącej zupy", "zagotować osobno w rondelku", "rozcieńczyć zimną wodą z octem", "wlać prosto z lodówki do wrzątku", "Zapobiega to zważeniu śmietany."),
         Q("Sos beszamelowy przygotowuje się z", "białej zasmażki i mleka", "ciemnej zasmażki i ciemnego wywaru", "żółtek i masła klarowanego", "oleju i octu", "Velouté to jasna zasmażka z jasnym wywarem."),
         Q("Sos holenderski to emulsja", "żółtek i masła klarowanego", "oleju i octu", "mąki i mleka", "śmietany i jogurtu", "Przygotowuje się go w kąpieli wodnej."),
         Q("Proporcja oleju do octu w sosie vinaigrette wynosi ok.", "3:1", "1:3", "1:1", "10:1", "Klasyczna proporcja to 3 części oleju na 1 część kwasu."),
@@ -1742,8 +1880,8 @@ przykład 2: potrzeba 6 kg obranej marchwi, odpadki 25%
         Q("Rozczyn drożdżowy przygotowuje się z mlekiem o temperaturze ok.", "30-35°C", "70-80°C", "5-10°C", "100°C", "Drożdże giną powyżej ok. 50-60°C."),
         Q("Ciasto parzone jest spulchniane", "parą wodną", "drożdżami", "proszkiem do pieczenia", "amoniakiem", "Dlatego ptysie są puste w środku."),
         Q("Wielokrotne wałkowanie i składanie ciasta z tłuszczem jest charakterystyczne dla ciasta", "francuskiego", "biszkoptowego", "drożdżowego", "piernikowego", "Powstaje wiele cienkich warstw."),
-        Q("Soda oczyszczona jako spulchniacz wymaga obecności", "składnika kwaśnego, np. miodu lub kefiru", "dużej ilości tłuszczu", "drożdży", "skrobi ziemniaczanej", "Reaguje z kwasem, wydzielając CO₂."),
-        Q("Galaretka z dodatkiem świeżego ananasa nie stężeje, ponieważ ananas zawiera", "enzym rozkładający białko żelatyny", "dużo skrobi", "dużo tłuszczu", "konserwanty", "Enzymem tym jest bromelaina."),
+        Q("Soda oczyszczona jako spulchniacz wymaga obecności", "składnika kwaśnego, np. kefiru lub miodu", "dużej ilości tłuszczu, np. masła", "dodatku drożdży i ciepłego mleka", "skrobi ziemniaczanej i cukru", "Reaguje z kwasem, wydzielając CO₂."),
+        Q("Galaretka z dodatkiem świeżego ananasa nie stężeje, ponieważ ananas zawiera", "enzym rozkładający białko żelatyny", "dużo skrobi wiążącej wodę", "tłuszcz hamujący żelowanie", "konserwanty i barwniki", "Enzymem tym jest bromelaina."),
         Q("Sos angielski (crème anglaise) podgrzewa się do ok.", "82-85°C, bez gotowania", "100°C, gotując 5 min", "50°C", "120°C", "Zagotowany sos się zważy."),
         Q("Deser mrożony z soku owocowego i syropu, bez tłuszczu mlecznego, to", "sorbet", "parfait", "lody śmietankowe", "mus czekoladowy", "Parfait zawiera żółtka i śmietankę.")
       ]
@@ -1773,6 +1911,12 @@ mięso surowe = 2 kg ÷ 0,65 ≈ 3,08 kg</pre>
 <p>Kasze i ryż zwiększają masę ok. 2,5-3 razy, makaron ok. 2-2,5 raza. Np. 100 g suchego ryżu daje ok. 250-300 g ugotowanego.</p>
 <p>Przy przeliczaniu przypraw (sól, pieprz, ostre przyprawy) zwiększa się je ostrożniej niż wynika ze współczynnika i koryguje smak na końcu.</p>
 <p>Masę porcji gotowej sprawdza się, ważąc kilka porcji przed wydaniem. Zbyt duże porcje podnoszą koszt, a zbyt małe są przyczyną reklamacji gości.</p>
+<h4>Przykład pełnego zadania</h4>
+<pre>receptura na 4 porcje: ziemniaki brutto 1,0 kg, odpadki 20%
+potrzeba 30 porcji: współczynnik 30 ÷ 4 = 7,5
+ziemniaki brutto 1,0 × 7,5 = 7,5 kg
+netto po obraniu 7,5 × 0,8 = 6,0 kg</pre>
+<p>Typowe pułapki: dzielenie zamiast mnożenia przez współczynnik, pomylenie masy brutto z netto oraz zbyt wczesne zaokrąglanie. Wynik zaokrągla się dopiero na końcu, a surowce liczone w sztukach (jaja) zawsze w górę do pełnej sztuki. Jednostki ujednolica się przed liczeniem: 250 g to 0,25 kg, 400 ml to 0,4 l.</p>
 <div class="tip">W zadaniu praktycznym zawsze sprawdź, czy receptura podaje masę brutto, czy netto, i czy masa porcji dotyczy produktu surowego, czy gotowego.</div>` },
         { tytul: "Koszt i cena potrawy", tresc: `<h4>Kalkulacja kosztu</h4>
 <pre>koszt surowca = ilość × cena jednostkowa
@@ -1801,6 +1945,12 @@ w karcie zwykle zaokrąglenie: 17,50 zł lub 18,00 zł</pre>
 <li>wykorzystanie odpadów kulinarnych (kości na wywar, obierki na bulion warzywny), aby obniżyć koszt.</li>
 </ul>
 <p>Cenę surowców przyjmuje się według ostatnich faktur lub cennika magazynu. Przy zmianie cen dostawców karty kalkulacyjne aktualizuje się, aby marża nie spadła niezauważenie.</p>
+<h4>Cena z zakładanego food cost</h4>
+<p>Gdy lokal zakłada docelowy food cost, cenę netto liczy się odwrotnie:</p>
+<pre>cena netto = koszt porcji ÷ food cost
+np. 6,00 zł ÷ 0,30 = 20,00 zł netto
+brutto przy 8% VAT: 20,00 × 1,08 = 21,60 zł</pre>
+<p>Pułapka: VAT dolicza się do ceny netto na samym końcu, a nie do kosztu surowców. Napoje alkoholowe mają stawkę 23%, więc ich cenę brutto liczy się inaczej niż cenę dań.</p>
 <div class="tip">Food cost liczymy od ceny netto, nie brutto. Liczenie od brutto zaniża wskaźnik.</div>` },
         { tytul: "Zasady żywienia i planowanie jadłospisu", tresc: `<h4>Składniki odżywcze</h4>
 <div class="tw"><table><tr><th>Składnik</th><th>Energia</th><th>Źródła</th></tr>
@@ -1827,6 +1977,14 @@ białko 25 g × 4 + węglowodany 60 g × 4 + tłuszcz 20 g × 9
 <tr><td>bezglutenowa</td><td>pszenica, żyto, jęczmień, orkisz</td><td>dowolne, bez kontaktu krzyżowego z mąką</td></tr>
 <tr><td>niskosodowa</td><td>sól, wędliny, sery żółte, konserwy</td><td>przyprawianie ziołami</td></tr></table></div>
 <p>Jadłospis dekadowy (na 10 dni) stosuje się w żywieniu zbiorowym (stołówki, szpitale, internaty).</p>
+<h4>Talerz zdrowego żywienia</h4>
+<ul>
+<li>połowa talerza to warzywa i owoce, z przewagą warzyw;</li>
+<li>ok. 1/4 to produkty zbożowe, najlepiej pełnoziarniste;</li>
+<li>ok. 1/4 to produkty białkowe: ryby, strączki, chude mięso, nabiał;</li>
+<li>woda jako podstawowy napój, ograniczenie cukru, soli i tłuszczów zwierzęcych.</li>
+</ul>
+<p>Przy planowaniu jadłospisu sprawdza się też koszt surowców, możliwości kuchni (sprzęt, czas, personel) i informację o 14 alergenach, którą trzeba przekazać gościom.</p>
 <div class="tip">Kasza manna to produkt pszenny, więc nie nadaje się do diety bezglutenowej. Kasza gryczana i jaglana są bezglutenowe.</div>` }
       ],
       pytania: [
@@ -1893,6 +2051,14 @@ białko 25 g × 4 + węglowodany 60 g × 4 + tłuszcz 20 g × 9
 <ul><li>podstawowe: mydło, żel, szampon, kubki, papier toaletowy;</li><li>dodatkowe (wyższe kategorie): szlafrok, kapcie, zestaw do szycia, do pielęgnacji obuwia, czajnik z kawą i herbatą, woda butelkowana.</li></ul>
 <h4>Pokoje szczególne</h4>
 <p>Pokój dla osoby z niepełnosprawnością (szersze drzwi, brak progów, uchwyty, prysznic bez brodzika, niżej zawieszone wyposażenie), pokój dla alergików (bez dywanów, pościel antyalergiczna), pokoje dla palących (coraz rzadziej, z oznakowaniem).</p>
+<h4>Przykłady z zadań</h4>
+<ul>
+<li>małżeństwo z dzieckiem do 3 lat: DBL z łóżeczkiem dziecięcym;</li>
+<li>dwóch współpracowników w delegacji: TWN, a nie DBL;</li>
+<li>jedna osoba w pokoju dwuosobowym: DSU, zwykle w cenie wyższej niż SGL;</li>
+<li>rodzina z dwójką nastolatków: connecting rooms lub pokój rodzinny z dostawką.</li>
+</ul>
+<p>Przy przydziale pokoju recepcja sprawdza w rezerwacji życzenia gościa (piętro, widok, cisza, rodzaj łóżka). Dostawkę przygotowuje służba pięter przed przyjazdem gościa, a opłatę za nią dolicza się do rachunku.</p>
 <div class="tip">Twin to dwa osobne łóżka, double to jedno łóżko małżeńskie. To najczęściej mylone oznaczenie w testach.</div>` },
         { tytul: "Statusy pokoi i współpraca działów", tresc: `<h4>Statusy pokoi</h4>
 <div class="tw"><table><tr><th>Skrót</th><th>Znaczenie</th></tr>
@@ -1918,11 +2084,18 @@ białko 25 g × 4 + węglowodany 60 g × 4 + tłuszcz 20 g × 9
 <p>kierownik służby pięter (executive housekeeper), zastępca, inspektor (supervisor, kontroluje pokoje), pokojowe (room attendant), porządkowi części ogólnodostępnych (public area), pracownicy pralni i magazynu bielizny.</p>
 <p>Status pokoju aktualizuje się w systemie hotelowym (PMS) natychmiast po sprzątaniu i kontroli, aby recepcja mogła sprzedać pokój.</p>
 <p>Lista przyjazdów pozwala służbie pięter ustalić, które pokoje muszą być gotowe najwcześniej.</p>
+<h4>Inne pojęcia z raportów</h4>
+<ul>
+<li><b>no show</b>: gość z rezerwacją nie przyjechał i jej nie odwołał;</li>
+<li><b>walk-in</b>: gość bez rezerwacji, który przyszedł prosto do recepcji;</li>
+<li><b>early check-in</b> i <b>late check-out</b>: wcześniejsze zameldowanie i późniejsze wymeldowanie, zwykle za dopłatą.</li>
+</ul>
+<p>Frekwencja (obłożenie) = pokoje sprzedane ÷ pokoje dostępne × 100%. Przykład: 72 pokoje sprzedane z 90 dostępnych to 80%.</p>
 <div class="tip">Pokój OOO nie jest sprzedawany i nie wlicza się do liczby pokoi dostępnych przy obliczaniu frekwencji.</div>` }
       ],
       pytania: [
         Q("Kategorię obiektowi hotelarskiemu nadaje", "marszałek województwa", "wójt gminy", "wojewoda", "minister finansów", "Marszałek prowadzi też ewidencję obiektów skategoryzowanych."),
-        Q("Pensjonat musi mieć co najmniej", "7 pokoi i zapewniać całodzienne wyżywienie", "10 pokoi", "50 pokoi", "1 pokój", "Hotel potrzebuje co najmniej 10 pokoi."),
+        Q("Pensjonat musi mieć co najmniej", "7 pokoi i całodzienne wyżywienie", "10 pokoi i restaurację a la carte", "5 pokoi i same śniadania", "3 pokoje i aneks kuchenny", "Hotel potrzebuje co najmniej 10 pokoi."),
         Q("Kempingi są kategoryzowane w skali", "1-4 gwiazdek", "1-5 gwiazdek", "I-III", "nie mają kategorii", "Hotele, motele i pensjonaty mają 1-5 gwiazdek."),
         Q("Pokój dwuosobowy z dwoma oddzielnymi łóżkami oznacza się skrótem", "TWN", "DBL", "SGL", "DSU", "DBL ma jedno łóżko małżeńskie."),
         Q("Pokoje połączone drzwiami wewnętrznymi, przydatne dla rodzin, to", "connecting rooms", "adjoining rooms", "studio", "suite", "Adjoining to pokoje sąsiednie bez drzwi wewnętrznych."),
@@ -1959,6 +2132,12 @@ białko 25 g × 4 + węglowodany 60 g × 4 + tłuszcz 20 g × 9
 <h4>Pokój zajęty a po wyjeździe</h4>
 <p>W pokoju zajętym nie przestawia się rzeczy gościa, nie otwiera bagażu ani szuflad, nie wyrzuca niczego, co nie leży w koszu. Gazety, notatki zostawia się. Ubrania można złożyć lub powiesić.</p>
 <p>Po zakończeniu pracy pokojowa uzupełnia wózek, oddaje klucze i raport, zgłasza usterki.</p>
+<h4>Uzasadnienie kolejności</h4>
+<p>Pokoje z prośbą o sprzątanie idą pierwsze, bo gość czeka na usługę. Pokoje po wyjeździe sprząta się przed pobytowymi, gdy są potrzebne dla nowych przyjazdów: recepcja nie może ich sprzedać, dopóki nie mają statusu wolny, czysty. Pokoje wolne i czyste wymagają tylko krótkiej kontroli.</p>
+<ul>
+<li>zużytej pościeli nie kładzie się na podłodze ani na meblach, tylko od razu wkłada do worka na wózku;</li>
+<li>śmieci w koszu nie ugniata się ręką (ryzyko skaleczenia).</li>
+</ul>
 <div class="tip">Odkurzanie zawsze na końcu, od okna do drzwi. Wycieranie kurzu zawsze od góry do dołu. To dwie zasady, które wracają w każdym teście.</div>` },
         { tytul: "Łazienka i środki czyszczące", tresc: `<h4>Kolejność sprzątania łazienki</h4>
 <ol>
@@ -1989,6 +2168,15 @@ białko 25 g × 4 + węglowodany 60 g × 4 + tłuszcz 20 g × 9
 </ul>
 <p>Ściereczki z mikrofibry piorą się w temperaturze ok. 60°C, bez płynu zmiękczającego, który zatyka włókna.</p>
 <p>Kubki i szklanki w łazience wymienia się na czyste i zabezpieczone (folią lub kapturkiem).</p>
+<h4>Kontrola po sprzątaniu</h4>
+<ul>
+<li>brak włosów w odpływach, wannie i na podłodze;</li>
+<li>lustro i armatura bez zacieków;</li>
+<li>komplet ręczników ułożonych według standardu hotelu;</li>
+<li>zapas papieru toaletowego, końcówka rolki złożona w trójkąt;</li>
+<li>opaska higieniczna na desce WC, jeśli wymaga tego standard.</li>
+</ul>
+<p>Pułapka: środki kwaśne stosuje się do kamienia, ale nie do marmuru, a środki zasadowe do tłuszczu. O wyborze odczynu decyduje rodzaj brudu i powierzchni.</p>
 <div class="tip">Ściereczka do WC nigdy nie dotyka umywalki ani szklanek. Szklanki w pokoju wymienia się na czyste z pralni lub zmywalni, a nie myje w umywalce.</div>` },
         { tytul: "Normy czasu i planowanie pracy", tresc: `<h4>Normy czasu</h4>
 <p>Orientacyjnie: pokój po wyjeździe ok. 25-35 min, pokój pobytowy ok. 15-20 min. Normy ustala hotel w zależności od kategorii i wielkości pokoi.</p>
@@ -2009,6 +2197,12 @@ zmiana 8 h (480 min), ale ok. 420 min efektywnej pracy:
 <p>Hol, korytarze, windy, toalety ogólne sprząta się w godzinach małego ruchu (noc, wczesny ranek). Mokrą podłogę oznacza się tabliczką ostrzegawczą.</p>
 <h4>Ergonomia</h4>
 <ul><li>ścielenie łóżek z przysiadu lub klęku, a nie ze skłonu;</li><li>odkurzacz i wózek pcha się przed sobą;</li><li>materace obraca się we dwie osoby.</li></ul>
+<h4>Drugi przykład</h4>
+<pre>pokojowa: 7 h efektywnej pracy = 420 min
+plan: 6 pokoi po wyjeździe × 30 min = 180 min
+pozostały czas: 420 - 180 = 240 min
+pokoje pobytowe po 20 min: 240 ÷ 20 = 12 pokoi</pre>
+<p>Przy podziale pracy kierownik służby pięter przydziela pokojowej pokoje na jednym piętrze lub w jednym skrzydle, aby skrócić przejścia z wózkiem. Plan pracy przekazuje się pokojowym na odprawie przed rozpoczęciem zmiany.</p>
 <div class="tip">W zadaniach o liczbie pokojowych zwróć uwagę, czy zadanie podaje czas efektywny pracy, czy pełną zmianę. Licz według danych z zadania.</div>` }
       ],
       pytania: [
@@ -2161,6 +2355,13 @@ przykład: 120 pokoi zajętych, średnio 1,6 osoby na pokój
 <h4>Minibar</h4>
 <p>Sprawdza się go codziennie i przy wyjeździe gościa. Zużyte produkty wpisuje się do rachunku przez recepcję i uzupełnia. Kontroluje się terminy przydatności produktów.</p>
 <p>Zamówienie z alkoholem realizuje się tylko dla gości pełnoletnich. Pracownik dostarczający zamówienie może zapytać o dokument, gdy ma wątpliwości.</p>
+<h4>Typowe błędy i pułapki</h4>
+<ul>
+<li>gdy na drzwiach wisi zawieszka DND, kelner przed zapukaniem dzwoni do pokoju;</li>
+<li>nie zostawia się zamówienia pod drzwiami bez kontaktu z gościem;</li>
+<li>przed obciążeniem pokoju sprawdza się, czy gość może obciążać rachunek pokoju (niektóre rezerwacje na to nie pozwalają);</li>
+<li>potrawy gorące podaje się pod kloszami, a napoje zimne schłodzone.</li>
+</ul>
 <div class="tip">Rachunek za room service gość podpisuje, a kwotę dopisuje się do rachunku pokoju. Na egzaminie to typowa odpowiedź na pytanie o sposób rozliczenia.</div>` },
         { tytul: "Usługi dodatkowe i dokumentacja", tresc: `<h4>Usługi dodatkowe</h4>
 <div class="tw"><table><tr><th>Usługa</th><th>Opis</th></tr>
@@ -2177,15 +2378,16 @@ przykład: 120 pokoi zajętych, średnio 1,6 osoby na pokój
 <h4>Odpowiedzialność hotelu za rzeczy gościa</h4>
 <ul>
 <li>hotel odpowiada za utratę lub uszkodzenie rzeczy wniesionych przez gościa (Kodeks cywilny, art. 846 i nast.);</li>
-<li>odpowiedzialność jest <b>ograniczona do stukrotności należności za jedną dobę</b> hotelową, chyba że rzecz oddano na przechowanie lub szkodę wyrządził personel;</li>
-<li>za pieniądze, papiery wartościowe i kosztowności hotel odpowiada bez ograniczeń tylko wtedy, gdy przyjął je na przechowanie;</li>
+<li>odpowiedzialność jest <b>ograniczona do stukrotności należności za jedną dobę</b> hotelową (art. 849 KC);</li>
+<li>ograniczenie nie dotyczy rzeczy <b>oddanych na przechowanie</b> (depozyt), rzeczy, których przyjęcia hotel bezzasadnie odmówił, oraz szkody wyrządzonej z winy hotelu lub jego personelu;</li>
+<li>hotel może odmówić przyjęcia na przechowanie pieniędzy, papierów wartościowych i kosztowności tylko wtedy, gdy zagrażają bezpieczeństwu albo mają zbyt dużą wartość lub zajmują zbyt wiele miejsca w stosunku do wielkości i standardu hotelu;</li>
 <li>gość powinien niezwłocznie zawiadomić hotel o szkodzie.</li>
 </ul>
 <h4>Dokumentacja służby pięter</h4>
 <p>raport pokojowej, karta zadań (lista pokoi), zeszyt usterek, rejestr rzeczy znalezionych, ewidencja bielizny, rejestr minibaru, plan sprzątania gruntownego.</p>
 <p>Usługi dodatkowe mogą być płatne lub wliczone w cenę pokoju (np. Wi-Fi, parking).</p>
 <p>Cennik usług dodatkowych powinien być dostępny dla gościa w pokoju lub w aplikacji hotelu.</p>
-<div class="tip">Ograniczenie odpowiedzialności hotelu do stukrotności ceny doby nie dotyczy rzeczy oddanych na przechowanie. To ważne rozróżnienie.</div>` }
+<div class="tip">Ograniczenie odpowiedzialności hotelu do stukrotności ceny doby nie dotyczy rzeczy oddanych na przechowanie ani szkody z winy personelu. To ważne rozróżnienie.</div>` }
       ],
       pytania: [
         Q("Śniadanie składające się z pieczywa, masła, dżemu i gorącego napoju to śniadanie", "kontynentalne", "angielskie", "amerykańskie", "bufetowe", "Angielskie zawiera dodatkowo dania na ciepło."),
@@ -2246,6 +2448,13 @@ przykład: 120 pokoi zajętych, średnio 1,6 osoby na pokój
 <p>Pokojowa przekazuje rzecz przełożonej lub do biura służby pięter, z wpisem w <b>rejestrze rzeczy znalezionych</b>: data, numer pokoju, opis przedmiotu, osoba znajdująca. Rzeczy wartościowe przechowuje się w sejfie. Rzecz oddaje się gościowi po potwierdzeniu jego tożsamości i opisu przedmiotu. Nie kontaktuje się samodzielnie z gościem, jeśli mogłoby to naruszyć jego prywatność.</p>
 <p>Skargę zgłoszoną w internecie (portal z opiniami) hotel również rozpatruje i odpowiada na nią publicznie, uprzejmie i rzeczowo.</p>
 <p>Analiza skarg pomaga poprawić standardy pracy.</p>
+<h4>Rekompensaty</h4>
+<p>W zależności od skali problemu hotel może zaproponować: przeprosiny i szybką naprawę, upgrade (pokój wyższej kategorii), bezpłatne śniadanie lub kolację, rabat na pobyt. O rabacie decyduje kierownik zmiany lub manager.</p>
+<ul>
+<li>przy skardze telefonicznej zapisuje się numer pokoju, nazwisko i godzinę zgłoszenia;</li>
+<li>gościowi podaje się realny czas załatwienia sprawy, np. „Technik przyjdzie w ciągu 15 minut”;</li>
+<li>po rozwiązaniu problemu recepcja kontaktuje się z gościem i pyta, czy wszystko jest w porządku.</li>
+</ul>
 <div class="tip">Na egzaminie odpowiedź „przeprosić i od razu zaproponować rozwiązanie” jest prawie zawsze poprawna. Tłumaczenie się lub odsyłanie gościa do innego działu to błąd.</div>` },
         { tytul: "Bezpieczeństwo w obiekcie", tresc: `<h4>Ochrona przeciwpożarowa</h4>
 <ul>
@@ -2276,10 +2485,10 @@ przykład: 120 pokoi zajętych, średnio 1,6 osoby na pokój
       ],
       pytania: [
         Q("Telefon w dziale hotelu należy odebrać", "do 3 sygnałów", "po 10 sygnałach", "tylko po zakończeniu bieżącej pracy", "nie wcześniej niż po 5 sygnałach", "To standard szybkiej obsługi."),
-        Q("Osoba przy recepcji pyta o numer pokoju gościa. Pracownik powinien", "nie podawać numeru, a zaproponować połączenie z pokojem lub przekazanie wiadomości", "podać numer pokoju", "podać numer, jeśli osoba zna nazwisko gościa", "zaprowadzić osobę do pokoju", "Chroni to prywatność i bezpieczeństwo gościa."),
+        Q("Osoba przy recepcji pyta o numer pokoju gościa. Pracownik powinien", "nie podawać numeru, zaproponować połączenie z pokojem", "podać numer pokoju, jeśli osoba jest uprzejma", "podać numer, jeśli osoba zna nazwisko gościa", "zaprowadzić osobę pod drzwi pokoju gościa", "Można też przekazać wiadomość. Chroni to prywatność i bezpieczeństwo gościa."),
         Q("Upominek powitalny przygotowany w pokoju gościa VIP to", "welcome pack", "turndown", "doorknob menu", "late check-out", "Np. owoce, wino, list od dyrektora."),
         Q("Pierwszym krokiem modelu LAST przy skardze gościa jest", "wysłuchanie gościa", "zaproponowanie rabatu", "przeprosiny i zakończenie rozmowy", "przekazanie sprawy policji", "Listen, Apologize, Solve, Thank."),
-        Q("Pokojowa znalazła w pokoju po wyjeździe gościa zegarek. Powinna", "przekazać go przełożonej i wpisać do rejestru rzeczy znalezionych", "zatrzymać go do czasu, aż gość się zgłosi", "wyrzucić go do kosza", "wysłać go pocztą na adres z karty meldunkowej", "Rzeczy wartościowe trafiają do sejfu."),
+        Q("Pokojowa znalazła w pokoju po wyjeździe gościa zegarek. Powinna", "przekazać go przełożonej i wpisać do rejestru", "zatrzymać go u siebie, aż gość się zgłosi", "zostawić go w pokoju dla kolejnego gościa", "wysłać go pocztą na adres z karty meldunkowej", "Wpis trafia do rejestru rzeczy znalezionych, a rzeczy wartościowe do sejfu."),
         Q("Osoba na korytarzu twierdzi, że zgubiła kartę do pokoju i prosi pokojową o otwarcie drzwi. Pokojowa powinna", "skierować ją do recepcji", "otworzyć pokój kartą serwisową", "otworzyć, jeśli osoba poda numer pokoju", "pożyczyć jej kartę serwisową", "Recepcja sprawdzi tożsamość."),
         Q("Podczas pożaru w hotelu nie wolno", "korzystać z windy", "używać klatki schodowej", "zamykać za sobą drzwi", "poruszać się nisko przy podłodze", "Winda może się zatrzymać i wypełnić dymem."),
         Q("Osobę nieprzytomną, która prawidłowo oddycha, układa się", "w pozycji bocznej ustalonej", "na brzuchu z głową w dół", "w pozycji siedzącej", "na plecach z poduszką pod głową", "Chroni to drożność dróg oddechowych.")

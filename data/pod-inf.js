@@ -73,7 +73,7 @@ window.KURSY = window.KURSY || {};
         Q("Procesor Intel z sufiksem F w nazwie (np. i5-12400F)", "nie ma zintegrowanego układu graficznego", "ma odblokowany mnożnik", "jest przeznaczony do laptopów", "ma obniżone TDP", "F: brak iGPU, potrzebna karta graficzna."),
         Q("Wtyczka EPS 8-pin (4+4) z zasilacza zasila", "procesor", "kartę graficzną", "dyski SATA", "wentylatory obudowy", "EPS 12 V doprowadza zasilanie do sekcji CPU."),
         Q("Data i godzina w komputerze resetują się po każdym odłączeniu zasilania. Należy", "wymienić baterię CR2032", "wymienić zasilacz", "zaktualizować sterowniki chipsetu", "wymienić moduł RAM", "Bateria podtrzymuje pamięć CMOS i zegar."),
-        Q("Aby uzyskać tryb Dual Channel, dwa moduły RAM należy", "zamontować w slotach wskazanych w instrukcji płyty (zwykle tego samego koloru)", "zamontować w dwóch sąsiednich slotach zawsze", "połączyć mostkiem SLI", "włączyć opcją Secure Boot", "Rozmieszczenie podaje dokumentacja płyty, najczęściej A2 i B2."),
+        Q("Aby uzyskać tryb Dual Channel, dwa moduły RAM należy", "zamontować w slotach wskazanych w instrukcji płyty", "zamontować zawsze w dwóch sąsiednich slotach", "połączyć dodatkowym mostkiem SLI lub CrossFire", "zamontować i włączyć w UEFI opcję Secure Boot", "Rozmieszczenie podaje dokumentacja płyty, najczęściej A2 i B2."),
         Q("Rozruch systemu z dysku z tablicą GPT wymaga trybu", "UEFI", "Legacy BIOS", "CSM z MBR", "PXE", "GPT jest standardowo uruchamiany przez UEFI.")
       ]
     },
@@ -172,7 +172,16 @@ window.KURSY = window.KURSY || {};
 <li><code>net user jan Haslo123 /add</code>, <code>net localgroup Administratorzy jan /add</code>, <code>net share</code>, <code>net use Z: \\\\serwer\\dane</code>.</li></ul>
 <h4>Rejestr</h4>
 <p>Główne klucze: <b>HKEY_LOCAL_MACHINE</b> (ustawienia komputera), <b>HKEY_CURRENT_USER</b> (zalogowany użytkownik), <b>HKEY_USERS</b>, <b>HKEY_CLASSES_ROOT</b> (skojarzenia plików), <b>HKEY_CURRENT_CONFIG</b>. Przed zmianą rejestru wykonaj jego eksport lub punkt przywracania.</p>
-<div class="tip">W PowerShell odpowiedniki: <code>Get-NetIPConfiguration</code>, <code>Test-Connection</code>, <code>Get-Service</code>, <code>New-LocalUser</code>. Na egzaminie wystarczy znajomość podstawowych poleceń cmd, ale PowerShell też się pojawia.</div>` },
+<div class="tip">W PowerShell odpowiedniki: <code>Get-NetIPConfiguration</code>, <code>Test-Connection</code>, <code>Get-Service</code>, <code>New-LocalUser</code>. Na egzaminie wystarczy znajomość podstawowych poleceń cmd, ale PowerShell też się pojawia.</div>
+<h4>Typowe zadania egzaminacyjne</h4>
+<div class="tw"><table><tr><th>Sytuacja</th><th>Właściwe narzędzie</th></tr>
+<tr><td>urządzenie z żółtym wykrzyknikiem</td><td>Menedżer urządzeń, aktualizacja lub wycofanie sterownika</td></tr>
+<tr><td>nowy dysk niewidoczny w Eksploratorze</td><td>Zarządzanie dyskami: inicjalizacja (MBR lub GPT), nowy wolumin, litera</td></tr>
+<tr><td>system wolno startuje</td><td>Menedżer zadań, karta Uruchamianie (w nowych Windows już nie msconfig)</td></tr>
+<tr><td>niebieski ekran po aktualizacji</td><td>Podgląd zdarzeń, dziennik System, następnie tryb awaryjny</td></tr>
+<tr><td>strony WWW nie otwierają się po zmianie DNS</td><td><code>ipconfig /flushdns</code>, potem <code>nslookup</code></td></tr></table></div>
+<p>Kolejność naprawy uszkodzonych plików systemowych: najpierw <code>DISM /Online /Cleanup-Image /RestoreHealth</code>, potem <code>sfc /scannow</code>. Polecenie <code>chkdsk</code> na dysku systemowym wymaga ponownego uruchomienia, bo wolumin jest w użyciu.</p>
+<div class="tip">Pułapka: <code>ipconfig /release</code> zwalnia adres tylko przy DHCP. Przy adresie statycznym nic nie zmienia. Konsole z rozszerzeniem .msc i polecenia net user wymagają zwykle uruchomienia jako administrator.</div>` },
         { tytul: "Uprawnienia NTFS i udostępnianie", tresc: `<h4>Uprawnienia NTFS</h4>
 <p>Uprawnienia standardowe: <b>Pełna kontrola</b>, <b>Modyfikacja</b>, <b>Odczyt i wykonanie</b>, <b>Wyświetlanie zawartości folderu</b>, <b>Odczyt</b>, <b>Zapis</b>. Modyfikacja pozwala usuwać pliki, ale nie zmieniać uprawnień ani przejmować własności (to daje Pełna kontrola).</p>
 <ul><li>Uprawnienia są <b>dziedziczone</b> z folderu nadrzędnego; dziedziczenie można wyłączyć, kopiując lub usuwając odziedziczone wpisy.</li>
@@ -291,14 +300,22 @@ iface enp0s3 inet static
    path = /srv/dane
    read only = no
    valid users = @ksiegowosc</pre>
-<div class="tip">Po każdej zmianie pliku konfiguracyjnego usługi zrestartuj ją (systemctl restart smbd) i sprawdź status. Składnię smb.conf sprawdza polecenie testparm.</div>` }
+<div class="tip">Po każdej zmianie pliku konfiguracyjnego usługi zrestartuj ją (systemctl restart smbd) i sprawdź status. Składnię smb.conf sprawdza polecenie testparm.</div>
+<h4>Zarządzanie usługami i pułapki</h4>
+<ul><li><code>systemctl status ssh</code> pokazuje stan, <code>systemctl enable ssh</code> włącza autostart, <code>systemctl start</code> uruchamia tylko teraz. Samo enable nie startuje usługi od razu (chyba że dodasz <code>--now</code>).</li>
+<li>Dzienniki usług: <code>journalctl -u smbd</code>, pliki w <code>/var/log/</code> (np. auth.log z próbami logowania SSH).</li>
+<li>Zmiana portu SSH w <code>sshd_config</code> (Port 2222) wymaga otwarcia tego portu w zaporze, inaczej utracisz zdalny dostęp.</li>
+<li>Instalacja pakietów: <code>apt update</code> odświeża listę, <code>apt install samba</code> instaluje, <code>apt upgrade</code> aktualizuje.</li></ul>
+<div class="tw"><table><tr><th>Port</th><th>Usługa</th></tr>
+<tr><td>22</td><td>SSH</td></tr><tr><td>67/68 UDP</td><td>DHCP</td></tr><tr><td>80 / 443</td><td>HTTP / HTTPS</td></tr><tr><td>139, 445</td><td>Samba (SMB)</td></tr><tr><td>2049</td><td>NFS</td></tr></table></div>
+<p>Na egzaminie częsty błąd to restart złej usługi: Samba to <code>smbd</code>, Apache to <code>apache2</code>, a serwer DHCP to <code>isc-dhcp-server</code>.</p>` }
       ],
       pytania: [
         Q("Uprawnienia rwxr-xr-- zapisane ósemkowo to", "754", "755", "744", "654", "rwx=7, r-x=5, r--=4."),
         Q("Przy umask 022 nowo tworzony plik otrzyma uprawnienia", "644", "755", "622", "777", "666 - 022 = 644."),
         Q("Który plik zawiera skróty haseł użytkowników w Linuksie?", "/etc/shadow", "/etc/passwd", "/etc/group", "/etc/login.defs", "/etc/shadow jest dostępny tylko dla roota."),
         Q("Polecenie dopisujące użytkownika jan do grupy biuro bez usuwania go z innych grup to", "usermod -aG biuro jan", "usermod -G biuro jan", "useradd -g biuro jan", "groupadd biuro jan", "Bez -a lista grup dodatkowych zostałaby zastąpiona."),
-        Q("Sticky bit ustawiony na katalogu /tmp powoduje, że", "plik może usunąć tylko jego właściciel (lub root)", "pliki dziedziczą grupę katalogu", "program działa z prawami właściciela", "katalog jest tylko do odczytu", "Sticky bit: litera t w uprawnieniach."),
+        Q("Sticky bit ustawiony na katalogu /tmp powoduje, że", "plik może usunąć tylko jego właściciel lub root", "nowe pliki dziedziczą grupę właściciela katalogu", "programy uruchamiają się z prawami właściciela", "katalog staje się dostępny tylko do odczytu", "Sticky bit: litera t w uprawnieniach."),
         Q("Aby usługa ssh uruchamiała się automatycznie przy starcie systemu, należy wydać polecenie", "systemctl enable ssh", "systemctl start ssh", "service ssh status", "apt install --boot ssh", "enable dodaje usługę do rozruchu."),
         Q("Plik konfiguracyjny serwera Samba to", "/etc/samba/smb.conf", "/etc/exports", "/etc/fstab", "/etc/samba/nfs.conf", "/etc/exports dotyczy NFS."),
         Q("Polecenie wyświetlające nasłuchujące porty TCP i UDP z nazwą procesu to", "ss -tulpn", "ip route", "df -h", "lsblk", "ss zastępuje netstat.")
@@ -325,7 +342,16 @@ iface enp0s3 inet static
 <p>Klasy (historycznie): A 1-126, B 128-191, C 192-223, D 224-239 (multicast), E 240-255. Adresy prywatne: <b>10.0.0.0/8</b>, <b>172.16.0.0/12</b> (172.16-172.31), <b>192.168.0.0/16</b>. Pętla zwrotna 127.0.0.0/8, APIPA 169.254.0.0/16.</p>
 <h4>IPv6 w skrócie</h4>
 <p>Adres ma 128 bitów, zapis w 8 grupach szesnastkowych. Skracanie: pomija się zera wiodące w grupie, jeden ciąg grup zerowych zastępuje się <code>::</code> (tylko raz w adresie). 2001:0db8:0000:0000:0000:0000:0000:0001 = <b>2001:db8::1</b>. Link-local zaczyna się od fe80::/10, adresy globalne od 2000::/3.</p>
-<div class="tip">Dwa hosty widzą się bez routera tylko wtedy, gdy po nałożeniu maski dają ten sam adres sieci. To najczęstsze zadanie z adresacji na INF.02.</div>` },
+<div class="tip">Dwa hosty widzą się bez routera tylko wtedy, gdy po nałożeniu maski dają ten sam adres sieci. To najczęstsze zadanie z adresacji na INF.02.</div>
+<h4>Podział sieci na równe podsieci</h4>
+<p>Zadanie: sieć 192.168.1.0/24 podziel na 4 równe podsieci. Potrzebne są 2 dodatkowe bity (2^2 = 4), więc nowy prefiks to <b>/26</b>, blok 64 adresy, 62 hosty w każdej podsieci.</p>
+<div class="tw"><table><tr><th>Podsieć</th><th>Adres sieci</th><th>Zakres hostów</th><th>Broadcast</th></tr>
+<tr><td>1</td><td>192.168.1.0</td><td>.1 - .62</td><td>192.168.1.63</td></tr>
+<tr><td>2</td><td>192.168.1.64</td><td>.65 - .126</td><td>192.168.1.127</td></tr>
+<tr><td>3</td><td>192.168.1.128</td><td>.129 - .190</td><td>192.168.1.191</td></tr>
+<tr><td>4</td><td>192.168.1.192</td><td>.193 - .254</td><td>192.168.1.255</td></tr></table></div>
+<p>Gdy zadanie podaje liczbę hostów, szukaj najmniejszego bloku, który je pomieści: 50 hostów wymaga bloku 64 (/26), bo /27 daje tylko 30. Pamiętaj o adresie dla bramy, który też zajmuje adres hosta.</p>
+<div class="tip">Pułapka: adres 192.168.1.64/26 to adres sieci, a 192.168.1.127/26 to broadcast, więc żadnego z nich nie można przypisać komputerowi.</div>` },
         { tytul: "Okablowanie i urządzenia sieciowe", tresc: `<h4>Sekwencje T568A i T568B</h4>
 <div class="tw"><table><tr><th>Pin</th><th>T568B</th><th>T568A</th></tr>
 <tr><td>1</td><td>biało-pomarańczowy</td><td>biało-zielony</td></tr>
@@ -395,7 +421,7 @@ S1(config-if)# switchport access vlan 10</pre>
         Q("Kabel skrosowany ma na jednym końcu sekwencję T568A, a na drugim", "T568B", "T568A", "odwróconą T568A", "dowolną", "Zamienione pary pomarańczowa i zielona."),
         Q("Na pinach 1 i 2 według T568B znajduje się para", "pomarańczowa", "zielona", "niebieska", "brązowa", "Biało-pomarańczowy i pomarańczowy."),
         Q("Który adres jest adresem prywatnym?", "172.20.5.1", "172.32.5.1", "192.169.1.1", "11.0.0.1", "Zakres prywatny 172.16.0.0-172.31.255.255."),
-        Q("Polecenie zapisujące bieżącą konfigurację przełącznika Cisco w pamięci NVRAM to", "copy running-config startup-config", "write erase", "show running-config", "reload", "Bez zapisu konfiguracja zniknie po restarcie."),
+        Q("Polecenie zapisujące bieżącą konfigurację przełącznika Cisco w pamięci NVRAM to", "copy running-config startup-config", "copy startup-config running-config", "erase startup-config", "copy running-config flash:vlan.dat", "Bez zapisu konfiguracja zniknie po restarcie."),
         Q("Skrócony zapis adresu 2001:0db8:0000:0000:0000:0000:0000:0001 to", "2001:db8::1", "2001:db8:0:1", "2001:db8::0::1", "21:db8::1", "Zera wiodące i jeden ciąg zerowych grup można pominąć."),
         Q("Które urządzenie dzieli domenę rozgłoszeniową?", "router", "koncentrator", "przełącznik bez VLAN", "wzmacniak", "Router nie przekazuje rozgłoszeń warstwy 2.")
       ]
@@ -425,7 +451,15 @@ S1(config-if)# switchport access vlan 10</pre>
 <li>Szyfrowanie dysku: <b>BitLocker</b> (Windows, najlepiej z modułem TPM), szyfrowanie plików EFS, w Linuksie LUKS.</li></ul>
 <h4>Zasady haseł w Windows</h4>
 <p>W zasadach zabezpieczeń (secpol.msc lub GPO): maksymalny i minimalny okres ważności hasła, minimalna długość, wymaganie złożoności, historia haseł, próg blokady konta po nieudanych logowaniach.</p>
-<div class="tip">Najpierw odłącz zainfekowany komputer od sieci, potem skanuj z nośnika ratunkowego. Przy ransomware nie płać okupu: przywróć dane z kopii offline.</div>` },
+<div class="tip">Najpierw odłącz zainfekowany komputer od sieci, potem skanuj z nośnika ratunkowego. Przy ransomware nie płać okupu: przywróć dane z kopii offline.</div>
+<h4>Kopie zapasowe</h4>
+<div class="tw"><table><tr><th>Rodzaj</th><th>Co kopiuje</th><th>Odtworzenie</th></tr>
+<tr><td>pełna</td><td>wszystkie wybrane dane</td><td>tylko ta kopia</td></tr>
+<tr><td>przyrostowa</td><td>zmiany od ostatniej kopii dowolnego typu</td><td>pełna i wszystkie kolejne przyrostowe</td></tr>
+<tr><td>różnicowa</td><td>zmiany od ostatniej kopii pełnej</td><td>pełna i ostatnia różnicowa</td></tr></table></div>
+<p>Zasada <b>3-2-1</b>: trzy kopie danych, na dwóch różnych nośnikach, jedna poza siedzibą firmy. Macierz RAID 1 nie jest kopią zapasową, bo usunięcie lub zaszyfrowanie pliku od razu trafia na oba dyski.</p>
+<p>W Windows kopie wykonuje Historia plików, a punkt przywracania systemu chroni ustawienia i sterowniki, ale nie dokumenty użytkownika.</p>
+<div class="tip">Pułapka: przyrostowa kopia jest najszybsza w tworzeniu, ale najwolniejsza w odtwarzaniu. Różnicowa rośnie każdego dnia aż do kolejnej kopii pełnej.</div>` },
         { tytul: "Kopie zapasowe i macierze RAID", tresc: `<h4>Rodzaje kopii</h4>
 <div class="tw"><table><tr><th>Kopia</th><th>Co zawiera</th><th>Atrybut archiwalny</th><th>Odtworzenie</th></tr>
 <tr><td>pełna</td><td>wszystkie wybrane pliki</td><td>czyści</td><td>tylko ta kopia</td></tr>
@@ -585,7 +619,7 @@ public:
         Q("W klasie C++ zadeklarowanej słowem class składowe bez modyfikatora są domyślnie", "prywatne", "publiczne", "chronione", "statyczne", "W struct domyślnie publiczne."),
         Q("Funkcja void f(int &x) otrzymuje argument", "przez referencję", "przez wartość", "przez stałą", "przez kopię wskaźnika", "Zmiany x będą widoczne w wywołującym."),
         Q("Wyrażenie rand() % 6 + 1 zwraca liczby z zakresu", "1-6", "0-6", "0-5", "1-7", "rand() % 6 daje 0-5, plus 1."),
-        Q("Metoda zadeklarowana jako virtual double pole() const = 0; jest", "czysto wirtualna, a klasa staje się abstrakcyjna", "statyczna", "przeciążona", "prywatna", "= 0 oznacza brak implementacji w klasie bazowej."),
+        Q("Metoda zadeklarowana jako virtual double pole() const = 0; jest", "czysto wirtualna, klasa jest abstrakcyjna", "statyczna, wywoływana bez tworzenia obiektu", "wirtualna z domyślną implementacją równą 0", "stała, zwracająca zawsze wartość 0", "= 0 oznacza brak implementacji w klasie bazowej."),
         Q("Pamięć zaalokowaną instrukcją new int[n] zwalnia się instrukcją", "delete[]", "delete", "free()", "nie trzeba jej zwalniać", "Dla tablic używa się delete[]."),
         Q("Metoda substr(1, 3) wywołana na napisie „Komputer” zwraca", "„omp”", "„Kom”", "„ompu”", "„mpu”", "Od indeksu 1, 3 znaki."),
         Q("Destruktor klasy Punkt ma postać", "~Punkt()", "Punkt()", "void ~Punkt(int)", "delete Punkt()", "Destruktor nie ma parametrów ani typu zwracanego.")
@@ -838,7 +872,18 @@ raise ValueError("Ujemny wiek")   # zgloszenie wyjatku</pre>
 with open("wynik.txt", "w", encoding="utf-8") as f:
     f.write("Suma: 10")</pre>
 <p>Tryby: <code>"r"</code> odczyt, <code>"w"</code> zapis (kasuje zawartość), <code>"a"</code> dopisywanie. Konstrukcja <code>with</code> sama zamyka plik.</p>
-<div class="tip">Na egzaminie częsty błąd: zapomniany <code>self</code> w definicji metody lub przy odwołaniu do atrybutu. Wtedy pojawia się TypeError lub NameError.</div>` }
+<div class="tip">Na egzaminie częsty błąd: zapomniany <code>self</code> w definicji metody lub przy odwołaniu do atrybutu. Wtedy pojawia się TypeError lub NameError.</div>
+<h4>Typowe pułapki</h4>
+<ul><li>Bez <code>encoding="utf-8"</code> polskie znaki w pliku mogą się wczytać błędnie na Windows.</li>
+<li>Otwarcie nieistniejącego pliku w trybie <code>"r"</code> zgłasza <code>FileNotFoundError</code>, a tryb <code>"w"</code> tworzy nowy plik.</li>
+<li>Metoda <code>readlines()</code> zwraca listę wierszy razem ze znakiem <code>\\n</code>, dlatego stosuje się <code>strip()</code>.</li>
+<li>Kolejność bloków except ma znaczenie: ogólny <code>except Exception</code> umieszczony na początku przechwyci wszystkie błędy.</li></ul>
+<div class="tw"><table><tr><th>Wyjątek</th><th>Przyczyna</th></tr>
+<tr><td>ValueError</td><td>niepoprawna wartość, np. int("abc")</td></tr>
+<tr><td>ZeroDivisionError</td><td>dzielenie przez zero</td></tr>
+<tr><td>IndexError</td><td>indeks spoza listy</td></tr>
+<tr><td>KeyError</td><td>brak klucza w słowniku</td></tr>
+<tr><td>AttributeError</td><td>brak atrybutu lub metody obiektu</td></tr></table></div>` }
       ],
       pytania: [
         Q("Wynik wyrażenia 17 // 5 w Pythonie to", "3", "3.4", "2", "4", "// to dzielenie całkowite."),
@@ -955,11 +1000,11 @@ public class Kwadrat extends Figura implements Rysowalny {
         Q("Ukrywanie pól klasy i udostępnianie ich przez metody to", "hermetyzacja", "dziedziczenie", "polimorfizm", "rekurencja", "Enkapsulacja chroni stan obiektu."),
         Q("Dwie metody o tej samej nazwie i różnych listach parametrów w jednej klasie to przykład", "przeciążania", "nadpisywania", "dziedziczenia wielobazowego", "hermetyzacji", "Overloading rozstrzyga kompilator."),
         Q("W diagramie UML symbol # przed atrybutem oznacza dostęp", "protected", "private", "public", "pakietowy", "+ public, - private, # protected, ~ pakietowy."),
-        Q("Relację kompozycji na diagramie klas UML oznacza", "pełny romb przy klasie całości", "pusty romb", "pusty trójkąt", "linia przerywana", "Pusty romb to agregacja."),
+        Q("Relację kompozycji na diagramie klas UML oznacza", "pełny romb przy klasie całości", "pusty romb przy klasie całości", "pusty trójkąt przy klasie bazowej", "przerywana linia zakończona strzałką", "Pusty romb to agregacja."),
         Q("W Javie klasa może dziedziczyć bezpośrednio po", "jednej klasie i implementować wiele interfejsów", "wielu klasach", "jednym interfejsie", "dowolnej liczbie klas abstrakcyjnych", "Wielodziedziczenie klas jest w C++."),
         Q("Metoda statyczna", "nie ma dostępu do this ani pól instancji", "może być wywołana tylko na obiekcie", "musi być abstrakcyjna", "jest zawsze prywatna", "Należy do klasy, nie do obiektu."),
         Q("Wzorzec gwarantujący istnienie tylko jednej instancji klasy to", "Singleton", "Obserwator", "Adapter", "Fabryka", "Prywatny konstruktor i statyczna metoda dostępu."),
-        Q("Po zdefiniowaniu w klasie konstruktora z parametrami konstruktor domyślny bezparametrowy", "nie jest już generowany automatycznie", "jest generowany zawsze", "staje się prywatny", "staje się statyczny", "Trzeba go zdefiniować samodzielnie, jeśli jest potrzebny.")
+        Q("Po zdefiniowaniu w klasie konstruktora z parametrami konstruktor domyślny bezparametrowy", "nie jest już generowany automatycznie", "jest nadal generowany przez kompilator", "staje się automatycznie prywatny", "staje się statyczny dla całej klasy", "Trzeba go zdefiniować samodzielnie, jeśli jest potrzebny.")
       ]
     },
     {
@@ -1075,7 +1120,15 @@ public class Kwadrat extends Figura implements Rysowalny {
 <p>Funkcja przyjmuje wiek od 18 do 65 włącznie. Klasy równoważności: poniżej 18 (niepoprawne), 18-65 (poprawne), powyżej 65 (niepoprawne). Wartości brzegowe do testów: <b>17, 18, 65, 66</b> (często też 19 i 64). Dodatkowo dane nieliczbowe i puste pole.</p>
 <h4>Pojęcia ISTQB</h4>
 <p><b>Błąd</b> (pomyłka człowieka) prowadzi do <b>defektu</b> w kodzie, który może wywołać <b>awarię</b> podczas działania. Testowanie pokazuje obecność defektów, a nie dowodzi ich braku. Testowanie wyczerpujące (wszystkich kombinacji) jest niemożliwe.</p>
-<div class="tip">Przypadek testowy zawiera: identyfikator, warunki wstępne, kroki, dane wejściowe, oczekiwany wynik, wynik rzeczywisty i status. Raport błędu dodatkowo: środowisko, priorytet i ważność.</div>` },
+<div class="tip">Przypadek testowy zawiera: identyfikator, warunki wstępne, kroki, dane wejściowe, oczekiwany wynik, wynik rzeczywisty i status. Raport błędu dodatkowo: środowisko, priorytet i ważność.</div>
+<h4>Testy jednostkowe w praktyce</h4>
+<p>Test jednostkowy ma zwykle trzy części: <b>Arrange</b> (przygotowanie danych), <b>Act</b> (wywołanie testowanej metody), <b>Assert</b> (sprawdzenie wyniku). W C# używa się MSTest, NUnit lub xUnit, w Javie JUnit, w Pythonie unittest lub pytest.</p>
+<div class="tw"><table><tr><th>Asercja</th><th>Sprawdza</th></tr>
+<tr><td>Assert.AreEqual(4, wynik)</td><td>równość wartości oczekiwanej i rzeczywistej</td></tr>
+<tr><td>Assert.IsTrue(warunek)</td><td>prawdziwość warunku</td></tr>
+<tr><td>Assert.ThrowsException</td><td>czy metoda zgłasza wyjątek</td></tr></table></div>
+<p>Zależności zewnętrzne (baza, sieć) zastępuje się obiektami zastępczymi: <b>mock</b> lub <b>stub</b>, aby test był szybki i powtarzalny.</p>
+<div class="tip">Pułapka: test regresyjny to nie nowy rodzaj poziomu, tylko powtórzenie wcześniejszych testów po zmianie. Debugowanie to szukanie przyczyny defektu, a testowanie to jego wykrywanie.</div>` },
         { tytul: "Testy jednostkowe i debugowanie", tresc: `<h4>Wzorzec AAA</h4>
 <p>Każdy test ma trzy części: <b>Arrange</b> (przygotuj dane), <b>Act</b> (wywołaj testowaną metodę), <b>Assert</b> (sprawdź wynik).</p>
 <h4>C# (MSTest, NUnit, xUnit)</h4>
@@ -1148,7 +1201,7 @@ autor: 00000000000
         Q("Technika testowania oparta na znajomości kodu źródłowego to", "testowanie białej skrzynki", "testowanie czarnej skrzynki", "test akceptacyjny", "test beta", "Np. pokrycie gałęzi."),
         Q("Funkcja przyjmuje wartości od 1 do 100. Zestaw wartości brzegowych do testu to", "0, 1, 100, 101", "1, 50, 100", "-100, 0, 100", "2, 99", "Wartości na granicy i tuż za nią."),
         Q("W metodyce TDD najpierw", "pisze się test, który nie przechodzi", "pisze się cały kod aplikacji", "wykonuje się refaktoryzację", "wykonuje się testy akceptacyjne", "Cykl: czerwony, zielony, refaktoryzacja."),
-        Q("W Visual Studio klawisz F11 podczas debugowania", "wchodzi do wnętrza wywoływanej funkcji", "przechodzi nad funkcją", "ustawia punkt przerwania", "kończy debugowanie", "F10 to step over, F11 step into."),
+        Q("W Visual Studio klawisz F11 podczas debugowania", "wchodzi do wnętrza wywoływanej funkcji", "przechodzi nad wywołaniem funkcji", "ustawia punkt przerwania w linii", "wznawia działanie do kolejnej pułapki", "F10 to step over, F11 step into, F9 punkt przerwania, F5 kontynuacja."),
         Q("Atrybut oznaczający metodę testową w MSTest to", "[TestMethod]", "[Fact]", "@Test", "[TestFixture]", "[Fact] to xUnit, @Test to JUnit."),
         Q("Osoba odpowiedzialna w Scrumie za priorytety w backlogu produktu to", "Product Owner", "Scrum Master", "tester", "klient końcowy", "Scrum Master dba o proces."),
         Q("Polecenie git zapisujące przygotowane zmiany w lokalnym repozytorium to", "git commit", "git push", "git clone", "git pull", "push wysyła commity na serwer.")
@@ -1194,7 +1247,16 @@ autor: 00000000000
 <p>Starsza technologia: projektant generuje kod w <code>Form1.Designer.cs</code>, kontrolki mają właściwości <code>Text</code>, <code>Checked</code>, zdarzenie <code>Click</code>. Komunikat: <code>MessageBox.Show("...")</code>. W WinForms TextBox zwraca <code>Text</code>, CheckBox <code>Checked</code> (bool), w WPF <code>IsChecked</code>.</p>
 <h4>Wiązanie danych (MVVM)</h4>
 <p><code>&lt;TextBox Text="{Binding Imie}"/&gt;</code> wiąże pole z właściwością ViewModelu ustawionego jako <code>DataContext</code>. Powiadamianie widoku o zmianie wymaga interfejsu <code>INotifyPropertyChanged</code>.</p>
-<div class="tip">Na egzaminie nazwy kontrolek, kolory i napisy muszą być dokładnie jak w poleceniu. Zwróć uwagę na wielkość liter i polskie znaki w etykietach.</div>` },
+<div class="tip">Na egzaminie nazwy kontrolek, kolory i napisy muszą być dokładnie jak w poleceniu. Zwróć uwagę na wielkość liter i polskie znaki w etykietach.</div>
+<h4>Typowe pułapki na egzaminie</h4>
+<ul><li><code>IsChecked</code> w WPF ma typ <code>bool?</code>, dlatego porównuje się go z <code>true</code>, a nie wstawia bezpośrednio do if.</li>
+<li>Liczbę z pola tekstowego zamieniaj bezpiecznie: <code>int.TryParse(txtWiek.Text, out int wiek)</code> zamiast <code>int.Parse</code>, który przy pustym polu zgłasza wyjątek.</li>
+<li>Kolor tła ustawia się w XAML atrybutem <code>Background="LightBlue"</code>, w kodzie <code>Brushes.LightBlue</code>. W WinForms właściwość nazywa się <code>BackColor</code>.</li>
+<li>Obrazek dodany do projektu musi mieć ustawioną akcję kompilacji Resource lub kopiowanie do katalogu wyjściowego, inaczej się nie wyświetli.</li></ul>
+<div class="tw"><table><tr><th>Element</th><th>WPF</th><th>Windows Forms</th></tr>
+<tr><td>zaznaczenie pola wyboru</td><td>IsChecked</td><td>Checked</td></tr>
+<tr><td>tekst etykiety</td><td>Content (Label), Text (TextBlock)</td><td>Text</td></tr>
+<tr><td>widoczność</td><td>Visibility</td><td>Visible</td></tr></table></div>` },
         { tytul: "Android Studio: aktywności i widoki", tresc: `<h4>Struktura projektu</h4>
 <ul><li><code>AndroidManifest.xml</code>: nazwa aplikacji, aktywności, uprawnienia (np. <code>android.permission.INTERNET</code>), ikona.</li>
 <li><code>res/layout/activity_main.xml</code>: układ widoku.</li>
@@ -1241,7 +1303,16 @@ autor: 00000000000
     }
 }</pre>
 <p>Pułapka: zapomniane <code>.show()</code> przy Toast powoduje, że komunikat się nie pojawi. Liczbę z EditText odczytuje się przez <code>Integer.parseInt(et.getText().toString())</code>, co przy pustym polu rzuca <code>NumberFormatException</code>.</p>
-<div class="tip">W Kotlinie zamiast findViewById stosuje się View Binding, a nowoczesny interfejs buduje się w Jetpack Compose. Na egzaminie wybór technologii jest zwykle dowolny, liczy się wynik zgodny z poleceniem.</div>` },
+<div class="tip">W Kotlinie zamiast findViewById stosuje się View Binding, a nowoczesny interfejs buduje się w Jetpack Compose. Na egzaminie wybór technologii jest zwykle dowolny, liczy się wynik zgodny z poleceniem.</div>
+<h4>Cykl życia aktywności</h4>
+<p>Metody wywoływane kolejno: <code>onCreate</code> (utworzenie, ustawienie widoku), <code>onStart</code>, <code>onResume</code> (aktywność na pierwszym planie), przy wyjściu <code>onPause</code>, <code>onStop</code>, <code>onDestroy</code>. Obrót ekranu domyślnie niszczy i tworzy aktywność od nowa, więc dane w polach bez zapisu stanu mogą zniknąć.</p>
+<div class="tw"><table><tr><th>Widok</th><th>Ważna metoda lub atrybut</th></tr>
+<tr><td>EditText</td><td>getText(), android:inputType="number"</td></tr>
+<tr><td>CheckBox, Switch</td><td>isChecked()</td></tr>
+<tr><td>ImageView</td><td>setImageResource(R.drawable.kot)</td></tr>
+<tr><td>Spinner</td><td>getSelectedItem()</td></tr>
+<tr><td>SeekBar</td><td>getProgress(), setOnSeekBarChangeListener</td></tr></table></div>
+<p>Przejście do innej aktywności: <code>startActivity(new Intent(this, DrugaActivity.class))</code>. Nowa aktywność musi być zadeklarowana w AndroidManifest.xml, inaczej aplikacja się zamknie z błędem.</p>` },
         { tytul: "Cykl życia, wieloplatformowość i UX", tresc: `<h4>Cykl życia aktywności Android</h4>
 <div class="tw"><table><tr><th>Metoda</th><th>Kiedy</th></tr>
 <tr><td>onCreate()</td><td>tworzenie aktywności, ustawienie widoku</td></tr>
@@ -1507,13 +1578,13 @@ autor: 00000000000
 <div class="tip">Zgięcie wykrywa się, porównując pomiary na dwóch długościach fali: dłuższa fala (1550 nm) jest bardziej wrażliwa na zginanie. Spaw daje podobny uskok na obu długościach fali.</div>` }
       ],
       pytania: [
-        Q("Błąd, którego nie wykryje prosty tester ciągłości, a ujawni pomiar NEXT, to", "rozdzielona para (split pair)", "przerwa żyły", "zwarcie żył", "skrzyżowane pary", "Kolejność pinów jest poprawna, ale pary są rozdzielone."),
-        Q("Zamiana miejscami żył w obrębie jednej pary (np. pin 1 z 2) to", "odwrócona para (reversed pair)", "split pair", "skrzyżowane pary", "zwarcie", "Pary pozostają te same, zmienia się polaryzacja."),
+        Q("Błąd, którego nie wykryje prosty tester ciągłości, a ujawni pomiar NEXT, to", "rozdzielona para (split pair)", "przerwa jednej z żył (open)", "zwarcie dwóch żył (short)", "skrzyżowane pary (crossed pair)", "Kolejność pinów jest poprawna, ale pary są rozdzielone."),
+        Q("Zamiana miejscami żył w obrębie jednej pary (np. pin 1 z 2) to", "odwrócona para (reversed pair)", "rozdzielona para (split pair)", "skrzyżowane pary (crossed pair)", "zwarcie żył w parze (short)", "Pary pozostają te same, zmienia się polaryzacja."),
         Q("Pomiar wykonywany od panelu krosowego do gniazda, bez kabli krosowych, to model", "łącza stałego (permanent link)", "kanału (channel)", "szkieletu", "łącza abonenckiego", "Kanał obejmuje kable krosowe."),
         Q("Dla parametru NEXT lepszy wynik to wartość", "większa w dB", "mniejsza w dB", "równa zeru", "ujemna", "Większe tłumienie przesłuchu oznacza słabsze zakłócenie."),
-        Q("Parametr Return Loss opisuje", "odbicia sygnału spowodowane niedopasowaniem impedancji", "różnicę opóźnień par", "przesłuch zdalny", "rezystancję pętli", "Przyczyną bywa zgniecenie kabla."),
+        Q("Parametr Return Loss opisuje", "odbicia sygnału przez niedopasowanie impedancji", "różnicę opóźnień propagacji między parami", "przesłuch mierzony na końcu odległym (FEXT)", "rezystancję pętli stałoprądowej pary żył", "Przyczyną bywa zgniecenie kabla."),
         Q("Do lokalizacji spawów i złączy na długości światłowodu służy", "reflektometr OTDR", "miernik mocy optycznej", "tester wiremap", "multimetr", "OTDR rysuje reflektogram w funkcji odległości."),
-        Q("Światłowód rozbiegowy (launch cable) w pomiarach OTDR stosuje się, aby", "ominąć strefę martwą i ocenić pierwsze złącze", "zwiększyć moc nadajnika", "zmienić długość fali", "zastąpić referencję miernika", "Strefa martwa zasłania zdarzenia tuż przy przyrządzie."),
+        Q("Światłowód rozbiegowy (launch cable) w pomiarach OTDR stosuje się, aby", "ominąć strefę martwą i ocenić pierwsze złącze", "zwiększyć moc impulsu wysyłanego przez OTDR", "przełączyć pomiar na inną długość fali", "zastąpić ustawienie referencji miernika mocy", "Strefa martwa zasłania zdarzenia tuż przy przyrządzie."),
         Q("Czerwony laser 650 nm wskazujący miejsce złamania włókna to", "wizualny lokalizator uszkodzeń (VFL)", "OTDR", "spawarka", "identyfikator włókien aktywnych", "Światło wydostaje się w miejscu uszkodzenia.")
       ]
     },
@@ -1864,7 +1935,7 @@ R1(config)# ipv6 route 2001:db8:acad:2::/64 g0/1 fe80::2</pre>
         Q("Pakiet do 10.1.1.5 przy trasach 10.0.0.0/8, 10.1.0.0/16 i 10.1.1.0/24 zostanie wysłany trasą", "10.1.1.0/24", "10.0.0.0/8", "10.1.0.0/16", "domyślną", "Wygrywa najdłuższe dopasowanie prefiksu."),
         Q("Polecenie konfigurujące trasę domyślną przez 203.0.113.1 to", "ip route 0.0.0.0 0.0.0.0 203.0.113.1", "ip route 255.255.255.255 0.0.0.0 203.0.113.1", "ip default-network 203.0.113.1 0.0.0.0", "route add default 203.0.113.1", "Sieć 0.0.0.0 z maską 0.0.0.0."),
         Q("Trasa statyczna z odległością administracyjną ustawioną ręcznie na 5, używana dopiero po awarii trasy głównej, to trasa", "pływająca", "sumaryczna", "domyślna", "bezpośrednia", "Floating static route."),
-        Q("Kod L w tablicy routingu oznacza", "adres lokalny interfejsu routera", "trasę RIP", "trasę z sieci LAN", "trasę zapasową", "Wpis /32 dla adresu interfejsu."),
+        Q("Kod L w tablicy routingu oznacza", "adres lokalny interfejsu routera", "sieć bezpośrednio podłączoną do routera", "trasę poznaną z protokołu RIP", "trasę zapasową z większym dystansem", "Wpis /32 dla adresu interfejsu. Sieć podłączona ma kod C, RIP kod R."),
         Q("Aby zapasowa trasa statyczna nie wypierała trasy OSPF, jej AD powinna wynosić np.", "130", "1", "90", "100", "Musi być większa niż 110."),
         Q("Sieci 192.168.4.0/24 do 192.168.7.0/24 sumaryzuje trasa", "192.168.4.0/22", "192.168.0.0/22", "192.168.4.0/23", "192.168.4.0/21", "4 = 00000100, 7 = 00000111, wspólne 6 bitów."),
         Q("Symbol U w wyniku polecenia ping na routerze Cisco oznacza", "cel nieosiągalny", "poprawną odpowiedź", "przekroczony czas oczekiwania", "nieznany pakiet", "Router odesłał ICMP unreachable.")
@@ -2058,7 +2129,7 @@ R1(config)# aaa authentication login default group radius local</pre>
         Q("Listę ACL standardową należy umieścić", "jak najbliżej celu", "jak najbliżej źródła", "zawsze na interfejsie WAN", "zawsze w kierunku in", "Filtruje tylko źródło, więc blisko źródła zablokowałaby za dużo."),
         Q("Numery list ACL rozszerzonych IPv4 to", "100-199", "1-99", "200-299", "600-699", "Oraz zakres 2000-2699."),
         Q("Na końcu każdej listy ACL znajduje się niejawny wpis", "deny any", "permit any", "deny tcp any any eq 80", "log", "Niejawna odmowa."),
-        Q("Słowo overload w poleceniu ip nat inside source list 1 interface g0/1 overload oznacza", "PAT (wiele hostów, jeden adres, różne porty)", "NAT statyczny", "NAT z pulą bez portów", "przekierowanie portów", "NAT z przeciążeniem."),
+        Q("Słowo overload w poleceniu ip nat inside source list 1 interface g0/1 overload oznacza", "PAT, czyli translację z użyciem numerów portów", "NAT statyczny jeden do jednego dla hosta", "NAT dynamiczny z pulą adresów bez portów", "przekierowanie portu do serwera wewnętrznego", "NAT z przeciążeniem."),
         Q("Prywatny adres hosta w sieci wewnętrznej w terminologii NAT to", "inside local", "inside global", "outside global", "outside local", "Inside global to adres publiczny hosta."),
         Q("Do ograniczenia dostępu do linii VTY za pomocą ACL służy polecenie", "access-class", "ip access-group", "ip nat inside", "transport input", "access-class w trybie line vty."),
         Q("Wpis access-list 110 deny tcp any host 10.0.0.5 eq 23 blokuje", "Telnet do hosta 10.0.0.5", "SSH do 10.0.0.5", "cały ruch z 10.0.0.5", "WWW do 10.0.0.5", "Port 23 to Telnet."),
@@ -2146,7 +2217,7 @@ R1(config-if)# no shutdown</pre>
         Q("Na interfejsie szeregowym routera po stronie kabla DCE należy skonfigurować", "clock rate", "bandwidth", "encapsulation dot1Q", "duplex full", "DCE dostarcza sygnał zegarowy."),
         Q("Domyślną enkapsulacją interfejsów szeregowych routerów Cisco jest", "HDLC", "PPP", "Frame Relay", "PPPoE", "Cisco HDLC."),
         Q("Uwierzytelnianie PPP, w którym hasło nie jest przesyłane, a weryfikacja odbywa się metodą wyzwanie-odpowiedź, to", "CHAP", "PAP", "LCP", "IPCP", "CHAP używa skrótu MD5."),
-        Q("W konfiguracji CHAP na routerze R1 polecenie username podaje", "nazwę hosta sąsiedniego routera", "własną nazwę R1", "nazwę domeny", "nazwę interfejsu", "Hasło musi być takie samo po obu stronach."),
+        Q("W konfiguracji CHAP na routerze R1 polecenie username podaje", "nazwę hosta sąsiedniego routera", "własną nazwę hosta routera R1", "nazwę domeny używaną przez PPP", "nazwę interfejsu szeregowego", "Hasło musi być takie samo po obu stronach."),
         Q("Typowe MTU dla połączenia PPPoE wynosi", "1492 bajty", "1500 bajtów", "576 bajtów", "9000 bajtów", "Nagłówek PPPoE zajmuje 8 bajtów."),
         Q("W sieci GPON sygnał do abonenta przesyłany jest na fali", "1490 nm", "1310 nm", "850 nm", "1625 nm", "1310 nm to kierunek od abonenta."),
         Q("Ile łączy wymaga pełna siatka łącząca 6 lokalizacji?", "15", "6", "30", "12", "6 x 5 / 2 = 15."),

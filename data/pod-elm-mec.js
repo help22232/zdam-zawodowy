@@ -144,7 +144,7 @@ R_B = (U_ster - U_BE) / I_B = (5 - 0,7) / 0,002 = 2150 Ω, wybieramy 2,2 kΩ</pr
         Q("Moc tracona w stabilizatorze 7805 zasilanym 12 V przy prądzie 0,5 A wynosi", "3,5 W", "2,5 W", "6 W", "0,5 W", "(12 - 5)·0,5 = 3,5 W."),
         Q("Wzmocnienie wzmacniacza nieodwracającego z R1 = 10 kΩ i R2 = 100 kΩ wynosi", "11", "10", "-10", "0,1", "k = 1 + R2/R1 = 1 + 10."),
         Q("Wzmocnienie napięciowe 40 dB odpowiada wzmocnieniu", "100 razy", "40 razy", "10 razy", "1000 razy", "20·log(100) = 40 dB."),
-        Q("Układ tranzystorowy o wzmocnieniu napięciowym bliskim 1 i dużej rezystancji wejściowej to", "wspólny kolektor (wtórnik emiterowy)", "wspólny emiter", "wspólna baza", "wzmacniacz różnicowy", "Wtórnik służy jako bufor dopasowujący impedancje."),
+        Q("Układ tranzystorowy o wzmocnieniu napięciowym bliskim 1 i dużej rezystancji wejściowej to", "układ wspólnego kolektora", "układ wspólnego emitera", "układ wspólnej bazy", "wzmacniacz różnicowy", "Wspólny kolektor to wtórnik emiterowy, służy jako bufor dopasowujący impedancje."),
         Q("Częstotliwość graniczna filtru RC to częstotliwość, przy której sygnał spada o", "3 dB", "6 dB", "10 dB", "20 dB", "Napięcie spada do 70,7% wartości w paśmie przepustowym.")
       ]
     },
@@ -455,7 +455,7 @@ Przy wsuwie odejmujemy pole tłoczyska: A = π(D² - d²)/4</pre>
         Q("W rozdzielaczu 5/2 cyfra 2 oznacza", "liczbę położeń", "liczbę przyłączy", "liczbę cewek", "przyłącze zasilania", "Pierwsza liczba to przyłącza, druga położenia."),
         Q("Zgodnie z ISO 5599 przyłącze zasilania rozdzielacza oznacza się cyfrą", "1", "2", "3", "4", "2 i 4 to wyjścia, 3 i 5 odpowietrzenia."),
         Q("Zatrzymanie siłownika w dowolnym położeniu umożliwia rozdzielacz", "5/3 z zamkniętym położeniem środkowym", "5/2 monostabilny", "3/2 NC", "5/3 z odpowietrzonym środkiem", "Zamknięty środek odcina obie komory siłownika."),
-        Q("Funkcję logiczną AND w pneumatyce realizuje zawór", "podwójnego sygnału (dwuciśnieniowy)", "przełączający", "zwrotny", "szybkiego spustu", "Zawór przełączający realizuje OR."),
+        Q("Funkcję logiczną AND w pneumatyce realizuje zawór", "dwuciśnieniowy", "przełączający", "zwrotny sterowany", "szybkiego spustu", "Zawór dwuciśnieniowy (podwójnego sygnału) daje wyjście przy obu sygnałach. Zawór przełączający realizuje OR."),
         Q("Zalecanym sposobem regulacji prędkości siłownika dwustronnego działania jest dławienie", "powietrza wylotowego", "powietrza dolotowego", "na reduktorze ciśnienia", "na zaworze bezpieczeństwa", "Daje płynny ruch niezależny od obciążenia."),
         Q("Zapis A- w diagramie drogowo-krokowym oznacza", "wsunięcie siłownika A", "wysunięcie siłownika A", "zatrzymanie siłownika A", "odcięcie zasilania siłownika A", "Plus oznacza wysunięcie, minus wsunięcie."),
         Q("Przewód czarny (BK) w trójprzewodowym czujniku PNP to", "wyjście sygnałowe", "zasilanie +24 V", "masa 0 V", "przewód ochronny", "BN to plus, BU masa.")
@@ -510,6 +510,9 @@ P_s = 2,3 / 0,85 ≈ 2,7 kW</pre>
 </ul>
 <h4>Pozostałe elementy</h4>
 <p>Zbiornik (objętość ok. 3-5-krotności wydajności minutowej pompy), filtry (ssawny, ciśnieniowy, spływowy), chłodnica, <b>akumulator hydrauliczny</b> (pęcherzowy, tłokowy; azot jako gaz), manometr, przewody sztywne i giętkie (węże wysokociśnieniowe).</p>
+<h4>Ciecze i przykładowe obliczenie</h4>
+<p>W układach stosuje się oleje hydrauliczne HL, HLP (z dodatkami przeciwzużyciowymi) i HV (do zmiennych temperatur), o klasie lepkości np. VG 32 lub VG 46. Temperatura pracy oleju powinna wynosić ok. 40-60°C.</p>
+<p>Siła siłownika: <b>F = p × A</b>. Tłok o średnicy 50 mm ma pole A ≈ 19,6 cm², więc przy 100 bar (10 MPa) daje F ≈ 19,6 kN. Prędkość tłoka: <b>v = Q / A</b>, przy Q = 12 l/min wynosi ok. 0,1 m/s. Po stronie tłoczyska pole jest mniejsze, więc siła jest mniejsza, a prędkość większa.</p>
 <div class="tip">Zawór maksymalny montuje się zaraz za pompą. Pytanie „który zawór chroni pompę przed przeciążeniem” ma właśnie tę odpowiedź.</div>` },
         { tytul: "Eksploatacja układów hydraulicznych", tresc: `<h4>Olej hydrauliczny</h4>
 <p>Funkcje: przenoszenie energii, smarowanie, chłodzenie, ochrona przed korozją. Najważniejsza cecha to <b>lepkość</b>; klasy <b>ISO VG</b> (np. VG 32, 46, 68) podają lepkość kinematyczną w mm²/s w temperaturze 40°C. Oznaczenia rodzajów: HL (z dodatkami antykorozyjnymi), <b>HLP</b> (dodatkowo przeciwzużyciowe, najczęstsze), HV (wysoki wskaźnik lepkości, do zmiennych temperatur). Optymalna temperatura pracy 40-60°C; powyżej ok. 70°C olej szybko się starzeje.</p>
@@ -536,12 +539,12 @@ P_s = 2,3 / 0,85 ≈ 2,7 kW</pre>
       pytania: [
         Q("Pompa o objętości roboczej 10 cm³/obr przy 1450 obr/min i sprawności objętościowej 0,95 ma wydajność około", "13,8 l/min", "14,5 l/min", "1,38 l/min", "138 l/min", "Q = 10 · 1450 · 0,95 cm³/min."),
         Q("Moc hydrauliczna przy ciśnieniu 100 bar i przepływie 60 l/min wynosi", "10 kW", "6 kW", "100 kW", "1 kW", "P = p·Q/600 = 100·60/600."),
-        Q("Zawór chroniący pompę i układ przed nadmiernym ciśnieniem to zawór", "maksymalny (przelewowy)", "redukcyjny", "dławiący", "zwrotny", "Nadmiar oleju kieruje do zbiornika."),
+        Q("Zawór chroniący pompę i układ przed nadmiernym ciśnieniem to zawór", "maksymalny", "redukcyjny", "dławiący", "zwrotny", "Zawór maksymalny (przelewowy) kieruje nadmiar oleju do zbiornika."),
         Q("W siłowniku z jednostronnym tłoczyskiem przy stałym przepływie oleju", "wsuwanie jest szybsze niż wysuwanie", "wysuwanie jest szybsze niż wsuwanie", "prędkości są równe", "prędkość nie zależy od pola powierzchni", "v = Q/A, a pole pierścieniowe jest mniejsze."),
         Q("Liczba w oznaczeniu oleju ISO VG 46 oznacza", "lepkość kinematyczną w mm²/s w 40°C", "temperaturę zapłonu", "maksymalne ciśnienie w barach", "zawartość dodatków w %", "Klasy lepkości odnoszą się do 40°C."),
         Q("Hałas pompy i spienienie oleju najczęściej wskazują na", "kawitację lub zasysanie powietrza", "zbyt wysokie ustawienie zaworu maksymalnego", "zbyt duży zbiornik", "zbyt czysty olej", "Typowa przyczyna to zatkany filtr ssawny lub niski poziom oleju."),
         Q("Przed rozkręceniem przewodów w układzie z akumulatorem hydraulicznym należy", "rozładować akumulator", "podnieść ciśnienie", "dolać oleju", "zamknąć zawór maksymalny", "Akumulator utrzymuje ciśnienie po wyłączeniu pompy."),
-        Q("Stałą prędkość siłownika niezależnie od obciążenia zapewnia", "regulator przepływu z wagą ciśnieniową", "dławik nastawny", "zawór zwrotny", "zawór redukcyjny", "Dławik daje przepływ zależny od różnicy ciśnień.")
+        Q("Stałą prędkość siłownika niezależnie od obciążenia zapewnia", "regulator przepływu", "zawór dławiąco-zwrotny", "zawór zwrotny sterowany", "zawór redukcyjny", "Regulator przepływu ma wagę ciśnieniową. Dławik daje przepływ zależny od różnicy ciśnień.")
       ]
     },
     {
@@ -862,7 +865,7 @@ Temp &gt; 22.0  → kasuj Grzałka (R)
         Q("Timer, którego wyjście załącza się dopiero po upływie czasu od podania sygnału na wejście, to", "TON", "TOF", "TP", "CTU", "TON to opóźnione załączenie."),
         Q("Wentylator ma pracować jeszcze 2 minuty po wyłączeniu urządzenia. Należy użyć timera", "TOF", "TON", "TP", "CTD", "TOF opóźnia wyłączenie."),
         Q("Licznik CTU z PV = 5 ustawi wyjście Q, gdy wartość CV", "osiągnie 5", "osiągnie 6", "spadnie do 0", "przekroczy 5", "Q = 1 dla CV ≥ PV."),
-        Q("Instrukcja ADD 1 wykonywana warunkowo przy wciśniętym przycisku bez zbocza spowoduje", "zwiększenie wartości w każdym cyklu programu", "jednorazowe zwiększenie o 1", "błąd kompilacji", "zatrzymanie CPU", "Należy użyć zbocza narastającego."),
+        Q("Instrukcja ADD 1 wykonywana warunkowo przy wciśniętym przycisku bez zbocza spowoduje", "zwiększanie wartości w każdym cyklu", "jednorazowe zwiększenie o 1", "błąd kompilacji programu", "zatrzymanie CPU w stanie STOP", "Należy użyć zbocza narastającego."),
         Q("Blok RS w odróżnieniu od SR ma priorytet", "kasowania", "ustawiania", "zbocza narastającego", "wejścia zegarowego", "W RS przy obu wejściach aktywnych wyjście = 0."),
         Q("Wejście PT bloku TON określa", "czas zadany", "czas, który upłynął", "wyjście timera", "wejście kasujące", "ET to czas bieżący.")
       ]
@@ -963,7 +966,7 @@ IF R_Start.Q THEN Licznik := Licznik + 1; END_IF;</pre>
         Q("Symbol „≥1” na bloku FBD oznacza funkcję", "OR", "AND", "XOR", "NOT", "Wyjście = 1, gdy co najmniej jedno wejście = 1."),
         Q("W języku ST operatorem przypisania jest", ":=", "=", "==", "=>", "Pojedynczy znak równości to porównanie."),
         Q("Instrukcja ST: IF Czujnik THEN Lampa := TRUE; END_IF; zachowuje się jak", "ustawienie (Set) lampy", "cewka zwykła", "kasowanie lampy", "timer TON", "Brak gałęzi ELSE, więc lampa nie zgaśnie sama."),
-        Q("Pętla w ST oczekująca na zmianę sygnału wejściowego spowoduje", "przekroczenie czasu cyklu i zadziałanie watchdoga", "poprawne oczekiwanie na sygnał", "automatyczne odświeżenie wejść", "przejście sterownika w tryb ręczny", "Wejścia odświeżają się dopiero po zakończeniu cyklu."),
+        Q("Pętla w ST oczekująca na zmianę sygnału wejściowego spowoduje", "przekroczenie czasu cyklu (watchdog)", "poprawne oczekiwanie na sygnał", "automatyczne odświeżenie wejść", "przejście sterownika w tryb ręczny", "Wejścia odświeżają się dopiero po zakończeniu cyklu."),
         Q("Krok początkowy w diagramie SFC oznacza się", "podwójną ramką", "linią przerywaną", "pogrubioną tranzycją", "kółkiem", "Jest aktywny po starcie sterownika."),
         Q("Rozgałęzienie równoległe w SFC oznacza", "jednoczesne wykonywanie kilku ścieżek", "wybór jednej z kilku ścieżek", "powrót do kroku początkowego", "zatrzymanie sekwencji", "Rysuje się je podwójną linią poziomą."),
         Q("Kwalifikator akcji N w SFC oznacza, że akcja jest", "aktywna tylko w czasie aktywności kroku", "ustawiona trwale", "opóźniona", "wykonywana jednorazowo impulsem", "S ustawia, D opóźnia, P daje impuls."),
@@ -1041,7 +1044,7 @@ MoveC p30, p40, v100, z10, tool1; // ruch po okręgu
         Q("Protokół Modbus TCP wykorzystuje standardowo port", "502", "80", "102", "8080", "Port 102 jest używany przez S7 ISO-on-TCP."),
         Q("Urządzenia w sieci PROFINET kontroler rozpoznaje przede wszystkim po", "nazwie urządzenia (device name)", "adresie PROFIBUS", "numerze seryjnym CPU", "kolorze kabla", "Na podstawie nazwy przypisywany jest adres IP."),
         Q("Kolor czerwony na ekranie HMI zgodnie z zasadami oznacza", "alarm lub stan niebezpieczny", "pracę normalną", "wymaganą czynność operatora", "stan wyłączenia bez błędu", "Zielony to praca normalna, niebieski czynność obowiązkowa."),
-        Q("Przycisk na panelu HMI powinien", "ustawiać bit w pamięci PLC, który program przetwarza z blokadami", "sterować bezpośrednio wyjściem fizycznym", "zastępować wyłącznik bezpieczeństwa", "wyłączać zasilanie CPU", "Program PLC uwzględnia warunki bezpieczeństwa."),
+        Q("Przycisk na panelu HMI powinien", "ustawiać bit w PLC, obsługiwany z blokadami", "sterować bezpośrednio wyjściem fizycznym", "zastępować wyłącznik bezpieczeństwa", "odłączać zasilanie jednostki CPU sterownika", "Program PLC uwzględnia warunki bezpieczeństwa."),
         Q("Robot o 4 osiach przeznaczony do szybkiego montażu w płaszczyźnie to robot", "SCARA", "przegubowy 6-osiowy", "kartezjański", "kolaboracyjny 7-osiowy", "Selective Compliance Assembly Robot Arm."),
         Q("Ruch robota, w którym punkt TCP porusza się po linii prostej, to ruch", "liniowy (MoveL, LIN)", "osiowy (MoveJ, PTP)", "kołowy (MoveC)", "bazowania", "MoveJ daje tor nieliniowy."),
         Q("Maksymalna prędkość TCP robota w trybie ręcznym T1 wynosi", "250 mm/s", "1000 mm/s", "50 mm/s", "2 m/s", "Wymagana jest też obsługa przycisku zezwolenia.")
@@ -1125,9 +1128,9 @@ OEE = 0,90 · 0,95 · 0,98 ≈ 0,84 = 84%</pre>
         Q("Wskaźnik OEE przy dostępności 0,9, wydajności 0,95 i jakości 0,98 wynosi około", "84%", "95%", "90%", "98%", "OEE to iloczyn trzech składników."),
         Q("Dostępność urządzenia przy MTBF = 190 h i MTTR = 10 h wynosi", "95%", "90%", "5%", "100%", "A = 190 / (190 + 10)."),
         Q("Dioda wejścia PLC świeci po zadziałaniu czujnika, ale program nie reaguje. Najbardziej prawdopodobna przyczyna to", "błąd w programie lub adresie zmiennej", "uszkodzony czujnik", "przerwany przewód czujnika", "brak zasilania czujnika", "Sygnał dociera do sterownika."),
-        Q("Funkcja wymuszania (force) w PLC", "trwale nadpisuje stan zmiennej niezależnie od programu", "jednorazowo zmienia wartość zmiennej", "kasuje bufor diagnostyczny", "przełącza CPU w STOP", "Wymuszenia sygnalizuje dioda FORCE i trzeba je usunąć."),
+        Q("Funkcja wymuszania (force) w PLC", "nadpisuje zmienną niezależnie od programu", "jednorazowo zmienia wartość zmiennej", "kasuje bufor diagnostyczny sterownika", "przełącza CPU w tryb STOP do restartu", "Wymuszenia sygnalizuje dioda FORCE i trzeba je usunąć."),
         Q("Człon regulatora likwidujący uchyb ustalony to człon", "całkujący I", "proporcjonalny P", "różniczkujący D", "dwustawny", "Całka sumuje uchyb aż do jego zniknięcia."),
-        Q("Regulator dwustawny z histerezą powoduje", "oscylacje wartości regulowanej wokół wartości zadanej", "brak uchybu w każdym czasie", "płynne sterowanie 0-100%", "pracę bez sprzężenia zwrotnego", "Typowy przykład to termostat."),
+        Q("Regulator dwustawny z histerezą powoduje", "oscylacje wokół wartości zadanej", "brak uchybu w każdej chwili", "płynne sterowanie mocą 0-100%", "pracę bez sprzężenia zwrotnego", "Typowy przykład to termostat."),
         Q("Kody błędu przepięcia w obwodzie DC falownika najczęściej wynikają ze", "zbyt krótkiego czasu hamowania", "zbyt długiego czasu rozruchu", "zbyt małego obciążenia przy rozruchu", "złego ustawienia języka panelu", "Energia hamowania podnosi napięcie DC; pomaga rezystor hamujący.")
       ]
     }
@@ -1287,7 +1290,7 @@ M1 = 10 N·m, η = 0,97 → M2 = 10 · 3 · 0,97 = 29,1 N·m</pre>
       pytania: [
         Q("Granica plastyczności śruby klasy 8.8 wynosi", "640 MPa", "800 MPa", "880 MPa", "88 MPa", "Re = 8 · 8 · 10 MPa."),
         Q("Łożysko 6205 ma średnicę otworu", "25 mm", "5 mm", "20 mm", "205 mm", "05 · 5 = 25 mm."),
-        Q("Przyrostek 2RS w oznaczeniu łożyska oznacza", "obustronne uszczelnienia gumowe", "blaszki ochronne", "zwiększony luz", "dwa rzędy kulek", "2Z to blaszki ochronne."),
+        Q("Przyrostek 2RS w oznaczeniu łożyska oznacza", "dwie uszczelki gumowe", "dwie blaszki ochronne", "zwiększony luz promieniowy", "dwa rzędy kulek", "2Z to blaszki ochronne."),
         Q("Przy montażu łożyska na wał siłę wcisku należy przykładać do", "pierścienia wewnętrznego", "pierścienia zewnętrznego", "koszyka", "uszczelnienia", "Siła nie może przechodzić przez elementy toczne."),
         Q("Przełożenie przekładni z kołami z1 = 20 i z2 = 60 wynosi", "3", "0,33", "40", "80", "i = z2/z1."),
         Q("Średnica podziałowa koła zębatego o module 2 mm i 30 zębach wynosi", "60 mm", "64 mm", "32 mm", "55 mm", "d = m·z."),
@@ -1322,6 +1325,13 @@ M1 = 10 N·m, η = 0,97 → M2 = 10 · 3 · 0,97 = 29,1 N·m</pre>
 </ol>
 <h4>Siły i metody łączenia wciskowego</h4>
 <p>Montaż na zimno (prasa ręczna, hydrauliczna), na gorąco (nagrzanie elementu obejmującego), przez ochłodzenie elementu obejmowanego. Przed wciskaniem powierzchnie smaruje się olejem, a wałek powinien mieć fazkę wprowadzającą. Wciskanie prowadzi się osiowo, bez ukosowania.</p>
+<h4>Łączenie skurczowe: przykład</h4>
+<p>Wymagany przyrost temperatury piasty: Δt = (wcisk + luz montażowy) / (α × d), dla stali α ≈ 12 × 10<sup>-6</sup> 1/K. Piasta o średnicy 100 mm, wcisk 0,06 mm, luz montażowy 0,06 mm: Δt = 0,12 / (12 × 10<sup>-6</sup> × 100) = <b>100 K</b>. Łożyska nagrzewa się nagrzewnicą indukcyjną lub w oleju, maksymalnie do ok. 120°C, nigdy palnikiem.</p>
+<h4>Kontrola po montażu</h4>
+<ul>
+<li>Sprawdzenie luzów, swobody obrotu i momentów dokręcenia śrub (dokręcanie na krzyż, w kilku etapach).</li>
+<li>Próba ruchowa najpierw bez obciążenia, potem pod obciążeniem, z kontrolą temperatury łożysk i drgań.</li>
+</ul>
 <div class="tip">Na egzaminie „metoda selekcji” to sortowanie części na grupy wymiarowe. „Metoda kompensacji” zawsze ma w opisie podkładki regulacyjne lub inny element kompensujący.</div>` },
         { tytul: "Osiowanie, poziomowanie i wyważanie", tresc: `<h4>Ustawianie maszyny na fundamencie</h4>
 <p>Maszynę ustawia się na fundamencie lub ramie, poziomuje <b>poziomnicą maszynową</b> (dokładność np. 0,02 mm/m) za pomocą podkładek lub śrub regulacyjnych, a następnie kotwi. Fundament izoluje drgania; pod maszyny precyzyjne stosuje się podkładki wibroizolacyjne. „Miękka stopa” (stopa nieprzylegająca do podłoża) powoduje odkształcenie korpusu: sprawdza się ją szczelinomierzem lub czujnikiem po poluzowaniu kolejnych śrub.</p>
@@ -1423,6 +1433,13 @@ M1 = 10 N·m, η = 0,97 → M2 = 10 · 3 · 0,97 = 29,1 N·m</pre>
 </ul>
 <h4>Ocena stanu</h4>
 <p>Weryfikacja części podczas remontu: części <b>dobre</b> (do dalszej pracy), <b>do naprawy</b> (regeneracja opłacalna), <b>do wymiany</b> (brakowane). Pomiary porównuje się z wymiarami nominalnymi i granicznymi z DTR (zużycie dopuszczalne).</p>
+<h4>Metody diagnozowania zużycia</h4>
+<div class="tw"><table><tr><th>Metoda</th><th>Co wykrywa</th></tr>
+<tr><td>pomiar drgań</td><td>niewyważenie, niewspółosiowość, uszkodzenia łożysk</td></tr>
+<tr><td>termowizja</td><td>przegrzane łożyska, złącza, sprzęgła</td></tr>
+<tr><td>analiza oleju</td><td>opiłki metalu, wodę, utlenienie oleju</td></tr>
+<tr><td>badania penetracyjne i magnetyczne</td><td>pęknięcia powierzchniowe wałów i kół</td></tr></table></div>
+<p>Pułapka: zużycie <b>adhezyjne</b> wynika z braku smaru i dużego nacisku, a <b>ścierne</b> z obecności twardych cząstek. Pitting to zmęczenie powierzchni, a nie korozja, choć wygląda jak drobne wżery. W warsztacie pomocny jest stetoskop do łożysk i czujnik zegarowy do pomiaru bicia.</p>
 <div class="tip">Przełom zmęczeniowy wału ma dwie strefy: gładką (stopniowy rozwój pęknięcia, często z liniami spoczynkowymi) i chropowatą (nagłe dołamanie). Pytanie o przyczynę: cykliczne obciążenia i karb.</div>` },
         { tytul: "Diagnostyka techniczna maszyn", tresc: `<h4>Metody diagnostyczne</h4>
 <div class="tw"><table><tr><th>Metoda</th><th>Co wykrywa</th></tr>
@@ -1453,7 +1470,7 @@ M1 = 10 N·m, η = 0,97 → M2 = 10 · 3 · 0,97 = 29,1 N·m</pre>
         Q("Liczba w oznaczeniu ISO VG 220 określa", "lepkość kinematyczną oleju w 40°C", "temperaturę krzepnięcia", "maksymalną prędkość obrotową", "konsystencję smaru", "Konsystencję smaru opisuje klasa NLGI."),
         Q("Zużycie w postaci wykruszeń na bieżniach łożysk i zębach kół to zużycie", "zmęczeniowe (pitting)", "ścierne", "adhezyjne", "kawitacyjne", "Wynika z cyklicznych naprężeń kontaktowych."),
         Q("Zatarcie elementów współpracujących przy braku smaru to zużycie", "adhezyjne", "zmęczeniowe", "korozyjne", "erozyjne", "Metale szczepiają się ze sobą."),
-        Q("W okresie normalnej eksploatacji zużycie elementów jest", "małe i w przybliżeniu stałe", "gwałtowne", "zerowe", "największe", "Gwałtowne zużycie występuje w okresie docierania i awaryjnym."),
+        Q("W okresie normalnej eksploatacji zużycie elementów jest", "małe, prawie stałe", "gwałtownie rosnące", "praktycznie zerowe", "największe w cyklu", "Gwałtowne zużycie występuje w okresie docierania i awaryjnym."),
         Q("Drgania o częstotliwości równej częstotliwości obrotowej (1× n) wskazują głównie na", "niewyważenie", "uszkodzenie zęba koła", "przechodzenie prądu przez łożysko", "kawitację", "Niewspółosiowość daje głównie 2× n."),
         Q("Przegrzane połączenia elektryczne i łożyska najszybciej wykryje", "kamera termowizyjna", "suwmiarka", "badanie penetracyjne", "twardościomierz", "Termowizja pokazuje rozkład temperatur bez kontaktu."),
         Q("Powierzchniowe pęknięcia w stalowym elemencie ferromagnetycznym wykrywa się metodą", "magnetyczno-proszkową", "termowizyjną", "spektrometrii oleju", "pomiaru twardości", "Proszek gromadzi się w miejscu rozproszenia pola na pęknięciu.")
@@ -1722,7 +1739,7 @@ N220 M30                  koniec programu</pre>
         Q("Kod G00 oznacza", "ruch szybki ustawczy", "interpolację liniową z posuwem", "interpolację kołową", "postój czasowy", "Podczas G00 nie wolno skrawać."),
         Q("Interpolację kołową przeciwną do ruchu wskazówek zegara oznacza kod", "G03", "G02", "G01", "M03", "M03 to obroty wrzeciona w prawo."),
         Q("Stałą prędkość skrawania na tokarce CNC włącza kod", "G96", "G97", "G95", "G94", "G97 to stałe obroty."),
-        Q("Kod G41 oznacza", "korekcję promienia narzędzia z lewej strony konturu", "korekcję długości narzędzia", "odwołanie korekcji", "wybór płaszczyzny XY", "G42 to korekcja z prawej, G40 odwołanie."),
+        Q("Kod G41 oznacza", "korekcję promienia, narzędzie z lewej", "korekcję długości narzędzia", "odwołanie korekcji promienia", "wybór płaszczyzny obróbki XY", "G42 to korekcja z prawej, G40 odwołanie."),
         Q("Wyłączenie chłodziwa w programie CNC realizuje funkcja", "M09", "M08", "M05", "M30", "M08 włącza chłodziwo."),
         Q("Zapis T0303 na tokarce Fanuc oznacza", "narzędzie nr 3 z korektorem nr 3", "trzy narzędzia po 3 mm", "czas 3,03 s", "trzecią płaszczyznę", "Pierwsze dwie cyfry to narzędzie, kolejne korektor.")
       ]
@@ -1842,9 +1859,9 @@ G80</pre>
 <div class="tip">Przy gwintowaniu gwintownikiem posuw w mm/min to iloczyn obrotów i skoku. Dla M10 (P = 1,5) przy 300 obr/min wynosi 450 mm/min. Inny posuw złamie gwintownik.</div>` }
       ],
       pytania: [
-        Q("Cykl G71 na tokarce Fanuc służy do", "toczenia zgrubnego wzdłużnego według konturu", "wykańczania konturu", "gwintowania wielokrotnego", "wiercenia z wycofaniem", "G70 to wykańczanie, G76 gwintowanie."),
-        Q("Zapis U0.4 w drugim bloku cyklu G71 oznacza", "naddatek 0,4 mm na średnicy na obróbkę wykańczającą", "głębokość skrawania 0,4 mm", "posuw 0,4 mm/obr", "odskok 0,4 mm", "Naddatek na promieniu wynosi 0,2 mm."),
-        Q("Korekcję promienia narzędzia należy włączać", "w ruchu liniowym przed wejściem w kontur", "w ruchu po łuku na konturze", "w bloku z G00 na konturze", "po zakończeniu obróbki", "Inaczej narzędzie podetnie przedmiot."),
+        Q("Cykl G71 na tokarce Fanuc służy do", "toczenia zgrubnego wzdłużnego", "wykańczania konturu po zgrubnym", "gwintowania wielokrotnego", "wiercenia z wycofaniem wiertła", "G70 to wykańczanie, G76 gwintowanie."),
+        Q("Zapis U0.4 w drugim bloku cyklu G71 oznacza", "naddatek 0,4 mm na średnicy", "głębokość skrawania 0,4 mm", "posuw 0,4 mm na obrót", "odskok narzędzia 0,4 mm", "Naddatek na promieniu wynosi 0,2 mm."),
+        Q("Korekcję promienia narzędzia należy włączać", "w ruchu liniowym przed konturem", "w ruchu po łuku na konturze", "w bloku G00 już na konturze", "po zakończeniu obróbki konturu", "Inaczej narzędzie podetnie przedmiot."),
         Q("Cykl G83 na frezarce oznacza", "wiercenie z okresowym wycofaniem wiertła", "gwintowanie gwintownikiem", "wiercenie zwykłe bez wycofania", "odwołanie cyklu", "Stosowany przy otworach głębokich."),
         Q("Posuw w mm/min przy gwintowaniu gwintownikiem M10 (skok 1,5 mm) przy 300 obr/min wynosi", "450 mm/min", "300 mm/min", "200 mm/min", "1,5 mm/min", "F = S · P."),
         Q("Gwintowanie nożem na tokarce wykonuje się przy", "stałych obrotach G97", "stałej prędkości skrawania G96", "posuwie w mm/min G98", "wyłączonym wrzecionie", "Posuw musi być zsynchronizowany z obrotami."),
@@ -2002,13 +2019,13 @@ wymiar = 12 + 0,5 + 0,28 = 12,78 mm</pre>
 <div class="tip">Kolejność pilników przy piłowaniu na wymiar: zdzierak (zgrubnie), równiak, gładzik. Ostatnie 0,1-0,2 mm zbiera się gładzikiem, sprawdzając wymiar suwmiarką lub mikrometrem.</div>` }
       ],
       pytania: [
-        Q("Bazą traserską nazywamy", "powierzchnię lub linię, od której odmierza się wymiary przy trasowaniu", "płytę żeliwną traserską", "pierwszy punkt napunktowany", "środek przedmiotu zawsze", "Najlepiej, gdy pokrywa się z bazą wymiarową rysunku."),
-        Q("Do pokrywania obrobionej powierzchni stali przed trasowaniem stosuje się", "roztwór siarczanu miedzi lub lakier traserski", "smar grafitowy", "olej maszynowy", "kredę z olejem", "Kreda z wodą stosowana jest na odlewach surowych."),
+        Q("Bazą traserską nazywamy", "powierzchnię, od której odmierza się wymiary", "żeliwną płytę, na której leży przedmiot", "pierwszy punkt napunktowany na przedmiocie", "zawsze geometryczny środek przedmiotu", "Baza może być też linią. Najlepiej, gdy pokrywa się z bazą wymiarową rysunku."),
+        Q("Do pokrywania obrobionej powierzchni stali przed trasowaniem stosuje się", "roztwór siarczanu miedzi", "smar grafitowy w paście", "olej maszynowy rozcieńczony", "kredę rozrobioną z olejem", "Stosuje się też lakier traserski. Kreda z wodą stosowana jest na odlewach surowych."),
         Q("Brzeszczot w piłce ręcznej zakłada się", "zębami skierowanymi do przodu, od rękojeści", "zębami skierowanymi do rękojeści", "dowolnie", "zębami w górę", "Piłka skrawa w ruchu od siebie."),
         Q("Do cięcia cienkiej blachy należy wybrać brzeszczot o liczbie zębów na cal", "32", "14", "18", "10", "Co najmniej 3 zęby muszą być w materiale."),
         Q("Pilnik o najdrobniejszym nacięciu to", "jedwabnik", "zdzierak", "równiak", "tarnik", "Kolejność: zdzierak, równiak, gładzik, jedwabnik."),
-        Q("Płaskość piłowanej powierzchni sprawdza się", "liniałem krawędziowym metodą szczeliny świetlnej", "suwmiarką", "mikrometrem zewnętrznym", "sprawdzianem szczękowym", "Prześwit pod liniałem pokazuje nierówności."),
-        Q("Jakość skrobania ocenia się", "liczbą punktów styku na kwadracie 25 × 25 mm", "pomiarem twardości", "pomiarem średnicy", "czasem skrobania", "Dokładne prowadnice mają 16-25 punktów."),
+        Q("Płaskość piłowanej powierzchni sprawdza się", "liniałem krawędziowym pod światło", "suwmiarką w kilku miejscach", "mikrometrem zewnętrznym", "sprawdzianem szczękowym", "Prześwit pod liniałem pokazuje nierówności."),
+        Q("Jakość skrobania ocenia się", "liczbą punktów styku na 25 × 25 mm", "pomiarem twardości powierzchni", "pomiarem średnicy otworu", "czasem trwania skrobania", "Dokładne prowadnice mają 16-25 punktów."),
         Q("Do uzyskania szczelności gniazda zaworu stosuje się", "docieranie pastą ścierną", "piłowanie zdzierakiem", "cięcie plazmowe", "trasowanie przestrzenne", "Docieranie daje bardzo gładką, dopasowaną powierzchnię.")
       ]
     },
@@ -2268,7 +2285,7 @@ F_max = 39 250 N → R_m = 500 MPa</pre>
         Q("Lutowanie twarde odbywa się w temperaturze", "powyżej 450°C", "poniżej 183°C", "poniżej 450°C", "powyżej 1500°C", "Poniżej 450°C to lutowanie miękkie."),
         Q("Kleje utwardzające się bez dostępu powietrza, stosowane do zabezpieczania gwintów, to kleje", "anaerobowe", "cyjanoakrylowe", "kontaktowe", "termotopliwe", "Utwardzają się w szczelinie między metalami."),
         Q("Szlifowanie czopów wału korbowego i zastosowanie panewek o zmienionym wymiarze to metoda", "wymiarów naprawczych", "tulejowania", "napawania", "metalizacji", "Część współpracująca ma wymiar naprawczy."),
-        Q("Do naprawy zerwanego gwintu w korpusie z zachowaniem gwintu nominalnego stosuje się", "wkładkę gwintową (Helicoil)", "rozwiertak", "narzynkę", "nitowanie", "Wkładka przywraca pierwotny gwint."),
+        Q("Do naprawy zerwanego gwintu w korpusie z zachowaniem gwintu nominalnego stosuje się", "wkładkę gwintową", "rozwiertak maszynowy", "narzynkę okrągłą", "nit zrywalny", "Wkładka typu Helicoil przywraca pierwotny gwint."),
         Q("Aby zatrzymać rozwój pęknięcia w korpusie żeliwnym przed naprawą, należy", "nawiercić końce pęknięcia", "podgrzać tylko środek pęknięcia", "zahartować korpus", "rozwiercić pęknięcie", "Otwór usuwa ostry wierzchołek karbu.")
       ]
     }
@@ -2524,6 +2541,9 @@ Czas realizacji wałka 2 tyg. → zlecenie 2 tyg. przed montażem</pre>
 </ol>
 <h4>Standaryzacja pracy</h4>
 <p>Standard pracy określa: takt, kolejność czynności, standardowy zapas w procesie. Instrukcje stanowiskowe (z obrazami, punktami kluczowymi jakości i BHP) umieszcza się bezpośrednio przy stanowisku. <b>Zarządzanie wizualne</b>: tablice wyników, oznaczenie miejsc składowania, cienie narzędzi (shadow board).</p>
+<h4>Wskaźnik OEE i takt: przykład</h4>
+<p><b>OEE = dostępność × wydajność × jakość</b>. Maszyna planowo pracuje 480 min, postoje trwały 48 min: dostępność 432/480 = 0,9. Wykonano 380 szt. przy możliwych 400: wydajność 0,95. Dobrych było 361 szt.: jakość 361/380 = 0,95. OEE = 0,9 × 0,95 × 0,95 ≈ <b>0,81 (81%)</b>. Wartość ok. 85% uważa się za poziom światowy.</p>
+<p><b>Takt</b> = dostępny czas pracy / zapotrzebowanie klienta, np. 27 000 s / 450 szt. = 60 s na sztukę. Gdy czas cyklu jest dłuższy od taktu, linia nie nadąży za popytem.</p>
 <div class="tip">Pytanie o „przeniesienie czynności z czasu postoju maszyny do czasu jej pracy” to zawsze SMED. „Karta, która uruchamia produkcję lub dostawę” to kanban.</div>` }
       ],
       pytania: [
@@ -2531,10 +2551,10 @@ Czas realizacji wałka 2 tyg. → zlecenie 2 tyg. przed montażem</pre>
         Q("Produkcja w sposób ciągły dużych ilości jednego wyrobu na liniach z krótkim taktem to produkcja", "masowa", "jednostkowa", "małoseryjna", "prototypowa", "Współczynnik specjalizacji stanowisk wynosi ok. 1."),
         Q("Zapotrzebowanie netto na wałki przy potrzebie brutto 300 szt., zapasie 60 szt. i dostawie w drodze 40 szt. wynosi", "200 szt.", "300 szt.", "260 szt.", "400 szt.", "300 - 60 - 40."),
         Q("Ścieżka krytyczna w sieci czynności to ścieżka", "najdłuższa, wyznaczająca minimalny czas realizacji", "najkrótsza", "z największą liczbą czynności", "z czynnościami o największym zapasie czasu", "Czynności krytyczne nie mają zapasu."),
-        Q("W analizie ABC grupa A obejmuje", "niewielką liczbę pozycji o największej wartości", "najwięcej pozycji o małej wartości", "pozycje bez ruchu w magazynie", "wyłącznie materiały pomocnicze", "Ok. 20% pozycji daje ok. 80% wartości."),
+        Q("W analizie ABC grupa A obejmuje", "mało pozycji o największej wartości", "najwięcej pozycji o małej wartości", "pozycje bez ruchu w magazynie", "wyłącznie materiały pomocnicze", "Ok. 20% pozycji daje ok. 80% wartości."),
         Q("Metoda skracania czasu przezbrojenia przez przeniesienie czynności na czas pracy maszyny to", "SMED", "5S", "Kanban", "Poka-yoke", "Single Minute Exchange of Die."),
         Q("Zabezpieczenie uniemożliwiające błędne założenie detalu w przyrządzie to", "poka-yoke", "kaizen", "heijunka", "andon", "Japońskie „zabezpieczenie przed pomyłką”."),
-        Q("Pierwszy krok metody 5S to", "sortowanie (usunięcie zbędnych przedmiotów)", "standaryzacja", "samodyscyplina", "sprzątanie", "Kolejność: sortowanie, systematyka, sprzątanie, standaryzacja, samodyscyplina.")
+        Q("Pierwszy krok metody 5S to", "sortowanie (seiri)", "standaryzacja (seiketsu)", "samodyscyplina (shitsuke)", "sprzątanie (seiso)", "Kolejność: sortowanie, systematyka, sprzątanie, standaryzacja, samodyscyplina.")
       ]
     },
     {

@@ -80,7 +80,7 @@ window.KURSY = window.KURSY || {};
         Q("Najlepsza dostępna cena pokoju w danym dniu, zmieniająca się zależnie od popytu, to", "BAR", "rack rate", "cena korporacyjna", "cena grupowa", "BAR = best available rate."),
         Q("Relokacja gościa do innego hotelu z powodu braku pokoi wskutek overbookingu to", "walk-out", "walk-in", "no-show", "check-out", "Walk-out: hotel przenosi gościa i pokrywa koszty."),
         Q("Lista uczestników grupy z przydziałem do pokoi to", "rooming list", "allotment", "voucher", "master bill", "Rooming list przesyła organizator przed przyjazdem grupy."),
-        Q("Ograniczenie, które wymaga od gościa rezerwacji co najmniej 2 nocy w długi weekend, to", "minimalna długość pobytu (MinLOS)", "stop sale", "release date", "late check-out", "MinLOS to narzędzie revenue management.")
+        Q("Ograniczenie, które wymaga od gościa rezerwacji co najmniej 2 nocy w długi weekend, to", "minimalna długość pobytu (MinLOS)", "stop sale (wstrzymanie sprzedaży)", "CTA (zamknięcie dla przyjazdów)", "release (termin zwolnienia puli)", "MinLOS to narzędzie revenue management. CTA blokuje tylko przyjazdy w danym dniu.")
       ]
     },
     {
@@ -308,10 +308,10 @@ window.KURSY = window.KURSY || {};
         Q("Status VD oznacza pokój", "wolny, do sprzątania", "zajęty, posprzątany", "wyłączony z eksploatacji", "wolny, gotowy do sprzedaży", "VD = vacant dirty."),
         Q("Pokój z awarią instalacji wodnej, wyłączony na dłużej ze sprzedaży, ma status", "OOO", "OC", "VC", "DND", "OOO = out of order."),
         Q("Naliczenie opłat za noclegi na konta wszystkich zajętych pokoi wykonuje", "audytor nocny", "pokojowa", "kierownik działu sprzedaży", "bagażowy", "Room posting to zadanie audytu nocnego."),
-        Q("Raport, na podstawie którego kuchnia planuje liczbę śniadań, to", "raport stanu gości (in-house)", "raport no-show", "raport kasowy", "raport zadłużeń", "Liczba gości w hotelu wyznacza liczbę śniadań."),
+        Q("Raport, na podstawie którego kuchnia planuje liczbę śniadań, to", "raport stanu gości (in-house)", "raport no-show z poprzedniej doby", "raport kasowy recepcji z doby", "raport zadłużeń gości (ledger)", "Liczba gości w hotelu wyznacza liczbę śniadań."),
         Q("Gość, który opuścił hotel bez uregulowania rachunku, to w żargonie hotelowym", "skipper", "walk-in", "sleep out", "no-show", "Sleep out oznacza gościa, który nie nocował w pokoju, ale nadal ma pobyt."),
         Q("W angielskim liście rozpoczętym zwrotem „Dear Sir or Madam” właściwym zakończeniem jest", "Yours faithfully", "Yours sincerely", "Best wishes", "See you soon", "Yours sincerely stosuje się, gdy znamy nazwisko adresata."),
-        Q("Osoba telefonująca pyta o numer pokoju gościa. Recepcjonista powinien", "odmówić podania numeru i zaproponować połączenie lub przekazanie wiadomości", "podać numer pokoju", "podać numer, jeśli rozmówca zna nazwisko gościa", "podać numer telefonu komórkowego gościa", "Ochrona danych i bezpieczeństwa gościa."),
+        Q("Osoba telefonująca pyta o numer pokoju gościa. Recepcjonista powinien", "nie podać numeru, zaproponować połączenie lub wiadomość", "podać numer pokoju, bo nie jest on tajemnicą", "podać numer, jeśli rozmówca zna nazwisko gościa", "podać zamiast numeru pokoju telefon komórkowy gościa", "Ochrona danych i bezpieczeństwa gościa."),
         Q("Naruszenie ochrony danych osobowych zgłasza się Prezesowi UODO w terminie", "72 godzin", "24 godzin", "7 dni", "30 dni", "Art. 33 RODO: bez zbędnej zwłoki, nie później niż w 72 godziny.")
       ]
     }
@@ -647,7 +647,7 @@ window.KURSY = window.KURSY || {};
         Q("Dokument potwierdzający opłacenie usługi, wymieniany na świadczenie u usługodawcy, to", "voucher", "rooming list", "polisa", "faktura VAT marża", "Pilot przekazuje vouchery w hotelach i restauracjach."),
         Q("Kod IATA lotniska w Krakowie-Balicach to", "KRK", "KRA", "KTW", "WAW", "KTW to Katowice-Pyrzowice."),
         Q("Do podróży do Włoch obywatelowi Polski wystarczy", "ważny dowód osobisty", "paszport z wizą", "paszport ważny 6 miesięcy", "prawo jazdy", "Włochy są w UE i strefie Schengen."),
-        Q("Uczestnik zgubił paszport za granicą. Pilot pomaga mu, kierując do", "konsulatu RP, który wydaje paszport tymczasowy", "lotniska po kartę pokładową", "hotelu po kartę meldunkową", "biura organizatora w Polsce", "Wcześniej zgłasza się utratę na policji."),
+        Q("Uczestnik zgubił paszport za granicą. Pilot pomaga mu, kierując do", "konsulatu RP, który wydaje paszport tymczasowy", "lotniska, gdzie wydadzą kartę pokładową", "hotelu, który wystawi zaświadczenie meldunkowe", "biura organizatora w Polsce po nowy paszport", "Wcześniej zgłasza się utratę na policji."),
         Q("Po każdym postoju autokaru pilot przede wszystkim", "liczy uczestników przed odjazdem", "rozdaje vouchery", "rozlicza zaliczkę", "zbiera opinie o imprezie", "Zapobiega pozostawieniu uczestnika."),
         Q("System MSZ, w którym podróżny może zarejestrować wyjazd za granicę, to", "Odyseusz", "Schengen", "ESTA", "EKUZ", "ESTA to elektroniczne zezwolenie na wjazd do USA.")
       ]
@@ -1079,12 +1079,12 @@ window.KURSY = window.KURSY || {};
 <div class="tip">Amoniaku nie dodaje się do wysokich wyrobów (np. babek), bo gaz nie ulotni się z miękiszu i wyrób będzie pachniał amoniakiem.</div>` }
       ],
       pytania: [
-        Q("Do wypieku biszkoptu najlepsza jest mąka", "tortowa typ 450 z dodatkiem skrobi ziemniaczanej", "razowa typ 2000", "chlebowa typ 750", "graham typ 1850", "Biszkopt wymaga mąki o słabym glutenie."),
-        Q("Typ mąki określa", "zawartość popiołu (składników mineralnych)", "zawartość glutenu", "zawartość wody", "stopień rozdrobnienia", "Typ 450 to ok. 450 mg popiołu w 100 g s.m."),
+        Q("Do wypieku biszkoptu najlepsza jest mąka", "tortowa typ 450, często ze skrobią", "razowa typ 2000, bogata w otręby", "chlebowa typ 750 o mocnym glutenie", "graham typ 1850, grubo mielona", "Biszkopt wymaga mąki o słabym glutenie, dodatek skrobi ziemniaczanej dodatkowo go osłabia."),
+        Q("Typ mąki określa", "zawartość popiołu (składników mineralnych)", "zawartość glutenu mokrego w mące", "zawartość wody w mące po zmieleniu", "stopień rozdrobnienia (granulację) mąki", "Typ 450 to ok. 450 mg popiołu w 100 g s.m."),
         Q("Jajo klasy wagowej L waży", "od 63 g do 73 g", "od 53 g do 63 g", "poniżej 53 g", "73 g i więcej", "S < 53, M 53-63, L 63-73, XL od 73 g."),
         Q("Cyfra 3 na początku kodu jaja oznacza chów", "klatkowy", "ekologiczny", "na wolnym wybiegu", "ściółkowy", "0 ekologiczny, 1 wolny wybieg, 2 ściółkowy, 3 klatkowy."),
         Q("Żelatyna nie stężeje w galaretce ze świeżym", "ananasem", "jabłkiem", "truskawkami", "wiśniami", "Enzymy ananasa rozkładają białko żelatyny."),
-        Q("Amoniak jako spulchniacz stosuje się do wyrobów", "płaskich i cienkich, np. pierniczków", "wysokich, np. babek", "biszkoptowych", "drożdżowych", "Gaz musi ulotnić się w czasie pieczenia."),
+        Q("Amoniak jako spulchniacz stosuje się do wyrobów", "płaskich i cienkich, np. pierniczków", "wysokich i puszystych, np. babek", "biszkoptowych, np. blatów tortowych", "drożdżowych, np. bułek maślanych", "Gaz musi ulotnić się w czasie pieczenia."),
         Q("Ciasto parzone i francuskie spulchnia głównie", "para wodna", "dwutlenek węgla z drożdży", "proszek do pieczenia", "amoniak", "To spulchnianie fizyczne."),
         Q("Do ubicia śmietany należy użyć śmietanki o zawartości tłuszczu co najmniej", "30%", "12%", "18%", "22%", "Najlepiej 36%, dobrze schłodzonej.")
       ]
@@ -1159,10 +1159,10 @@ window.KURSY = window.KURSY || {};
         Q("Ciasto drożdżowe bogate w tłuszcz i jaja sporządza się najlepiej metodą", "dwufazową, z rozczynem", "jednofazową, na zimno", "parzenia", "ucierania", "Rozczyn przyspiesza rozwój drożdży w trudnym środowisku."),
         Q("Garowanie wyrobów drożdżowych przeprowadza się w temperaturze około", "30-35°C", "5-10°C", "45-55°C", "60-70°C", "Przy wilgotności 75-85%."),
         Q("Wyrób drożdżowy opadnięty, płaski, o kwaśnym smaku był", "przegarowany", "niedogarowany", "za mocno wyrobiony", "pieczony w za wysokiej temperaturze", "Za długi rozrost końcowy."),
-        Q("Bezy francuskie poddaje się", "suszeniu w temperaturze ok. 90-120°C", "pieczeniu w 220°C", "smażeniu w tłuszczu", "gotowaniu na parze", "Wysoka temperatura daje brązowe, pękające bezy."),
+        Q("Bezy francuskie poddaje się", "suszeniu w temperaturze ok. 90-120°C", "pieczeniu w temperaturze ok. 220°C", "smażeniu w głębokim tłuszczu", "gotowaniu na parze przez 10 min", "Wysoka temperatura daje brązowe, pękające bezy."),
         Q("Masa bezowa włoska powstaje przez", "wlanie gorącego syropu cukrowego do ubitych białek", "ubijanie białek na zimno z cukrem pudrem", "podgrzanie białek z cukrem na parze", "dodanie mąki do ubitej piany", "Syrop ok. 118-121°C."),
         Q("Ciasto parzone piecze się początkowo w temperaturze około", "220°C", "150°C", "120°C", "180°C bez zmiany przez cały czas", "Po wyrośnięciu temperaturę się obniża."),
-        Q("Ciasto francuskie spulchnia się głównie dzięki", "parze wodnej tworzącej się między warstwami tłuszczu", "drożdżom", "proszkowi do pieczenia", "ubitej pianie z białek", "Wysoka temperatura pieczenia, ok. 220-230°C.")
+        Q("Ciasto francuskie spulchnia się głównie dzięki", "parze wodnej tworzącej się między warstwami", "drożdżom dodanym do ciasta podstawowego", "proszkowi do pieczenia dodanemu do mąki", "pianie z białek wmieszanej w ciasto", "Wysoka temperatura pieczenia, ok. 220-230°C.")
       ]
     },
     {
@@ -1252,7 +1252,7 @@ window.KURSY = window.KURSY || {};
         Q("Fondant otrzymuje się z syropu cukrowego gotowanego do temperatury około", "115-117°C", "100°C", "140-150°C", "170°C", "Następnie się go studzi i uciera."),
         Q("Ganache to połączenie czekolady ze", "śmietanką", "skrobią", "żelatyną i wodą", "białkami jaj", "Proporcja zależy od zastosowania."),
         Q("Torty z kremem przechowuje się w temperaturze około", "2-6°C", "15-18°C", "20-22°C", "-1°C do 0°C w temperaturze pokojowej", "To wyroby łatwo psujące się."),
-        Q("Cienka warstwa kremu nakładana przed ostatecznym pokryciem tortu służy do", "zebrania okruchów i wyrównania powierzchni", "nasączenia blatów", "zastąpienia syropu", "barwienia tortu", "Potem tort się chłodzi i nakłada warstwę ostateczną.")
+        Q("Cienka warstwa kremu nakładana przed ostatecznym pokryciem tortu służy do", "zebrania okruchów i wyrównania powierzchni", "nasączenia biszkoptu zamiast ponczu", "zastąpienia warstwy masy między blatami", "nadania tortowi koloru przed dekoracją", "Potem tort się chłodzi i nakłada warstwę ostateczną.")
       ]
     },
     {
@@ -1338,7 +1338,7 @@ window.KURSY = window.KURSY || {};
       pytania: [
         Q("Do ubicia piany z białek w robocie planetarnym stosuje się", "rózgę (trzepaczkę)", "hak spiralny", "mieszadło płaskie", "nóż tnący", "Hak służy do ciasta drożdżowego, łopatka do ucierania."),
         Q("Do laminowania ciasta francuskiego służy", "wałkownica (sheeter)", "dzielarka", "miesiarka spiralna", "temperówka", "Wałkownica równomiernie wałkuje ciasto z tłuszczem."),
-        Q("Płonący tłuszcz w smażalniku należy gasić", "kocem gaśniczym lub gaśnicą klasy F", "wodą", "gaśnicą wodną", "mąką", "Woda powoduje wybuchowe rozpryskiwanie tłuszczu."),
+        Q("Płonący tłuszcz w smażalniku należy gasić", "kocem gaśniczym lub gaśnicą klasy F", "strumieniem wody z węża hydrantowego", "gaśnicą wodną przeznaczoną do klasy A", "zasypaniem dużą ilością mąki", "Woda powoduje wybuchowe rozpryskiwanie tłuszczu."),
         Q("Pączki nasiąknięte tłuszczem to najczęściej skutek", "zbyt niskiej temperatury tłuszczu", "zbyt wysokiej temperatury tłuszczu", "za krótkiego garowania", "dodania spirytusu do ciasta", "Właściwa temperatura to ok. 170-180°C."),
         Q("Receptura podaje surowce na 2 kg ciasta, a potrzeba 5 kg. Współczynnik przeliczeniowy wynosi", "2,5", "0,4", "3", "10", "5 / 2 = 2,5."),
         Q("Z 4 kg ciasta otrzymano 3,4 kg wyrobu. Ubytek wypiekowy wynosi", "15%", "85%", "17,6%", "6%", "0,6 / 4 × 100% = 15%."),

@@ -73,11 +73,18 @@ window.KURSY = window.KURSY || {};
 <li><b>Wybrzuszenia nad wkrętami</b>: wkręt za płytko; zbyt głęboko wkręcony przerywa karton i traci nośność.</li>
 <li><b>Widoczne spoiny po malowaniu</b>: niewłaściwa klasa jakości przy świetle bocznym, brak gruntu wyrównującego chłonność.</li>
 </ul>
+<h4>Materiały i kontrola</h4>
+<ul>
+<li>Masy gipsowe służą do spoinowania z taśmą, gotowe masy polimerowe do gładzi i warstw wierzchnich; nie miesza się mas różnych producentów.</li>
+<li>Taśma papierowa jest najmocniejsza i dobra w narożach wewnętrznych, taśma z flizeliny lub siatki szklanej jest szybsza w montażu.</li>
+<li>Powierzchnie Q3 i Q4 kontroluje się lampą ustawioną pod ostrym kątem do ściany (światło smugowe).</li>
+<li>Spoinuje się po zakończeniu montażu wszystkich warstw płyt i przy stabilnej wilgotności powietrza.</li>
+</ul>
 <div class="tip">Na egzaminie: tapety cienkie i farby z połyskiem wymagają co najmniej Q3, a pod płytki wystarczy Q1.</div>` }
       ],
       pytania: [
         Q("Jaki jest typowy rozstaw osiowy profili CW w ściance działowej z jednowarstwowym opłytowaniem?", "60 cm", "30 cm", "90 cm", "120 cm", "Rozstaw 60 cm odpowiada połowie szerokości płyty 120 cm."),
-        Q("Profil CW w ściance działowej przycina się:", "o ok. 1-1,5 cm krócej niż wysokość pomieszczenia", "dokładnie na wysokość pomieszczenia", "o 5 cm dłużej i wciska na siłę", "o 10 cm krócej", "Luz kompensuje ugięcie stropu."),
+        Q("Profil CW w ściance działowej przycina się:", "o ok. 1-1,5 cm krócej niż pomieszczenie", "dokładnie na wysokość pomieszczenia", "o ok. 2 cm dłużej, by stał na wcisk", "o ok. 10 cm krócej niż pomieszczenie", "Luz kompensuje ugięcie stropu."),
         Q("Płyty g-k na suficie podwieszanym montuje się:", "poprzecznie do profili nośnych", "równolegle do profili nośnych", "dowolnie", "tylko pionowo", "Płyty mocuje się poprzecznie do profili nośnych CD."),
         Q("Klasa jakości szpachlowania wymagana pod tapety gładkie i farby z połyskiem to:", "Q4", "Q1", "Q2", "Q0", "Q4 to pełne szpachlowanie całej powierzchni."),
         Q("Pod okładzinę z płytek ceramicznych na ściance g-k wystarczy szpachlowanie w klasie:", "Q1", "Q3", "Q4", "Q5", "Q1 to wypełnienie spoin i zakrycie wkrętów."),
@@ -136,6 +143,13 @@ window.KURSY = window.KURSY || {};
 <li><b>R9-R13</b>: antypoślizgowość; R10-R11 w strefach mokrych i na zewnątrz, R12-R13 w zakładach przemysłowych.</li>
 <li>Gatunek I (pierwszy) dopuszcza najmniej wad; płytki <b>rektyfikowane</b> mają szlifowane krawędzie i pozwalają na fugę ok. 2 mm.</li>
 </ul>
+<h4>Szerokość fug</h4>
+<div class="tw"><table><tr><th>Sytuacja</th><th>Zalecenie</th></tr>
+<tr><td>płytki rektyfikowane wewnątrz</td><td>ok. 2 mm</td></tr>
+<tr><td>płytki ścienne niekalibrowane</td><td>ok. 2-3 mm</td></tr>
+<tr><td>gres podłogowy</td><td>ok. 3-5 mm</td></tr>
+<tr><td>taras, balkon</td><td>ok. 5-8 mm, fuga CG2 WA</td></tr></table></div>
+<p>Typowa pułapka testowa: litera <b>T</b> oznacza zmniejszony spływ, a nie termoodporność, a <b>F</b> szybkie wiązanie, a nie mrozoodporność. Klej dobiera się do najtrudniejszego warunku na danej powierzchni, np. ogrzewanie podłogowe wymaga kleju odkształcalnego co najmniej S1.</p>
 <div class="tip">Na taras: płytki BIa (mrozoodporne), klej C2 S1 lub S2, metoda kombinowana, fuga CG2 W.</div>` },
         { tytul: "Układanie, fugowanie i odbiór", tresc: `<h4>Metody nakładania kleju</h4>
 <ul>
@@ -164,13 +178,13 @@ window.KURSY = window.KURSY || {};
 <div class="tip">Pułapka egzaminacyjna: fugi cementowej nie stosuje się w narożach wewnętrznych łazienki, bo pęka; tam idzie elastyczny silikon.</div>` }
       ],
       pytania: [
-        Q("Symbol C2TE oznacza klej:", "cementowy, o podwyższonej przyczepności, o zmniejszonym spływie i wydłużonym czasie otwartym", "dyspersyjny, szybkowiążący", "epoksydowy, wysokoodkształcalny", "cementowy zwykły, mrozoodporny", "C = cementowy, 2 = podwyższone parametry, T = niespływający, E = wydłużony czas otwarty."),
+        Q("Symbol C2TE oznacza klej:", "cementowy, ulepszony, niespływający, o wydłużonym czasie otwartym", "cementowy, zwykły, szybkowiążący, o wydłużonym czasie otwartym", "dyspersyjny, ulepszony, niespływający, wysokoodkształcalny", "reaktywny, ulepszony, termoodporny, o krótkim czasie otwartym", "C = cementowy, 2 = podwyższone parametry, T = niespływający, E = wydłużony czas otwarty."),
         Q("Płytki o nasiąkliwości E ≤ 0,5%, odpowiednie na taras, należą do grupy:", "BIa", "BIII", "BIIb", "AIII", "BIa to gres porcelanowy, mrozoodporny."),
         Q("Metodę kombinowaną nakładania kleju stosuje się przede wszystkim:", "na zewnątrz i przy płytkach dużego formatu", "przy mozaice na ścianie w suchym pomieszczeniu", "wyłącznie na płytach g-k", "tylko przy klejach dyspersyjnych", "Kombinowana daje pełne podparcie płytki bez pustek."),
         Q("Wilgotność jastrychu cementowego przed klejeniem płytek mierzy się:", "metodą karbidową (CM)", "poziomnicą", "łatą 2 m", "młotkiem przez opukiwanie", "Wynik podaje się w % CM."),
         Q("Styk ściany z posadzką w łazience wypełnia się:", "silikonem sanitarnym", "fugą cementową CG1", "klejem C1", "zaprawą cementową", "Naroża pracują, potrzebna jest masa elastyczna."),
         Q("Okładzinę ścienną w łazience zaczyna się zwykle układać:", "od drugiego rzędu, na listwie podporowej", "od rzędu przy suficie", "od pierwszego rzędu przy posadzce przed jej ułożeniem", "od środka ściany w dół", "Pierwszy rząd układa się po wykonaniu posadzki."),
-        Q("Oznaczenie PEI dotyczy:", "odporności szkliwa płytek na ścieranie", "antypoślizgowości", "mrozoodporności", "odkształcalności kleju", "Klasy PEI I-V."),
+        Q("Oznaczenie PEI dotyczy:", "odporności szkliwa płytek na ścieranie", "antypoślizgowości płytek w strefach mokrych", "mrozoodporności płytek zewnętrznych", "odkształcalności kleju do płytek", "Klasy PEI I-V."),
         Q("Fuga oznaczona RG to fuga:", "reaktywna (epoksydowa)", "cementowa zwykła", "cementowa o zmniejszonej nasiąkliwości", "dyspersyjna gotowa", "RG = reaction resin grout.")
       ]
     },
@@ -194,6 +208,14 @@ window.KURSY = window.KURSY || {};
 <tr><td>klejowa</td><td>kleje celulozowe, niezmywalna</td><td>dziś rzadko, sufity tanie</td></tr>
 <tr><td>olejna, ftalowa, poliuretanowa</td><td>spoiwa rozpuszczalnikowe</td><td>drewno, metal, lamperie</td></tr></table></div>
 <p>Wg PN-EN 13300 farbę ocenia się m.in. klasą <b>odporności na szorowanie na mokro</b> (klasa 1 najlepsza, 5 najsłabsza) i <b>siłą krycia</b> (klasa 1 najlepsza).</p>
+<h4>Gruntowanie i zużycie farby</h4>
+<ul>
+<li>Grunt wyrównuje chłonność, wzmacnia osypujące się podłoże i zmniejsza zużycie farby.</li>
+<li>Pod farby akrylowe stosuje się grunt akrylowy, pod silikatowe grunt silikatowy, pod silikonowe grunt silikonowy.</li>
+<li>Grunt rozcieńcza się zgodnie z instrukcją; zbyt stężony tworzy błyszczącą błonę, z której farba może się łuszczyć.</li>
+<li>Farbę nakłada się po wyschnięciu gruntu, zwykle po kilku godzinach.</li>
+</ul>
+<p>Zużycie oblicza się z wydajności na opakowaniu: ściany 40 m², wydajność 10 m²/l, dwie warstwy: 40 × 2 / 10 = <b>8 l</b>, czyli 3 opakowania po 3 l.</p>
 <div class="tip">Kolejność w pomieszczeniu: najpierw sufit, potem ściany, na końcu stolarka i lamperie; malowanie zaczyna się od okna w głąb pomieszczenia.</div>` },
         { tytul: "Technika malowania i wady powłok", tresc: `<h4>Wykonanie</h4>
 <ol>
@@ -253,10 +275,10 @@ window.KURSY = window.KURSY || {};
 <div class="tip">Przy wzorze z raportem do długości pasa dolicza się raport, co często zmniejsza liczbę pasów z rolki. Rolki muszą mieć ten sam numer partii (odcień).</div>` }
       ],
       pytania: [
-        Q("Farbę silikatową stosuje się na:", "podłoża mineralne, np. tynki cementowo-wapienne", "stare powłoki akrylowe", "drewno", "płyty OSB", "Spoiwo silikatowe wiąże chemicznie z podłożem mineralnym."),
-        Q("Jak sprawdzić, czy na ścianie jest farba klejowa?", "przetrzeć ją wilgotną gąbką, farba klejowa się zmywa", "zmierzyć wilgotność metodą CM", "przyłożyć łatę 2 m", "posypać kredą", "Farbę klejową trzeba zmyć przed malowaniem emulsją."),
-        Q("Ostatnie przejście wałkiem na suficie wykonuje się:", "równolegle do kierunku padania światła z okna", "prostopadle do okna", "po okręgu", "dowolnie", "Zapobiega to widoczności śladów wałka."),
-        Q("Zacieki na powłoce są najczęściej skutkiem:", "zbyt grubej warstwy lub zbyt rzadkiej farby", "malowania w temperaturze 18 °C", "gruntowania podłoża", "użycia wałka welurowego", "Nadmiar farby spływa pod własnym ciężarem."),
+        Q("Farbę silikatową stosuje się na:", "tynki mineralne, np. cementowo-wapienne", "stare powłoki akrylowe i lateksowe", "drewno i elementy drewnopochodne", "płyty OSB i sklejkę na zewnątrz", "Spoiwo silikatowe wiąże chemicznie z podłożem mineralnym."),
+        Q("Jak sprawdzić, czy na ścianie jest farba klejowa?", "przetrzeć wilgotną gąbką, farba się zmyje", "zmierzyć wilgotność ściany metodą CM", "przyłożyć łatę 2 m i sprawdzić prześwit", "posypać ścianę kredą i zdmuchnąć", "Farbę klejową trzeba zmyć przed malowaniem emulsją."),
+        Q("Ostatnie przejście wałkiem na suficie wykonuje się:", "równolegle do kierunku padania światła z okna", "prostopadle do kierunku padania światła z okna", "ruchem po okręgu, od środka sufitu", "ukośnie, pod kątem 45° do ścian", "Zapobiega to widoczności śladów wałka."),
+        Q("Zacieki na powłoce są najczęściej skutkiem:", "zbyt grubej warstwy lub zbyt rzadkiej farby", "malowania w temperaturze ok. 18 °C", "gruntowania podłoża przed malowaniem", "użycia wałka welurowego z krótkim włosiem", "Nadmiar farby spływa pod własnym ciężarem."),
         Q("Ile litrów farby potrzeba na 60 m² przy dwóch warstwach i wydajności 10 m²/l?", "12 l", "6 l", "20 l", "60 l", "60 × 2 / 10 = 12 l."),
         Q("Symbol trzech fal na etykiecie tapety oznacza tapetę:", "bardzo zmywalną", "odporną na światło", "do klejenia na ścianę", "bez dopasowania wzoru", "Jedna fala: odporna na wodę, dwie: zmywalna, trzy: bardzo zmywalna."),
         Q("Pierwszy pas tapety przykleja się zazwyczaj:", "przy oknie, według wyznaczonego pionu", "w najciemniejszym narożniku", "nad drzwiami", "od środka ściany bez pionu", "Kierunek od okna ukrywa zakłady."),
@@ -286,6 +308,13 @@ window.KURSY = window.KURSY || {};
 </ul>
 <h4>Pielęgnacja i wilgotność</h4>
 <p>Jastrych cementowy chroni się przed szybkim wysychaniem (folia, zraszanie przez min. ok. 3 dni), przeciągiem i słońcem; ruch pieszy po ok. 2-3 dniach. Przed wykończeniem wymagana wilgotność: cementowy pod parkiet ok. <b>2% CM</b> (z ogrzewaniem 1,8%), anhydrytowy <b>0,5% CM</b> (z ogrzewaniem 0,3%). Ogrzewanie podłogowe wygrzewa się wg protokołu wygrzewania przed układaniem posadzki.</p>
+<h4>Wady podkładów</h4>
+<ul>
+<li><b>Rysy skurczowe</b>: brak pielęgnacji, za dużo wody w mieszance, za duże pola bez dylatacji.</li>
+<li><b>Głuchy odgłos przy opukiwaniu</b>: odspojenie podkładu zespolonego od stropu.</li>
+<li><b>Mleczko lub spiek na powierzchni anhydrytu</b>: przed klejeniem posadzki usuwa się je szlifowaniem.</li>
+<li><b>Nierówności</b>: sprawdza się łatą 2 m przykładaną w różnych kierunkach; prześwity porównuje się z tolerancją wymaganą dla danej posadzki.</li>
+</ul>
 <div class="tip">Zbrojenie rozproszone (włókna polipropylenowe) ogranicza rysy skurczowe; siatka stalowa w podkładzie pływającym nie zastępuje dylatacji.</div>` },
         { tytul: "Panele, deski i parkiet", tresc: `<h4>Panele laminowane i winylowe</h4>
 <ul>
@@ -332,17 +361,24 @@ window.KURSY = window.KURSY || {};
 <li>Listwy przypodłogowe: obwód 2 × (5,20 + 3,80) = 18,0 m, minus drzwi 0,9 m = 17,1 m; przy listwach 2,5 m: 17,1 / 2,5 = 6,84, czyli <b>7 sztuk</b>.</li>
 <li>Folia PE: 19,76 m² + zakłady ok. 10% = ok. 22 m².</li>
 </ul>
+<h4>Typowe błędy przy wykładzinach</h4>
+<ul>
+<li>Klejenie na wilgotny podkład: pęcherze i odspojenia; wilgotność sprawdza się metodą CM przed klejeniem.</li>
+<li>Brak aklimatyzacji: wykładzina kurczy się i otwierają się styki.</li>
+<li>Zbyt długie odparowanie kleju: słaba przyczepność, wykładzina odstaje na krawędziach.</li>
+<li>Nierówności podkładu odwzorowują się na cienkiej wykładzinie, dlatego masa wyrównująca jest konieczna.</li>
+</ul>
 <div class="tip">W zadaniu egzaminacyjnym zawsze zaokrągla się w górę do pełnych opakowań, a naddatek dolicza tylko wtedy, gdy podaje go treść zadania.</div>` }
       ],
       pytania: [
         Q("Szczelina dylatacyjna przy ścianach pod panelami laminowanymi powinna wynosić około:", "8-10 mm", "1-2 mm", "30 mm", "nie jest potrzebna", "Panele pracują pod wpływem wilgotności i temperatury."),
-        Q("Symbol CA w oznaczeniu podkładu oznacza podkład:", "siarczanowo-wapniowy (anhydrytowy)", "cementowy", "asfaltowy", "żywiczny", "CT cementowy, CA anhydrytowy, SR żywiczny, MA asfalt lany."),
+        Q("Symbol CA w oznaczeniu podkładu oznacza podkład:", "siarczanowo-wapniowy (anhydrytowy)", "cementowy (z cementu portlandzkiego)", "asfaltowy (z asfaltu lanego)", "żywiczny (z żywic syntetycznych)", "CT cementowy, CA anhydrytowy, SR żywiczny, MA asfalt lany."),
         Q("Dopuszczalna wilgotność podkładu anhydrytowego bez ogrzewania przed ułożeniem parkietu to ok.:", "0,5% CM", "2% CM", "5% CM", "10% CM", "Anhydryt jest wrażliwy na wilgoć."),
         Q("Pod panele na jastrychu cementowym układa się najpierw:", "folię PE z zakładami", "papę asfaltową na lepiku", "siatkę z włókna szklanego", "klej dyspersyjny", "Folia chroni panele przed wilgocią z podłoża."),
-        Q("Łączenie pasów wykładziny PVC w pomieszczeniach higienicznych wykonuje się:", "spawaniem na gorąco sznurem PVC", "silikonem", "fugą cementową", "taśmą malarską", "Spaw daje szczelną, zmywalną posadzkę."),
+        Q("Łączenie pasów wykładziny PVC w pomieszczeniach higienicznych wykonuje się:", "spawaniem na gorąco sznurem PVC", "uszczelnianiem styku silikonem", "wypełnianiem styku fugą cementową", "sklejaniem na zakład taśmą dwustronną", "Spaw daje szczelną, zmywalną posadzkę."),
         Q("Ile paczek paneli po 2,22 m² trzeba na 19,76 m² przy 7% naddatku?", "10", "9", "8", "12", "21,14 / 2,22 = 9,5, zaokrąglone w górę do 10."),
         Q("Wybrzuszenie podłogi z paneli najczęściej wynika z:", "braku szczeliny dylatacyjnej przy ścianach", "zbyt długiej aklimatyzacji", "zastosowania folii PE", "ułożenia równolegle do światła", "Panele rozszerzają się i nie mają miejsca."),
-        Q("Podkład pływający to podkład:", "ułożony na warstwie izolacji i oddzielony od ścian taśmą dylatacyjną", "przyklejony do stropu warstwą sczepną", "wykonany wyłącznie z żywicy", "który nie wymaga dylatacji", "Nie ma sztywnego połączenia ze stropem i ścianami.")
+        Q("Podkład pływający to podkład:", "na izolacji, oddzielony od ścian taśmą dylatacyjną", "przyklejony do stropu warstwą sczepną", "wykonany wyłącznie z żywicy epoksydowej", "ułożony na folii, bez dylatacji obwodowej", "Nie ma sztywnego połączenia ze stropem i ścianami.")
       ]
     }
   ]);
@@ -417,6 +453,13 @@ window.KURSY = window.KURSY || {};
 </ul>
 <h4>Zwilżanie elementów</h4>
 <p>Cegły ceramiczne o dużej nasiąkliwości zwilża się przed murowaniem w upał, aby nie „wypiły” wody z zaprawy (słaba przyczepność, kruszenie spoin). Bloczków z betonu komórkowego na zaprawę cienkowarstwową zwykle się nie moczy, tylko odpyla.</p>
+<h4>Proste badania na budowie</h4>
+<div class="tw"><table><tr><th>Badanie</th><th>Co sprawdza</th></tr>
+<tr><td>pomiar miarką kilku sztuk z partii</td><td>odchyłki wymiarów (cegła pełna 250 x 120 x 65 mm)</td></tr>
+<tr><td>opukiwanie młotkiem</td><td>wypalenie i pęknięcia wewnętrzne; głuchy dźwięk świadczy o wadzie</td></tr>
+<tr><td>oględziny po zwilżeniu</td><td>wykwity solne, margiel</td></tr>
+<tr><td>sprawdzenie zawartości worka</td><td>grudki cementu, które nie rozsypują się w palcach, oznaczają zawilgocenie</td></tr></table></div>
+<p>Materiał niezgodny z zamówieniem lub bez dokumentów odrzuca się i odnotowuje to w protokole. Cement zbrylony nie nadaje się do zapraw konstrukcyjnych. Przy rozładunku nie zrzuca się elementów murowych z wysokości, bo powstają w nich ukryte pęknięcia.</p>
 <div class="tip">Pytanie typu „co oznacza margiel w cegle” ma odpowiedź: grudki wapna, które po zawilgoceniu pęcznieją i powodują odpryski.</div>` }
       ],
       pytania: [
@@ -425,9 +468,9 @@ window.KURSY = window.KURSY || {};
         Q("Symbol M10 w oznaczeniu zaprawy oznacza:", "wytrzymałość na ściskanie 10 N/mm²", "10% domieszek", "proporcję 1:10", "czas zużycia 10 godzin", "Liczba po M to wytrzymałość w MPa."),
         Q("W zaprawie 1:1:6 trzecia liczba oznacza:", "części piasku", "części wody", "części cementu", "części wapna", "Kolejność: cement, wapno, piasek."),
         Q("Ile cementu (objętościowo) potrzeba na 0,8 m³ zaprawy 1:1:6 w uproszczonym rachunku?", "0,1 m³", "0,2 m³", "0,6 m³", "0,8 m³", "0,8 / 8 części = 0,1 m³ na część."),
-        Q("Margiel w cegle to:", "wtrącenia wapna powodujące odpryski po zawilgoceniu", "rodzaj spoiny", "glazurowana powierzchnia", "otwór w cegle kratówce", "Grudki CaO pęcznieją pod wpływem wody."),
+        Q("Margiel w cegle to:", "grudki wapna powodujące odpryski", "rodzaj spoiny w murze licowym", "glazurowana powierzchnia cegły", "drążenia w cegle dziurawce", "Grudki CaO pęcznieją pod wpływem wody."),
         Q("Zaprawy, która zaczęła wiązać:", "nie wolno rozrabiać ponownie wodą", "można rozcieńczyć wodą i użyć", "należy podgrzać", "używa się do spoin licowych", "Dodanie wody obniża wytrzymałość."),
-        Q("Worki z cementem składuje się:", "w suchym magazynie na podestach nad podłogą", "na gruncie pod gołym niebem", "w pryzmie z piaskiem", "w wodzie", "Cement chroni się przed wilgocią.")
+        Q("Worki z cementem składuje się:", "w suchym magazynie na podestach nad podłogą", "na gruncie pod gołym niebem, bez folii", "w pryzmie razem z piaskiem i żwirem", "na mokrej posadzce, by nie pyliły", "Cement chroni się przed wilgocią.")
       ]
     },
     {
@@ -588,12 +631,12 @@ window.KURSY = window.KURSY || {};
       pytania: [
         Q("Tynk pospolity trójwarstwowy stosowany w mieszkaniach to tynk kategorii:", "III", "0", "I", "IVf", "Obrzutka, narzut, gładź zatarta packą."),
         Q("Pierwsza warstwa tynku zwykłego, zwiększająca przyczepność, to:", "obrzutka", "gładź", "narzut", "szpachla", "Obrzutka ma ok. 3-4 mm."),
-        Q("Spęcherzenia i odpryski z kraterami w tynku są skutkiem:", "niedogaszonych ziaren wapna w zaprawie", "za grubej gładzi", "użycia piasku płukanego", "zbyt wolnego wysychania", "Ziarna wapna gaszą się w tynku i zwiększają objętość."),
+        Q("Spęcherzenia i odpryski z kraterami w tynku są skutkiem:", "niedogaszonych ziaren wapna w zaprawie", "za grubej warstwy gładzi gipsowej", "użycia piasku płukanego do zaprawy", "zbyt wolnego wysychania tynku", "Ziarna wapna gaszą się w tynku i zwiększają objętość."),
         Q("Typowa grubość tynku gipsowego maszynowego na ścianach to:", "10-15 mm", "1-2 mm", "30-40 mm", "50 mm", "Minimalnie ok. 8 mm."),
-        Q("Tynku gipsowego nie stosuje się:", "na elewacjach i w pomieszczeniach stale mokrych", "w sypialniach", "na ścianach z betonu komórkowego", "na sufitach w mieszkaniach", "Gips jest wrażliwy na stałą wilgoć."),
-        Q("Wg typowych zasad przedmiaru tynków otworów o powierzchni do 3 m²:", "nie potrąca się, a ościeży nie dolicza", "potrąca się zawsze", "potrąca się połowę", "dolicza się podwójnie", "Otwory > 3 m² potrąca się, doliczając ościeża."),
+        Q("Tynku gipsowego nie stosuje się:", "na elewacjach i w pomieszczeniach mokrych", "w sypialniach i pokojach dziennych", "na ścianach z betonu komórkowego", "na sufitach w mieszkaniach i biurach", "Gips jest wrażliwy na stałą wilgoć."),
+        Q("Wg typowych zasad przedmiaru tynków otworów o powierzchni do 3 m²:", "nie potrąca się, a ościeży nie dolicza", "potrąca się zawsze, ościeża dolicza", "potrąca się połowę ich powierzchni", "dolicza się podwójnie z ościeżami", "Otwory > 3 m² potrąca się, doliczając ościeża."),
         Q("Faktura tynku cienkowarstwowego z bruzdami od zacierania to:", "kornik", "baranek", "gładź", "filc", "Baranek ma równomierne ziarno."),
-        Q("Rysy skurczowe w tynku powstają najczęściej przez:", "zbyt szybkie wysychanie i za tłustą zaprawę", "gruntowanie podłoża", "osadzenie narożników", "nakładanie gładzi packą", "Szybka utrata wody powoduje skurcz.")
+        Q("Rysy skurczowe w tynku powstają najczęściej przez:", "zbyt szybkie wysychanie i za tłustą zaprawę", "gruntowanie podłoża przed tynkowaniem", "osadzenie metalowych narożników", "zacieranie tynku packą styropianową", "Szybka utrata wody powoduje skurcz.")
       ]
     },
     {
@@ -670,13 +713,13 @@ window.KURSY = window.KURSY || {};
       ],
       pytania: [
         Q("Poręcz główna na rusztowaniu powinna znajdować się na wysokości:", "1,1 m", "0,5 m", "0,8 m", "2,0 m", "Do tego poręcz pośrednia i krawężnik 0,15 m."),
-        Q("Pracą na wysokości jest praca na powierzchni położonej co najmniej:", "1,0 m nad poziomem podłogi lub ziemi", "0,5 m", "2,0 m", "3,0 m", "Definicja z przepisów BHP."),
+        Q("Pracą na wysokości jest praca na powierzchni położonej co najmniej:", "1,0 m nad poziomem podłogi lub ziemi", "0,5 m nad poziomem podłogi lub ziemi", "2,0 m nad poziomem podłogi lub ziemi", "3,0 m nad poziomem podłogi lub ziemi", "Definicja z przepisów BHP."),
         Q("Minimalna szerokość pomostu roboczego rusztowania to:", "0,6 m", "0,3 m", "1,2 m", "0,4 m", "Pomost musi być pełny i bez szczelin."),
         Q("Wg typowych zasad przedmiaru murów potrąca się otwory większe niż:", "0,5 m²", "3 m²", "5 m²", "0,1 m²", "Małe otwory pomija się."),
         Q("Ile cegieł (bez strat) potrzeba na 14,55 m² muru o grubości 1 cegły?", "1455", "728", "2910", "400", "Ok. 100 szt./m²."),
         Q("Nakład 32 r-g wykonują 2 murarze po 8 h dziennie w ciągu:", "2 dni", "4 dni", "1 dnia", "8 dni", "32 / (2 × 8) = 2."),
-        Q("Rozbiórkę budynku prowadzi się:", "od góry do dołu, w kolejności odwrotnej do wznoszenia", "od fundamentów w górę", "od ścian nośnych", "dowolnie, byle szybko", "Podcinanie dolnych części grozi zawaleniem."),
-        Q("Przed wykuciem otworu w ścianie nośnej należy:", "podstemplować strop i osadzić nadproże", "zdjąć tynk z całej ściany", "zalać ścianę wodą", "zamurować drzwi", "Ściana nośna przenosi obciążenie stropu.")
+        Q("Rozbiórkę budynku prowadzi się:", "od góry, odwrotnie niż przy wznoszeniu", "od fundamentów w górę, warstwami", "od ścian nośnych, potem stropy", "równocześnie na wszystkich kondygnacjach", "Podcinanie dolnych części grozi zawaleniem."),
+        Q("Przed wykuciem otworu w ścianie nośnej należy:", "podstemplować strop i osadzić nadproże", "skuć tynk z całej powierzchni ściany", "obficie zmoczyć ścianę wodą", "zamurować sąsiednie otwory drzwiowe", "Ściana nośna przenosi obciążenie stropu.")
       ]
     }
   ]);
@@ -707,6 +750,13 @@ window.KURSY = window.KURSY || {};
 <li>Wytyczenie geodezyjne obiektu, tablica informacyjna, ogłoszenie z danymi BHP (gdy wymagane), zagospodarowanie placu budowy.</li>
 </ol>
 <p>Rozpoczęcie budowy następuje z chwilą podjęcia <b>prac przygotowawczych</b> (wytyczenie geodezyjne, niwelacja terenu, zagospodarowanie placu budowy z tymczasowymi obiektami, przyłącza na potrzeby budowy).</p>
+<h4>Zakończenie budowy</h4>
+<ul>
+<li>Po zakończeniu budowy na pozwoleniu inwestor <b>zawiadamia</b> organ nadzoru budowlanego o zakończeniu albo, w określonych przypadkach, uzyskuje <b>pozwolenie na użytkowanie</b>.</li>
+<li>Do zawiadomienia dołącza się m.in. oświadczenie kierownika budowy, dziennik budowy i inwentaryzację geodezyjną powykonawczą.</li>
+<li>Rozbiórka obiektu wpisanego do rejestru zabytków zawsze wymaga pozwolenia.</li>
+<li>Zmiana sposobu użytkowania obiektu wymaga zgłoszenia.</li>
+</ul>
 <div class="tip">Pułapka: projekt techniczny nie jest zatwierdzany decyzją, ale bez niego nie wolno rozpocząć robót budowlanych.</div>` },
         { tytul: "Uczestnicy procesu i plan BIOZ", tresc: `<h4>Uczestnicy procesu budowlanego</h4>
 <div class="tw"><table><tr><th>Uczestnik</th><th>Najważniejsze obowiązki</th></tr>
@@ -728,6 +778,13 @@ window.KURSY = window.KURSY || {};
 <li>Wpisy dokonują: kierownik budowy i robót, inspektor nadzoru, projektant (nadzór autorski), organy kontroli, geodeta.</li>
 <li>Wpisuje się m.in. przebieg robót, zdarzenia, polecenia, odbiory robót zanikających, wyniki prób.</li>
 <li>Dziennik jest dokumentem urzędowym; po zakończeniu budowy przechowuje go inwestor.</li>
+</ul>
+<h4>Odbiory robót</h4>
+<ul>
+<li><b>Odbiór robót zanikających i ulegających zakryciu</b> (np. zbrojenie przed betonowaniem, izolacje): dokonuje go inspektor nadzoru, a wynik wpisuje się do dziennika.</li>
+<li><b>Odbiór częściowy</b>: dotyczy etapu robót, jest podstawą rozliczenia częściowego.</li>
+<li><b>Odbiór końcowy</b>: komisja inwestora, protokół, dokumentacja powykonawcza.</li>
+<li>Kierownik budowy składa <b>oświadczenie</b> o zgodności wykonania obiektu z projektem i przepisami.</li>
 </ul>
 <div class="tip">Informację BIOZ sporządza projektant, a plan BIOZ kierownik budowy. To częste pytanie na egzaminie.</div>` },
         { tytul: "Odbiory, zakończenie budowy i użytkowanie", tresc: `<h4>Rodzaje odbiorów</h4>
@@ -760,10 +817,10 @@ window.KURSY = window.KURSY || {};
         Q("O zamierzonym terminie rozpoczęcia robót zawiadamia się nadzór budowlany co najmniej:", "7 dni wcześniej", "1 dzień wcześniej", "30 dni wcześniej", "nie trzeba zawiadamiać", "Zawiadomienie wraz z oświadczeniem kierownika budowy."),
         Q("Plan BIOZ sporządza:", "kierownik budowy", "projektant", "inwestor", "wojewoda", "Projektant sporządza informację BIOZ."),
         Q("Plan BIOZ jest wymagany m.in., gdy planowany zakres robót przekracza:", "500 osobodni", "50 osobodni", "100 roboczogodzin", "10 dni roboczych", "Lub > 30 dni roboczych i ≥ 20 pracowników jednocześnie."),
-        Q("Pozwolenie na budowę wygasa, gdy budowy nie rozpoczęto przed upływem:", "3 lat od uprawomocnienia decyzji", "1 roku", "6 miesięcy", "10 lat", "Także przy przerwie dłuższej niż 3 lata."),
+        Q("Pozwolenie na budowę wygasa, gdy budowy nie rozpoczęto przed upływem:", "3 lat od uprawomocnienia decyzji", "1 roku od uprawomocnienia decyzji", "6 miesięcy od doręczenia decyzji", "5 lat od dnia wydania decyzji", "Także przy przerwie dłuższej niż 3 lata."),
         Q("Przykładem roboty zanikającej jest:", "zbrojenie przed betonowaniem", "malowanie ścian", "montaż drzwi", "układanie paneli", "Po zabetonowaniu nie można jej sprawdzić."),
         Q("Po zawiadomieniu o zakończeniu budowy organ może wnieść sprzeciw w terminie:", "14 dni", "21 dni", "3 dni", "60 dni", "Brak sprzeciwu pozwala użytkować obiekt."),
-        Q("Projekt techniczny:", "nie jest składany do organu, ale musi być na budowie przed rozpoczęciem robót", "jest zatwierdzany decyzją starosty", "jest zbędny przy pozwoleniu na budowę", "sporządza go kierownik budowy", "Od 2020 projekt budowlany ma trzy części.")
+        Q("Projekt techniczny:", "nie jest składany do organu, ale wymagany na budowie", "jest zatwierdzany decyzją o pozwoleniu na budowę", "jest zbędny, gdy wydano pozwolenie na budowę", "sporządza go kierownik budowy w trakcie robót", "Od 2020 projekt budowlany ma trzy części.")
       ]
     },
     {
@@ -787,6 +844,8 @@ window.KURSY = window.KURSY || {};
 </ul>
 <h4>Specyfikacja techniczna (STWiORB)</h4>
 <p>Szczegółowa specyfikacja techniczna wykonania i odbioru robót budowlanych opisuje wymagania materiałowe, technologię, kontrolę jakości, <b>zasady obmiaru</b> i odbioru. W zamówieniach publicznych przedmiar, STWiORB i projekt tworzą opis przedmiotu zamówienia.</p>
+<h4>Przykład obliczenia w przedmiarze</h4>
+<p>Tynk wewnętrzny na ścianie 5,0 x 2,7 m z oknem 1,2 x 1,5 m (1,8 m², czyli do 3 m²): okna się nie potrąca, a ościeży nie dolicza. Ilość: 5,0 × 2,7 = <b>13,50 m²</b>. Gdyby otwór miał 2,0 x 2,0 m (4,0 m²), potrąca się go i dolicza ościeża: 13,50 - 4,00 + powierzchnia ościeży. Zasady potrąceń zależą od założeń danego katalogu, dlatego zawsze sprawdza się założenia szczegółowe.</p>
 <div class="tip">Na egzaminie BUD.14 rubrykę „obliczenia” wypełnia się działaniem, nie tylko wynikiem; sprawdzający ocenia, czy dobrze potrącono otwory.</div>` },
         { tytul: "Przedmiar robót ziemnych i fundamentów", tresc: `<h4>Roboty ziemne</h4>
 <ul>
@@ -836,7 +895,7 @@ window.KURSY = window.KURSY || {};
 <div class="tip">Ilość w przedmiarze zaokrągla się do 2 miejsc po przecinku, a zakup materiałów zawsze w górę do pełnych sztuk lub opakowań.</div>` }
       ],
       pytania: [
-        Q("Przedmiar robót sporządza się na podstawie:", "dokumentacji projektowej przed wykonaniem robót", "pomiarów robót już wykonanych", "faktur za materiały", "dziennika budowy po odbiorze", "Obmiar dotyczy robót wykonanych."),
+        Q("Przedmiar robót sporządza się na podstawie:", "dokumentacji projektowej, przed robotami", "pomiarów robót już wykonanych na budowie", "faktur i dowodów zakupu materiałów", "wpisów w dzienniku budowy po odbiorze", "Obmiar dotyczy robót wykonanych."),
         Q("W oznaczeniu KNR 2-02 0126-01 liczba 0126 to:", "numer tablicy", "numer kolumny", "numer katalogu", "liczba roboczogodzin", "2-02 katalog, 0126 tablica, 01 kolumna."),
         Q("Wykopy oblicza się w:", "m³ gruntu w stanie rodzimym", "m² powierzchni terenu", "tonach urobku", "m gruntu", "Objętość bez spulchnienia."),
         Q("Objętość wykopu 36 m x 1,2 m x 1,2 m wynosi:", "51,84 m³", "43,20 m³", "86,40 m³", "25,92 m³", "36 × 1,2 × 1,2."),
@@ -930,7 +989,7 @@ window.KURSY = window.KURSY || {};
         Q("Kosztorys inwestorski służy przede wszystkim do:", "ustalenia wartości zamówienia przed przetargiem", "rozliczenia robót dodatkowych", "zamówienia materiałów przez wykonawcę", "ustalenia wynagrodzenia brygady", "Sporządza go inwestor lub projektant."),
         Q("Remont mieszkania o powierzchni 70 m² objęty jest stawką VAT:", "8%", "23%", "5%", "0%", "Budownictwo objęte społecznym programem mieszkaniowym (lokal do 150 m²)."),
         Q("Przy wynagrodzeniu ryczałtowym ryzyko błędów w ilościach robót ponosi zazwyczaj:", "wykonawca", "inwestor", "projektant", "nadzór budowlany", "Cena jest stała niezależnie od ilości."),
-        Q("Kosztorys zamienny sporządza się, gdy:", "w trakcie robót zmieniono rozwiązania lub materiały", "inwestor ogłasza przetarg", "budowa zakończyła się bez zmian", "trzeba ustalić ubezpieczenie budowy", "Zmienia pozycje kosztorysu umownego.")
+        Q("Kosztorys zamienny sporządza się, gdy:", "w trakcie robót zmieniono rozwiązania", "inwestor ogłasza przetarg na roboty", "budowa zakończyła się bez żadnych zmian", "trzeba ustalić wartość ubezpieczenia", "Zmienia pozycje kosztorysu umownego.")
       ]
     },
     {
@@ -1012,11 +1071,11 @@ window.KURSY = window.KURSY || {};
 <div class="tip">Próbki betonu do badania wytrzymałości to standardowo sześciany 150 x 150 x 150 mm badane po 28 dniach.</div>` }
       ],
       pytania: [
-        Q("Pracochłonność 540 r-g wykona 5-osobowa brygada pracująca po 8 h w ciągu:", "13,5 dnia (14 dni roboczych)", "10 dni", "27 dni", "5 dni", "540 / (5 × 8) = 13,5."),
-        Q("Ścieżka krytyczna to:", "najdłuższy ciąg czynności, w którym czynności mają zerowy zapas czasu", "najkrótszy ciąg czynności", "kolejność dostaw materiałów", "trasa dojazdu na budowę", "Opóźnienie na ścieżce krytycznej opóźnia całość."),
+        Q("Pracochłonność 540 r-g wykona 5-osobowa brygada pracująca po 8 h w ciągu:", "13,5 dnia (14 dni roboczych)", "10,8 dnia (11 dni roboczych)", "16,9 dnia (17 dni roboczych)", "67,5 dnia (68 dni roboczych)", "540 / (5 × 8) = 13,5."),
+        Q("Ścieżka krytyczna to:", "najdłuższy ciąg czynności o zerowym zapasie czasu", "najkrótszy ciąg czynności w harmonogramie", "kolejność dostaw materiałów na plac budowy", "trasa dojazdu sprzętu ciężkiego na budowę", "Opóźnienie na ścieżce krytycznej opóźnia całość."),
         Q("Metoda organizacji, w której brygady specjalistyczne przechodzą rytmicznie z działki na działkę, to metoda:", "równomierna (potokowa)", "kolejna", "równoczesna", "ryczałtowa", "Daje równomierne zatrudnienie."),
         Q("Ile tynkarzy potrzeba, aby 540 r-g wykonać w 10 dni po 8 h?", "7", "5", "6", "10", "540 / 80 = 6,75, w górę do 7."),
-        Q("Standardowe próbki betonu do badania wytrzymałości na ściskanie to:", "sześciany 150 mm badane po 28 dniach", "walce 50 mm po 3 dniach", "belki 1 m po 7 dniach", "kostki 50 mm po roku", "Klasa betonu odnosi się do 28 dni."),
+        Q("Standardowe próbki betonu do badania wytrzymałości na ściskanie to:", "sześciany 150 mm badane po 28 dniach", "walce 50 mm badane po 3 dniach", "belki 100 cm badane po 7 dniach", "kostki 50 mm badane po 1 roku", "Klasa betonu odnosi się do 28 dni."),
         Q("Aby skrócić czas całej budowy, należy skrócić czynności:", "leżące na ścieżce krytycznej", "mające największy zapas czasu", "dowolne", "wykonywane na końcu", "Tylko one wyznaczają termin końcowy."),
         Q("Konsystencję mieszanki betonowej na budowie bada się najczęściej:", "metodą opadu stożka", "sklerometrem", "łatą 2 m", "metodą karbidową", "Opad stożka Abramsa."),
         Q("Wykres zatrudnienia pod harmonogramem Gantta powinien być:", "możliwie równomierny", "jak najbardziej zmienny", "zawsze malejący", "niepotrzebny", "Równomierne zatrudnienie ułatwia organizację.")
@@ -1049,6 +1108,12 @@ window.KURSY = window.KURSY || {};
 <ul>
 <li>cienkie (do ok. 0,05 mm), średnie, grube (powyżej ok. 0,08 mm); grube i szkliste trudniej przyjmują barwnik;</li>
 <li>porowatość niska (łuska zamknięta, włos „szklisty”), średnia, wysoka (po rozjaśnianiu, trwałej, słońcu): włos chłonie preparat szybko i nierównomiernie, szybko traci kolor.</li>
+</ul>
+<h4>Skład chemiczny włosa</h4>
+<p>Włos składa się w ok. <b>80-90% z keratyny</b>, białka bogatego w aminokwas <b>cystynę</b>, który zawiera siarkę i tworzy mostki dwusiarczkowe. Pozostałe składniki to woda (ok. 10-15%), lipidy, pigment i pierwiastki śladowe. Keratynę budują głównie: węgiel, tlen, azot, wodór i siarka.</p>
+<ul>
+<li>Włos mokry jest bardziej rozciągliwy niż suchy: zdrowy wydłuża się o ok. 20-30% i wraca do długości.</li>
+<li>Nasilone wypadanie w telogenie pojawia się np. ok. 2-3 miesiące po porodzie, wysokiej gorączce lub silnym stresie; łysienie androgenowe skraca fazę anagenu.</li>
 </ul>
 <div class="tip">Pytanie egzaminacyjne: trwała ondulacja działa na mostki dwusiarczkowe, a modelowanie suszarką tylko na wiązania wodorowe, dlatego jest nietrwałe.</div>` },
         { tytul: "Choroby i przeciwwskazania", tresc: `<h4>Zmiany, przy których usługi się nie wykonuje</h4>
@@ -1099,8 +1164,8 @@ window.KURSY = window.KURSY || {};
         Q("Włos rośnie przeciętnie o około:", "1 cm na miesiąc", "1 mm na miesiąc", "5 cm na miesiąc", "1 cm na rok", "Ok. 0,3-0,4 mm na dobę."),
         Q("Próbę uczuleniową przed farbowaniem wykonuje się:", "48 godzin przed zabiegiem", "bezpośrednio przed nałożeniem farby", "tydzień po zabiegu", "tylko u nowych klientów raz w życiu", "Wynik ocenia się po 48 h."),
         Q("Bezwzględnym przeciwwskazaniem do usługi fryzjerskiej jest:", "grzybica skóry głowy", "łupież suchy", "włosy cienkie", "siwizna 50%", "Choroby zakaźne wykluczają usługę."),
-        Q("Próba na metale wykazuje obecność:", "barwników metalicznych, np. z farb z solami metali", "silikonów", "keratyny", "łupieżu", "Reakcja z oksydantem jest gwałtowna."),
-        Q("Zdrowy włos w próbie elastyczności na mokro:", "wydłuża się o ok. 20-30% i wraca do długości", "pęka natychmiast", "nie wydłuża się wcale", "wydłuża się dwukrotnie", "Szybkie pękanie świadczy o zniszczeniu."),
+        Q("Próba na metale wykazuje obecność:", "soli metali, np. z farb progresywnych", "silikonów z odżywek i serum", "keratyny w uszkodzonej korze", "łupieżu i resztek łoju na skórze", "Reakcja z oksydantem jest gwałtowna."),
+        Q("Zdrowy włos w próbie elastyczności na mokro:", "wydłuża się o ok. 20-30% i wraca do długości", "pęka natychmiast przy lekkim naciągu", "nie wydłuża się wcale, jest sztywny", "wydłuża się dwukrotnie i nie wraca", "Szybkie pękanie świadczy o zniszczeniu."),
         Q("Pigment odpowiedzialny za odcienie żółto-czerwone to:", "feomelanina", "eumelanina", "keratyna", "cystyna", "Eumelanina daje odcienie brązowo-czarne.")
       ]
     },
@@ -1135,6 +1200,14 @@ window.KURSY = window.KURSY || {};
 <li>Dwukrotne mycie (pierwsze usuwa zabrudzenia, drugie pielęgnuje), masaż opuszkami palców, nie paznokciami.</li>
 <li>Dokładne spłukanie, odżywka na długości, osuszenie ręcznikiem przez dociśnięcie, nie tarcie.</li>
 </ol>
+<h4>Skala pH w praktyce</h4>
+<div class="tw"><table><tr><th>Preparat</th><th>Orientacyjne pH</th></tr>
+<tr><td>odżywka, płukanka kwaśna</td><td>3-4,5</td></tr>
+<tr><td>szampon łagodny</td><td>5-6</td></tr>
+<tr><td>woda wodociągowa</td><td>ok. 7</td></tr>
+<tr><td>farba utleniająca, płyn do trwałej</td><td>8,5-10</td></tr>
+<tr><td>rozjaśniacz w proszku z oksydantem</td><td>ok. 10-11</td></tr></table></div>
+<p>Woda twarda (z jonami wapnia i magnezu) gorzej się pieni i zostawia osad na włosach, przez co tracą połysk; w salonie stosuje się zmiękczacze wody lub szampony z substancjami kompleksującymi.</p>
 <div class="tip">Szampon przed zabiegiem chemicznym nakłada się delikatnie, bez masażu, aby nie podrażnić skóry, która za chwilę zetknie się z preparatem zasadowym.</div>` },
         { tytul: "Zabiegi pielęgnacyjne włosów", tresc: `<h4>Rodzaje preparatów</h4>
 <ul>
@@ -1154,6 +1227,15 @@ window.KURSY = window.KURSY || {};
 <tr><td>łupież tłusty</td><td>peeling, szampon przeciwłupieżowy, ograniczenie ciężkich kosmetyków przy skórze</td></tr></table></div>
 <h4>Zalecenia dla klienta</h4>
 <p>Fryzjer doradza pielęgnację domową: rodzaj szamponu i odżywki, termoochronę przed suszarką i prostownicą (temperatura prostownicy zwykle do ok. 180-200 °C, niżej przy włosach cienkich), ochronę UV, częstotliwość podcinania końców (co ok. 6-8 tygodni przy krótkich formach).</p>
+<h4>Przebieg zabiegu regenerującego</h4>
+<ol>
+<li>Diagnoza włosów i skóry głowy, dobór kuracji.</li>
+<li>Mycie szamponem dobranym do problemu, odsączenie ręcznikiem (nadmiar wody rozcieńcza preparat).</li>
+<li>Nałożenie maski pasmami, od połowy długości do końców, rozczesanie grzebieniem o rzadkich zębach.</li>
+<li>Działanie ciepła przez ok. 10-20 min (czepek, klimazon), które rozchyla łuskę i ułatwia wnikanie składników.</li>
+<li>Spłukanie letnią wodą, odżywka kwaśna domykająca łuskę, stylizacja.</li>
+</ol>
+<p>Kuracje proteinowe wykonuje się seriami, np. raz w tygodniu przez 4-6 tygodni. Zbyt częste maski proteinowe na zdrowych włosach powodują sztywność i łamliwość.</p>
 <div class="tip">Rozdwojonych końców nie da się „skleić” na stałe; jedyną skuteczną metodą jest obcięcie, a odżywki tylko je maskują.</div>` },
         { tytul: "Masaż skóry głowy i stanowisko pracy", tresc: `<h4>Techniki masażu</h4>
 <ol>
@@ -1182,6 +1264,13 @@ window.KURSY = window.KURSY || {};
 <tr><td>dezynfekcja</td><td>zniszczenie większości drobnoustrojów (zanurzenie w roztworze roboczym wg czasu z etykiety, spryskanie powierzchni)</td></tr>
 <tr><td>sterylizacja</td><td>zniszczenie wszystkich form, także przetrwalnikowych (autoklaw); narzędzia naruszające ciągłość skóry</td></tr></table></div>
 <p>Brzytwy z wymiennymi ostrzami stosuje się z nowym ostrzem dla każdego klienta. Ręczniki i peleryny zmienia się po każdym kliencie, pędzle i miseczki myje i dezynfekuje.</p>
+<h4>Kiedy wykonuje się masaż</h4>
+<p>Masaż skóry głowy wykonuje się podczas mycia lub jako osobny zabieg z ampułką. Nie wykonuje się go przed koloryzacją, trwałą ondulacją ani rozjaśnianiem, bo pobudzona skóra silniej reaguje na preparat zasadowy (pieczenie, zaczerwienienie).</p>
+<ul>
+<li>Ręce czyste i ciepłe, paznokcie krótkie, bez pierścionków i bransoletek.</li>
+<li>Siła ucisku dostosowana do klienta, ruchy rytmiczne, bez odrywania dłoni od skóry.</li>
+<li>Przy wypadaniu włosów masaż jest delikatny, aby nie wyrywać włosów będących w telogenie.</li>
+</ul>
 <div class="tip">Kolejność ruchów masażu kończy się zawsze głaskaniem, tak jak się zaczyna; przy łojotoku masażu się nie wykonuje.</div>` }
       ],
       pytania: [
@@ -1189,10 +1278,10 @@ window.KURSY = window.KURSY || {};
         Q("SLES to składnik szamponu z grupy:", "tenzydów anionowych", "związków kationowych", "konserwantów", "silikonów", "Główny składnik myjący."),
         Q("Temperatura wody do mycia głowy powinna wynosić około:", "37-38 °C", "20 °C", "50 °C", "60 °C", "Sprawdza się ją na nadgarstku."),
         Q("Przed trwałą ondulacją włosy myje się:", "szamponem oczyszczającym, bez masażu skóry", "szamponem z silikonami i masażem", "tylko wodą z octem", "nie myje się wcale", "Masaż mógłby podrażnić skórę."),
-        Q("Związki kationowe w odżywkach:", "neutralizują ujemny ładunek włosa i ułatwiają rozczesywanie", "silnie myją i pienią", "rozjaśniają włosy", "zrywają mostki dwusiarczkowe", "Np. polyquaternium."),
+        Q("Związki kationowe w odżywkach:", "wygładzają łuskę i ułatwiają czesanie", "silnie myją i dają obfitą pianę", "rozjaśniają włosy o 1-2 tony w 20 min", "zrywają mostki dwusiarczkowe w korze", "Np. polyquaternium."),
         Q("Przeciwwskazaniem do masażu skóry głowy jest:", "silny łojotok", "włosy suche", "włosy długie", "siwizna", "Masaż pobudza wydzielanie łoju."),
         Q("Ostatnią techniką w masażu skóry głowy jest:", "głaskanie", "oklepywanie", "ugniatanie", "wibracja", "Masaż zaczyna się i kończy głaskaniem."),
-        Q("Sterylizacja różni się od dezynfekcji tym, że:", "niszczy wszystkie drobnoustroje, także przetrwalniki", "usuwa tylko zabrudzenia", "jest wykonywana zimną wodą", "dotyczy tylko ręczników", "Najczęściej w autoklawie.")
+        Q("Sterylizacja różni się od dezynfekcji tym, że:", "niszczy wszystkie drobnoustroje i przetrwalniki", "usuwa tylko zabrudzenia i resztki włosów", "jest wykonywana w zimnej wodzie z mydłem", "dotyczy wyłącznie ręczników i peleryn", "Najczęściej w autoklawie.")
       ]
     },
     {
@@ -1244,6 +1333,14 @@ window.KURSY = window.KURSY || {};
 </ol>
 <h4>Bezpieczeństwo</h4>
 <p>Nożyczki przekazuje się zamknięte, rączką do odbiorcy. Brzytwę przechowuje się zabezpieczoną, zużyte ostrza wrzuca do pojemnika na odpady ostre. Skaleczenie: przerwanie pracy, rękawiczki, zatamowanie krwawienia jałowym gazikiem, dezynfekcja narzędzia.</p>
+<h4>Typowe pułapki</h4>
+<ul>
+<li>Degażówki nie służą do wyznaczania linii; zbyt częste ich użycie przy nasadzie daje odstające krótkie włosy i efekt „puchu”.</li>
+<li>Na włosach kręconych unika się brzytwy i mocnego przerzedzania, bo końce się puszą.</li>
+<li>Nożyczki konserwuje się: czyszczenie z włosów, oliwienie śruby, regulacja docisku, ostrzenie u specjalisty.</li>
+<li>Nasadki maszynki zmienia się stopniowo; skok z 3 mm od razu na 12 mm daje widoczny „schodek”.</li>
+</ul>
+<p>Na egzaminie opis techniki musi pasować do efektu: point cut zmiękcza linię, blunt daje ciężką, wyraźną linię, a slicing dodaje ruchu i tekstury.</p>
 <div class="tip">Brzytwą tnie się zawsze włosy mokre; na suchych ciągnie i niszczy końce.</div>` },
         { tytul: "Modelowanie i stylizacja", tresc: `<h4>Modelowanie suszarką</h4>
 <ul>
@@ -1269,17 +1366,25 @@ window.KURSY = window.KURSY || {};
 <li>żel, wosk, pasta, glinka: kontrola i tekstura (glinka matowa, pomada błyszcząca);</li>
 <li>lakier: utrwalenie (elastyczny lub mocny);</li>
 <li>serum, olejek: połysk i wygładzenie końców.</li></ul>
+<h4>Kolejność modelowania gładkiego boba</h4>
+<ol>
+<li>Podsuszenie włosów do ok. 70-80% bez szczotki.</li>
+<li>Podział na sekcje: kark, boki, góra; spięcie klipsami.</li>
+<li>Pasmo naciągnięte szczotką, dysza ustawiona wzdłuż pasma, ruch od nasady do końców, końce lekko podwinięte.</li>
+<li>Kontrola symetrii w lustrze, zimny nadmuch, serum na końce.</li>
+</ol>
+<p>Dysza skierowana pod łuskę (od końców do nasady) daje matowe, puszące się włosy. Suszarka trzymana zbyt blisko i zbyt długo w jednym miejscu przegrzewa włos, a nawet skórę głowy.</p>
 <div class="tip">Pod koniec modelowania zimny nadmuch „zamyka” fryzurę, bo wiązania wodorowe stabilizują się po ostygnięciu.</div>` }
       ],
       pytania: [
-        Q("Strzyżenie z elewacją 0° daje formę:", "jednolitą (solid), z ciężarem na obwodzie", "równych warstw", "długich warstw", "graduacji wysokiej", "Wszystkie włosy kończą się na jednej linii."),
+        Q("Strzyżenie z elewacją 0° daje formę:", "jednolitą (solid), z ciężarem na obwodzie", "równych warstw o jednakowej długości", "długich warstw z lekkością na końcach", "wysokiej graduacji z krótkim karkiem", "Wszystkie włosy kończą się na jednej linii."),
         Q("Elewacja 90° w strzyżeniu daje:", "warstwy o jednakowej długości od skóry", "formę jednolitą", "warstwy wydłużające się ku dołowi", "linię ciężaru na karku", "Uniform layers."),
         Q("Pasmo prowadzące ruchome polega na tym, że:", "każde kolejne pasmo strzyże się do części poprzedniego", "wszystkie pasma przyciąga się do jednego punktu", "strzyże się bez pasma", "używa się tylko maszynki", "Stałe pasmo daje przyrost długości."),
         Q("Brzytwą strzyże się włosy:", "mokre", "suche", "po lakierowaniu", "tylko kręcone suche", "Na suchych brzytwa szarpie."),
-        Q("Degażówki służą przede wszystkim do:", "przerzedzania włosów i zmiękczania linii", "cięcia mocnych linii", "golenia karku", "nawijania loków", "Mają ząbki na jednym lub obu ostrzach."),
+        Q("Degażówki służą przede wszystkim do:", "przerzedzania włosów i zmiękczania linii", "wycinania mocnych, ostrych linii", "golenia karku i konturowania baków", "cięcia grubych pasm techniką blunt", "Mają ząbki na jednym lub obu ostrzach."),
         Q("Podczas modelowania strumień powietrza kieruje się:", "od nasady do końców", "od końców do nasady", "prostopadle do skóry", "losowo", "Zgodnie z ułożeniem łuski."),
-        Q("Na zakończenie modelowania stosuje się zimny nadmuch, aby:", "utrwalić kształt po zamknięciu wiązań wodorowych", "rozjaśnić włosy", "otworzyć łuskę", "usunąć lakier", "Ostygnięcie stabilizuje kształt."),
-        Q("Kontrolę strzyżenia przeprowadza się:", "w kierunku przeciwnym do separacji użytej podczas strzyżenia", "tylko patrząc w lustro z daleka", "na suchych włosach po lakierowaniu", "nie wykonuje się kontroli", "Np. strzyżono pionowo, kontrola poziomo.")
+        Q("Na zakończenie modelowania stosuje się zimny nadmuch, aby:", "zamknąć wiązania wodorowe w nowym kształcie", "otworzyć łuskę przed nałożeniem lakieru", "rozluźnić skręt uzyskany szczotką", "usunąć nadmiar preparatu stylizującego", "Ostygnięcie stabilizuje kształt."),
+        Q("Kontrolę strzyżenia przeprowadza się:", "w kierunku przeciwnym do użytej separacji", "tylko patrząc w lustro z dużej odległości", "na suchych włosach po lakierowaniu", "w tym samym kierunku co separacja", "Np. strzyżono pionowo, kontrola poziomo.")
       ]
     },
     {
@@ -1315,6 +1420,13 @@ window.KURSY = window.KURSY || {};
 <li><b>Bezpośrednia (toner, płukanka)</b>: barwnik na powierzchni, bez oksydantu.</li>
 <li><b>Roślinna (henna)</b>: barwi łuskę; utrudnia późniejsze zabiegi chemiczne.</li>
 </ul>
+<h4>Dobór oksydantu</h4>
+<div class="tw"><table><tr><th>Oksydant</th><th>Działanie</th></tr>
+<tr><td>3% (10 vol)</td><td>ton w ton lub przyciemnianie, bez rozjaśnienia</td></tr>
+<tr><td>6% (20 vol)</td><td>rozjaśnienie o ok. 1 ton, standard przy pokrywaniu siwizny</td></tr>
+<tr><td>9% (30 vol)</td><td>rozjaśnienie o ok. 2 tony</td></tr>
+<tr><td>12% (40 vol)</td><td>rozjaśnienie o ok. 3 tony (farby superrozjaśniające)</td></tr></table></div>
+<p>Przykład: klientka ma naturalny ton 6 i chce uzyskać 8.3. Potrzebne jest rozjaśnienie o 2 tony, czyli farba 8.3 z oksydantem 9%. Pigment tła na poziomie 8 jest żółty, więc refleks złoty go wzmacnia; gdyby klientka chciała chłodny blond, dobiera się refleks popielaty lub perłowy. Proporcję mieszania (zwykle 1:1 lub 1:1,5) podaje karta producenta.</p>
 <div class="tip">Pigment tła rozjaśnienia na poziomie 7 jest pomarańczowo-żółty, na 9 jasnożółty; to on „wychodzi” po rozjaśnieniu i trzeba go zneutralizować.</div>` },
         { tytul: "Oksydanty, proporcje i siwizna", tresc: `<h4>Stężenie oksydantu (H2O2)</h4>
 <div class="tw"><table><tr><th>Stężenie</th><th>Zastosowanie</th></tr>
@@ -1378,7 +1490,7 @@ window.KURSY = window.KURSY || {};
         Q("Żółty odcień po rozjaśnieniu neutralizuje się refleksem:", "fioletowym (perłowym)", "złotym", "miedzianym", "czerwonym", "Fiolet leży naprzeciw żółtego w kole barw."),
         Q("Przy pierwszej koloryzacji na jaśniej farbę nakłada się najpierw:", "na długości i końce, a odrost później", "na odrost, potem końce", "tylko na końce", "na całą długość naraz z ciepłem", "Ciepło skóry przyspiesza reakcję przy nasadzie."),
         Q("Standardowa proporcja farby utleniającej i oksydantu wynosi najczęściej:", "1 : 1", "1 : 5", "3 : 1", "1 : 10", "Superrozjaśniające często 1 : 2."),
-        Q("Pomarańczowy odcień neutralizuje się kolorem:", "niebieskim (popielatym)", "żółtym", "czerwonym", "złotym", "Niebieski jest przeciwny pomarańczowemu."),
+        Q("Pomarańczowy odcień neutralizuje się kolorem:", "niebieskim (popielatym)", "zielonym (matowym)", "fioletowym (perłowym)", "złotym (ciepłym)", "Niebieski jest przeciwny pomarańczowemu."),
         Q("Aby rozjaśnić włosy wcześniej farbowane farbą utleniającą na ciemno, stosuje się:", "dekoloryzację lub rozjaśniacz", "jaśniejszą farbę z oksydantem 3%", "szampon oczyszczający", "odżywkę kwaśną", "Farba nie rozjaśnia sztucznego pigmentu.")
       ]
     },
@@ -1405,6 +1517,15 @@ window.KURSY = window.KURSY || {};
 </ul>
 <h4>Ochrona klienta i fryzjera</h4>
 <p>Wokół linii włosów nakłada się krem ochronny i opaskę z waty; fryzjer pracuje w <b>rękawiczkach</b>. Płyn do oczu: natychmiast płukać dużą ilością wody, w razie potrzeby lekarz. Pomieszczenie wentylowane (amoniak).</p>
+<h4>Próby przed zabiegiem</h4>
+<ul>
+<li><b>Próba uczuleniowa</b>: preparat na skórę za uchem lub w zgięciu łokcia, ocena po 48 h.</li>
+<li><b>Próba elastyczności</b>: mokre pasmo rozciąga się; włos szybko pękający nie nadaje się do zabiegu.</li>
+<li><b>Próba porowatości</b>: przesuwanie palcami od końców do nasady; szorstkość oznacza otwartą łuskę i potrzebę słabszego płynu.</li>
+<li><b>Próba na metale</b>: pasmo w roztworze oksydantu z amoniakiem; nagrzewanie, pienienie lub dym oznaczają obecność metali.</li>
+<li><b>Lok próbny</b> na pasemku z niewidocznego miejsca, gdy reakcja włosów budzi wątpliwości.</li>
+</ul>
+<p>Wyniki prób wpisuje się do karty klienta razem z nazwą płynu, czasem działania i średnicą wałków.</p>
 <div class="tip">Kolejność jest stała: najpierw reduktor (otwiera mostki), potem utrwalacz (utlenia i zamyka). Zamiana kolejności nie daje skrętu.</div>` },
         { tytul: "Nawijanie i przebieg zabiegu", tresc: `<h4>Dobór wałków</h4>
 <ul>
@@ -1431,6 +1552,8 @@ window.KURSY = window.KURSY || {};
 </ol>
 <h4>Zalecenia po zabiegu</h4>
 <p>Nie myć włosów przez ok. <b>48 h</b>, nie spinać mocno, nie prostować; używać kosmetyków do włosów kręconych. Koloryzację wykonuje się najlepiej ok. 1-2 tygodnie po trwałej (lub przed nią z odstępem wg producenta).</p>
+<h4>Naciąg i kąt nawijania</h4>
+<p>Pasmo odciąga się pod kątem ok. <b>90°</b> do skóry, a wałek osadza na podstawie pasma, dzięki czemu skręt zaczyna się od nasady. Nawinięcie poniżej podstawy daje mniejszą objętość, a powyżej większe uniesienie. Zbyt mocny naciąg rozciąga włosy i powoduje łamliwość, zbyt słaby daje nierówny skręt. Płynu nie nakłada się w nadmiarze, a jego resztki z karku i czoła zbiera się wacikiem, aby nie podrażniły skóry.</p>
 <div class="tip">Sygnał końca działania płynu to lok testowy w kształcie litery S, a nie upływ maksymalnego czasu z instrukcji.</div>` },
         { tytul: "Prostowanie chemiczne i wady trwałej", tresc: `<h4>Prostowanie chemiczne</h4>
 <p>Wykorzystuje ten sam mechanizm (redukcja i utlenianie), ale zamiast nawijania włosy wygładza się grzebieniem, dłońmi lub prostownicą w trakcie działania preparatu.</p>
@@ -1451,16 +1574,23 @@ window.KURSY = window.KURSY || {};
 <tr><td>łamanie włosów</td><td>włosy zniszczone, zbyt silny płyn, metale we włosach</td></tr></table></div>
 <h4>Korekta</h4>
 <p>Zbyt słaby skręt można powtórzyć dopiero po ocenie stanu włosów, słabszym płynem i z odstępem (najlepiej ok. 2 tygodnie). Przekręcone włosy wymagają regeneracji i stopniowego ścinania, a nie kolejnego zabiegu chemicznego.</p>
+<h4>Zalecenia i bezpieczeństwo</h4>
+<ul>
+<li>Przed prostowaniem chemicznym wykonuje się próbę uczuleniową i próbę na pasemku.</li>
+<li>Preparaty wodorotlenkowe wymagają zabezpieczenia skóry wazeliną i pracy w rękawiczkach; kontakt z oczami grozi poważnym oparzeniem.</li>
+<li>Przez ok. 48-72 h po zabiegu nie myje się włosów, nie zakłada ich za uszy i nie spina gumką, aby nie powstały załamania.</li>
+<li>Włosów po prostowaniu wodorotlenkowym nie poddaje się w krótkim odstępie trwałej tioglikolanowej ani rozjaśnianiu.</li>
+</ul>
 <div class="tip">Załamania przy nasadzie najczęściej powstają od gumki wałka, która zbyt mocno uciska świeżo zredukowane, miękkie włosy.</div>` }
       ],
       pytania: [
         Q("Podstawowym reduktorem w płynach do trwałej ondulacji jest:", "tioglikolan amonu", "nadtlenek wodoru", "amoniak", "pantenol", "Nadtlenek wodoru to utrwalacz."),
-        Q("Utrwalacz w trwałej ondulacji działa przez:", "utlenienie i odbudowę mostków dwusiarczkowych", "redukcję mostków", "zamknięcie wiązań wodorowych", "rozpuszczenie keratyny", "Zwykle H2O2 ok. 1,5-2%."),
-        Q("Koniec działania płynu redukującego rozpoznaje się po:", "loku testowym w kształcie litery S", "zmianie koloru włosów", "zapachu amoniaku", "wyschnięciu włosów", "Odwija się ok. 1,5 obrotu wałka."),
+        Q("Utrwalacz w trwałej ondulacji działa przez:", "utlenienie i odbudowę mostków dwusiarczkowych", "redukcję i rozerwanie mostków dwusiarczkowych", "zamknięcie wiązań wodorowych w chłodzie", "rozpuszczenie keratyny w łusce włosa", "Zwykle H2O2 ok. 1,5-2%."),
+        Q("Koniec działania płynu redukującego rozpoznaje się po:", "loku testowym w kształcie litery S", "zmianie koloru włosów na wałkach", "silnym zapachu amoniaku z czepka", "całkowitym wyschnięciu płynu", "Odwija się ok. 1,5 obrotu wałka."),
         Q("Płyn kwaśny do trwałej stosuje się przede wszystkim do włosów:", "delikatnych i farbowanych", "bardzo grubych odpornych", "z barwnikami metalicznymi", "afro do prostowania", "Działa łagodniej."),
         Q("Załamania włosów przy nasadzie po trwałej powstają najczęściej przez:", "gumkę wałka uciskającą włosy", "za długie płukanie", "użycie bibułek", "zbyt słaby płyn", "Zmiękczony włos łatwo się odkształca."),
         Q("Po trwałej ondulacji nie zaleca się mycia włosów przez około:", "48 godzin", "15 minut", "2 tygodnie", "6 miesięcy", "Mostki stabilizują się po zabiegu."),
-        Q("Za słaby skręt po trwałej może wynikać z:", "zbyt krótkiego czasu działania lub zbyt dużych wałków", "zbyt małych wałków", "zbyt mocnego płynu", "zbyt długiego utrwalania", "Mostki nie zostały dostatecznie zredukowane."),
+        Q("Za słaby skręt po trwałej może wynikać z:", "zbyt krótkiego czasu lub za dużych wałków", "zbyt małych wałków i mocnego naciągu", "zbyt mocnego płynu do włosów trudnych", "zbyt długiego działania utrwalacza", "Mostki nie zostały dostatecznie zredukowane."),
         Q("Przeciwwskazaniem do trwałej ondulacji jest:", "obecność barwników metalicznych we włosach", "włosy proste", "włosy krótkie", "włosy naturalne nieskrzywdzone", "Grozi zniszczeniem włosów i poparzeniem.")
       ]
     }
@@ -1537,6 +1667,13 @@ window.KURSY = window.KURSY || {};
 </ul>
 <h4>Dopasowanie do wieku i zawodu</h4>
 <p>U osób starszych korzystne są fryzury z objętością i miękkimi liniami (unoszą rysy), jaśniejsze, ciepłe odcienie zmiękczające zmarszczki. Zawód wymagający związania włosów (gastronomia, medycyna) wymaga długości pozwalającej na upięcie lub krótkiej, praktycznej formy.</p>
+<h4>Kształt twarzy a fryzura</h4>
+<div class="tw"><table><tr><th>Twarz</th><th>Zalecenie</th></tr>
+<tr><td>okrągła</td><td>objętość na czubku, boczna grzywka, linie pionowe; unikać objętości przy policzkach</td></tr>
+<tr><td>kwadratowa</td><td>miękkie fale, asymetria, zaokrąglenie przy linii żuchwy</td></tr>
+<tr><td>podłużna</td><td>grzywka, objętość po bokach; unikać wysokich upięć</td></tr>
+<tr><td>trójkątna (szerokie czoło)</td><td>grzywka, objętość na wysokości żuchwy</td></tr>
+<tr><td>owalna</td><td>pasuje do niej prawie każda forma</td></tr></table></div>
 <div class="tip">Projekt zawsze uzasadnia się analizą: „ze względu na okrągły kształt twarzy zaproponowano objętość na czubku i boczną grzywkę”.</div>` }
       ],
       pytania: [
@@ -1544,7 +1681,7 @@ window.KURSY = window.KURSY || {};
         Q("Linia pionowa w fryzurze optycznie:", "wydłuża i wysmukla", "poszerza", "skraca", "nie ma wpływu", "Pozioma poszerza."),
         Q("Twarz prostokątną (podłużną) koryguje się:", "grzywką i objętością po bokach", "wysoką objętością na czubku", "gładkim zaczesaniem do tyłu", "długimi prostymi włosami bez grzywki", "Celem jest optyczne skrócenie."),
         Q("Złoty podział w kompozycji fryzury to proporcja około:", "1 : 1,618", "1 : 1", "1 : 3", "2 : 5", "Proporcja uznawana za harmonijną."),
-        Q("Dominanta w kompozycji fryzury to:", "element przyciągający wzrok, akcent", "symetria obu stron", "powtarzanie loków", "kolor naturalny", "Np. kwiat lub kok."),
+        Q("Dominanta w kompozycji fryzury to:", "element przyciągający wzrok, akcent", "symetria obu stron fryzury", "rytmiczne powtarzanie loków", "naturalny kolor bez refleksów", "Np. kwiat lub kok."),
         Q("Przy profilu wypukłym (cofnięte czoło i broda) zaleca się:", "objętość z przodu nad czołem lub grzywkę", "gładkie zaczesanie do tyłu", "kok nisko na karku bez grzywki", "bardzo krótkie boki i gładką górę", "Grzywka wyrównuje profil."),
         Q("Przy krótkiej szyi korzystne są:", "krótki tył lub wysokie upięcia", "długie włosy z objętością w karku", "bardzo szerokie fale na wysokości szyi", "niskie koki na karku", "Odsłonięty kark wydłuża szyję."),
         Q("Twarz w kształcie serca (szerokie czoło, wąska broda) koryguje się:", "objętością na wysokości żuchwy i boczną grzywką", "objętością na skroniach", "krótkimi bokami przy brodzie", "wysokim upięciem odsłaniającym czoło", "Wyrównuje się dolną część twarzy.")
@@ -1598,6 +1735,8 @@ window.KURSY = window.KURSY || {};
 <li>Przy cerze z rumieniem unika się czerwieni i miedzi, które go podkreślają.</li>
 <li>Uwzględnia się kolor brwi (różnica zbyt duża wygląda nienaturalnie) i możliwość utrzymania koloru (odrosty).</li>
 </ul>
+<h4>Przykład uzasadnienia w projekcie</h4>
+<p>Klientka o jasnej, chłodnej cerze, szaroniebieskich oczach i naturalnym popielatym blondzie 7.1 to typ <b>lato</b>. Proponuje się chłodny jasny blond 8.1 lub 9.2 z perłowymi pasemkami, a unika miedzi i złota, które dają ziemisty efekt. W projekcie zapisuje się typ urody, naturalny ton, kolor docelowy i uzasadnienie wyboru.</p>
 <div class="tip">Typ „lato” i „zima” to tonacje chłodne, „wiosna” i „jesień” ciepłe. Typ zima wyróżnia się wysokim kontrastem między cerą a włosami.</div>` },
         { tytul: "Techniki koloryzacji w projekcie", tresc: `<h4>Techniki i ich efekt</h4>
 <div class="tw"><table><tr><th>Technika</th><th>Efekt</th><th>Dla kogo</th></tr>
@@ -1631,7 +1770,7 @@ window.KURSY = window.KURSY || {};
         Q("Dla typu „jesień” w projekcie fryzury zaleca się kolory:", "miedziane, rude, kasztanowe", "popielate blondy", "chłodną czerń", "platynę z fioletem", "Jesień to typ ciepły i głęboki."),
         Q("Technika, w której pasma maluje się ręcznie pędzlem dla miękkiego efektu, to:", "balejaż", "ombre", "color blocking", "pasemka przez czepek", "Balayage z franc. „zamiatanie”."),
         Q("Zielonkawe żyły na nadgarstku wskazują zwykle na tonację skóry:", "ciepłą", "chłodną", "neutralną zawsze", "nie mają związku", "Niebieskie żyły wskazują na chłodną."),
-        Q("Kontrast symultaniczny polega na tym, że:", "kolor wydaje się inny zależnie od sąsiadującego koloru", "łączy się dwa kolory ciepłe", "stosuje się tylko czerń i biel", "kolor jest jednolity", "Np. szarość przy czerwieni wydaje się zielonkawa.")
+        Q("Kontrast symultaniczny polega na tym, że:", "kolor zmienia odbiór zależnie od sąsiedniego", "łączy się wyłącznie dwa kolory ciepłe", "stosuje się tylko czerń i biel obok siebie", "kolor jest jednolity na całej fryzurze", "Np. szarość przy czerwieni wydaje się zielonkawa.")
       ]
     },
     {
@@ -1660,6 +1799,13 @@ window.KURSY = window.KURSY || {};
 <li>Odkryte wysokie czoło, włosy gładko zaczesane z przedziałkiem pośrodku, siatki z perłami, warkocze upięte wokół głowy.</li>
 <li>Modny jasny, złocisty kolor (rozjaśnianie słońcem i preparatami); we Włoszech kapelusze bez denka do rozjaśniania.</li>
 <li>Elżbietańska Anglia: drobne loki z przodu, podwyższenie nad czołem, rudy kolor na wzór królowej.</li>
+</ul>
+<h4>Ozdoby i materiały w dawnych epokach</h4>
+<ul>
+<li>Egipt: peruki utrwalane woskiem pszczelim i żywicami, pachnące olejki do pielęgnacji.</li>
+<li>Grecja i Rzym: siatki, szpile z kości i metalu, złote wstążki; Rzymianki rozjaśniały włosy mydłem galijskim.</li>
+<li>Średniowiecze: wianki, lniane czepce, welony; zakrycie włosów było znakiem statusu mężatki.</li>
+<li>Renesans: perły wplatane we włosy, siateczki z pereł i złotej nici, diademy.</li>
 </ul>
 <div class="tip">Hennin to wysokie stożkowe nakrycie głowy z końca średniowiecza, a węzeł grecki to kok na potylicy z opaską; oba bywają w pytaniach o rozpoznanie epoki.</div>` },
         { tytul: "Barok, rokoko i XIX wiek", tresc: `<h4>Barok (XVII w.)</h4>
@@ -1723,8 +1869,8 @@ window.KURSY = window.KURSY || {};
       pytania: [
         Q("Fontaź (fontange) to charakterystyczna fryzura epoki:", "baroku", "renesansu", "secesji", "lat 60. XX wieku", "Konstrukcja z koronek na stelażu nad czołem."),
         Q("Wysokie, pudrowane fryzury kobiece na stelażach to cecha:", "rokoka", "średniowiecza", "starożytnego Egiptu", "lat 20. XX wieku", "Symbolem jest Maria Antonina."),
-        Q("Peruka allonge to:", "męska peruka z długimi lokami, typowa dla baroku", "stożkowe nakrycie głowy", "kobiecy kok grecki", "krótka fryzura chłopczycy", "Moda dworu Ludwika XIV."),
-        Q("Hennin to:", "wysokie stożkowe nakrycie głowy z końca średniowiecza", "fryzura rokokowa", "rodzaj trwałej ondulacji", "warkocz egipski", "Często z welonem."),
+        Q("Peruka allonge to:", "męska peruka barokowa z długimi lokami", "stożkowe nakrycie głowy z welonem", "kobiecy kok grecki z opaską", "krótka fryzura chłopczycy z lat 20.", "Moda dworu Ludwika XIV."),
+        Q("Hennin to:", "wysokie stożkowe nakrycie głowy z XV wieku", "wysoka fryzura rokokowa na stelażu", "dawny rodzaj trwałej ondulacji", "egipska peruka z warkoczyków", "Często z welonem."),
         Q("Fryzura bob i styl „na chłopczycę” stały się modne w:", "latach 20. XX wieku", "latach 80. XX wieku", "renesansie", "baroku", "Symbol emancypacji kobiet."),
         Q("Ondulację żelazkiem (fale marcel) wynalazł:", "Marcel Grateau", "Vidal Sassoon", "Léonard", "Angelika de Fontanges", "W 1872 roku."),
         Q("Fryzura beehive (ul) jest typowa dla:", "lat 60. XX wieku", "lat 20.", "biedermeieru", "starożytnego Rzymu", "Wysoka objętość z tapirowania."),
@@ -1786,6 +1932,13 @@ window.KURSY = window.KURSY || {};
 <li><b>4- i 5-pasmowe</b>, korony z warkoczy wokół głowy, warkocze skręcane (twist).</li>
 </ul>
 <p>Po zapleceniu warkocz „rozluźnia się” (pancaking), wyciągając lekko krawędzie, co daje objętość.</p>
+<h4>Mocowanie i trwałość</h4>
+<ul>
+<li>Wsuwkę wpina się falistą stroną do głowy, zahaczając włosy z podstawy; dwie wsuwki na krzyż dają najmocniejsze połączenie.</li>
+<li>Ciężkie upięcia opiera się na mocnej podstawie, np. kucyku lub warkoczu przy nasadzie.</li>
+<li>Lakier nanosi się z odległości ok. 25-30 cm, cienkimi warstwami, a nie jednym mokrym strumieniem.</li>
+<li>Ozdoby (grzebyki, kwiaty, welon) mocuje się po zakończeniu upięcia; welon wpina się pod kokiem lub nad nim.</li>
+</ul>
 <div class="tip">Francuski: pasma nad środkiem (warkocz wtopiony), holenderski: pod środkiem (warkocz wypukły). To typowe pytanie testowe.</div>` },
         { tytul: "Fryzury ślubne, wieczorowe i postiże", tresc: `<h4>Fryzura ślubna</h4>
 <ul>
@@ -1812,11 +1965,11 @@ window.KURSY = window.KURSY || {};
         Q("Rysunek projektowy fryzury przedstawia się zwykle:", "en face, z profilu i z tyłu", "tylko z przodu", "wyłącznie z góry", "tylko w formie opisu", "Pokazuje formę w trzech wymiarach."),
         Q("Na rysunku głowy oczy leżą mniej więcej:", "w połowie wysokości głowy", "na 1/4 wysokości od góry", "tuż pod linią włosów", "na wysokości ust", "Typowy błąd to rysowanie oczu za wysoko."),
         Q("Warkocz holenderski różni się od francuskiego tym, że pasma przekłada się:", "pod środkowym pasmem", "nad środkowym pasmem", "tylko z jednej strony", "bez dobierania pasm", "Daje warkocz wypukły."),
-        Q("Fryzurę próbną przed ślubem wykonuje się, aby:", "dobrać fryzurę do sukni, welonu i sprawdzić jej trwałość", "wykonać próbę uczuleniową", "skrócić czas zabiegu do 5 minut", "zmienić kolor włosów", "Ustala się projekt i ozdoby."),
-        Q("Tupecik (topper) służy do:", "uzupełnienia przerzedzeń na czubku głowy", "całkowitego pokrycia głowy", "przedłużania końców", "ochrony włosów przed farbą", "Peruka pokrywa całą głowę."),
-        Q("Włosów syntetycznych w postiżach nie wolno zazwyczaj:", "układać zwykłą prostownicą lub lokówką", "czesać", "przechowywać na główce", "myć w letniej wodzie", "Chyba że są termoodporne."),
+        Q("Fryzurę próbną przed ślubem wykonuje się, aby:", "dobrać fryzurę do stroju i sprawdzić trwałość", "wykonać obowiązkową próbę uczuleniową", "skrócić czas zabiegu w dniu ślubu do 5 minut", "zmienić kolor włosów tydzień przed ślubem", "Ustala się projekt i ozdoby."),
+        Q("Tupecik (topper) służy do:", "uzupełnienia przerzedzeń na czubku głowy", "całkowitego pokrycia owłosionej skóry", "przedłużania końców włosów o 20 cm", "ochrony włosów przed farbą i słońcem", "Peruka pokrywa całą głowę."),
+        Q("Włosów syntetycznych w postiżach nie wolno zazwyczaj:", "układać zwykłą prostownicą lub lokówką", "czesać szczotką o rzadkich zębach", "przechowywać na styropianowej główce", "myć w letniej wodzie z szamponem", "Chyba że są termoodporne."),
         Q("Do dekoltu typu łódka najlepiej pasuje:", "wysokie upięcie", "długie rozpuszczone włosy", "bardzo niski kok na karku", "fryzura z dużą objętością na wysokości ramion", "Odsłania szyję i linię ramion."),
-        Q("Tapirowanie wykonuje się:", "od wewnętrznej strony pasm przy nasadzie dla objętości", "na końcach włosów dla połysku", "wyłącznie na mokrych włosach", "tylko na włosach syntetycznych", "Wierzch się wygładza.")
+        Q("Tapirowanie wykonuje się:", "od spodu pasm przy nasadzie, dla objętości", "na końcach włosów, dla połysku", "wyłącznie na mokrych włosach, przed suszeniem", "tylko na włosach syntetycznych w perukach", "Wierzch się wygładza.")
       ]
     }
   ]);
@@ -1849,6 +2002,14 @@ window.KURSY = window.KURSY || {};
 <p>Typ skóry jest uwarunkowany genetycznie, a <b>stany</b> (odwodnienie, wrażliwość, naczynkowość, trądzik, przebarwienia, starzenie) mogą się zmieniać. Skóra tłusta może być jednocześnie <b>odwodniona</b>.</p>
 <h4>Fototypy wg Fitzpatricka</h4>
 <p>I: bardzo jasna, zawsze się pali, nigdy nie opala; II: jasna, łatwo się pali, opala słabo; III: opala się stopniowo; IV: oliwkowa, rzadko się pali; V: ciemna; VI: bardzo ciemna. Fototyp wpływa na dobór zabiegów złuszczających i ryzyko przebarwień.</p>
+<h4>Badania aparaturowe: co mierzą</h4>
+<ul>
+<li><b>Korneometr</b>: nawilżenie warstwy rogowej; niski wynik oznacza odwodnienie.</li>
+<li><b>Sebumetr</b>: taśma przykładana do skóry; im więcej łoju, tym bardziej staje się przezroczysta.</li>
+<li><b>pH-metr</b>: zdrowa skóra ma pH ok. 4,5-5,5 (płaszcz hydrolipidowy).</li>
+<li><b>Tewametr</b>: mierzy TEWL, czyli przeznaskórkową utratę wody.</li>
+</ul>
+<p>Wyniki zapisuje się w karcie, a badanie powtarza po serii zabiegów, aby ocenić efekt.</p>
 <div class="tip">Odwodnienie to brak wody, a suchość to brak lipidów. Skóra tłusta może być odwodniona i wtedy wymaga nawilżania, nie wysuszania.</div>` },
         { tytul: "Wykwity i zmiany skórne", tresc: `<h4>Wykwity pierwotne</h4>
 <div class="tw"><table><tr><th>Wykwit</th><th>Opis</th></tr>
@@ -1895,6 +2056,14 @@ window.KURSY = window.KURSY || {};
 </ol>
 <h4>Zalecenia po zabiegach złuszczających</h4>
 <p>Unikanie słońca i solarium, krem z filtrem <b>SPF 50</b>, bez peelingów domowych i retinoidów przez kilka dni, delikatne mycie, nawilżanie i łagodzenie (pantenol, alantoina). Zabiegi kwasami i laserowe najlepiej w miesiącach o niskim nasłonecznieniu.</p>
+<h4>Ochrona przeciwsłoneczna</h4>
+<ul>
+<li>UVB odpowiada za rumień i oparzenia; wartość <b>SPF</b> mówi o ochronie przed UVB.</li>
+<li>UVA przenika przez chmury i szyby, działa przez cały rok i odpowiada głównie za fotostarzenie.</li>
+<li>Krem z filtrem nakłada się w ilości ok. 2 mg/cm² (ok. pół łyżeczki na twarz) i odnawia co ok. 2 h podczas ekspozycji.</li>
+<li>Składniki przeciwstarzeniowe: retinoidy, witamina C, peptydy, kwas hialuronowy, niacynamid.</li>
+</ul>
+<p>Kosmetolog nie wykonuje zabiegów inwazyjnych, a zmiany podejrzane (rosnące, krwawiące, nieregularne znamiona) kieruje do dermatologa.</p>
 <div class="tip">Karta zabiegowa jest dokumentem: chroni klienta i kosmetologa, a na egzaminie ocenia się jej kompletność (wywiad, diagnoza, przebieg, zalecenia).</div>` }
       ],
       pytania: [
@@ -1902,8 +2071,8 @@ window.KURSY = window.KURSY || {};
         Q("Skóra mieszana charakteryzuje się:", "tłustą strefą T i suchymi lub normalnymi policzkami", "równomiernym przetłuszczaniem całej twarzy", "brakiem porów", "obecnością teleangiektazji na całej twarzy", "Strefa T to czoło, nos i broda."),
         Q("Krosta to wykwit:", "wypełniony ropą", "wypełniony płynem surowiczym", "płaski, zmieniający tylko barwę", "powstały z drapania", "Pęcherzyk zawiera płyn surowiczy."),
         Q("Nadżerka różni się od owrzodzenia tym, że:", "jest płytsza i goi się bez blizny", "zawsze krwawi", "jest wykwitem pierwotnym", "zawiera ropę", "Owrzodzenie pozostawia bliznę."),
-        Q("Bezwzględnym przeciwwskazaniem do zabiegu na twarzy jest:", "czynna opryszczka w miejscu zabiegu", "skóra sucha", "skóra mieszana", "fototyp II", "Grozi rozsianiem zakażenia."),
-        Q("Przy trądziku różowatym należy unikać:", "zabiegów rozgrzewających i ostrych peelingów", "kremów łagodzących", "filtrów SPF", "masek chłodzących", "Ciepło nasila rumień."),
+        Q("Bezwzględnym przeciwwskazaniem do zabiegu na twarzy jest:", "czynna opryszczka w miejscu zabiegu", "skóra sucha z drobnymi zmarszczkami", "skóra mieszana z tłustą strefą T", "fototyp II wg Fitzpatricka", "Grozi rozsianiem zakażenia."),
+        Q("Przy trądziku różowatym należy unikać:", "ciepła i ostrych peelingów ziarnistych", "kremów łagodzących z alantoiną", "filtrów SPF 50 w okresie letnim", "masek chłodzących i algowych", "Ciepło nasila rumień."),
         Q("Fotostarzenie wywołuje przede wszystkim:", "promieniowanie UVA", "niedobór wody pitnej", "masaż twarzy", "sen na plecach", "UVA wnika głęboko do skóry właściwej."),
         Q("Zmarszczki z odwodnienia:", "ustępują po nawilżeniu skóry", "są zawsze głębokimi bruzdami", "powstają od skurczów mięśni", "wymagają leczenia chirurgicznego", "To drobna siateczka w warstwie rogowej.")
       ]
@@ -1929,6 +2098,15 @@ window.KURSY = window.KURSY || {};
 <tr><td>łagodzące</td><td>zmniejszają podrażnienie</td><td>alantoina, bisabolol, pantenol, wąkrota azjatycka</td></tr></table></div>
 <h4>Emulsje</h4>
 <p><b>O/W (olej w wodzie)</b>: lekkie, szybko się wchłaniają, do skóry tłustej i normalnej, na dzień. <b>W/O (woda w oleju)</b>: bogate, ochronne, do skóry suchej, na zimę i noc.</p>
+<h4>Przykład odczytu składu</h4>
+<p>Skład: <b>Aqua, Glycerin, Caprylic/Capric Triglyceride, Cetearyl Alcohol, Sodium Hyaluronate, Panthenol, Phenoxyethanol, Parfum, Limonene</b>.</p>
+<ul>
+<li>Woda i gliceryna na początku: krem nawilżający, emulsja O/W.</li>
+<li>Caprylic/Capric Triglyceride to lekki emolient, a Cetearyl Alcohol to emulgator i zagęstnik (alkohol tłuszczowy, który nie wysusza jak Alcohol Denat.).</li>
+<li>Sodium Hyaluronate to humektant, Panthenol składnik nawilżający i łagodzący.</li>
+<li>Phenoxyethanol to konserwant, a Parfum i Limonene to zapach i alergen, więc produkt nie jest bezzapachowy.</li>
+</ul>
+<p>Pułapka: słowo „alcohol” w nazwie nie zawsze oznacza alkohol etylowy.</p>
 <div class="tip">Mocznik do ok. 10% nawilża, a w wyższych stężeniach działa keratolitycznie (złuszczająco), np. w kremach na pięty.</div>` },
         { tytul: "Kwasy i peelingi chemiczne", tresc: `<h4>Rodzaje kwasów</h4>
 <div class="tw"><table><tr><th>Kwas</th><th>Grupa</th><th>Właściwości</th></tr>
@@ -1955,6 +2133,8 @@ window.KURSY = window.KURSY || {};
 </ol>
 <h4>Przeciwwskazania</h4>
 <p>Opryszczka czynna, uszkodzenia skóry, świeża opalenizna, retinoidy doustne (izotretynoina) w ciągu ostatnich miesięcy, ciąża (przy silnych kwasach i salicylowym), alergia na kwas (np. salicylowy przy uczuleniu na aspirynę).</p>
+<h4>Seria i dobór kwasu</h4>
+<p>Zabiegi kwasami wykonuje się serią, zwykle 4-8 zabiegów co 7-14 dni, od jesieni do wczesnej wiosny. Przed serią klient może stosować w domu łagodne preparaty z kwasami, które przygotowują skórę. Na skórze naczyniowej wybiera się PHA lub kwas migdałowy, przy trądziku salicylowy lub pirogronowy, przy przebarwieniach glikolowy i migdałowy, zawsze z ochroną SPF.</p>
 <div class="tip">Kwas migdałowy jest polecany dla skóry wrażliwej i przy ciemniejszych fototypach, bo ma dużą cząsteczkę i działa łagodnie.</div>` },
         { tytul: "Substancje aktywne i ochrona przeciwsłoneczna", tresc: `<h4>Substancje aktywne</h4>
 <div class="tw"><table><tr><th>Substancja</th><th>Działanie</th><th>Uwagi</th></tr>
@@ -1983,7 +2163,7 @@ window.KURSY = window.KURSY || {};
         Q("Kwas salicylowy (BHA) poleca się przede wszystkim przy:", "trądziku i łojotoku", "skórze bardzo suchej bez zmian", "zmarszczkach z odwodnienia", "przy uczuleniu na aspirynę", "Jest rozpuszczalny w tłuszczach."),
         Q("Kwas o najmniejszej cząsteczce z grupy AHA, wnikający najgłębiej, to kwas:", "glikolowy", "migdałowy", "mlekowy", "laktobionowy", "Daje silne efekty, ale może podrażniać."),
         Q("Siła działania peelingu kwasowego rośnie, gdy:", "pH preparatu jest niższe", "pH preparatu jest wyższe", "czas kontaktu jest krótszy", "skóra jest nawilżona kremem tłustym", "Niższe pH to więcej wolnego kwasu."),
-        Q("Symbol UVA w kółku oznacza, że:", "ochrona przed UVA wynosi co najmniej 1/3 deklarowanego SPF", "produkt nie chroni przed UVB", "kosmetyk jest wodoodporny", "SPF wynosi 100", "Wymóg europejskiego zalecenia."),
+        Q("Symbol UVA w kółku oznacza, że:", "ochrona UVA to min. 1/3 deklarowanego SPF", "produkt nie chroni przed promieniami UVB", "kosmetyk jest wodoodporny przez 80 minut", "filtr ma SPF co najmniej 50+", "Wymóg europejskiego zalecenia."),
         Q("Filtry mineralne to m.in.:", "tlenek cynku i dwutlenek tytanu", "retinol i niacynamid", "gliceryna i mocznik", "parabeny", "Odbijają i rozpraszają promieniowanie."),
         Q("Emulsja typu W/O jest polecana szczególnie dla skóry:", "suchej, na zimę i noc", "tłustej na dzień latem", "trądzikowej z łojotokiem", "zawsze pod makijaż matujący", "Zawiera ciągłą fazę olejową.")
       ]
@@ -2073,7 +2253,7 @@ window.KURSY = window.KURSY || {};
         Q("Po dezynkrustacji zmienia się biegunowość na anodę, aby:", "przywrócić kwaśne pH skóry", "zwiększyć zasadowość", "wprowadzić witaminę C", "rozgrzać skórę", "Anoda ściąga i uspokaja."),
         Q("W jonoforezie substancję o ładunku ujemnym wprowadza się:", "z katody (-)", "z anody (+)", "bez prądu", "przez wapozon", "Jednoimienne ładunki się odpychają."),
         Q("Bezwzględnym przeciwwskazaniem do galwanizacji jest:", "rozrusznik serca", "skóra tłusta", "rozszerzone pory", "skóra szara", "Prąd może zakłócić działanie urządzenia."),
-        Q("Peeling kawitacyjny wykorzystuje:", "ultradźwięki ok. 25-30 kHz na wilgotnej skórze", "prąd stały", "kryształki korundu", "parę wodną z ozonem", "Kawitacja usuwa zrogowaciały naskórek."),
+        Q("Peeling kawitacyjny wykorzystuje:", "ultradźwięki 25-30 kHz na mokrej skórze", "prąd stały o niskim natężeniu i żel", "kryształki korundu i podciśnienie", "parę wodną z ozonem pod ciśnieniem", "Kawitacja usuwa zrogowaciały naskórek."),
         Q("W sonoforezie na twarzy stosuje się zwykle częstotliwość:", "3 MHz", "50 Hz", "25 kHz", "1 kHz", "3 MHz działa płyciej niż 1 MHz."),
         Q("Mikrodermabrazji nie wykonuje się przy:", "aktywnym trądziku ropnym", "skórze szarej", "płytkich bliznach", "rozszerzonych porach", "Mogłaby rozsiać zakażenie."),
         Q("Wapozonu nie stosuje się przy:", "cerze naczyniowej", "skórze tłustej", "zaskórnikach", "skórze zanieczyszczonej", "Ciepło rozszerza naczynka.")
@@ -2105,6 +2285,12 @@ window.KURSY = window.KURSY || {};
 <li>Nie wyciska się krost zapalnych, cyst i zmian ropnych w głębi skóry.</li>
 <li>Czas ograniczony (ok. 15-20 min), aby nie traumatyzować skóry; po zabiegu dezynfekcja, darsonwalizacja, maska ściągająca i łagodząca.</li>
 </ul>
+<h4>Dezynkrustacja i darsonwalizacja</h4>
+<ul>
+<li><b>Dezynkrustacja</b>: prąd galwaniczny z roztworem zasadowym pod elektrodą czynną (biegun ujemny); zmydla łój i rozpulchnia zaskórniki przed oczyszczaniem.</li>
+<li><b>Darsonwalizacja</b>: prąd wysokiej częstotliwości z elektrodą szklaną; działa bakteriobójczo (ozon) i przyspiesza gojenie, dlatego wykonuje się ją po oczyszczaniu.</li>
+<li>Przeciwwskazania do zabiegów prądowych: rozrusznik serca, ciąża, metalowe implanty w okolicy zabiegu, padaczka.</li>
+</ul>
 <div class="tip">Demakijaż zaczyna się od oczu i ust, a dopiero potem twarzy. Typowa pułapka w pytaniach o kolejność.</div>` },
         { tytul: "Masaż kosmetyczny twarzy", tresc: `<h4>Zasady</h4>
 <ul>
@@ -2128,6 +2314,14 @@ window.KURSY = window.KURSY || {};
 </ul>
 <h4>Przeciwwskazania do masażu</h4>
 <p>Stany zapalne i ropne, trądzik ropny i różowaty (masaż klasyczny), opryszczka, uszkodzenia skóry, gorączka, świeże zabiegi medycyny estetycznej (np. wypełniacze w ciągu ok. 2 tygodni), cera naczyniowa (intensywny masaż), nowotwory, zakrzepica.</p>
+<h4>Kierunki ruchów na twarzy</h4>
+<ul>
+<li>Czoło: od środka do skroni.</li>
+<li>Okolica oczu: po górnej powiece od wewnętrznego do zewnętrznego kącika, po dolnej od zewnętrznego do wewnętrznego, bardzo delikatnie.</li>
+<li>Policzki: od kącików ust i skrzydełek nosa w stronę uszu.</li>
+<li>Broda i żuchwa: od środka brody do płatków uszu.</li>
+<li>Szyja przy drenażu: w dół, w kierunku węzłów nadobojczykowych.</li>
+</ul>
 <div class="tip">Masaż Jacquet to szczypanie dla skóry tłustej, a drenaż limfatyczny to delikatne ruchy dla obrzęków i skóry naczyniowej.</div>` },
         { tytul: "Maski kosmetyczne i dobór zabiegu", tresc: `<h4>Rodzaje masek</h4>
 <div class="tw"><table><tr><th>Maska</th><th>Cechy</th><th>Dla skóry</th></tr>
@@ -2150,6 +2344,8 @@ window.KURSY = window.KURSY || {};
 <tr><td>cera naczyniowa</td><td>peeling enzymatyczny, ampułka z witaminą C i rutyną, drenaż, maska chłodząca algowa</td></tr>
 <tr><td>skóra dojrzała</td><td>mikrodermabrazja, peptydy, masaż liftingujący, maska termomodelująca</td></tr>
 <tr><td>przebarwienia</td><td>seria kwasów (migdałowy, glikolowy) jesienią i zimą, wit. C, SPF 50</td></tr></table></div>
+<h4>Przygotowanie maski algowej</h4>
+<p>Proszek miesza się z wodą w proporcji podanej przez producenta, szybko, do uzyskania jednolitej masy bez grudek, i nakłada grubą warstwą w ciągu ok. 1-2 minut, zanim zastygnie. Pod maskę algową nakłada się ampułkę lub serum, bo okluzja zwiększa ich wnikanie. Maskę zdejmuje się w całości, a resztki usuwa wilgotnym wacikiem i tonikiem.</p>
 <div class="tip">Maska ciepła termomodelująca jest przeciwwskazana przy cerze naczyniowej, tam stosuje się maski chłodzące.</div>` }
       ],
       pytania: [
@@ -2217,6 +2413,12 @@ window.KURSY = window.KURSY || {};
 </ul>
 <h4>Higiena makijażu</h4>
 <p>Produkty pobiera się szpatułką na paletkę, tusz jednorazowymi szczoteczkami, kredki temperuje przed każdym klientem; pędzle myje i dezynfekuje. Nie wykonuje się makijażu na skórze z opryszczką lub zapaleniem spojówek.</p>
+<h4>Dobór podkładu</h4>
+<ul>
+<li>Odcień sprawdza się na linii żuchwy przy świetle dziennym; dobrze dobrany podkład „znika” na skórze.</li>
+<li>Skóra tłusta: podkład matujący, beztłuszczowy; skóra sucha: nawilżający, rozświetlający.</li>
+<li>Podkład nakłada się gąbką, pędzlem lub palcami od środka twarzy na zewnątrz, roztapiając go przy linii włosów i żuchwy.</li>
+</ul>
 <div class="tip">Zielony korektor neutralizuje czerwień, fioletowy żółtawy koloryt, a łososiowy sińce. To ta sama zasada barw dopełniających co w koloryzacji.</div>` },
         { tytul: "Rodzaje makijażu i dobór kolorów", tresc: `<h4>Makijaż wg okazji</h4>
 <div class="tw"><table><tr><th>Makijaż</th><th>Cechy</th></tr>
@@ -2242,12 +2444,12 @@ window.KURSY = window.KURSY || {};
       pytania: [
         Q("Próbę uczuleniową przed henną wykonuje się:", "co najmniej 48 h przed zabiegiem", "bezpośrednio przed zabiegiem", "po zabiegu", "nie jest potrzebna", "Wynik ocenia się po 48 h."),
         Q("Najczęściej stosowany oksydant do henny brwi i rzęs to:", "3%", "12%", "9%", "40%", "Zgodnie z instrukcją producenta."),
-        Q("Początek brwi wyznacza linia pionowa przechodząca przez:", "skrzydełko nosa i wewnętrzny kącik oka", "środek źrenicy", "zewnętrzny kącik oka", "kącik ust", "Koniec wyznacza linia przez zewnętrzny kącik oka."),
+        Q("Początek brwi wyznacza linia pionowa przechodząca przez:", "skrzydełko nosa i wewnętrzny kącik oka", "skrzydełko nosa i środek źrenicy", "skrzydełko nosa i zewnętrzny kącik oka", "kącik ust i środek źrenicy", "Koniec wyznacza linia przez zewnętrzny kącik oka."),
         Q("Włoski brwi podczas regulacji usuwa się:", "zgodnie z kierunkiem wzrostu", "przeciwnie do kierunku wzrostu", "nożyczkami przy skórze", "maszynką", "Zmniejsza to ból i ryzyko wrastania."),
         Q("Zaczerwienienia na twarzy neutralizuje korektor w kolorze:", "zielonym", "fioletowym", "różowym", "pomarańczowym", "Zieleń jest dopełniająca do czerwieni."),
         Q("Ciemniejszy kolor w konturowaniu twarzy:", "wysmukla i cofa", "wysuwa i powiększa", "rozświetla", "nie zmienia kształtu", "Jasny kolor wysuwa."),
         Q("Przy oczach blisko osadzonych jasny cień nakłada się:", "w wewnętrznym kąciku", "w zewnętrznym kąciku", "tylko pod łukiem brwiowym", "na całej powiece ruchomej ciemnym kolorem", "Optycznie oddala oczy od siebie."),
-        Q("W makijażu fotograficznym unika się:", "pudrów z SPF i drobinek odbijających flesz", "matowego wykończenia", "konturowania", "bazy pod makijaż", "Mogą dać efekt białej twarzy na zdjęciach.")
+        Q("W makijażu fotograficznym unika się:", "pudrów z SPF i mocnych drobinek", "matowego wykończenia podkładu", "konturowania kości policzkowych", "bazy wygładzającej pod makijaż", "Mogą dać efekt białej twarzy na zdjęciach.")
       ]
     }
   ]);
@@ -2375,6 +2577,13 @@ window.KURSY = window.KURSY || {};
 <tr><td>agregat uprawowy</td><td>kilka operacji w jednym przejeździe</td></tr></table></div>
 <h4>Uprawa uproszczona</h4>
 <p>Uprawa bezorkowa (kultywator głęboki, brona talerzowa) i siew bezpośredni ograniczają erozję, koszty i straty wody, ale zwiększają presję chwastów i chorób przenoszonych na resztkach; wymagają dobrej ochrony herbicydowej.</p>
+<h4>Terminy w praktyce</h4>
+<ul>
+<li>Pszenica ozima po rzepaku: uprawa pożniwna zaraz po zbiorze rzepaku (lipiec), orka siewna na początku września, siew ok. 20-25 września.</li>
+<li>Burak cukrowy po zbożu: uprawa pożniwna i międzyplon, orka zimowa w listopadzie, wiosną włókowanie i agregat uprawowy.</li>
+<li>Gleb ciężkich nie uprawia się, gdy są zbyt mokre: powstają bryły i zaskorupienie.</li>
+</ul>
+<p>Każde zbędne przejście maszyny zwiększa koszty i ugniata glebę, dlatego dąży się do łączenia zabiegów w agregatach.</p>
 <div class="tip">Orka zimowa zostaje w ostrej skibie, a orka siewna musi mieć czas na osiadanie gleby przed siewem ozimin.</div>` },
         { tytul: "Norma wysiewu i terminy siewu", tresc: `<h4>Wzór</h4>
 <p><b>Norma wysiewu (kg/ha) = obsada (szt./m²) × MTZ (g) / WU (%)</b></p>
@@ -2399,6 +2608,14 @@ window.KURSY = window.KURSY || {};
 <tr><td>ziemniak (sadzenie)</td><td>gdy gleba ma ok. 8 °C, kwiecień</td><td>ok. 8-10 cm</td><td>ok. 4-5 bulw/m²</td></tr></table></div>
 <h4>Przygotowanie materiału siewnego</h4>
 <p>Kwalifikowany materiał siewny (etykieta, stopień kwalifikacji) zaprawia się zaprawą nasienną przeciw chorobom grzybowym (np. śnieć, fuzarioza) i szkodnikom. Opóźniony siew wymaga zwiększenia normy (gorsze krzewienie).</p>
+<h4>Drugi przykład: rzepak</h4>
+<p>Obsada 50 roślin/m², MTZ 5 g, czystość 99%, zdolność kiełkowania 95%.</p>
+<ul>
+<li>WU = 99 × 95 / 100 = 94,05%;</li>
+<li>norma = 50 × 5 / 94,05 = <b>2,66 kg/ha</b>, czyli ok. 2,7 kg/ha;</li>
+<li>nasiona odmian mieszańcowych kupuje się często w jednostkach siewnych (określona liczba nasion), a nie w kilogramach.</li>
+</ul>
+<p>Pułapka obliczeniowa: MTZ podaje się w gramach, a wynik ze wzoru wychodzi od razu w kg/ha, bez dodatkowego przeliczania.</p>
 <div class="tip">Wynik normy wysiewu podaje się w kg/ha. Jeśli WU wynosi 100%, norma = obsada × MTZ / 100.</div>` },
         { tytul: "Płodozmian, przedplony i zbiór", tresc: `<h4>Zasady płodozmianu</h4>
 <ul>
@@ -2421,17 +2638,20 @@ window.KURSY = window.KURSY || {};
 <li>Ziarno do przechowania: wilgotność do ok. 14%, oczyszczone, w czystym magazynie, z kontrolą temperatury.</li>
 <li>Kukurydza na kiszonkę: dojrzałość woskowa, sucha masa ok. 30-35%.</li>
 </ul>
+<h4>Przykładowe zmianowanie</h4>
+<p>Zmianowanie 4-polowe na glebie średniej: <b>ziemniak lub burak, pszenica ozima, groch, jęczmień jary z wsiewką koniczyny</b>. Okopowa uprawiana na oborniku zostawia glebę czystą i zasobną, groch dostarcza azot, a wsiewka chroni glebę po zbiorze. Zboża zajmują 50% powierzchni, co ogranicza choroby podstawy źdźbła.</p>
+<p>Monokultura (ta sama roślina co roku) zwiększa presję chorób i szkodników, a w ramach warunkowości obowiązuje norma zmianowania upraw na gruntach ornych.</p>
 <div class="tip">Rośliny strączkowe są bardzo dobrym przedplonem, bo pozostawiają w glebie azot związany z powietrza.</div>` }
       ],
       pytania: [
         Q("Norma wysiewu przy obsadzie 400 szt./m², MTZ 45 g i WU 90% wynosi:", "200 kg/ha", "180 kg/ha", "45 kg/ha", "400 kg/ha", "400 × 45 / 90 = 200."),
-        Q("Wartość użytkowa nasion to:", "czystość × zdolność kiełkowania / 100", "MTZ × obsada", "masa nasion w worku", "liczba nasion w 1 kg", "Np. 98 × 92 / 100 = 90,2%."),
+        Q("Wartość użytkowa nasion to:", "czystość × zdolność kiełkowania / 100", "MTZ × obsada roślin na 1 m² / 100", "masa nasion w worku / czystość", "liczba nasion w 1 kg × kiełkowanie", "Np. 98 × 92 / 100 = 90,2%."),
         Q("Orkę zimową pozostawia się na zimę:", "w ostrej skibie", "zwałowaną i zbronowaną", "przykrytą folią", "obsianą rzepakiem", "Zatrzymuje śnieg i wodę."),
         Q("Głębokość siewu rzepaku ozimego wynosi ok.:", "1,5-2 cm", "5-6 cm", "8-10 cm", "0,2 cm", "Drobne nasiona sieje się płytko."),
         Q("Podorywka wykonywana jest:", "bezpośrednio po zbiorze przedplonu", "wiosną przed siewem jarych", "w zimie na zmarzniętą glebę", "tylko na łąkach", "Przerywa parowanie i niszczy chwasty."),
         Q("Złym przedplonem dla pszenicy ozimej jest:", "pszenica", "rzepak", "groch", "koniczyna", "Sprzyja chorobom podstawy źdźbła."),
         Q("Zboża zbiera się kombajnem w fazie:", "dojrzałości pełnej", "dojrzałości mlecznej", "kwitnienia", "krzewienia", "Wilgotność ziarna ok. 14-15%."),
-        Q("Rośliny wiążące azot atmosferyczny dzięki bakteriom brodawkowym to:", "strączkowe i motylkowe", "zboża", "okopowe", "oleiste", "Np. groch, łubin, koniczyna.")
+        Q("Rośliny wiążące azot atmosferyczny dzięki bakteriom brodawkowym to:", "strączkowe i motylkowe", "zboża ozime i jare", "okopowe i korzeniowe", "oleiste i kapustne", "Np. groch, łubin, koniczyna.")
       ]
     },
     {
@@ -2460,6 +2680,14 @@ window.KURSY = window.KURSY || {};
 <tr><td>ziemniak</td><td>zaraza ziemniaka, alternarioza, parch</td><td>stonka ziemniaczana</td></tr>
 <tr><td>rzepak</td><td>sucha zgnilizna, zgnilizna twardzikowa, kiła</td><td>słodyszek, chowacze, pchełki</td></tr>
 <tr><td>burak</td><td>chwościk, mączniak</td><td>mątwik, śmietka</td></tr></table></div>
+<h4>Zasady stosowania środków</h4>
+<ul>
+<li>Stosuje się wyłącznie środki zarejestrowane, zgodnie z etykietą: dawka, termin, faza rozwojowa rośliny, liczba zabiegów.</li>
+<li>Opryskiwacz musi mieć aktualne badanie techniczne, a operator ważne szkolenie z ochrony roślin.</li>
+<li>Każdy zabieg ewidencjonuje się: data, uprawa, powierzchnia, środek, dawka, przyczyna zabiegu.</li>
+<li>Opryskuje się przy wietrze do ok. 3 m/s, poza okresem lotu pszczół i z zachowaniem odległości od wód.</li>
+<li><b>Karencja</b> to czas od zabiegu do zbioru, a <b>prewencja</b> to czas, w którym na pole nie wpuszcza się ludzi i zwierząt.</li>
+</ul>
 <div class="tip">Integrowana ochrona nie zakazuje chemii, ale wymaga uzasadnienia zabiegu (np. przekroczenie progu) i wcześniejszego wykorzystania metod niechemicznych.</div>` },
         { tytul: "Kalibracja opryskiwacza i przygotowanie cieczy", tresc: `<h4>Wzór na dawkę cieczy</h4>
 <p><b>Q (l/ha) = 600 × q / (v × b)</b></p>
@@ -2510,7 +2738,7 @@ window.KURSY = window.KURSY || {};
       ],
       pytania: [
         Q("Dawka cieczy przy q = 1,2 l/min, v = 6 km/h i b = 0,5 m wynosi:", "240 l/ha", "120 l/ha", "360 l/ha", "60 l/ha", "600 × 1,2 / (6 × 0,5) = 240."),
-        Q("Okres karencji to:", "minimalny czas od ostatniego zabiegu do zbioru rośliny", "czas, w którym nie wolno wchodzić na pole", "czas działania środka", "termin ważności środka", "Prewencja dotyczy przebywania na polu."),
+        Q("Okres karencji to:", "czas od ostatniego zabiegu do zbioru rośliny", "czas, w którym nie wolno wchodzić na pole", "czas skutecznego działania środka na roślinie", "termin ważności środka od daty produkcji", "Prewencja dotyczy przebywania na polu."),
         Q("Integrowana ochrona roślin jest obowiązkowa w Polsce od:", "1 stycznia 2014 r.", "1 maja 2004 r.", "1 stycznia 2023 r.", "nie jest obowiązkowa", "Wynika z dyrektywy UE."),
         Q("Zabiegu opryskiwania nie wykonuje się przy prędkości wiatru powyżej:", "4 m/s", "10 m/s", "15 m/s", "1 km/h", "Grozi znoszeniem cieczy."),
         Q("Środki niebezpieczne dla pszczół stosuje się:", "po zakończeniu lotu pszczół", "w południe", "rano przed lotem pszczół w pełnym kwitnieniu", "w czasie deszczu", "Najczęściej wieczorem."),
@@ -2596,10 +2824,10 @@ window.KURSY = window.KURSY || {};
       pytania: [
         Q("Ciąża lochy trwa około:", "114 dni", "150 dni", "280 dni", "21 dni", "3 miesiące, 3 tygodnie, 3 dni."),
         Q("Inkubacja jaj kurzych trwa:", "21 dni", "28 dni", "14 dni", "35 dni", "Kaczka i indyczka ok. 28 dni."),
-        Q("Najpewniejszym objawem rui u krowy jest:", "stanie przy obskakiwaniu przez inne zwierzęta", "spadek apetytu", "wzrost mleczności", "kaszel", "Tzw. odruch tolerancji."),
+        Q("Najpewniejszym objawem rui u krowy jest:", "tolerowanie obskakiwania przez inne krowy", "wyraźny spadek apetytu i ruminacji", "nagły wzrost wydajności mlecznej", "kaszel i podwyższona temperatura", "Tzw. odruch tolerancji."),
         Q("Krowę zasusza się przed wycieleniem na około:", "6-8 tygodni", "1 tydzień", "4 miesiące", "nie zasusza się", "Wymię się regeneruje."),
-        Q("Siarę cielę powinno otrzymać:", "jak najszybciej po urodzeniu, w ciągu 1-2 h", "po 3 dniach", "po tygodniu", "nie potrzebuje siary", "Zawiera przeciwciała."),
-        Q("Kwasica żwacza jest skutkiem:", "nadmiaru pasz treściwych i niedoboru włókna", "nadmiaru siana", "pojenia czystą wodą", "wypasu na pastwisku", "Fermentacja skrobi obniża pH żwacza."),
+        Q("Siarę cielę powinno otrzymać:", "jak najszybciej po urodzeniu, w ciągu 1-2 h", "dopiero po 3 dniach od urodzenia", "po tygodniu, gdy żwacz się rozwinie", "po 12-24 h, gdy cielę obeschnie", "Zawiera przeciwciała."),
+        Q("Kwasica żwacza jest skutkiem:", "nadmiaru pasz treściwych, braku włókna", "nadmiaru siana i słomy w dawce", "pojenia czystą, chłodną wodą", "wypasu na pastwisku z koniczyną", "Fermentacja skrobi obniża pH żwacza."),
         Q("Minimalna powierzchnia kojca dla tucznika powyżej 110 kg wynosi:", "1,0 m²", "0,40 m²", "0,15 m²", "2,5 m²", "Dla 85-110 kg 0,65 m²."),
         Q("Wysoka liczba komórek somatycznych w mleku świadczy o:", "zapaleniu wymienia", "wysokiej zawartości tłuszczu", "dobrym żywieniu", "niskiej temperaturze mleka", "Limit to 400 000/ml.")
       ]
@@ -2654,6 +2882,13 @@ window.KURSY = window.KURSY || {};
 <p>Tarczowy (odśrodkowy) lub pneumatyczny. Szerokość roboczą i nakładanie się pasów ustala się wg tabel producenta dla danego nawozu (gęstość, granulacja); dawkę reguluje zasuwą i prędkością. Kontrola równomierności tacami testowymi. Przy granicach pola i wodach stosuje się rozsiew graniczny.</p>
 <h4>Opryskiwacz polowy</h4>
 <p>Zbiornik, pompa, zawór regulacyjny z manometrem, filtry, belka z rozpylaczami (wysokość ok. 50 cm nad roślinami przy rozstawie 50 cm). Rozpylacze płaskostrumieniowe standardowe, eżektorowe (grube krople, mniejsze znoszenie). Kalibracja według wzoru na wydatek cieczy.</p>
+<h4>Obsługa i bezpieczeństwo maszyn</h4>
+<ul>
+<li>Wał przegubowo-teleskopowy musi mieć sprawną osłonę zabezpieczoną łańcuszkami przed obracaniem.</li>
+<li>Przed regulacją lub czyszczeniem wyłącza się WOM i silnik, a maszynę opuszcza na ziemię.</li>
+<li>Ciśnienie w oponach i obciążniki dobiera się do maszyny, aby ciągnik zachował sterowność.</li>
+<li>Po sezonie maszyny myje się, konserwuje i przechowuje pod dachem.</li>
+</ul>
 <div class="tip">Próba kręconą pozwala sprawdzić dawkę wysiewu przed wyjazdem w pole; wynik z 1/40 ha mnoży się przez 40.</div>` },
         { tytul: "Maszyny do zbioru i BHP", tresc: `<h4>Kombajn zbożowy</h4>
 <ul>
@@ -2688,8 +2923,8 @@ window.KURSY = window.KURSY || {};
         Q("Wynik próby kręconej z powierzchni 1/40 ha wynosi 5 kg. Dawka wysiewu to:", "200 kg/ha", "125 kg/ha", "40 kg/ha", "5 kg/ha", "5 × 40 = 200."),
         Q("Pług obracalny pozwala:", "orać bez tworzenia zagonów i rozorywek", "wysiewać nasiona", "uprawiać bez odwracania gleby", "zbierać ziemniaki", "Skiby odkładane są w jedną stronę."),
         Q("W kombajnie zbożowym za oddzielenie ziarna od słomy odpowiadają:", "wytrząsacze", "nagarniacz", "rozdrabniacz", "heder", "Czystość zapewnia zespół czyszczący."),
-        Q("Zapchanie maszyny usuwa się:", "przy wyłączonym silniku i zatrzymanych zespołach", "w czasie pracy na niskich obrotach", "ręką przy włączonym WOM", "drągiem w trakcie jazdy", "Podstawowa zasada BHP."),
-        Q("Kondycjoner w kosiarce służy do:", "zgniatania łodyg dla szybszego schnięcia", "zbierania pokosu w wały", "owijania bel folią", "rozdrabniania kukurydzy", "Przyspiesza suszenie siana.")
+        Q("Zapchanie maszyny usuwa się:", "po wyłączeniu silnika i zatrzymaniu zespołów", "w czasie pracy na niskich obrotach silnika", "ręką przy włączonym, ale wolnym WOM", "drągiem w trakcie powolnej jazdy", "Podstawowa zasada BHP."),
+        Q("Kondycjoner w kosiarce służy do:", "zgniatania łodyg dla szybszego schnięcia", "zgrabiania pokosu w wały do prasy", "owijania bel folią kiszonkarską", "rozdrabniania kukurydzy na kiszonkę", "Przyspiesza suszenie siana.")
       ]
     }
   ]);
@@ -2721,6 +2956,8 @@ window.KURSY = window.KURSY || {};
 <li><b>Wydajność pracy</b> = produkcja / nakład pracy (np. t na roboczogodzinę).</li>
 <li><b>Produktywność ziemi</b> = produkcja na 1 ha użytków rolnych.</li>
 </ul>
+<h4>Nadwyżka bezpośrednia</h4>
+<p><b>NB = wartość produkcji (z dopłatami związanymi z produkcją) - koszty bezpośrednie</b>. Przykład: pszenica 7 t/ha × 900 zł/t = 6300 zł, koszty bezpośrednie 3200 zł/ha, NB = <b>3100 zł/ha</b>. NB służy do porównywania opłacalności różnych działalności w gospodarstwie, ale nie uwzględnia kosztów pośrednich, więc nie jest zyskiem.</p>
 <div class="tip">Koszty stałe nie zmieniają się przy wzroście produkcji, dlatego większa skala obniża koszt jednostkowy (efekt skali).</div>` },
         { tytul: "Nadwyżka bezpośrednia i dochód", tresc: `<h4>Nadwyżka bezpośrednia (NB)</h4>
 <p><b>NB = wartość produkcji (z płatnościami związanymi z daną działalnością) - koszty bezpośrednie</b>. Służy do porównywania opłacalności działalności i wyboru struktury produkcji.</p>
@@ -2821,6 +3058,11 @@ window.KURSY = window.KURSY || {};
 <tr><td>współpraca, grupy producentów, LEADER</td><td>organizacja rynku, rozwój lokalny</td></tr></table></div>
 <h4>Rolnictwo ekologiczne</h4>
 <p>Zakaz syntetycznych nawozów i środków ochrony roślin oraz GMO. Gospodarstwo podlega kontroli <b>jednostki certyfikującej</b> co najmniej raz w roku. Okres konwersji: zwykle <b>2 lata</b> dla upraw jednorocznych i łąk, <b>3 lata</b> dla upraw wieloletnich (sady). Produkty oznacza się logo UE (euroliść) i numerem jednostki certyfikującej.</p>
+<h4>I filar a II filar</h4>
+<div class="tw"><table><tr><th>I filar</th><th>II filar</th></tr>
+<tr><td>płatności bezpośrednie wypłacane co roku: podstawowe wsparcie dochodów, płatność redystrybucyjna, dla młodych rolników, ekoschematy, płatności związane z produkcją</td><td>rozwój obszarów wiejskich: inwestycje, premie, ONW, rolnictwo ekologiczne, działania środowiskowe</td></tr>
+<tr><td>finansowany w całości z budżetu UE</td><td>współfinansowany z budżetu krajowego</td></tr></table></div>
+<p>Wnioski o płatności składa się w ARiMR przez aplikację eWniosekPlus, w terminie ogłaszanym co roku, zwykle wiosną.</p>
 <div class="tip">Strefy buforowe wzdłuż cieków i zakaz wypalania to przykłady norm GAEC, czyli elementu warunkowości.</div>` },
         { tytul: "Instytucje i obowiązki rolnika", tresc: `<h4>Instytucje</h4>
 <div class="tw"><table><tr><th>Instytucja</th><th>Zadania</th></tr>
@@ -2850,7 +3092,7 @@ window.KURSY = window.KURSY || {};
       ],
       pytania: [
         Q("Płatności bezpośrednie w Polsce obsługuje:", "ARiMR", "KRUS", "KOWR", "PIORiN", "Agencja Restrukturyzacji i Modernizacji Rolnictwa."),
-        Q("Ekoschematy to:", "dobrowolne, dodatkowo płatne praktyki korzystne dla środowiska", "obowiązkowe normy GAEC", "rodzaj podatku rolnego", "kredyty preferencyjne", "Rolnik wybiera je we wniosku."),
+        Q("Ekoschematy to:", "dobrowolne płatne praktyki prośrodowiskowe", "obowiązkowe normy GAEC w warunkowości", "rodzaj podatku rolnego od gruntów", "kredyty preferencyjne na inwestycje", "Rolnik wybiera je we wniosku."),
         Q("Normy GAEC są częścią:", "warunkowości", "ekoschematów", "płatności redystrybucyjnej", "systemu KRUS", "Obowiązują każdego beneficjenta płatności."),
         Q("Okres konwersji dla upraw jednorocznych w rolnictwie ekologicznym trwa zwykle:", "2 lata", "6 miesięcy", "5 lat", "10 lat", "Uprawy wieloletnie 3 lata."),
         Q("Podatek rolny od 1 ha przeliczeniowego to równowartość:", "2,5 q żyta", "1 t pszenicy", "10 q kukurydzy", "5 q owsa", "Według ceny ogłaszanej przez GUS."),
@@ -2931,6 +3173,8 @@ window.KURSY = window.KURSY || {};
 <tr><td>chemikalia</td><td>środki ochrony osobistej, magazyn środków, karty charakterystyki</td></tr>
 <tr><td>pożar (siano, paliwa)</td><td>suche siano, kontrola temperatury stogów, gaśnice, zakaz palenia</td></tr></table></div>
 <p>KRUS prowadzi prewencję wypadkową i wypłaca jednorazowe odszkodowanie z tytułu wypadku przy pracy rolniczej.</p>
+<h4>Najczęstsze wypadki w rolnictwie</h4>
+<p>Według statystyk KRUS najwięcej wypadków to <b>upadki osób</b> (śliskie podłogi, schody, wysiadanie z ciągnika), dalej pochwycenia przez ruchome części maszyn oraz uderzenia i przygniecenia przez zwierzęta. Dzieci nie mogą wykonywać prac niebezpiecznych, a w pobliżu pracującej maszyny nie przebywają osoby postronne.</p>
 <div class="tip">Do zbiornika gnojowicy nie wchodzi się bez asekuracji drugiej osoby: siarkowodór może zabić w kilka chwil.</div>` }
       ],
       pytania: [
@@ -2941,7 +3185,7 @@ window.KURSY = window.KURSY || {};
         Q("Do kosztów zmiennych eksploatacji maszyny zalicza się:", "paliwo i naprawy", "amortyzację", "ubezpieczenie", "garażowanie", "Zależą od intensywności użytkowania."),
         Q("Okres agrotechniczny to:", "dopuszczalny czas na wykonanie danego zabiegu", "czas trwania sezonu wegetacyjnego", "okres karencji środka", "wiek maszyny", "Np. optymalny termin siewu."),
         Q("Umowa o pomocy przy zbiorach pozwala zatrudnić pomocnika rolnika łącznie maksymalnie na:", "180 dni w roku", "30 dni w roku", "365 dni", "7 dni", "Ubezpieczenie w KRUS opłaca rolnik."),
-        Q("Największym zagrożeniem przy wchodzeniu do zbiornika gnojowicy jest:", "zatrucie gazami (siarkowodór)", "porażenie prądem", "hałas", "przegrzanie", "Wchodzi się tylko z asekuracją.")
+        Q("Największym zagrożeniem przy wchodzeniu do zbiornika gnojowicy jest:", "zatrucie gazami (siarkowodór)", "porażenie prądem z mieszadła", "hałas pracującej pompy", "przegrzanie organizmu latem", "Wchodzi się tylko z asekuracją.")
       ]
     },
     {
@@ -2972,6 +3216,8 @@ window.KURSY = window.KURSY || {};
 <li>Realne założenia cen i plonów (zwykle średnie z kilku lat).</li>
 <li>Zachowanie <b>trwałości operacji</b> przez określony czas po płatności końcowej (zwykle 5 lat).</li>
 </ul>
+<h4>Okres zwrotu: przykład</h4>
+<p>Robot udojowy kosztuje 500 000 zł, a roczny przyrost dochodu (oszczędność pracy i wyższa wydajność) wynosi 100 000 zł. Prosty okres zwrotu: 500 000 / 100 000 = <b>5 lat</b>. Inwestycja jest korzystna, gdy okres zwrotu jest krótszy od okresu użytkowania, a NPV (wartość bieżąca netto) jest dodatnia. Przy dotacji 50% okres zwrotu skraca się do 2,5 roku.</p>
 <div class="tip">W SWOT mocne i słabe strony to czynniki wewnętrzne gospodarstwa, a szanse i zagrożenia zewnętrzne (rynek, prawo, klimat).</div>` },
         { tytul: "Rynek i kanały sprzedaży", tresc: `<h4>Kanały dystrybucji</h4>
 <div class="tw"><table><tr><th>Kanał</th><th>Cechy</th></tr>
@@ -2992,6 +3238,13 @@ window.KURSY = window.KURSY || {};
 </ul>
 <h4>Ceny i informacja rynkowa</h4>
 <p>Ceny rolne podlegają sezonowym wahaniom (zboże najtańsze w żniwa, droższe wiosną). Informacje rynkowe publikuje m.in. Zintegrowany System Rolniczej Informacji Rynkowej (ZSRIR) ministerstwa, giełdy towarowe (MATIF), GUS.</p>
+<h4>Obowiązki przy sprzedaży własnych produktów</h4>
+<ul>
+<li>Sprzedaż bezpośrednia wymaga wpisu do rejestru prowadzonego przez powiatowego lekarza weterynarii (produkty zwierzęce) lub państwowego inspektora sanitarnego (produkty roślinne).</li>
+<li>RHD wymaga rejestracji w odpowiedniej inspekcji, ewidencji sprzedaży i przestrzegania zasad higieny.</li>
+<li>Cenę ustala się, uwzględniając koszt jednostkowy, transport, opakowania i marżę.</li>
+</ul>
+<p>Na egzaminie łatwo pomylić RHD z MLO: MLO dotyczy produktów zwierzęcych dostarczanych lokalnym sklepom i restauracjom pod nadzorem weterynaryjnym, a RHD głównie sprzedaży własnych przetworów konsumentom.</p>
 <div class="tip">RHD dotyczy żywności przetworzonej z własnych surowców sprzedawanej konsumentom końcowym, a sprzedaż bezpośrednia produktów nieprzetworzonych to odrębna forma.</div>` },
         { tytul: "Systemy jakości i bezpieczeństwo żywności", tresc: `<h4>HACCP: 7 zasad</h4>
 <ol>
@@ -3016,15 +3269,20 @@ window.KURSY = window.KURSY || {};
 <tr><td>GLOBALG.A.P.</td><td>międzynarodowy standard dobrej praktyki rolniczej, wymagany przez sieci handlowe</td></tr></table></div>
 <h4>Jakość surowców</h4>
 <p>Ziarno: wilgotność, gęstość w stanie zsypnym, liczba opadania, zawartość białka, zanieczyszczenia. Mleko: ogólna liczba drobnoustrojów do 100 000/ml, komórki somatyczne do 400 000/ml, brak inhibitorów (antybiotyków), schłodzenie do ok. 4-6 °C po doju.</p>
+<h4>Przykłady CCP</h4>
+<div class="tw"><table><tr><th>Etap</th><th>Zagrożenie</th><th>Limit i działanie</th></tr>
+<tr><td>schładzanie mleka</td><td>namnażanie bakterii</td><td>schłodzenie do ok. 4-6 °C; przy awarii schładzalnika powiadomienie mleczarni</td></tr>
+<tr><td>pasteryzacja w RHD</td><td>bakterie chorobotwórcze</td><td>wymagana temperatura i czas, zapis wskazań termometru</td></tr>
+<tr><td>pakowanie</td><td>ciała obce (szkło, metal)</td><td>kontrola wzrokowa, wykrywacz metali</td></tr></table></div>
 <div class="tip">Zagrożenia w HACCP dzielą się na biologiczne, chemiczne i fizyczne. CCP to punkt, w którym kontrola może wyeliminować lub ograniczyć zagrożenie.</div>` }
       ],
       pytania: [
         Q("W analizie SWOT szanse i zagrożenia to czynniki:", "zewnętrzne", "wewnętrzne", "wyłącznie finansowe", "techniczne gospodarstwa", "Mocne i słabe strony są wewnętrzne."),
         Q("Przychód z RHD zwolniony z podatku dochodowego wynosi do:", "100 000 zł rocznie", "10 000 zł", "1 000 000 zł", "nie ma zwolnienia", "Powyżej ryczałt 2%."),
-        Q("Umowa kontraktacyjna jest zawierana:", "przed rozpoczęciem produkcji i ustala ilość, jakość oraz cenę", "po sprzedaży towaru", "tylko z konsumentem końcowym", "wyłącznie z ARiMR", "Ogranicza ryzyko rynkowe."),
+        Q("Umowa kontraktacyjna jest zawierana:", "przed produkcją, określa ilość, jakość i cenę", "po sprzedaży towaru, jako jej potwierdzenie", "tylko z konsumentem końcowym na targu", "wyłącznie z ARiMR przy wniosku o dopłaty", "Ogranicza ryzyko rynkowe."),
         Q("Krytyczny punkt kontroli w systemie HACCP oznacza się skrótem:", "CCP", "GMP", "GHP", "IRZ", "Critical Control Point."),
         Q("Zasada „jeden krok wstecz, jeden krok naprzód” dotyczy:", "identyfikowalności żywności", "płodozmianu", "rozrodu zwierząt", "kalibracji opryskiwacza", "Rozporządzenie 178/2002."),
-        Q("Oscypek jest przykładem produktu z oznaczeniem:", "ChNP (chroniona nazwa pochodzenia)", "GLOBALG.A.P.", "IP", "QAFP", "Produkt regionalny UE."),
+        Q("Oscypek jest przykładem produktu z oznaczeniem:", "ChNP (chroniona nazwa pochodzenia)", "GTS (gwarantowana specjalność)", "IP (integrowana produkcja)", "QAFP (system jakości mięsa)", "Produkt regionalny UE."),
         Q("Cele SMART powinny być m.in.:", "mierzalne i określone w czasie", "ogólne i bez terminu", "wyłącznie jakościowe", "tajne", "Specific, Measurable, Achievable, Relevant, Time-bound."),
         Q("Do zagrożeń fizycznych w HACCP należą:", "kawałki szkła, metalu, kamienie", "bakterie Salmonella", "pozostałości antybiotyków", "pleśnie", "Biologiczne i chemiczne to odrębne grupy.")
       ]
@@ -3058,6 +3316,14 @@ window.KURSY = window.KURSY || {};
 <li><b>NDSP</b>: pułapowe, którego nie wolno przekroczyć w żadnym momencie.</li>
 <li><b>NDN</b>: najwyższe dopuszczalne natężenie czynników fizycznych (np. hałas, promieniowanie).</li>
 </ul>
+<h4>Przechowywanie i typowe błędy</h4>
+<ul>
+<li>Substancji niezgodnych nie przechowuje się razem: utleniacze (GHS03) z dala od łatwopalnych (GHS02), kwasy oddzielnie od zasad; np. środek z podchlorynem zmieszany z kwasem wydziela trujący chlor.</li>
+<li>Kartę charakterystyki dostawca przekazuje bezpłatnie, w języku polskim; pracodawca udostępnia ją pracownikom na stanowisku pracy.</li>
+<li>Hasło „Niebezpieczeństwo” oznacza poważniejsze zagrożenie niż hasło „Uwaga”.</li>
+<li>Pracownik przechodzi instruktaż z zasad postępowania z danym preparatem, a pracodawca prowadzi spis substancji niebezpiecznych używanych w zakładzie.</li>
+</ul>
+<p>Częsta pułapka na egzaminie: wykrzyknik (GHS07) oznacza działanie drażniące lub szkodliwe, a czaszka (GHS06) toksyczność ostrą; piktogram korozji dotyczy zarówno skóry i oczu, jak i metali.</p>
 <div class="tip">Substancje przechowuje się w oryginalnych opakowaniach z etykietą; przelewanie chemii do butelek po napojach to częsta przyczyna zatruć.</div>` },
         { tytul: "Środki ochrony indywidualnej i zbiorowej", tresc: `<h4>Kolejność działań</h4>
 <p>Najpierw eliminacja zagrożenia lub zastąpienie go mniejszym, potem środki techniczne i <b>ochrona zbiorowa</b> (osłony, wentylacja, barierki, wyciągi miejscowe), organizacja pracy (rotacja, skrócenie ekspozycji), a dopiero na końcu <b>środki ochrony indywidualnej</b> (ŚOI).</p>
@@ -3080,6 +3346,13 @@ window.KURSY = window.KURSY || {};
 </ul>
 <h4>Ocena ryzyka: przykład</h4>
 <p>Stanowisko fryzjera, zagrożenie: kontakt z preparatami chemicznymi. Ciężkość: średnia (zapalenie skóry), prawdopodobieństwo: prawdopodobne, ryzyko: <b>średnie</b>. Działania: rękawice nitrylowe, wentylacja, szkolenie, kremy ochronne. Ponowna ocena po zmianach, wypadku lub zmianie technologii.</p>
+<h4>Ochrona zbiorowa w praktyce</h4>
+<div class="tw"><table><tr><th>Zagrożenie</th><th>Środek zbiorowy</th></tr>
+<tr><td>upadek z wysokości</td><td>balustrady z poręczą na wysokości 1,1 m i krawężnikiem 0,15 m, siatki ochronne</td></tr>
+<tr><td>pyły i opary</td><td>wentylacja ogólna i miejscowa, odciągi przy stanowisku</td></tr>
+<tr><td>hałas</td><td>obudowy dźwiękochłonne maszyn, ekrany, tłumiki</td></tr>
+<tr><td>porażenie prądem</td><td>wyłączniki różnicowoprądowe, izolacja, uziemienie</td></tr></table></div>
+<p>Środki zbiorowe chronią wszystkich pracowników jednocześnie i nie zależą od tego, czy ktoś pamięta o założeniu maski, dlatego mają pierwszeństwo. ŚOI uszkodzone lub po terminie (np. kask po silnym uderzeniu, szelki po zatrzymaniu upadku) wycofuje się z użycia, nawet gdy wyglądają na sprawne.</p>
 <div class="tip">Środki ochrony indywidualnej stosuje się dopiero wtedy, gdy zagrożenia nie da się wyeliminować ani ograniczyć środkami zbiorowymi.</div>` },
         { tytul: "Wypadek przy pracy: postępowanie krok po kroku", tresc: `<h4>Natychmiast po zdarzeniu</h4>
 <ol>
@@ -3110,9 +3383,9 @@ window.KURSY = window.KURSY || {};
         Q("Piktogram GHS05 (korozja) oznacza substancje:", "żrące", "łatwopalne", "wybuchowe", "niebezpieczne dla środowiska", "Np. kwasy i zasady."),
         Q("Zwroty P na etykiecie substancji chemicznej dotyczą:", "środków ostrożności", "rodzaju zagrożenia", "producenta", "ceny", "Zwroty H opisują zagrożenia."),
         Q("NDSCh to stężenie, które może występować nie dłużej niż:", "15 minut", "8 godzin", "1 godzinę bez przerwy", "nigdy", "Najwyżej 2 razy w zmianie."),
-        Q("Środki ochrony indywidualnej stosuje się:", "gdy zagrożenia nie da się wyeliminować środkami zbiorowymi", "zawsze w pierwszej kolejności", "tylko na życzenie pracownika", "wyłącznie na budowie", "Pierwszeństwo ma ochrona zbiorowa."),
+        Q("Środki ochrony indywidualnej stosuje się:", "gdy ochrona zbiorowa nie usuwa zagrożenia", "zawsze w pierwszej kolejności, przed osłonami", "tylko na wyraźne życzenie pracownika", "wyłącznie na budowach i w zakładach", "Pierwszeństwo ma ochrona zbiorowa."),
         Q("Najwyższą skuteczność ochrony przed pyłami ma półmaska klasy:", "FFP3", "FFP1", "FFP2", "FFP0", "FFP3 chroni przed najdrobniejszymi pyłami."),
-        Q("Protokół powypadkowy sporządza się w ciągu:", "14 dni od zawiadomienia", "24 godzin", "3 miesięcy", "1 roku", "Sporządza go zespół powypadkowy."),
+        Q("Protokół powypadkowy sporządza się w ciągu:", "14 dni od zawiadomienia", "24 godzin od zdarzenia", "3 miesięcy od wypadku", "30 dni od powrotu do pracy", "Sporządza go zespół powypadkowy."),
         Q("Wypadek śmiertelny zgłasza się niezwłocznie do:", "PIP i prokuratury", "urzędu skarbowego", "sanepidu i banku", "KRUS i GUS", "Także wypadek ciężki i zbiorowy."),
         Q("Zasiłek chorobowy po wypadku przy pracy wynosi:", "100% podstawy wymiaru", "50%", "80%", "nie przysługuje", "Przy zwykłej chorobie zwykle 80%.")
       ]
@@ -3138,6 +3411,14 @@ window.KURSY = window.KURSY || {};
 </ul>
 <h4>Przyczyny pożarów w pracy</h4>
 <p>Wadliwa instalacja elektryczna i przeciążone przedłużacze, palenie tytoniu w miejscach niedozwolonych, prace spawalnicze bez zabezpieczenia, samozapalenie (szmaty z olejem, mokre siano), nieostrożne obchodzenie się z ogniem, urządzenia grzewcze blisko materiałów palnych, wyładowania atmosferyczne.</p>
+<h4>Podręczny sprzęt gaśniczy</h4>
+<ul>
+<li>Gaśnica <b>proszkowa ABC</b> (GP): najbardziej uniwersalna, ale mocno brudzi i może uszkodzić elektronikę.</li>
+<li>Gaśnica <b>śniegowa</b> (GS, CO2): grupy B i C, urządzenia elektryczne pod napięciem; nie chwyta się dyszy, bo jest bardzo zimna (odmrożenia).</li>
+<li>Gaśnica <b>wodno-pianowa</b> (GWP): grupy A i B.</li>
+<li><b>Koc gaśniczy</b>: płonąca odzież na człowieku, mały pożar tłuszczu w naczyniu.</li>
+</ul>
+<p>Gaśnicę uruchamia się w pozycji pionowej, z odległości kilku metrów, kierując strumień na <b>podstawę ognia</b>, a nie na płomienie. Pożar rozlanej cieczy gasi się od brzegu w głąb, a spływającą ciecz od góry do dołu. Kilku gaśnic używa się jednocześnie, a nie po kolei.</p>
 <div class="tip">Płonącego tłuszczu na patelni nie gasi się wodą. Przykrywa się go pokrywką lub kocem gaśniczym, po wyłączeniu źródła ciepła.</div>` },
         { tytul: "Gaśnice i gaszenie pożaru w zarodku", tresc: `<h4>Rodzaje gaśnic</h4>
 <div class="tw"><table><tr><th>Gaśnica</th><th>Grupy</th><th>Uwagi</th></tr>
@@ -3196,11 +3477,11 @@ window.KURSY = window.KURSY || {};
         Q("Pożar grupy B to pożar:", "cieczy i topiących się ciał stałych", "ciał stałych tlących się", "gazów", "metali", "Np. benzyna, oleje."),
         Q("Płonącego oleju na patelni nie gasi się wodą, ponieważ:", "następuje gwałtowny wyrzut płonącego oleju", "woda jest za droga", "olej przestaje się palić za wolno", "woda zamienia się w lód", "Woda gwałtownie paruje pod olejem."),
         Q("Do gaszenia urządzeń elektronicznych najlepiej nadaje się gaśnica:", "śniegowa CO2", "pianowa", "wodna", "z piaskiem", "Nie pozostawia osadu."),
-        Q("Oznaczenie GP-6x ABC oznacza gaśnicę:", "proszkową, 6 kg środka, do grup A, B, C", "pianową 6 l", "śniegową 6 kg do grupy F", "wodną do pożarów metali", "GP = gaśnica proszkowa."),
+        Q("Oznaczenie GP-6x ABC oznacza gaśnicę:", "proszkową, 6 kg środka, do grup A, B, C", "pianową, 6 litrów środka, do grup A, B", "śniegową, 6 kg CO2, do grup B, C", "wodną mgłową, 6 l, do grup A, B, C", "GP = gaśnica proszkowa."),
         Q("Strumień środka gaśniczego kieruje się:", "na podstawę płomieni, z wiatrem w plecy", "w górną część płomieni pod wiatr", "w powietrze nad ogniem", "na ściany pomieszczenia", "Gasi się źródło spalania."),
         Q("Odległość do najbliższej gaśnicy nie powinna przekraczać:", "30 m", "100 m", "5 m", "300 m", "Wymóg przepisów ppoż."),
         Q("Numer alarmowy straży pożarnej to:", "998", "999", "997", "996", "Ogólny numer alarmowy 112."),
-        Q("Podczas ewakuacji z zadymionego budynku należy:", "poruszać się nisko przy podłodze i nie korzystać z windy", "jechać windą", "otwierać wszystkie okna i drzwi", "zamykać drzwi na klucz", "Dym gromadzi się pod sufitem.")
+        Q("Podczas ewakuacji z zadymionego budynku należy:", "poruszać się nisko i nie korzystać z windy", "zjechać windą jak najszybciej na parter", "otworzyć wszystkie okna i drzwi po drodze", "wracać po rzeczy osobiste do pokoju", "Dym gromadzi się pod sufitem.")
       ]
     },
     {
@@ -3281,10 +3562,10 @@ window.KURSY = window.KURSY || {};
         Q("Stosunek uciśnięć do oddechów w RKO dorosłego wynosi:", "30 : 2", "15 : 2", "5 : 1", "30 : 5", "Zgodnie z wytycznymi ERC."),
         Q("Głębokość uciśnięć klatki piersiowej u dorosłego to:", "5-6 cm", "1-2 cm", "8-10 cm", "3 cm", "Tempo 100-120 na minutę."),
         Q("Oparzenie termiczne chłodzi się chłodną wodą przez około:", "20 minut", "1 minutę", "2 godziny", "nie chłodzi się", "Co najmniej 10 minut."),
-        Q("Opaskę uciskową (stazę) stosuje się:", "przy krwotoku z kończyny, którego nie da się zatamować uciskiem", "przy każdym skaleczeniu", "przy krwawieniu z nosa", "przy oparzeniu", "Zapisuje się godzinę założenia."),
+        Q("Opaskę uciskową (stazę) stosuje się:", "przy krwotoku z kończyny nieustającym po ucisku", "przy każdym skaleczeniu dłoni lub palca", "przy krwawieniu z nosa po urazie twarzy", "przy oparzeniu kończyny wrzątkiem", "Zapisuje się godzinę założenia."),
         Q("Pierwszą czynnością przy porażeniu prądem jest:", "odłączenie zasilania", "rozpoczęcie RKO bez względu na prąd", "polanie poszkodowanego wodą", "podanie wody do picia", "Najpierw bezpieczeństwo ratownika."),
         Q("U dorosłego z niedrożnością dróg oddechowych i nieskutecznym kaszlem wykonuje się najpierw:", "5 uderzeń między łopatki", "30 uciśnięć klatki", "pozycję boczną", "podanie wody", "Potem 5 uciśnięć nadbrzusza."),
-        Q("Podczas napadu drgawek należy:", "chronić głowę i nie wkładać niczego do ust", "przytrzymywać kończyny siłą", "włożyć łyżkę między zęby", "polewać zimną wodą", "Po napadzie pozycja boczna.")
+        Q("Podczas napadu drgawek należy:", "chronić głowę i nie wkładać niczego do ust", "przytrzymywać siłą kończyny chorego", "włożyć łyżkę lub patyk między zęby", "polewać twarz chorego zimną wodą", "Po napadzie pozycja boczna.")
       ]
     },
     {
@@ -3365,7 +3646,7 @@ window.KURSY = window.KURSY || {};
       ],
       pytania: [
         Q("Absolwent technikum z 5-letnim stażem pracy ma prawo do urlopu w wymiarze:", "26 dni", "20 dni", "21 dni", "30 dni", "5 lat nauki + 5 lat pracy = 10 lat."),
-        Q("Jedna część urlopu wypoczynkowego musi trwać co najmniej:", "14 kolejnych dni kalendarzowych", "5 dni roboczych", "3 dni", "21 dni", "Pozostałe części dowolnie."),
+        Q("Jedna część urlopu wypoczynkowego musi trwać co najmniej:", "14 kolejnych dni kalendarzowych", "5 kolejnych dni roboczych", "10 kolejnych dni roboczych", "21 kolejnych dni kalendarzowych", "Pozostałe części dowolnie."),
         Q("Urlop zaległy należy wykorzystać do:", "30 września następnego roku", "31 grudnia bieżącego roku", "31 marca następnego roku", "końca umowy", "Zgodnie z Kodeksem pracy."),
         Q("Urlop na żądanie przysługuje w wymiarze:", "4 dni w roku", "2 dni w roku", "10 dni w roku", "nie przysługuje", "W ramach wymiaru urlopu."),
         Q("Pracownik ze stawką 30 zł/h przepracował 4 nadgodziny w zwykły dzień roboczy. Należy mu się:", "180 zł", "120 zł", "240 zł", "60 zł", "4 × (30 + 50% × 30)."),
@@ -3444,7 +3725,7 @@ window.KURSY = window.KURSY || {};
       pytania: [
         Q("Jednoosobową działalność gospodarczą rejestruje się w:", "CEIDG", "KRS", "GUS bezpośrednio", "sądzie rejonowym", "Wniosek CEIDG-1, bezpłatnie."),
         Q("Ulga na start pozwala nie płacić składek społecznych ZUS przez:", "6 miesięcy", "24 miesiące", "12 miesięcy", "3 lata", "Składkę zdrowotną płaci się."),
-        Q("Na ryczałcie od przychodów ewidencjonowanych podatek oblicza się od:", "przychodu, bez odliczania kosztów", "dochodu", "wartości majątku", "liczby pracowników", "Stawki zależą od rodzaju działalności."),
+        Q("Na ryczałcie od przychodów ewidencjonowanych podatek oblicza się od:", "przychodu, bez odliczania kosztów", "dochodu, czyli przychodu minus koszty", "wartości majątku firmy na koniec roku", "liczby zatrudnionych pracowników", "Stawki zależą od rodzaju działalności."),
         Q("Podatek liniowy wynosi:", "19%", "12%", "32%", "9%", "Bez kwoty wolnej."),
         Q("Kwota brutto usługi o wartości netto 400 zł i VAT 23% wynosi:", "492 zł", "423 zł", "308 zł", "400 zł", "400 × 1,23."),
         Q("Wartość netto z kwoty brutto 615 zł przy VAT 23% to:", "500 zł", "473,55 zł", "591 zł", "615 zł", "615 / 1,23."),

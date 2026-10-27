@@ -79,7 +79,7 @@ w poniedziałek 2.11.2026.</pre>
         Q("Pracownik urzędu podlega wyłączeniu od sprawy, która dotyczy jego", "brata", "kuzyna", "kolegi z pracy", "sąsiada z bloku", "Rodzeństwo to krewni drugiego stopnia; kuzyn to czwarty stopień."),
         Q("Postępowanie, które stało się bezprzedmiotowe, organ kończy przez wydanie", "decyzji o umorzeniu postępowania", "postanowienia o zawieszeniu", "zaświadczenia", "notatki służbowej", "Umorzenie następuje w drodze decyzji (art. 105)."),
         Q("Jeżeli w postępowaniu zawieszonym na wniosek strony nikt przez 3 lata nie zwróci się o jego podjęcie, to", "żądanie wszczęcia uważa się za wycofane", "organ wydaje decyzję pozytywną", "sprawę przekazuje się do sądu", "postępowanie automatycznie się wznawia", "Art. 98 § 2 KPA."),
-        Q("Ostatni dzień 14-dniowego terminu przypada w sobotę. Termin upływa", "w najbliższym dniu, który nie jest dniem wolnym ani sobotą", "w tę sobotę", "w poprzedzający piątek", "po kolejnych 7 dniach", "Art. 57 § 4 KPA."),
+        Q("Ostatni dzień 14-dniowego terminu przypada w sobotę. Termin upływa", "w najbliższym dniu roboczym po tej sobocie", "w tę sobotę, bo sobota nie jest świętem", "w poprzedzający tę sobotę piątek", "w sobotę, o ile urząd tego dnia pracuje", "Art. 57 § 4 KPA."),
         Q("Prośbę o przywrócenie terminu wnosi się w ciągu", "7 dni od ustania przyczyny uchybienia", "14 dni od doręczenia decyzji", "30 dni od upływu terminu", "3 dni od ustania przyczyny", "Jednocześnie trzeba dopełnić czynności, np. wnieść odwołanie."),
         Q("Termin na wniesienie odwołania zostanie zachowany, jeśli przed jego upływem pismo", "nadano w placówce Poczty Polskiej jako operatora wyznaczonego", "nadano u dowolnego kuriera", "wrzucono do skrzynki pocztowej w sobotę wieczorem bez nadania", "przekazano znajomemu pracownikowi urzędu prywatnie", "Art. 57 § 5 pkt 2 KPA.")
       ]
@@ -174,7 +174,7 @@ Otrzymują: 1. adresat  2. a/a</pre>
         Q("Decyzja, od której nie służy odwołanie w administracyjnym toku instancji, to decyzja", "ostateczna", "prawomocna", "nieważna", "wykonalna warunkowo", "Prawomocna to taka, której nie można zaskarżyć również do sądu."),
         Q("Rygor natychmiastowej wykonalności nadaje się decyzji m.in. ze względu na", "ochronę zdrowia lub życia ludzkiego", "wygodę pracownika urzędu", "koniec roku budżetowego", "brak odwołania w ciągu 3 dni", "Art. 108 § 1 KPA."),
         Q("Błąd rachunkowy w decyzji organ prostuje", "postanowieniem, z urzędu lub na żądanie strony", "nową decyzją po wznowieniu postępowania", "tylko na podstawie wyroku sądu", "aneksem podpisanym przez stronę", "Art. 113 § 1 KPA."),
-        Q("Strona, która zastosowała się do błędnego pouczenia o terminie odwołania", "nie może ponieść z tego powodu ujemnych skutków", "traci prawo do odwołania", "musi zapłacić opłatę karną", "odpowiada za błąd organu", "Art. 112 KPA.")
+        Q("Strona, która zastosowała się do błędnego pouczenia o terminie odwołania", "nie może z tego powodu ponieść szkody", "traci prawo do wniesienia odwołania", "musi zapłacić opłatę za uchybienie", "odpowiada za błąd popełniony przez organ", "Art. 112 KPA.")
       ]
     },
     {
@@ -266,11 +266,11 @@ Otrzymują: 1. adresat  2. a/a</pre>
       ],
       pytania: [
         Q("Odwołanie od decyzji wójta w sprawie zadań własnych gminy rozpatruje", "samorządowe kolegium odwoławcze", "rada gminy", "wojewoda", "wojewódzki sąd administracyjny", "SKO jest organem wyższego stopnia dla organów samorządu."),
-        Q("Od decyzji wydanej w I instancji przez ministra strona może wnieść", "wniosek o ponowne rozpatrzenie sprawy", "odwołanie do premiera", "zażalenie do wojewody", "skargę do SKO", "Art. 127 § 3 KPA."),
+        Q("Od decyzji wydanej w I instancji przez ministra strona może wnieść", "wniosek o ponowne rozpatrzenie sprawy", "odwołanie do Prezesa Rady Ministrów", "zażalenie do właściwego wojewody", "skargę do samorządowego kolegium", "Art. 127 § 3 KPA."),
         Q("Organ I instancji przekazuje odwołanie wraz z aktami organowi odwoławczemu w terminie", "7 dni", "14 dni", "30 dni", "3 dni", "Art. 133 KPA."),
         Q("Zakaz wydania przez organ odwoławczy decyzji na niekorzyść odwołującego się dotyczy sytuacji, gdy decyzja", "nie narusza rażąco prawa ani interesu społecznego", "została wydana przez wójta", "dotyczy podatków", "ma rygor natychmiastowej wykonalności", "Art. 139 KPA."),
         Q("Podstawą wznowienia postępowania jest sytuacja, w której", "strona bez własnej winy nie brała udziału w postępowaniu", "decyzję wydano bez podstawy prawnej", "decyzję skierowano do osoby niebędącej stroną", "decyzja jest trwale niewykonalna", "Pozostałe odpowiedzi to przesłanki nieważności."),
-        Q("Podanie o wznowienie postępowania wnosi się w terminie", "1 miesiąca od dowiedzenia się o okoliczności stanowiącej podstawę wznowienia", "7 dni od doręczenia decyzji", "14 dni od doręczenia decyzji", "5 lat od wydania decyzji", "Art. 148 KPA."),
+        Q("Podanie o wznowienie postępowania wnosi się w terminie", "1 miesiąca od dowiedzenia się o podstawie wznowienia", "7 dni od dnia doręczenia decyzji ostatecznej", "14 dni od dnia doręczenia decyzji ostatecznej", "5 lat od dnia doręczenia lub ogłoszenia decyzji", "Art. 148 KPA."),
         Q("Skargę do wojewódzkiego sądu administracyjnego wnosi się", "za pośrednictwem organu, w terminie 30 dni", "bezpośrednio do sądu, w terminie 14 dni", "za pośrednictwem SKO, w terminie 7 dni", "do NSA, w terminie 60 dni", "Art. 53 i 54 p.p.s.a."),
         Q("Skargę obywatela na przewlekłe załatwianie spraw przez urzędnika (dział VIII KPA) należy załatwić najpóźniej w ciągu", "1 miesiąca", "7 dni", "14 dni", "3 miesięcy", "3 miesiące to termin na petycję.")
       ]
@@ -367,7 +367,7 @@ Dokumentację można wybrakować po 31.12.2031
       pytania: [
         Q("Kategorię archiwalną w jednolitym rzeczowym wykazie akt ma", "wyłącznie klasa końcowa", "każda klasa pierwszego rzędu", "tylko klasa 0 Zarządzanie", "każde pojedyncze pismo", "Według klasy końcowej zakłada się teczki."),
         Q("W znaku sprawy OR.1510.7.2026 liczba 7 oznacza", "kolejny numer sprawy w spisie spraw", "numer pokoju pracownika", "liczbę załączników", "symbol klasyfikacyjny z JRWA", "1510 to symbol z JRWA, OR to komórka."),
-        Q("Kancelaria nie otwiera przesyłki", "zawierającej ofertę w postępowaniu o udzielenie zamówienia publicznego", "z odwołaniem od decyzji", "od innego urzędu", "z wnioskiem o zaświadczenie", "Ofertę przechowuje się zamkniętą do terminu otwarcia ofert."),
+        Q("Kancelaria nie otwiera przesyłki", "z ofertą w postępowaniu o zamówienie publiczne", "z odwołaniem od decyzji organu I instancji", "nadanej przez inny urząd administracji", "z wnioskiem o wydanie zaświadczenia", "Ofertę przechowuje się zamkniętą do terminu otwarcia ofert."),
         Q("Wskazanie przez kierownika komórki pracownika, który ma załatwić sprawę, to", "dekretacja", "akceptacja", "brakowanie", "ekspertyza archiwalna", "Akceptacja to zatwierdzenie projektu pisma."),
         Q("Spis spraw prowadzi się", "dla każdej klasy końcowej odrębnie na rok kalendarzowy", "jeden dla całego urzędu na 5 lat", "dla każdego pracownika osobno bez podziału na lata", "tylko dla spraw kategorii A", "Numeracja zaczyna się co roku od 1."),
         Q("Materiały archiwalne kategorii A przekazuje się do archiwum państwowego po upływie", "25 lat od ich wytworzenia", "2 lat od zakończenia sprawy", "10 lat", "50 lat", "Ustawa o narodowym zasobie archiwalnym."),
@@ -559,7 +559,7 @@ np. 10 000 zł × 10% × 73 dni ÷ 365 = 200 zł</pre>
       pytania: [
         Q("Umowa sprzedaży nieruchomości zawarta w zwykłej formie pisemnej jest", "nieważna", "ważna, ale trudniejsza do udowodnienia", "ważna po zarejestrowaniu w urzędzie skarbowym", "wzruszalna przez 1 rok", "Wymagany jest akt notarialny pod rygorem nieważności."),
         Q("Wiadomość e-mail pozwalająca ustalić nadawcę spełnia wymogi formy", "dokumentowej", "pisemnej", "elektronicznej", "aktu notarialnego", "Forma elektroniczna wymaga kwalifikowanego podpisu."),
-        Q("Prokury można udzielić", "osobie fizycznej z pełną zdolnością do czynności prawnych", "spółce z o.o.", "osobie, która ukończyła 13 lat", "każdej osobie prawnej", "Art. 109² KC."),
+        Q("Prokury można udzielić", "osobie fizycznej z pełną zdolnością do czynności prawnych", "osobie z ograniczoną zdolnością do czynności prawnych", "spółce z o.o. jako pełnomocnikowi przedsiębiorcy", "każdej osobie prawnej wpisanej do rejestru KRS", "Art. 109² KC."),
         Q("Jeśli kupujący, który dał zadatek, nie wykona umowy, sprzedawca może odstąpić od umowy i", "zatrzymać zadatek", "żądać dwukrotności zadatku", "musi zwrócić zadatek", "żądać kary umownej w wysokości ceny", "Dwukrotności może żądać dający zadatek."),
         Q("Kto sprzedaje towar we własnym imieniu, ale na rachunek innej osoby, za prowizją?", "komisant", "agent", "pełnomocnik", "prokurent", "Agent działa w imieniu dającego zlecenie."),
         Q("Roszczenie przedsiębiorcy o zapłatę za towar przedawnia się z upływem", "3 lat, z końcem roku kalendarzowego", "6 lat od dnia wymagalności", "2 lat od wydania towaru", "10 lat", "Roszczenia z działalności gospodarczej: 3 lata (art. 118 KC)."),
@@ -578,7 +578,7 @@ np. 10 000 zł × 10% × 73 dni ÷ 365 = 200 zł</pre>
 <li>Przedsiębiorca odpowiada za zobowiązania firmy <b>całym majątkiem osobistym</b>.</li>
 </ul>
 <h4>Działalność nierejestrowana</h4>
-<p>Osoba fizyczna nie musi rejestrować firmy, jeśli jej przychód należny nie przekracza w żadnym kwartale <b>225% minimalnego wynagrodzenia</b> (limit kwartalny obowiązuje od 2025 r.) i nie prowadziła działalności w ostatnich 60 miesiącach. Taka osoba nie płaci składek ZUS z tego tytułu, ale rozlicza podatek w zeznaniu rocznym.</p>
+<p>Osoba fizyczna nie musi rejestrować firmy, jeśli jej przychód należny nie przekracza w żadnym kwartale <b>225% minimalnego wynagrodzenia</b> (limit kwartalny zamiast miesięcznego obowiązuje od 2025 r.; w 2026 r. przy płacy minimalnej 4806 zł wynosi on 10 813,50 zł) i nie prowadziła działalności w ostatnich 60 miesiącach. Taka osoba nie płaci składek ZUS z tego tytułu, ale rozlicza podatek w zeznaniu rocznym.</p>
 <h4>Ulgi w składkach ZUS dla nowych firm</h4>
 <div class="tw"><table><tr><th>Ulga</th><th>Okres</th><th>Na czym polega</th></tr>
 <tr><td>ulga na start</td><td>6 pełnych miesięcy</td><td>brak składek społecznych, płaci się tylko składkę zdrowotną</td></tr>
@@ -635,10 +635,10 @@ np. 10 000 zł × 10% × 73 dni ÷ 365 = 200 zł</pre>
       pytania: [
         Q("Osoba fizyczna rozpoczynająca jednoosobową działalność gospodarczą składa wniosek", "CEIDG-1", "KRS-W3", "ZUS ZWUA", "VAT-26", "Wpis do CEIDG jest bezpłatny."),
         Q("Minimalny kapitał zakładowy spółki z ograniczoną odpowiedzialnością wynosi", "5 000 zł", "50 000 zł", "100 000 zł", "1 zł", "Wartość udziału co najmniej 50 zł."),
-        Q("Wspólnik spółki jawnej odpowiada za zobowiązania spółki", "całym majątkiem, solidarnie i subsydiarnie", "tylko do wysokości wkładu", "do sumy komandytowej", "wcale nie odpowiada", "Subsydiarnie: po bezskutecznej egzekucji z majątku spółki."),
+        Q("Wspólnik spółki jawnej odpowiada za zobowiązania spółki", "całym majątkiem, solidarnie i subsydiarnie", "tylko do wysokości wniesionego wkładu", "do wysokości sumy komandytowej z umowy", "wyłącznie majątkiem wspólnym spółki", "Subsydiarnie: po bezskutecznej egzekucji z majątku spółki."),
         Q("Do sumy komandytowej za zobowiązania spółki odpowiada", "komandytariusz", "komplementariusz", "akcjonariusz", "partner", "Komplementariusz odpowiada bez ograniczeń."),
         Q("Obowiązkowym organem nadzorczym spółki akcyjnej jest", "rada nadzorcza", "komisja rewizyjna", "zgromadzenie wspólników", "prokurent", "Walne zgromadzenie to organ uchwałodawczy."),
-        Q("Spółka cywilna", "nie ma osobowości prawnej, a przedsiębiorcami są jej wspólnicy", "jest wpisywana do KRS", "wymaga kapitału 5 000 zł", "jest spółką kapitałową", "Spółka cywilna jest umową z Kodeksu cywilnego."),
+        Q("Spółka cywilna", "nie ma osobowości prawnej, przedsiębiorcami są wspólnicy", "podlega obowiązkowemu wpisowi do rejestru KRS", "wymaga kapitału zakładowego co najmniej 5 000 zł", "jest spółką kapitałową z osobowością prawną", "Spółka cywilna jest umową z Kodeksu cywilnego."),
         Q("Struktura, w której pracownik podlega jednocześnie kierownikowi działu i kierownikowi projektu, to struktura", "macierzowa", "liniowa", "sztabowo-liniowa", "dywizjonalna", "Typowa dla firm projektowych."),
         Q("Regulamin pracy jest obowiązkowy u pracodawcy zatrudniającego co najmniej", "50 pracowników", "10 pracowników", "20 pracowników bez wyjątku", "100 pracowników", "Przy 20-49 pracownikach, gdy zażąda tego związek zawodowy.")
       ]
@@ -669,7 +669,7 @@ np. 10 000 zł × 10% × 73 dni ÷ 365 = 200 zł</pre>
 <li>przy sprzedaży zwolnionej: podstawa prawna zwolnienia (np. art. 113 ustawy o VAT dla zwolnienia podmiotowego).</li>
 </ul>
 <h4>Krajowy System e-Faktur</h4>
-<p>Od 2026 r. faktury między przedsiębiorcami wystawia się jako <b>faktury ustrukturyzowane</b> w KSeF (wdrażane etapami: od 1 lutego 2026 r. najwięksi podatnicy, od 1 kwietnia 2026 r. pozostali). Faktura otrzymuje numer KSeF, a nabywca odbiera ją w systemie.</p>
+<p>Od 2026 r. faktury między przedsiębiorcami wystawia się jako <b>faktury ustrukturyzowane</b> w KSeF (wdrażane etapami: od 1 lutego 2026 r. najwięksi podatnicy, ze sprzedażą w 2024 r. powyżej 200 mln zł, od 1 kwietnia 2026 r. pozostali; najmniejsi podatnicy i niektóre szczególne przypadki, np. faktury z kas rejestrujących, mogą korzystać z okresu przejściowego do końca 2026 r., czyli obowiązek obejmuje ich od 1 stycznia 2027 r.). Od 1 lutego 2026 r. wszyscy podatnicy muszą umieć odbierać faktury przez KSeF. Faktura otrzymuje numer KSeF, a nabywca odbiera ją w systemie.</p>
 <h4>Paragon a faktura</h4>
 <ul>
 <li>Paragon z NIP nabywcy na kwotę do <b>450 zł brutto</b> (lub 100 euro) jest <b>fakturą uproszczoną</b>.</li>
@@ -751,7 +751,7 @@ zapłata 25. dnia: 5 000 zł</pre>
       ],
       pytania: [
         Q("Fakturę za towar dostarczony 20 maja należy wystawić najpóźniej", "15 czerwca", "20 maja", "31 maja", "25 czerwca", "Do 15. dnia miesiąca następującego po miesiącu dostawy."),
-        Q("Adnotację „mechanizm podzielonej płatności” umieszcza się na fakturze, gdy kwota należności przekracza", "15 000 zł brutto i dotyczy towarów z załącznika nr 15", "1 000 zł netto", "450 zł brutto", "100 000 zł netto przy każdej sprzedaży", "Art. 106e ust. 1 pkt 18a ustawy o VAT."),
+        Q("Adnotację „mechanizm podzielonej płatności” umieszcza się na fakturze, gdy kwota należności przekracza", "15 000 zł brutto i dotyczy towarów z załącznika nr 15", "15 000 zł netto i dotyczy wszystkich towarów i usług", "450 zł brutto i dotyczy faktury uproszczonej", "100 000 zł netto przy każdej sprzedaży krajowej", "Art. 106e ust. 1 pkt 18a ustawy o VAT."),
         Q("Paragon z NIP nabywcy uznaje się za fakturę uproszczoną, jeśli kwota należności nie przekracza", "450 zł", "1 000 zł", "200 zł", "15 000 zł", "Lub 100 euro."),
         Q("Fakturę korygującą w związku ze zwrotem części towaru wystawia", "sprzedawca", "nabywca", "przewoźnik", "urząd skarbowy", "Nabywca może wystawić tylko notę korygującą."),
         Q("Notą korygującą nabywca może poprawić", "błędny adres nabywcy", "cenę jednostkową", "stawkę VAT", "ilość towaru", "Nota nie może dotyczyć kwot ani stawek."),
@@ -850,7 +850,7 @@ wynik na sprzedaży = 30 000 - 20 000 = +10 000 zł (zysk)</pre>
 <div class="tip">Wymiana silnika na identyczny to remont. Wymiana na silnik o większej mocy, który zwiększa wydajność maszyny, to modernizacja, czyli ulepszenie.</div>` }
       ],
       pytania: [
-        Q("Do wartości początkowej środka trwałego czynnego podatnika VAT NIE wlicza się", "podlegającego odliczeniu VAT naliczonego", "kosztów transportu", "kosztów montażu", "cła", "VAT odliczalny nie zwiększa ceny nabycia."),
+        Q("Do wartości początkowej środka trwałego czynnego podatnika VAT NIE wlicza się", "odliczalnego podatku VAT naliczonego", "kosztów transportu do miejsca użytkowania", "kosztów montażu i uruchomienia", "należnego cła od importu środka", "VAT odliczalny nie zwiększa ceny nabycia."),
         Q("Amortyzację środka trwałego przyjętego do używania 10 marca rozpoczyna się od", "kwietnia", "marca", "stycznia następnego roku", "dnia zakupu", "Od miesiąca następującego po miesiącu przyjęcia."),
         Q("Maszyna o wartości 40 000 zł, stawka liniowa 10%. Miesięczny odpis amortyzacyjny wynosi", "333,33 zł", "400,00 zł", "4 000,00 zł", "3 333,33 zł", "40 000 × 10% = 4 000 zł rocznie ÷ 12."),
         Q("W metodzie degresywnej odpis roczny oblicza się od", "wartości netto na początek roku", "wartości początkowej w każdym roku", "wartości rynkowej", "wartości odtworzeniowej", "Przy spadku odpisu poniżej liniowego przechodzi się na liniową."),
@@ -947,7 +947,7 @@ do rozliczenia jako niedobór: 160 + 30 = 190 zł</pre>
         Q("Arkusz spisu z natury jest", "drukiem ścisłego zarachowania", "dokumentem kasowym", "dowodem zewnętrznym obcym", "dokumentem PZ", "Arkusze są numerowane i ewidencjonowane."),
         Q("Spis z natury zapasów na koniec roku można rozpocząć nie wcześniej niż", "3 miesiące przed końcem roku", "1 miesiąc przed końcem roku", "6 miesięcy przed końcem roku", "w dniu bilansowym", "I zakończyć do 15. dnia następnego roku."),
         Q("Środki trwałe znajdujące się na terenie strzeżonym inwentaryzuje się drogą spisu z natury raz na", "4 lata", "rok", "2 lata", "10 lat", "Art. 26 ust. 3 pkt 3 ustawy o rachunkowości."),
-        Q("Kompensata niedoborów z nadwyżkami jest dopuszczalna, gdy dotyczą", "podobnych składników i tej samej osoby materialnie odpowiedzialnej", "dowolnych towarów w całej firmie", "różnych magazynierów w tym samym roku", "środków trwałych i materiałów", "Kompensuje się mniejszą ilość po niższej cenie."),
+        Q("Kompensata niedoborów z nadwyżkami jest dopuszczalna, gdy dotyczą", "podobnych składników u tej samej osoby odpowiedzialnej", "dowolnych składników ujętych w tym samym arkuszu spisu", "tej samej grupy towarów u różnych magazynierów", "środków trwałych i materiałów tej samej osoby", "Kompensuje się mniejszą ilość po niższej cenie."),
         Q("Niedobór niezawiniony powstały w wyniku kradzieży z włamaniem rozlicza się w ciężar", "pozostałych kosztów operacyjnych", "kapitału zakładowego", "przychodów ze sprzedaży", "pracownika magazynu", "Niedobór zawiniony obciąża pracownika."),
         Q("Pracownik odpowiada w pełnej wysokości za szkodę w mieniu", "powierzonym mu z obowiązkiem zwrotu lub wyliczenia się", "wyrządzoną nieumyślnie przy obsłudze maszyny", "którego nie był użytkownikiem", "zniszczonym przez klienta", "Przy szkodzie nieumyślnej górna granica to 3-miesięczne wynagrodzenie.")
       ]
@@ -1059,7 +1059,7 @@ Pracownik na 1/2 etatu z prawem do 26 dni: 13 dni</pre>
       pytania: [
         Q("Łączny okres zatrudnienia na podstawie umów na czas określony u tego samego pracodawcy nie może przekraczać", "33 miesięcy", "24 miesięcy", "36 miesięcy", "12 miesięcy", "Ani więcej niż 3 umów."),
         Q("Okres wypowiedzenia umowy na czas nieokreślony przy stażu 4 lat u pracodawcy wynosi", "3 miesiące", "1 miesiąc", "2 tygodnie", "6 miesięcy", "Co najmniej 3 lata stażu: 3 miesiące."),
-        Q("Rozwiązanie umowy bez wypowiedzenia z winy pracownika nie może nastąpić po upływie", "1 miesiąca od uzyskania przez pracodawcę wiadomości o przyczynie", "7 dni od zdarzenia", "3 miesięcy od zdarzenia", "roku od zdarzenia", "Art. 52 § 2 KP."),
+        Q("Rozwiązanie umowy bez wypowiedzenia z winy pracownika nie może nastąpić po upływie", "1 miesiąca od uzyskania wiadomości o przyczynie", "7 dni od uzyskania wiadomości o przyczynie", "3 miesięcy od dnia zaistnienia zdarzenia", "1 roku od dnia zaistnienia zdarzenia", "Art. 52 § 2 KP: liczy się od dnia, w którym pracodawca dowiedział się o przyczynie."),
         Q("Minimalny nieprzerwany odpoczynek dobowy pracownika wynosi", "11 godzin", "8 godzin", "12 godzin", "35 godzin", "35 godzin to odpoczynek tygodniowy."),
         Q("Święto przypadające w sobotę", "obniża wymiar czasu pracy o 8 godzin", "nie wpływa na wymiar czasu pracy", "podwyższa wymiar o 8 godzin", "przenosi się automatycznie na niedzielę", "Pracodawca wyznacza za nie inny dzień wolny."),
         Q("Dodatek za pracę w godzinach nadliczbowych w niedzielę niebędącą dla pracownika dniem pracy wynosi", "100% wynagrodzenia", "50% wynagrodzenia", "20% stawki godzinowej", "150% wynagrodzenia", "Art. 151¹ § 1 KP."),
@@ -1166,11 +1166,11 @@ koszt pracodawcy = 6 000 + 1 228,80 = 7 228,80 zł
       pytania: [
         Q("Za każdy dzień choroby pensję miesięczną pomniejsza się o", "1/30 wynagrodzenia", "1/21 wynagrodzenia", "stawkę godzinową × 8", "1/12 wynagrodzenia", "Przy innych nieobecnościach stosuje się stawkę godzinową."),
         Q("Od wynagrodzenia chorobowego wypłacanego przez pracodawcę nalicza się", "składkę zdrowotną i zaliczkę PIT", "wszystkie składki społeczne", "tylko składkę chorobową", "składkę na Fundusz Pracy", "Od świadczeń chorobowych nie nalicza się składek społecznych."),
-        Q("Jako pierwsze z wynagrodzenia potrąca się", "sumy egzekwowane na zaspokojenie świadczeń alimentacyjnych", "kary porządkowe", "zaliczki udzielone pracownikowi", "dobrowolne składki na ubezpieczenie", "Art. 87 § 1 KP."),
+        Q("Jako pierwsze z wynagrodzenia potrąca się", "sumy egzekwowane na poczet alimentów", "kary pieniężne nałożone przez pracodawcę", "zaliczki pieniężne udzielone pracownikowi", "sumy egzekwowane na poczet innych długów", "Art. 87 § 1 KP."),
         Q("Przy egzekucji alimentów można potrącić do", "3/5 wynagrodzenia", "1/2 wynagrodzenia", "1/10 wynagrodzenia", "całego wynagrodzenia", "Bez kwoty wolnej od potrąceń."),
         Q("Kary pieniężne łącznie nie mogą przekroczyć", "1/10 wynagrodzenia przypadającego do wypłaty", "1/2 wynagrodzenia", "jednodniowego wynagrodzenia", "10% wynagrodzenia brutto rocznie", "Jedna kara: do jednodniowego wynagrodzenia."),
         Q("Wpłata podstawowa pracodawcy do PPK wynosi", "1,5% wynagrodzenia", "2% wynagrodzenia", "0,5% wynagrodzenia", "2,5% wynagrodzenia", "Pracownik: 2%, pracodawca: 1,5%."),
-        Q("Wpłata pracodawcy na PPK dla pracownika", "jest jego przychodem podlegającym opodatkowaniu", "zmniejsza jego podatek", "podlega składkom ZUS pracownika", "jest wolna od podatku", "Dlatego zwiększa podstawę zaliczki PIT."),
+        Q("Wpłata pracodawcy na PPK dla pracownika", "jest jego przychodem opodatkowanym PIT", "obniża jego zaliczkę na podatek PIT", "podlega składkom ZUS po stronie pracownika", "jest całkowicie zwolniona z podatku", "Dlatego zwiększa podstawę zaliczki PIT."),
         Q("Imienny raport miesięczny o należnych składkach za ubezpieczonego to", "ZUS RCA", "ZUS DRA", "ZUS ZWUA", "PIT-11", "DRA to deklaracja zbiorcza płatnika.")
       ]
     },
@@ -1259,7 +1259,7 @@ stawka dzienna = 4 200 ÷ 30 = 140,00 zł
 <div class="tip">60 dni opiekuńczego to limit roczny wspólny dla wszystkich dzieci. Dwoje dzieci nie daje 120 dni.</div>` }
       ],
       pytania: [
-        Q("Pracownik w wieku 40 lat choruje 40 dni w roku. Pracodawca wypłaca mu wynagrodzenie chorobowe za", "33 dni, a od 34. dnia przysługuje zasiłek chorobowy", "14 dni", "40 dni", "30 dni", "Pracownik po 50. roku życia: 14 dni."),
+        Q("Pracownik w wieku 40 lat choruje 40 dni w roku. Pracodawca wypłaca mu wynagrodzenie chorobowe za", "33 dni, a od 34. dnia przysługuje zasiłek chorobowy", "14 dni, a od 15. dnia przysługuje zasiłek chorobowy", "30 dni, a od 31. dnia przysługuje zasiłek chorobowy", "40 dni, a zasiłku chorobowego się nie wypłaca", "Pracownik po 50. roku życia: 14 dni."),
         Q("Zasiłek chorobowy za okres pobytu w szpitalu wynosi", "70% podstawy", "80% podstawy", "100% podstawy", "60% podstawy", "Wyjątki: ciąża, wypadek w drodze do lub z pracy (100%)."),
         Q("Okres zasiłkowy przy zwykłej chorobie wynosi maksymalnie", "182 dni", "270 dni", "33 dni", "12 miesięcy", "270 dni przy gruźlicy i ciąży."),
         Q("Okres wyczekiwania na zasiłek chorobowy dla osoby ubezpieczonej obowiązkowo wynosi", "30 dni", "90 dni", "14 dni", "nie ma okresu wyczekiwania", "Dla ubezpieczonych dobrowolnie 90 dni."),
@@ -1294,7 +1294,7 @@ stawka dzienna = 4 200 ÷ 30 = 140,00 zł
 </ul>
 <h4>VAT w małej firmie</h4>
 <ul>
-<li><b>Zwolnienie podmiotowe</b>: gdy sprzedaż opodatkowana w poprzednim roku nie przekroczyła <b>200 000 zł</b> (proporcjonalnie w roku rozpoczęcia działalności). Nie dotyczy m.in. niektórych usług prawniczych, doradczych i sprzedaży wybranych towarów.</li>
+<li><b>Zwolnienie podmiotowe</b>: gdy sprzedaż opodatkowana w poprzednim roku nie przekroczyła <b>240 000 zł</b> (limit obowiązujący od 1 stycznia 2026 r., wcześniej 200 000 zł; proporcjonalnie w roku rozpoczęcia działalności). Nie dotyczy m.in. niektórych usług prawniczych, doradczych i sprzedaży wybranych towarów.</li>
 <li>Rejestracja jako podatnik VAT czynny: zgłoszenie <b>VAT-R</b>.</li>
 <li>Stawki: 23%, 8%, 5%, 0% oraz zwolnienie „zw”.</li>
 <li>JPK_V7M (miesięcznie) lub JPK_V7K (kwartalnie, dla małych podatników) do 25. dnia miesiąca po okresie.</li>
@@ -1375,7 +1375,7 @@ np. 5% × 2,0 × 2,0 = 20%</pre>
       pytania: [
         Q("Stawka podatku liniowego dla przedsiębiorcy wynosi", "19%", "12%", "32%", "9%", "Składka zdrowotna przy liniowym: 4,9% dochodu."),
         Q("Podatnik opłacający ryczałt od przychodów ewidencjonowanych", "nie odlicza kosztów uzyskania przychodu", "odlicza wszystkie koszty", "płaci podatek od dochodu", "nie prowadzi żadnej ewidencji", "Podstawą jest przychód."),
-        Q("Zwolnienie podmiotowe z VAT przysługuje, gdy wartość sprzedaży w poprzednim roku nie przekroczyła", "200 000 zł", "100 000 zł", "2 mln euro", "50 000 zł", "Art. 113 ustawy o VAT."),
+        Q("Zwolnienie podmiotowe z VAT przysługuje, gdy wartość sprzedaży w poprzednim roku nie przekroczyła", "240 000 zł", "200 000 zł", "2 mln euro", "100 000 zł", "Art. 113 ustawy o VAT, limit 240 000 zł obowiązuje od 1 stycznia 2026 r. (wcześniej 200 000 zł)."),
         Q("Stawka CIT dla małego podatnika wynosi", "9%", "19%", "12%", "5,5%", "Mały podatnik: przychody do 2 mln euro."),
         Q("Przy kredycie spłacanym w ratach malejących", "część kapitałowa raty jest stała", "wszystkie raty są równe", "odsetki rosną z każdą ratą", "łączny koszt odsetek jest wyższy niż przy ratach równych", "Raty malejące mają niższy łączny koszt odsetek."),
         Q("Faktoring pełny oznacza, że ryzyko niewypłacalności dłużnika ponosi", "faktor", "firma sprzedająca należność", "bank dłużnika", "urząd skarbowy", "Przy faktoringu niepełnym ryzyko wraca do firmy."),
@@ -1491,7 +1491,7 @@ Zysk netto             36 400</pre>
         Q("Odsetki od kredytu bankowego pobrane z rachunku księguje się na koncie", "751 Koszty finansowe", "750 Przychody finansowe", "761 Pozostałe koszty operacyjne", "402 Usługi obce", "Odsetki od lokat to przychody finansowe 750."),
         Q("Saldo Wn konta 300 Rozliczenie zakupu oznacza", "materiały w drodze", "dostawy niefakturowane", "zobowiązania wobec dostawców", "zużycie materiałów", "Faktura wpłynęła, materiały jeszcze nie."),
         Q("Wydanie sprzedanych towarów w cenie zakupu księguje się", "Wn 731 / Ma 330", "Wn 330 / Ma 731", "Wn 730 / Ma 330", "Wn 200 / Ma 730", "Konto 731 to wartość sprzedanych towarów w cenach zakupu."),
-        Q("Storno czerwone polega na", "powtórzeniu błędnego zapisu ze znakiem minus na tych samych stronach kont", "zapisie odwrotnym po przeciwnych stronach", "usunięciu zapisu korektorem", "przeksięgowaniu na konto 860", "Nie zawyża obrotów kont."),
+        Q("Storno czerwone polega na", "powtórzeniu błędnego zapisu kwotą ujemną po tych samych stronach", "zapisie odwrotnym błędnej kwoty po przeciwnych stronach kont", "wymazaniu błędnego zapisu korektorem i wpisaniu nowego", "przeksięgowaniu błędnej kwoty na konto 860 Wynik finansowy", "Nie zawyża obrotów kont."),
         Q("Przekazanie do używania maszyny, której koszty zebrano na koncie 080, księguje się", "Wn 010 / Ma 080", "Wn 080 / Ma 010", "Wn 400 / Ma 070", "Wn 010 / Ma 201", "Dokumentem jest OT."),
         Q("Wartość netto sprzedanego środka trwałego ujmuje się na koncie", "761 Pozostałe koszty operacyjne", "760 Pozostałe przychody operacyjne", "731 Wartość sprzedanych towarów", "400 Amortyzacja", "Przychód ze sprzedaży: konto 760."),
         Q("Saldo Ma konta 860 Wynik finansowy na koniec roku oznacza", "zysk netto", "stratę netto", "zobowiązanie podatkowe", "kapitał zakładowy", "Saldo Wn oznacza stratę.")
@@ -1594,11 +1594,11 @@ Na 31.12.2026 w pasywach: 5 000 zł przychodów przyszłych okresów</pre>
         Q("Zapasy na dzień bilansowy wycenia się według cen nabycia lub kosztu wytworzenia", "nie wyższych od cen sprzedaży netto", "powiększonych o marżę", "zawsze po cenach rynkowych", "według ceny sprzedaży brutto", "Art. 28 ust. 1 pkt 6 ustawy o rachunkowości."),
         Q("Odpis aktualizujący wartość należności księguje się", "Wn 761 / Ma 290", "Wn 290 / Ma 761", "Wn 200 / Ma 760", "Wn 751 / Ma 200", "Odpis jest kosztem i korektą należności."),
         Q("Ujemne różnice kursowe zalicza się do", "kosztów finansowych", "pozostałych kosztów operacyjnych", "kosztów rodzajowych", "strat nadzwyczajnych", "Dodatnie różnice kursowe to przychody finansowe."),
-        Q("Metodą potwierdzenia sald inwentaryzuje się", "środki na rachunkach bankowych", "gotówkę w kasie", "grunty", "należności sporne", "Należności sporne i grunty: weryfikacja."),
+        Q("Metodą potwierdzenia sald inwentaryzuje się", "środki na rachunkach bankowych", "gotówkę w kasie i czeki obce", "grunty i wartości niematerialne", "należności sporne i wątpliwe", "Należności sporne i grunty: weryfikacja."),
         Q("Nadwyżkę materiałów ujawnioną podczas inwentaryzacji księguje się", "Wn 310 / Ma 760", "Wn 760 / Ma 310", "Wn 310 / Ma 401", "Wn 234 / Ma 310", "Nadwyżka zwiększa pozostałe przychody operacyjne."),
         Q("Roczną polisę 2 400 zł zapłacono 1 października. Kwota czynnych rozliczeń międzyokresowych na 31 grudnia wynosi", "1 800 zł", "600 zł", "2 400 zł", "200 zł", "Koszt 3 miesięcy (600 zł) obciąża bieżący rok."),
         Q("Czynsz otrzymany z góry za przyszłe miesiące wykazuje się w bilansie jako", "rozliczenia międzyokresowe przychodów w pasywach", "należności w aktywach", "czynne rozliczenia międzyokresowe kosztów", "kapitał zapasowy", "Przychód rozlicza się w kolejnych miesiącach."),
-        Q("Rezerwę tworzy się na", "zobowiązania, których kwota lub termin nie są pewne", "pewne należności od klientów", "zapasy towarów", "zysk zatrzymany", "Np. odprawy emerytalne, spory sądowe, naprawy gwarancyjne.")
+        Q("Rezerwę tworzy się na", "zobowiązania o niepewnej kwocie lub terminie", "pewne należności od stałych odbiorców", "zapasy towarów zalegające w magazynie", "zysk zatrzymany do podziału w przyszłości", "Np. odprawy emerytalne, spory sądowe, naprawy gwarancyjne.")
       ]
     },
     {
@@ -1705,7 +1705,7 @@ F. Zysk ze sprzedaży                      30 000</pre>
 <div class="tip">Okresy przechowywania liczy się od początku roku następującego po roku obrotowym, którego dane dotyczą.</div>` }
       ],
       pytania: [
-        Q("Zgodność sumy sald Wn i Ma w zestawieniu obrotów i sald nie wykrywa błędu polegającego na", "zaksięgowaniu operacji na niewłaściwym koncie po właściwej stronie", "zapisie jednostronnym", "zapisie różnych kwot po obu stronach", "pominięciu zapisu po stronie Ma", "Zapis na złym koncie zachowuje równowagę."),
+        Q("Zgodność sumy sald Wn i Ma w zestawieniu obrotów i sald nie wykrywa błędu polegającego na", "księgowaniu na złym koncie, ale po właściwej stronie", "zapisie kwoty tylko po jednej stronie jednego konta", "zapisie różnych kwot po stronie Wn i po stronie Ma", "pominięciu zapisu po stronie Ma przy zapisie na Wn", "Zapis na złym koncie zachowuje równowagę."),
         Q("Saldo konta 070 Umorzenie środków trwałych w bilansie", "pomniejsza wartość środków trwałych w aktywach", "jest wykazywane w pasywach jako kapitał", "jest zobowiązaniem długoterminowym", "zwiększa zapasy", "Konto 070 jest kontem korygującym."),
         Q("Zwiększenie stanu produktów w wariancie porównawczym rachunku zysków i strat", "dodaje się do przychodów netto ze sprzedaży", "odejmuje się od przychodów ze sprzedaży", "jest pozostałym kosztem operacyjnym", "nie jest wykazywane", "Koryguje koszty rodzajowe o wartość zapasu produktów."),
         Q("Pozycja „koszty ogólnego zarządu” występuje w rachunku zysków i strat w wariancie", "kalkulacyjnym", "porównawczym", "tylko w rachunku przepływów", "w obu wariantach jako osobna pozycja", "Wariant porównawczy ma układ rodzajowy."),
@@ -1933,13 +1933,13 @@ OTIF = zamówienia wydane na czas i kompletne ÷ wszystkie × 100%</pre>
       ],
       pytania: [
         Q("Zgłoszenie przez dostawcę planowanego terminu dostawy i liczby palet to", "awizacja", "kompletacja", "konsolidacja", "inwentaryzacja", "Pozwala zaplanować rampę i sprzęt."),
-        Q("Uszkodzenie opakowań stwierdzone podczas rozładunku należy udokumentować", "protokołem szkody podpisanym przez kierowcę i adnotacją w liście przewozowym", "tylko wpisem w kartotece magazynowej", "dokumentem MM", "notatką bez podpisu kierowcy", "Inaczej trudno dochodzić roszczeń od przewoźnika."),
+        Q("Uszkodzenie opakowań stwierdzone podczas rozładunku należy udokumentować", "protokołem szkody podpisanym także przez kierowcę", "wyłącznie wpisem w kartotece magazynowej towaru", "dokumentem MM przesunięcia międzymagazynowego", "notatką służbową magazyniera bez podpisu kierowcy", "Dodatkowo wpisuje się adnotację w liście przewozowym, inaczej trudno dochodzić roszczeń od przewoźnika."),
         Q("Zwrot niewykorzystanych materiałów z produkcji do magazynu dokumentuje się dowodem", "ZW", "RW", "PW", "WZ", "RW to wydanie do produkcji."),
         Q("Dokumentem, który nie zmienia łącznego zapasu przedsiębiorstwa, jest", "MM", "PZ", "WZ", "RW", "Przesuwa towar między magazynami."),
         Q("Stan 40 szt. po 25 zł, dostawa 60 szt. po 27 zł, wydano 70 szt. Wartość rozchodu wg FIFO wynosi", "1 810 zł", "1 750 zł", "1 890 zł", "1 820 zł", "40 × 25 + 30 × 27."),
-        Q("Kompletacja polegająca na pobraniu towarów dla kilku zamówień jednocześnie i ich późniejszym rozdziale to", "kompletacja zbiorcza (batch picking)", "kompletacja jednostkowa", "cross-docking", "pick-by-light", "Skraca drogę kompletujących."),
+        Q("Kompletacja polegająca na pobraniu towarów dla kilku zamówień jednocześnie i ich późniejszym rozdziale to", "kompletacja zbiorcza (batch picking)", "kompletacja jednostkowa (order picking)", "cross-docking (przeładunek bez składowania)", "kompletacja ze wsparciem pick-by-light", "Skraca drogę kompletujących."),
         Q("Trzech kompletujących pobrało w ciągu 8 godzin 1 920 linii. Wydajność wynosi", "80 linii/h na osobę", "240 linii/h na osobę", "640 linii/h na osobę", "60 linii/h na osobę", "1 920 ÷ (3 × 8)."),
-        Q("Towar dla odbiorcy, który będzie rozładowywany jako ostatni na trasie, ładuje się", "najgłębiej w przestrzeni ładunkowej", "przy drzwiach naczepy", "na samej górze stosu", "w dowolnym miejscu", "Kolejność załadunku jest odwrotna do rozładunku.")
+        Q("Towar dla odbiorcy, który będzie rozładowywany jako ostatni na trasie, ładuje się", "najgłębiej w przestrzeni ładunkowej", "najbliżej tylnych drzwi naczepy", "na samej górze stosu ładunków", "w dowolnym miejscu, byle równomiernie", "Kolejność załadunku jest odwrotna do rozładunku.")
       ]
     },
     {
@@ -2041,7 +2041,7 @@ A  - strefa (lub magazyn)
         Q("Operator wózka widłowego z napędem mechanicznym musi posiadać", "zaświadczenie kwalifikacyjne UDT", "prawo jazdy kategorii C", "certyfikat ADR", "uprawnienia SEP", "Wózek podlega dozorowi technicznemu."),
         Q("Hala ma 2 000 m² powierzchni użytkowej, a powierzchnia składowa wynosi 1 300 m². Wskaźnik wykorzystania powierzchni wynosi", "65%", "35%", "153%", "75%", "1 300 ÷ 2 000 × 100%."),
         Q("Regał ma 8 sekcji po 3 miejsca na 5 poziomach. Liczba miejsc paletowych wynosi", "120", "40", "24", "16", "8 × 3 × 5."),
-        Q("Towary o największej liczbie pobrań należy umieścić", "blisko strefy wydań, na wysokości dogodnej do pobrania", "na najwyższych poziomach regałów", "w najdalszej części magazynu", "w strefie przyjęć", "Skraca to drogę i czas kompletacji."),
+        Q("Towary o największej liczbie pobrań należy umieścić", "blisko strefy wydań, na dogodnej wysokości", "na najwyższych poziomach regałów paletowych", "w najdalszej części magazynu, przy ścianie", "w strefie przyjęć, obok ramp rozładunkowych", "Skraca to drogę i czas kompletacji."),
         Q("Kawy nie należy składować w sąsiedztwie", "środków chemicznych o intensywnym zapachu", "herbaty w szczelnych opakowaniach", "cukru w workach", "makaronu", "Kawa chłonie obce zapachy.")
       ]
     },
@@ -2161,8 +2161,8 @@ rotacja w dniach = 10 000 ÷ 45 000 × 90 = 20 dni</pre>
         Q("Zapas maksymalny 600 szt., stan przy przeglądzie 220 szt., w drodze 80 szt. Należy zamówić", "300 szt.", "380 szt.", "460 szt.", "520 szt.", "600 - 220 - 80."),
         Q("Odchylenie standardowe popytu dziennego 8 szt., czas dostawy 9 dni, ω = 1,65. Zapas bezpieczeństwa wynosi około", "40 szt.", "119 szt.", "24 szt.", "13 szt.", "1,65 × 8 × 3 = 39,6."),
         Q("Roczny popyt 1 800 szt., koszt zamówienia 50 zł, roczny koszt utrzymania 1 szt. 4 zł. EOQ wynosi", "212 szt.", "150 szt.", "450 szt.", "300 szt.", "√(2 × 1 800 × 50 ÷ 4) = √45 000 ≈ 212."),
-        Q("W punkcie ekonomicznej wielkości zamówienia", "roczne koszty zamawiania równają się rocznym kosztom utrzymania", "koszty utrzymania są równe zero", "koszty zamawiania są najwyższe", "zapas średni jest równy rocznemu popytowi", "Koszt całkowity jest wtedy minimalny."),
-        Q("W analizie ABC grupę A stanowią pozycje, które", "mają największy udział w wartości obrotu", "są najtańsze w zakupie", "mają nieregularny popyt", "zajmują najwięcej miejsca", "Zwykle ok. 20% pozycji daje ok. 80% wartości."),
+        Q("W punkcie ekonomicznej wielkości zamówienia", "koszty zamawiania są równe kosztom utrzymania zapasu", "koszty utrzymania zapasu spadają do zera", "koszty zamawiania osiągają wartość najwyższą", "zapas średni równa się rocznemu popytowi na towar", "Koszt całkowity jest wtedy minimalny."),
+        Q("W analizie ABC grupę A stanowią pozycje, które", "mają największy udział w wartości obrotu", "mają najniższą cenę jednostkową zakupu", "mają najbardziej nieregularny popyt", "zajmują najwięcej miejsca w magazynie", "Zwykle ok. 20% pozycji daje ok. 80% wartości."),
         Q("Zapas średni 15 000 zł, sprzedaż roczna 180 000 zł. Rotacja zapasu w dniach (rok 360 dni) wynosi", "30 dni", "12 dni", "60 dni", "15 dni", "15 000 ÷ 180 000 × 360.")
       ]
     },
@@ -2274,10 +2274,10 @@ odpady przekazane do recyklingu 3,6 t ÷ wszystkie odpady 4,0 t × 100% = 90%</p
         Q("Piktogram przedstawiający płomień nad okręgiem oznacza substancje", "utleniające", "łatwopalne", "wybuchowe", "żrące", "Sam płomień to substancje łatwopalne."),
         Q("Informacje o warunkach magazynowania substancji niebezpiecznej zawiera sekcja karty charakterystyki", "7", "1", "14", "16", "Sekcja 14: informacje o transporcie."),
         Q("Na pochylni wózek widłowy z ładunkiem zjeżdża w dół", "tyłem, z ładunkiem od strony wzniesienia", "przodem, z ładunkiem skierowanym w dół", "z ładunkiem podniesionym wysoko", "bokiem", "Ładunek zawsze od strony wzniesienia."),
-        Q("Uszkodzenie regału oznaczone kolorem czerwonym wymaga", "natychmiastowego rozładowania i wyłączenia z użytkowania", "naprawy w ciągu 4 tygodni", "tylko monitorowania", "obniżenia obciążenia o 10%", "Pomarańczowe: naprawa w 4 tygodnie."),
+        Q("Uszkodzenie regału oznaczone kolorem czerwonym wymaga", "natychmiastowego rozładowania i wyłączenia z użytku", "naprawy w ciągu 4 tygodni bez rozładunku", "tylko monitorowania przy kolejnej inspekcji", "obniżenia obciążenia o 10% do czasu przeglądu", "Pomarańczowe: naprawa w 4 tygodnie."),
         Q("Dopuszczalna masa ładunku przenoszonego ręcznie przez kobietę przy pracy stałej wynosi", "12 kg", "20 kg", "30 kg", "25 kg", "Przy pracy dorywczej 20 kg."),
         Q("Pożar oleju jadalnego w urządzeniu kuchennym to pożar grupy", "F", "A", "B", "D", "Grupa D to metale."),
-        Q("Dokumentem potwierdzającym przekazanie odpadów firmie odbierającej jest", "karta przekazania odpadów w systemie BDO", "dokument WZ", "list przewozowy CMR", "faktura korygująca", "KPO wystawia się elektronicznie w BDO.")
+        Q("Dokumentem potwierdzającym przekazanie odpadów firmie odbierającej jest", "karta przekazania odpadów w systemie BDO", "dokument WZ wystawiony przez magazyn", "list przewozowy CMR z opisem odpadów", "karta ewidencji odpadów w rejestrze BDO", "KPO wystawia się elektronicznie w BDO. Karta ewidencji (KEO) służy do bieżącej ewidencji, a nie do przekazania.")
       ]
     }
   ]);
@@ -2388,9 +2388,9 @@ nabiał         do +6°C</pre>
         Q("Ładunek 15 600 kg przewożony pojazdem o ładowności 24 000 kg daje wykorzystanie ładowności", "65%", "54%", "154%", "35%", "15 600 ÷ 24 000 × 100%."),
         Q("Dopuszczalna szerokość pojazdu ciężarowego (poza chłodniami) wynosi", "2,55 m", "2,40 m", "2,60 m", "3,00 m", "Chłodnie: 2,60 m."),
         Q("Według PN-EN 12195-1 mocowanie ładunku musi wytrzymać do przodu siłę równą", "0,8 ciężaru ładunku", "0,5 ciężaru ładunku", "1,5 ciężaru ładunku", "0,2 ciężaru ładunku", "Do tyłu i na boki 0,5."),
-        Q("Parametr pasa transportowego istotny przy mocowaniu przez docisk to", "STF (standardowa siła napięcia)", "LC w pętli", "długość taśmy", "kolor etykiety", "Docisk zależy od napięcia pasa."),
+        Q("Parametr pasa transportowego istotny przy mocowaniu przez docisk to", "STF (standardowa siła napięcia)", "LC (zdolność mocowania w pętli)", "SHF (ręczna siła napinania)", "wydłużenie taśmy pod obciążeniem", "Docisk zależy od napięcia pasa, czyli STF podanego na etykiecie. LC liczy się przy mocowaniu bezpośrednim."),
         Q("Pojazd chłodnia klasy C (FRC) pozwala utrzymać temperaturę w zakresie", "od +12°C do -20°C", "od +12°C do 0°C", "od +12°C do -10°C", "tylko powyżej 0°C", "FRA: do 0°C, FRB: do -10°C."),
-        Q("Przejazd pojazdu przekraczającego dopuszczalne wymiary wymaga", "zezwolenia na przejazd pojazdu nienormatywnego", "tylko zgłoszenia na policji", "certyfikatu ATP", "karnetu TIR", "Często także pilota.")
+        Q("Przejazd pojazdu przekraczającego dopuszczalne wymiary wymaga", "zezwolenia na przejazd pojazdu nienormatywnego", "wyłącznie zgłoszenia przejazdu na policji", "świadectwa ATP dla zestawu pojazdów", "karnetu TIR wydanego dla przewoźnika", "Często także pilota.")
       ]
     },
     {
@@ -2496,13 +2496,13 @@ wyjazd: dzień 1, godz. 6:00</pre>
 <div class="tip">W zadaniach zawsze licz czas jazdy w minutach i rozpisz tabelę godzin. Łatwo wtedy wykazać egzaminatorowi, że każda norma jest spełniona.</div>` }
       ],
       pytania: [
-        Q("Dzienny czas jazdy kierowcy może zostać wydłużony do 10 godzin", "nie więcej niż dwa razy w tygodniu", "codziennie", "raz w miesiącu", "trzy razy w tygodniu", "Normalnie 9 h."),
+        Q("Dzienny czas jazdy kierowcy może zostać wydłużony do 10 godzin", "nie więcej niż dwa razy w tygodniu", "nie więcej niż trzy razy w tygodniu", "codziennie przy jeździe w załodze", "nie więcej niż raz w miesiącu", "Normalnie 9 h."),
         Q("Maksymalny łączny czas jazdy w dwóch kolejnych tygodniach wynosi", "90 h", "56 h", "112 h", "100 h", "W jednym tygodniu maks. 56 h."),
-        Q("Przerwę 45 minut można podzielić na dwie części w kolejności", "najpierw co najmniej 15 min, potem co najmniej 30 min", "najpierw 30 min, potem 15 min", "trzy przerwy po 15 min", "dowolnie", "Odwrotna kolejność nie spełnia normy."),
+        Q("Przerwę 45 minut można podzielić na dwie części w kolejności", "najpierw min. 15 min, potem min. 30 min", "najpierw min. 30 min, potem min. 15 min", "trzy części po co najmniej 15 min", "w dowolnej kolejności, łącznie 45 min", "Odwrotna kolejność nie spełnia normy."),
         Q("Regularny tygodniowy okres odpoczynku wynosi co najmniej", "45 godzin", "24 godziny", "11 godzin", "35 godzin", "Skrócony: co najmniej 24 h."),
         Q("Piktogram skrzyżowanych młotków na tachografie oznacza", "inną pracę", "jazdę", "dyspozycyjność", "odpoczynek", "Np. załadunek, tankowanie, kontrolę pojazdu."),
         Q("Dane z karty kierowcy przewoźnik pobiera co najmniej co", "28 dni", "90 dni", "7 dni", "56 dni", "Z pamięci tachografu co 90 dni."),
-        Q("Trasa 560 km przy średniej prędkości 70 km/h wymaga czasu jazdy", "8 h i co najmniej jednej przerwy 45 min", "8 h bez przerw", "7 h i dwóch przerw", "10 h i odpoczynku dobowego", "560 ÷ 70 = 8 h, więc po 4,5 h potrzebna jest przerwa."),
+        Q("Trasa 560 km przy średniej prędkości 70 km/h wymaga czasu jazdy", "8 h i co najmniej jednej przerwy 45 min", "8 h bez konieczności robienia przerwy", "7 h i dwóch przerw po 45 minut", "10 h i odpoczynku dobowego w trasie", "560 ÷ 70 = 8 h, więc po 4,5 h potrzebna jest przerwa."),
         Q("W Polsce pojazdy o DMC powyżej 12 t nie mogą jeździć w dni ustawowo wolne od pracy w godzinach", "8:00-22:00", "6:00-18:00", "0:00-24:00", "18:00-22:00", "Wyjątki dotyczą m.in. przewozu żywności szybko psującej się.")
       ]
     },
@@ -2615,8 +2615,8 @@ wskaźnik szkód = przesyłki uszkodzone ÷ wszystkie × 100%
         Q("Koszty stałe pojazdu wynoszą 18 000 zł miesięcznie przy przebiegu 9 000 km. Koszt stały na 1 km wynosi", "2,00 zł", "0,50 zł", "1,80 zł", "20,00 zł", "18 000 ÷ 9 000."),
         Q("Do kosztów zmiennych w transporcie drogowym zalicza się", "paliwo i opłaty drogowe", "ubezpieczenie OC pojazdu", "ratę leasingu", "czynsz za biuro", "Rosną wraz z liczbą przejechanych kilometrów."),
         Q("Pojazd przejechał 1 200 km, z czego 900 km z ładunkiem. Współczynnik przebiegu ładownego wynosi", "0,75", "1,33", "0,25", "0,90", "900 ÷ 1 200."),
-        Q("Według konwencji CMR odszkodowanie za zaginięcie towaru nie może przekroczyć", "8,33 SDR za 1 kg wagi brutto brakującego towaru", "wartości całego pojazdu", "dwukrotności przewoźnego", "100 euro za przesyłkę", "Chyba że zadeklarowano wartość lub specjalny interes."),
-        Q("Zastrzeżenie dotyczące szkody niewidocznej przy przewozie CMR odbiorca składa na piśmie w ciągu", "7 dni (bez niedziel i świąt)", "21 dni", "24 godzin", "1 roku", "21 dni dotyczy opóźnienia."),
+        Q("Według konwencji CMR odszkodowanie za zaginięcie towaru nie może przekroczyć", "8,33 SDR za 1 kg wagi brutto brakującego towaru", "17 SDR za 1 kg wagi brutto brakującego towaru", "dwukrotności przewoźnego za całą przesyłkę", "wartości całego pojazdu wraz z naczepą", "Chyba że zadeklarowano wartość lub specjalny interes. 17 SDR za kg to limit z kolejowej konwencji CIM."),
+        Q("Zastrzeżenie dotyczące szkody niewidocznej przy przewozie CMR odbiorca składa na piśmie w ciągu", "7 dni (bez niedziel i świąt)", "21 dni od wydania towaru", "24 godzin od rozładunku", "1 roku od dnia dostawy", "21 dni dotyczy opóźnienia."),
         Q("Roszczenia z przewozu wg CMR (bez złego zamiaru) przedawniają się po", "1 roku", "3 latach", "6 latach", "6 miesiącach", "Przy złym zamiarze: 3 lata."),
         Q("Ubezpieczenie chroniące przewoźnika przed skutkami jego odpowiedzialności za szkody w towarze to", "OCP", "cargo", "AC", "OCS", "OCS to ubezpieczenie spedytora."),
         Q("Po przewozie międzynarodowym przewoźnik może wykonać w kraju przyjmującym", "do 3 operacji kabotażowych w ciągu 7 dni", "nieograniczoną liczbę przewozów", "1 operację w ciągu 30 dni", "do 5 operacji w ciągu 14 dni", "Potem 4 dni przerwy.")

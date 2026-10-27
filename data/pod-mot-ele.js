@@ -168,9 +168,9 @@ window.KURSY = window.KURSY || {};
         Q("Napięcie spoczynkowe w pełni naładowanego akumulatora 12 V wynosi około", "12,6-12,8 V", "11,8 V", "13,8-14,4 V", "10,5 V", "13,8-14,4 V to napięcie ładowania przez alternator."),
         Q("Gęstość elektrolitu w pełni naładowanym akumulatorze wynosi około", "1,28 g/cm³", "1,00 g/cm³", "1,12 g/cm³", "1,84 g/cm³", "1,12 g/cm³ oznacza akumulator rozładowany."),
         Q("Zalecany prąd ładowania akumulatora 60 Ah prostownikiem klasycznym wynosi", "6 A", "60 A", "0,6 A", "30 A", "Ok. 1/10 pojemności."),
-        Q("Po wymianie akumulatora w pojeździe z czujnikiem IBS należy", "zarejestrować nowy akumulator w sterowniku testerem", "wymienić alternator", "odłączyć czujnik", "naładować go prądem 1/2 pojemności", "Sterownik dopasowuje strategię ładowania do typu i wieku akumulatora."),
-        Q("Rozrusznik obraca się, ale nie obraca wału silnika. Najbardziej prawdopodobną przyczyną jest", "uszkodzone sprzęgło jednokierunkowe bendiksa", "rozładowany akumulator", "brak napięcia na zacisku 50", "uszkodzony regulator napięcia", "Przy braku napięcia na 50 rozrusznik w ogóle nie ruszy."),
-        Q("Zacisk 50 rozrusznika służy do", "sterowania włącznikiem elektromagnetycznym ze stacyjki", "doprowadzenia stałego plusa z akumulatora", "połączenia z masą", "zasilania lampki ładowania", "Stały plus z akumulatora to zacisk 30."),
+        Q("Po wymianie akumulatora w pojeździe z czujnikiem IBS należy", "zarejestrować akumulator testerem", "wymienić alternator na mocniejszy", "odłączyć czujnik IBS od klemy", "naładować go prądem 1/2 pojemności", "Sterownik dopasowuje strategię ładowania do typu i wieku akumulatora."),
+        Q("Rozrusznik obraca się, ale nie obraca wału silnika. Najbardziej prawdopodobną przyczyną jest", "uszkodzone sprzęgło jednokierunkowe", "rozładowany akumulator rozruchowy", "brak napięcia na zacisku 50", "uszkodzony regulator napięcia", "Ślizga się sprzęgło jednokierunkowe bendiksa. Przy braku napięcia na 50 rozrusznik w ogóle nie ruszy."),
+        Q("Zacisk 50 rozrusznika służy do", "sterowania elektromagnesem ze stacyjki", "doprowadzenia stałego plusa z akumulatora", "połączenia obudowy z masą pojazdu", "zasilania lampki kontrolnej ładowania", "Stały plus z akumulatora to zacisk 30."),
         Q("Napięcie ładowania wynosi 15,3 V przy 2000 obr/min. Przyczyną jest najczęściej", "uszkodzony regulator napięcia", "zużyte szczotki", "ślizgający się pasek", "rozładowany akumulator", "Zużyte szczotki i pasek dają raczej za niskie napięcie."),
         Q("Duże tętnienia napięcia na zacisku B+ alternatora wskazują na", "uszkodzenie diody prostownika", "zbyt mały prąd spoczynkowy", "dobry stan regulatora", "zbyt wysoką gęstość elektrolitu", "Tętnienia mierzy się oscyloskopem lub miernikiem w trybie AC.")
       ]
@@ -255,7 +255,7 @@ window.KURSY = window.KURSY || {};
         Q("Rezystancja czujnika temperatury typu NTC wraz ze wzrostem temperatury", "maleje", "rośnie", "nie zmienia się", "spada do zera przy 0°C", "Czujnik PTC zachowuje się odwrotnie."),
         Q("Większość czujników sterownika silnika zasilana jest napięciem odniesienia", "5 V", "12 V", "24 V", "230 V", "Stabilne 5 V pozwala dokładnie przeliczyć sygnał."),
         Q("Bez sygnału z czujnika położenia wału korbowego silnik", "nie uruchomi się", "pracuje normalnie", "pracuje tylko na wolnych obrotach", "przechodzi na zasilanie gazem", "Sterownik nie wie, kiedy wtrysnąć paliwo i wywołać iskrę."),
-        Q("Koło impulsowe 60-2 oznacza", "60 pozycji zębów, z których 2 są usunięte jako znacznik", "60 zębów i 2 czujniki", "60 obrotów na 2 sekundy", "2 cylindry na 60 stopni", "Luka po dwóch zębach wyznacza położenie odniesienia wału."),
+        Q("Koło impulsowe 60-2 oznacza", "60 podziałek, z których 2 zęby usunięto", "60 zębów i 2 czujniki położenia wału", "60 obrotów wału na 2 sekundy pracy", "2 cylindry przesunięte co 60 stopni", "Luka po dwóch zębach wyznacza położenie odniesienia wału."),
         Q("Kod P0302 przenosi się na cylinder 3 po zamianie cewek cylindrów 2 i 3. Uszkodzona jest", "cewka zapłonowa", "świeca zapłonowa cylindra 2", "wtryskiwacz cylindra 2", "czujnik spalania stukowego", "Usterka podąża za przełożonym elementem."),
         Q("Linie magistrali CAN w gnieździe OBD znajdują się na pinach", "6 i 14", "4 i 5", "7 i 15", "1 i 16", "Pin 16 to plus, piny 4 i 5 to masa."),
         Q("Typowa rezystancja wysokooporowego wtryskiwacza benzynowego wynosi", "ok. 12-16 Ω", "ok. 0,1 Ω", "ok. 2 kΩ", "ok. 1 MΩ", "Wtryskiwacze niskooporowe mają ok. 2-3 Ω."),
@@ -290,6 +290,13 @@ window.KURSY = window.KURSY || {};
 <li>Zmierz napięcie na oprawce przy włączonym świetle: powinno być bliskie napięciu akumulatora.</li>
 <li>Zmierz spadek napięcia na masie oprawki: skorodowana masa daje słabe świecenie lub „podświetlanie” innych lamp (prąd szuka drogi przez inne żarówki).</li>
 </ol>
+<h4>Typowe pułapki egzaminacyjne</h4>
+<ul>
+<li>Reflektory ustawia się na pojeździe nieobciążonym (kierowca lub obciążnik 75 kg), przy prawidłowym ciśnieniu w oponach i korektorze w pozycji 0. Pochylenie granicy światła mijania podaje się w procentach, typowo 1-1,5%, a wartość jest podana na obudowie reflektora.</li>
+<li>Tylne światło przeciwmgłowe można włączyć tylko przy włączonych światłach mijania, drogowych lub przeciwmgłowych przednich. Jego lampka kontrolna jest żółta (pomarańczowa).</li>
+<li>Przekaźnik świateł: zacisk 30 to stały plus, 85 i 86 to cewka, 87 to wyjście do odbiornika.</li>
+<li>Żarówka na zimno ma rezystancję kilka razy mniejszą niż w pracy, dlatego z pomiaru omomierzem nie oblicza się jej mocy.</li>
+</ul>
 <div class="tip">Gdy po włączeniu stopu słabo zapala się kierunkowskaz lub pozycja, prawie zawsze winna jest masa lampy tylnej.</div>` },
         { tytul: "Ustawienie świateł", tresc: `<h4>Wymagania</h4>
 <ul>
@@ -349,7 +356,7 @@ window.KURSY = window.KURSY || {};
         Q("Gdy po wciśnięciu hamulca słabo zapala się tylne światło pozycyjne i kierunkowskaz, przyczyną jest zwykle", "uszkodzona masa lampy tylnej", "przepalony bezpiecznik świateł stop", "uszkodzony włącznik świateł", "za mała moc żarówki", "Prąd szuka drogi do masy przez inne włókna."),
         Q("Element klimatyzacji, w którym czynnik oddaje ciepło i skrapla się, to", "skraplacz", "parownik", "osuszacz", "zawór rozprężny", "Parownik pobiera ciepło z kabiny."),
         Q("Czynnik chłodniczy stosowany w nowych samochodach osobowych w UE to", "R1234yf", "R12", "R22", "R404A", "R134a stosowano w starszych pojazdach."),
-        Q("Przed napełnieniem układu klimatyzacji czynnikiem stacja wykonuje", "próżnię w celu usunięcia wilgoci i sprawdzenia szczelności", "przepłukanie wodą", "podgrzanie skraplacza", "wymianę paska wieloklinowego", "Wilgoć w układzie zamarza w zaworze i tworzy kwasy.")
+        Q("Przed napełnieniem układu klimatyzacji czynnikiem stacja wykonuje", "próżnię (osuszenie i test szczelności)", "przepłukanie układu wodą destylowaną", "podgrzanie skraplacza do 80°C", "pomiar ciśnienia oleju silnikowego", "Wilgoć w układzie zamarza w zaworze i tworzy kwasy.")
       ]
     },
     {
@@ -431,12 +438,12 @@ window.KURSY = window.KURSY || {};
       pytania: [
         Q("Rezystancja zmierzona między przewodami CAN-H i CAN-L sprawnej magistrali High Speed wynosi około", "60 Ω", "120 Ω", "0 Ω", "1 MΩ", "Dwa rezystory 120 Ω połączone równolegle dają 60 Ω."),
         Q("W stanie recesywnym napięcie na liniach CAN-H i CAN-L wynosi około", "2,5 V na obu liniach", "12 V na obu liniach", "5 V na CAN-H i 0 V na CAN-L", "0 V na obu liniach", "W stanie dominującym CAN-H rośnie do ok. 3,5 V, CAN-L spada do ok. 1,5 V."),
-        Q("Pomiar 120 Ω między CAN-H a CAN-L oznacza najczęściej", "przerwę w magistrali lub brak jednego rezystora terminującego", "prawidłowy stan magistrali", "zwarcie linii do masy", "zwarcie między liniami", "Prawidłowy wynik to ok. 60 Ω."),
+        Q("Pomiar 120 Ω między CAN-H a CAN-L oznacza najczęściej", "przerwę lub brak jednego terminatora", "prawidłowy stan magistrali CAN", "zwarcie jednej linii do masy", "zwarcie między liniami CAN-H i CAN-L", "Prawidłowy wynik to ok. 60 Ω."),
         Q("Magistrala LIN wykorzystuje", "jeden przewód sygnałowy", "dwa skręcone przewody", "światłowód", "przewód koncentryczny", "Światłowód stosuje magistrala MOST."),
         Q("Zapłonnika poduszki powietrznej nie wolno sprawdzać omomierzem, ponieważ", "prąd pomiarowy może spowodować jej odpalenie", "pomiar zawsze wskazuje 0 Ω", "zapłonnik ma rezystancję kilku MΩ", "omomierz uszkodzi sterownik ABS", "Do sprawdzania wiązki używa się symulatora."),
         Q("Wymontowaną poduszkę powietrzną należy odłożyć", "stroną wybuchową do góry", "stroną wybuchową do dołu", "na grzejniku, aby wyschła", "w dowolnej pozycji na stole", "Przy przypadkowym odpaleniu poduszka nie wystrzeli jak pocisk."),
         Q("Element pojazdu elektrycznego, który ładuje akumulator 12 V, to", "przetwornica DC/DC", "falownik trakcyjny", "ładowarka pokładowa AC", "alternator", "Pojazd elektryczny nie ma alternatora."),
-        Q("Przed rozpoczęciem pracy przy instalacji HV, po wyjęciu złącza serwisowego i odczekaniu, należy", "sprawdzić brak napięcia odpowiednim miernikiem", "od razu odkręcić przewody HV", "podłączyć ładowarkę", "włączyć tryb READY", "Brak napięcia potwierdza się pomiarem, nie zakłada.")
+        Q("Przed rozpoczęciem pracy przy instalacji HV, po wyjęciu złącza serwisowego i odczekaniu, należy", "potwierdzić brak napięcia miernikiem", "od razu odkręcić przewody HV", "podłączyć ładowarkę do gniazda", "włączyć tryb READY na chwilę", "Brak napięcia potwierdza się pomiarem, nie zakłada.")
       ]
     }
   ]);
@@ -523,7 +530,7 @@ window.KURSY = window.KURSY || {};
       pytania: [
         Q("Owalizacja cylindra to różnica średnic zmierzonych", "w dwóch prostopadłych płaszczyznach na tej samej wysokości", "w jednej płaszczyźnie na różnych wysokościach", "dwóch sąsiednich cylindrów", "cylindra i tłoka", "Różnica na różnych wysokościach to stożkowatość."),
         Q("Do pomiaru średnicy cylindra stosuje się", "średnicówkę czujnikową", "szczelinomierz", "liniał krawędziowy", "areometr", "Średnicówkę zeruje się na mikrometrze ustawionym na wymiar nominalny."),
-        Q("Luz w zamku pierścienia tłokowego mierzy się", "szczelinomierzem po wsunięciu pierścienia do cylindra", "mikrometrem na tłoku", "suwmiarką na zdjętym pierścieniu", "Plastigage", "Pierścień ustawia się prostopadle do gładzi, wpychając go denkiem tłoka."),
+        Q("Luz w zamku pierścienia tłokowego mierzy się", "szczelinomierzem w cylindrze", "mikrometrem na zdjętym tłoku", "suwmiarką na wyjętym pierścieniu", "paskiem Plastigage w rowku", "Pierścień ustawia się prostopadle do gładzi, wpychając go denkiem tłoka."),
         Q("Typowa kolejność zapłonu w silniku rzędowym czterocylindrowym to", "1-3-4-2", "1-2-3-4", "1-4-2-3", "1-2-4-3", "Odstęp między zapłonami wynosi 180° obrotu wału."),
         Q("Po założeniu nowego paska rozrządu i zdjęciu blokad należy przede wszystkim", "obrócić wał ręcznie o dwa obroty i sprawdzić znaki", "od razu uruchomić silnik na wysokich obrotach", "wymienić olej silnikowy", "zmierzyć ciśnienie sprężania", "Kontrola znaków po dwóch obrotach wyklucza przeskoczenie zęba."),
         Q("Wzrost ciśnienia sprężania po wlaniu oleju do cylindra świadczy o", "zużyciu pierścieni tłokowych", "nieszczelności zaworu wylotowego", "pękniętej głowicy", "zbyt dużym luzie zaworowym", "Olej chwilowo uszczelnia pierścienie; zawory nie reagują na olej."),
@@ -604,7 +611,7 @@ window.KURSY = window.KURSY || {};
         Q("Napięcie sondy lambda dwustanowej przy mieszance bogatej wynosi około", "0,9 V", "0,1 V", "5 V", "12 V", "Uboga mieszanka daje ok. 0,1 V."),
         Q("Ciśnienie paliwa w szynie układu Common Rail przy pełnym obciążeniu osiąga", "1600-2500 bar", "3-4 bar", "50-80 bar", "10-15 bar", "Ciśnienie 3-4 bar to wtrysk wielopunktowy benzyny."),
         Q("Test przelewów w silniku Common Rail służy do oceny", "szczelności wtryskiwaczy", "ciśnienia doładowania", "sprawności katalizatora", "stanu świec żarowych", "Wtryskiwacz z dużo większym przelewem jest nieszczelny."),
-        Q("Po wymianie wtryskiwacza w silniku Common Rail należy", "wprowadzić kod kalibracyjny wtryskiwacza do sterownika", "wymienić pompę wysokiego ciśnienia", "zresetować licznik przebiegu", "wymienić sondę lambda", "Kod (IMA/QR) koryguje dawkę dla indywidualnych cech wtryskiwacza."),
+        Q("Po wymianie wtryskiwacza w silniku Common Rail należy", "wpisać kod korekcyjny (IMA) do sterownika", "wymienić pompę wysokiego ciśnienia", "zresetować adaptacje skrzyni biegów", "wymienić filtr paliwa i sondę lambda", "Kod (IMA/QR) koryguje dawkę dla indywidualnych cech wtryskiwacza."),
         Q("Zawór EGR ma za zadanie przede wszystkim ograniczyć emisję", "tlenków azotu", "tlenku węgla", "sadzy", "dwutlenku węgla", "Spaliny obniżają temperaturę spalania, przez co powstaje mniej NOx."),
         Q("Stopień zapełnienia filtra DPF sterownik ocenia na podstawie sygnału", "czujnika różnicy ciśnień", "sondy lambda za katalizatorem", "czujnika spalania stukowego", "przepływomierza", "Rosnąca różnica ciśnień przed i za filtrem oznacza zapełnienie sadzą."),
         Q("Płyn AdBlue stosowany w układzie SCR to wodny roztwór", "mocznika", "glikolu", "metanolu", "amoniaku 100%", "Stężenie mocznika wynosi 32,5%.")
@@ -770,13 +777,13 @@ window.KURSY = window.KURSY || {};
       ],
       pytania: [
         Q("Ząbkowanie bieżnika i ścieranie jednej krawędzi opon przednich świadczy najczęściej o nieprawidłowej", "zbieżności kół", "ciśnieniu w zbiorniku paliwa", "kolejności zapłonu", "wysokości świateł", "Zbieżność wpływa najsilniej na zużycie opon."),
-        Q("Zbieżność kół przednich reguluje się zwykle przez", "wkręcanie lub wykręcanie końcówek drążków kierowniczych", "wymianę amortyzatorów", "zmianę ciśnienia w oponach", "dokręcanie śrub koła", "Regulację wykonuje się po równo z obu stron, aby kierownica pozostała prosto."),
+        Q("Zbieżność kół przednich reguluje się zwykle przez", "zmianę długości drążków kierowniczych", "zmianę pochylenia kolumny kierownicy", "zmianę ciśnienia w oponach przednich", "przestawienie mocowania amortyzatora", "Regulację wykonuje się po równo z obu stron, aby kierownica pozostała prosto."),
         Q("Kąt pochylenia koła jest ujemny, gdy", "górna część koła pochylona jest do środka pojazdu", "górna część koła pochylona jest na zewnątrz", "koła są bliżej siebie z przodu", "oś skrętu jest pochylona do tyłu", "Ujemny camber poprawia trzymanie się drogi na zakrętach."),
         Q("Wynik badania amortyzatora metodą EUSAMA wynoszący 30% oznacza", "amortyzator zużyty", "amortyzator bardzo dobry", "zbyt duże ciśnienie w oponie", "prawidłowy luz łożyska", "Poniżej ok. 40% amortyzator kwalifikuje się do wymiany."),
         Q("Amortyzatory należy wymieniać", "parami na jednej osi", "pojedynczo, tylko uszkodzony", "zawsze wszystkie cztery", "tylko na osi napędowej", "Różnica tłumienia na osi pogarsza stabilność."),
-        Q("Śruby tulei metalowo-gumowych wahacza ostatecznie dokręca się", "przy kole obciążonym, w pozycji roboczej zawieszenia", "przy kole wiszącym w powietrzu", "przed zamontowaniem wahacza", "kluczem udarowym bez kontroli momentu", "Inaczej tuleja pracuje skręcona i szybko się niszczy."),
+        Q("Śruby tulei metalowo-gumowych wahacza ostatecznie dokręca się", "przy kole obciążonym (pozycja robocza)", "przy kole wiszącym w powietrzu", "przed zamontowaniem wahacza w aucie", "kluczem udarowym bez kontroli momentu", "Inaczej tuleja pracuje skręcona i szybko się niszczy."),
         Q("Napis OUTSIDE na oponie asymetrycznej oznacza, że ta strona opony", "musi znajdować się na zewnątrz pojazdu", "musi być od strony zawieszenia", "jest przeznaczona do jazdy terenowej", "wskazuje kierunek obrotu", "Kierunek obrotu wskazuje strzałka ROTATION na oponach kierunkowych."),
-        Q("W pośrednim systemie TPMS spadek ciśnienia wykrywany jest na podstawie", "zmiany prędkości obrotowej koła z czujników ABS", "czujnika w zaworze koła", "pomiaru temperatury opony", "czujnika poziomu nadwozia", "Opona z niższym ciśnieniem ma mniejszy promień toczenia i obraca się szybciej.")
+        Q("W pośrednim systemie TPMS spadek ciśnienia wykrywany jest na podstawie", "prędkości obrotowej kół z czujników ABS", "sygnału z czujnika w zaworze koła", "pomiaru temperatury bieżnika opony", "sygnału z czujników poziomu nadwozia", "Opona z niższym ciśnieniem ma mniejszy promień toczenia i obraca się szybciej.")
       ]
     },
     {
@@ -859,13 +866,13 @@ window.KURSY = window.KURSY || {};
       ],
       pytania: [
         Q("Pulsowanie pedału hamulca i drgania kierownicy podczas hamowania są typowym objawem", "bicia tarcz hamulcowych", "zapowietrzenia układu", "zużytych amortyzatorów tylnych", "uszkodzonego serwa", "Bicie tarczy mierzy się czujnikiem zegarowym."),
-        Q("Bicie boczne tarczy hamulcowej mierzy się", "czujnikiem zegarowym na podstawie magnetycznej", "mikrometrem", "suwmiarką", "szczelinomierzem", "Mikrometrem mierzy się grubość tarczy."),
+        Q("Bicie boczne tarczy hamulcowej mierzy się", "czujnikiem zegarowym na statywie", "mikrometrem zewnętrznym do tarcz", "suwmiarką w kilku punktach tarczy", "szczelinomierzem przy jarzmie zacisku", "Mikrometrem mierzy się grubość tarczy."),
         Q("Miękki, gąbczasty pedał hamulca świadczy najczęściej o", "obecności powietrza w układzie hamulcowym", "zużytych tarczach", "uszkodzonym czujniku ABS", "zbyt dużym ciśnieniu w oponach", "Powietrze i para wodna są ściśliwe w przeciwieństwie do płynu."),
-        Q("Płynu hamulcowego DOT 5 nie wolno mieszać z płynem DOT 4, ponieważ", "DOT 5 jest na bazie silikonu, a DOT 4 na bazie glikolu", "DOT 5 ma niższą temperaturę wrzenia", "DOT 4 jest na bazie oleju mineralnego", "DOT 5 jest higroskopijny", "DOT 5.1 jest glikolowy i można go mieszać z DOT 4."),
+        Q("Płynu hamulcowego DOT 5 nie wolno mieszać z płynem DOT 4, ponieważ", "DOT 5 jest silikonowy, a DOT 4 glikolowy", "DOT 5 ma niższą temperaturę wrzenia", "DOT 4 jest na bazie oleju mineralnego", "DOT 5 jest silnie higroskopijny", "DOT 5.1 jest glikolowy i można go mieszać z DOT 4."),
         Q("Siły hamowania kół osi przedniej wynoszą 4,0 kN i 3,0 kN. Różnica sił wynosi", "25%", "33%", "10%", "75%", "(4,0 - 3,0) / 4,0 = 0,25."),
         Q("Maksymalna dopuszczalna różnica sił hamowania kół jednej osi wynosi", "30%", "5%", "50%", "70%", "Większa różnica powoduje ściąganie pojazdu podczas hamowania."),
         Q("Minimalny wskaźnik skuteczności hamulca postojowego samochodu osobowego wynosi", "16%", "50%", "30%", "5%", "Dla hamulca roboczego minimum to 50% (nowsze M1: 58%)."),
-        Q("Czujnika ABS typu aktywnego nie sprawdza się omomierzem, ponieważ", "jest zasilanym czujnikiem elektronicznym z sygnałem prostokątnym", "nie ma przewodów", "ma rezystancję równą zeru", "działa tylko przy prędkości powyżej 100 km/h", "Sprawdza się napięcie zasilania i sygnał oscyloskopem lub testerem.")
+        Q("Czujnika ABS typu aktywnego nie sprawdza się omomierzem, ponieważ", "jest czujnikiem zasilanym, z sygnałem cyfrowym", "ma zbyt dużą rezystancję uzwojenia cewki", "ma rezystancję równą zeru w każdym stanie", "działa dopiero powyżej prędkości 100 km/h", "Sprawdza się napięcie zasilania i sygnał oscyloskopem lub testerem.")
       ]
     }
   ]);
@@ -955,9 +962,9 @@ window.KURSY = window.KURSY || {};
         Q("W numerze VIN rok modelowy oznacza znak na pozycji", "10.", "1.", "4.", "17.", "11. znak to zakład produkcyjny."),
         Q("W numerze VIN nie stosuje się liter", "I, O, Q", "A, B, C", "X, Y, Z", "E, F, G", "Mogłyby być mylone z cyframi 1 i 0."),
         Q("Pole E w dowodzie rejestracyjnym zawiera", "numer VIN", "numer rejestracyjny", "moc silnika", "dopuszczalną masę całkowitą", "Numer rejestracyjny to pole A, moc P.2, DMC F.1."),
-        Q("Pierwsze okresowe badanie techniczne nowego samochodu osobowego bez instalacji gazowej wykonuje się", "przed upływem 3 lat od pierwszej rejestracji", "po roku od rejestracji", "po 5 latach od rejestracji", "co roku od początku", "Drugie badanie przed upływem 5 lat, potem co rok."),
+        Q("Pierwsze okresowe badanie techniczne nowego samochodu osobowego bez instalacji gazowej wykonuje się", "przed upływem 3 lat od rejestracji", "po roku od pierwszej rejestracji", "po 5 latach od pierwszej rejestracji", "co roku od dnia rejestracji", "Drugie badanie przed upływem 5 lat, potem co rok."),
         Q("Samochód osobowy z instalacją LPG podlega badaniu technicznemu", "co rok", "co 2 lata", "co 3 lata", "tylko przy rejestracji", "Instalacja gazowa wymaga corocznej kontroli."),
-        Q("Podczas naprawy mechanik wykrył dodatkową usterkę. Serwis powinien", "uzyskać zgodę klienta przed wykonaniem dodatkowej naprawy", "naprawić ją i doliczyć do faktury", "nie informować klienta", "przerwać całą naprawę", "Zakres prac i koszt wykraczający poza zlecenie wymaga akceptacji klienta."),
+        Q("Podczas naprawy mechanik wykrył dodatkową usterkę. Serwis powinien", "uzyskać zgodę klienta przed naprawą", "naprawić ją i doliczyć do faktury", "pominąć ją i nie informować klienta", "przerwać całą naprawę i oddać auto", "Zakres prac i koszt wykraczający poza zlecenie wymaga akceptacji klienta."),
         Q("Ochraniacze na fotel, kierownicę i dywanik zakłada się", "podczas przyjęcia pojazdu, przed pracami", "dopiero przy wydaniu pojazdu", "tylko w pojazdach nowych", "tylko na życzenie klienta", "Chronią wnętrze przed zabrudzeniem w czasie obsługi.")
       ]
     },
@@ -1134,12 +1141,12 @@ window.KURSY = window.KURSY || {};
       ],
       pytania: [
         Q("Rękojmia za wady towaru sprzedanego konsumentowi trwa", "2 lata od wydania towaru", "6 miesięcy", "zawsze 5 lat", "tyle, ile wskazuje karta gwarancyjna", "Dla rzeczy używanych można ją skrócić do 1 roku."),
-        Q("Gwarancji udziela", "gwarant na podstawie dobrowolnego oświadczenia", "zawsze sprzedawca z mocy ustawy", "ubezpieczyciel OC", "stacja kontroli pojazdów", "Odpowiedzialność ustawowa sprzedawcy to rękojmia."),
+        Q("Gwarancji udziela", "gwarant w dobrowolnym oświadczeniu", "zawsze sprzedawca z mocy ustawy", "ubezpieczyciel w ramach polisy OC", "stacja kontroli pojazdów po badaniu", "Odpowiedzialność ustawowa sprzedawcy to rękojmia."),
         Q("Serwis powinien odpowiedzieć na reklamację konsumenta w terminie", "14 dni", "3 dni", "30 dni", "6 miesięcy", "Brak odpowiedzi w tym terminie oznacza uznanie reklamacji."),
-        Q("Obowiązkowym ubezpieczeniem komunikacyjnym w Polsce jest", "OC posiadaczy pojazdów mechanicznych", "AC", "NNW", "assistance", "Pozostałe ubezpieczenia są dobrowolne."),
+        Q("Obowiązkowym ubezpieczeniem komunikacyjnym w Polsce jest", "OC posiadaczy pojazdów", "AC (autocasco)", "NNW kierowcy i pasażerów", "assistance drogowe", "Pozostałe ubezpieczenia są dobrowolne."),
         Q("Kary za brak obowiązkowego OC nakłada", "Ubezpieczeniowy Fundusz Gwarancyjny", "Stacja Kontroli Pojazdów", "Inspekcja Pracy", "Urząd Skarbowy", "UFG wypłaca także odszkodowania za nieubezpieczonych sprawców."),
         Q("Ubezpieczyciel powinien wypłacić odszkodowanie co do zasady w terminie", "30 dni od zgłoszenia szkody", "7 dni od zgłoszenia", "90 dni od zgłoszenia", "roku od zgłoszenia", "Dłużej tylko, gdy wyjaśnienie okoliczności nie jest możliwe w tym czasie."),
-        Q("Przekazanie zużytego oleju firmie odbierającej odpady dokumentuje się", "kartą przekazania odpadu w systemie BDO", "fakturą proforma", "zleceniem naprawy", "protokołem odbioru pojazdu", "Prowadzi się także ewidencję odpadów."),
+        Q("Przekazanie zużytego oleju firmie odbierającej odpady dokumentuje się", "kartą przekazania odpadu w BDO", "fakturą proforma od odbiorcy", "zleceniem naprawy pojazdu", "protokołem odbioru pojazdu", "Prowadzi się także ewidencję odpadów."),
         Q("Na odpływie wód z myjni i placu warsztatu stosuje się", "separator substancji ropopochodnych", "osadnik gnilny", "filtr węglowy w kabinie", "odmę silnika", "Separator zatrzymuje oleje i paliwa przed kanalizacją.")
       ]
     },
@@ -1166,6 +1173,13 @@ window.KURSY = window.KURSY || {};
 <p>Liczba stanowisk = roczna pracochłonność [rbh] / (roczny fundusz czasu stanowiska [h] × współczynnik wykorzystania × liczba zmian). Przykład: 12 000 rbh rocznie, fundusz 2000 h, wykorzystanie 0,8, jedna zmiana: 12 000 / 1600 = 7,5, czyli <b>8 stanowisk</b> (zawsze zaokrąglamy w górę).</p>
 <h4>Wyposażenie typowego stanowiska</h4>
 <p>Wózek narzędziowy z kompletem kluczy, klucz dynamometryczny, instalacja sprężonego powietrza, odciąg spalin, lampa, pojemnik na zużyty olej, tester diagnostyczny. W strefie hybryd i EV: wydzielone stanowisko oznakowane, mata izolacyjna, narzędzia 1000 V, hak ratunkowy, tablice ostrzegawcze.</p>
+<h4>Wymagania BHP dla stanowisk</h4>
+<div class="tw"><table><tr><th>Element</th><th>Wymaganie</th></tr>
+<tr><td>Kanał naprawczy</td><td>krawężniki prowadzące, przykrycie gdy nieużywany, wyjście awaryjne, oświetlenie niskonapięciowe</td></tr>
+<tr><td>Odciąg spalin</td><td>obowiązkowy przy pracy silnika w zamkniętej hali (tlenek węgla)</td></tr>
+<tr><td>Lampy przenośne</td><td>zasilane bardzo niskim napięciem bezpiecznym (np. 12 V lub 24 V)</td></tr>
+<tr><td>Gaśnice</td><td>proszkowe ABC przy stanowiskach, oznakowane i łatwo dostępne</td></tr></table></div>
+<p>Typowy błąd w zadaniach: wybór podnośnika dwukolumnowego do pomiaru geometrii. Geometrię mierzy się na podnośniku najazdowym lub stanowisku z płytami obrotowymi, bo koła muszą stać obciążone.</p>
 <div class="tip">W zadaniach o liczbie stanowisk wynik zawsze zaokrąglaj w górę: ułamek stanowiska oznacza, że cała praca nie zmieści się w istniejącej liczbie.</div>` },
         { tytul: "Przepływ zleceń i harmonogram", tresc: `<h4>Rola osób w serwisie</h4>
 <ul>
@@ -1195,6 +1209,13 @@ window.KURSY = window.KURSY || {};
 <li><b>Kontakt po wizycie</b> (follow-up) po 1-3 dniach: zadowolenie, problemy. Wyniki zbiera się jako wskaźnik <b>CSI</b> (zadowolenia klienta).</li>
 <li>Przypomnienia o przeglądach i badaniu technicznym (za zgodą klienta).</li>
 </ul>
+<h4>Dokumenty w przepływie zlecenia</h4>
+<div class="tw"><table><tr><th>Etap</th><th>Dokument</th></tr>
+<tr><td>przyjęcie</td><td>zlecenie naprawy z podpisem klienta, protokół przyjęcia (przebieg, paliwo, uszkodzenia)</td></tr>
+<tr><td>naprawa</td><td>karta pracy mechanika, dokument pobrania części z magazynu (RW)</td></tr>
+<tr><td>prace dodatkowe</td><td>notatka o zgodzie klienta (telefon, SMS, e-mail)</td></tr>
+<tr><td>wydanie</td><td>faktura, protokół wydania, wpis do książki serwisowej</td></tr></table></div>
+<p>Czas pracy rozlicza się w normogodzinach z katalogu producenta, a nie w czasie rzeczywistym. Mechanik, który wykonuje naprawę szybciej niż norma, podnosi swój wskaźnik wydajności.</p>
 <div class="tip">Ścieżka krytyczna to najdłuższy ciąg zadań zależnych. Skrócić całkowity czas naprawy można tylko skracając zadania na tej ścieżce.</div>` },
         { tytul: "BHP i ochrona przeciwpożarowa", tresc: `<h4>Zagrożenia w serwisie</h4>
 <div class="tw"><table><tr><th>Zagrożenie</th><th>Środek ochrony</th></tr>
@@ -1233,7 +1254,7 @@ window.KURSY = window.KURSY || {};
         Q("Pożary cieczy palnych, np. benzyny, należą do grupy", "B", "A", "C", "D", "A to ciała stałe, C gazy, D metale."),
         Q("Oświetlenie przenośne w kanale przeglądowym zasila się", "napięciem bezpiecznym", "napięciem 400 V", "bezpośrednio z akumulatora pojazdu przewodem bez izolacji", "napięciem 230 V bez zabezpieczeń", "W kanale łatwo o kontakt z metalem i wilgoć."),
         Q("Wskaźnik CSI w serwisie określa", "zadowolenie klientów", "wykorzystanie stanowisk", "liczbę reklamacji części", "zużycie energii", "Customer Satisfaction Index."),
-        Q("Pracownik doznał porażenia prądem. Pierwszą czynnością ratownika jest", "uwolnienie poszkodowanego spod działania prądu (wyłączenie zasilania)", "rozpoczęcie oddechów ratowniczych", "podanie płynów", "przeniesienie poszkodowanego bez wyłączania prądu", "Bez wyłączenia prądu ratownik sam może zostać porażony.")
+        Q("Pracownik doznał porażenia prądem. Pierwszą czynnością ratownika jest", "uwolnienie spod działania prądu", "rozpoczęcie oddechów ratowniczych", "podanie poszkodowanemu płynów", "przeniesienie go w bezpieczne miejsce", "Najpierw wyłącza się zasilanie, bez tego ratownik sam może zostać porażony.")
       ]
     },
     {
@@ -1267,6 +1288,13 @@ window.KURSY = window.KURSY || {};
 <li>Lista kontrolna przed wydaniem: momenty dokręcenia, poziomy płynów, brak kodów błędów, jazda próbna, czystość wnętrza.</li>
 <li>Zasada „czterech oczu”: kluczowe prace (hamulce, układ kierowniczy) sprawdza druga osoba.</li>
 <li>Rejestrowanie <b>napraw powtórnych</b> (powrót klienta z tą samą usterką).</li>
+</ul>
+<h4>Narzędzia analizy problemów</h4>
+<ul>
+<li><b>Diagram Ishikawy</b> (rybiej ości): przyczyny w kategoriach 5M, czyli człowiek, maszyna, metoda, materiał, zarządzanie (często dodaje się też środowisko i pomiar).</li>
+<li><b>Metoda 5 x Dlaczego</b>: pytanie „dlaczego?” powtarza się aż do znalezienia przyczyny źródłowej.</li>
+<li><b>Wykres Pareto</b>: ok. 20% przyczyn daje ok. 80% skutków, więc najpierw usuwa się przyczyny najczęstsze.</li>
+<li>Wskaźniki serwisu: <b>CSI</b> (zadowolenie klienta), <b>FTFR</b> (naprawy skuteczne za pierwszym razem), odsetek napraw powtórnych.</li>
 </ul>
 <div class="tip">PDCA to kolejność: planuj, wykonaj, sprawdź, działaj. W pytaniach często podaje się etap opisowo, np. „pomiar efektów wprowadzonej zmiany” to Check.</div>` },
         { tytul: "Narzędzia analizy problemów", tresc: `<h4>Diagram Ishikawy (przyczynowo-skutkowy, „rybia ość”)</h4>
@@ -1326,12 +1354,12 @@ window.KURSY = window.KURSY || {};
       pytania: [
         Q("Norma określająca wymagania dla systemu zarządzania jakością to", "ISO 9001", "ISO 14001", "ISO 45001", "PN-EN 60204", "ISO 14001 dotyczy środowiska, ISO 45001 BHP."),
         Q("Etap cyklu PDCA polegający na pomiarze efektów wdrożonej zmiany to", "Check", "Plan", "Do", "Act", "Act to utrwalenie lub korekta zmiany."),
-        Q("Diagram Ishikawy służy do", "analizy przyczyn problemu w kategoriach (np. 5M)", "planowania urlopów", "obliczania kosztów naprawy", "harmonogramowania stanowisk", "Nazywany jest diagramem rybiej ości."),
+        Q("Diagram Ishikawy służy do", "analizy przyczyn problemu (np. 5M)", "planowania urlopów pracowników", "obliczania kosztów naprawy pojazdu", "harmonogramowania pracy stanowisk", "Nazywany jest diagramem rybiej ości."),
         Q("Zasada Pareto mówi, że", "ok. 20% przyczyn powoduje ok. 80% problemów", "wszystkie przyczyny są tak samo ważne", "80% klientów jest niezadowolonych", "20% zleceń trwa 80% dłużej", "Należy najpierw zająć się kilkoma najważniejszymi przyczynami."),
         Q("Krok metody 5S polegający na wyznaczeniu stałego miejsca dla każdego narzędzia to", "systematyka", "sortowanie", "sprzątanie", "samodyscyplina", "Przykładem jest tablica cieni na ścianie warsztatu."),
         Q("Rozwiązanie zapobiegające popełnieniu błędu, np. złącze możliwe do połączenia tylko w jeden sposób, to", "poka-yoke", "kaizen", "kanban", "benchmarking", "Kaizen to ciągłe drobne usprawnienia."),
         Q("Na 200 ankiet 110 osób oceniło serwis na 9-10, a 30 osób na 0-6. Wskaźnik NPS wynosi", "40", "55", "70", "15", "55% - 15% = 40."),
-        Q("Wskaźnik FTFR w serwisie oznacza odsetek", "napraw wykonanych skutecznie za pierwszym razem", "pojazdów przyjętych bez umówienia", "części zamówionych przed wizytą", "klientów płacących kartą", "First Time Fix Rate.")
+        Q("Wskaźnik FTFR w serwisie oznacza odsetek", "napraw skutecznych za pierwszym razem", "pojazdów przyjętych bez umówienia", "części zamówionych przed wizytą", "klientów powracających w ciągu roku", "First Time Fix Rate.")
       ]
     }
   ]);
@@ -1433,7 +1461,7 @@ window.KURSY = window.KURSY || {};
         Q("W układzie gwiazdy napięcie na każdym odbiorniku zasilanym z sieci 400 V wynosi", "230 V", "400 V", "690 V", "133 V", "Uf = U / √3."),
         Q("Trzy jednakowe grzałki przełączono z gwiazdy w trójkąt. Moc całkowita", "wzrośnie 3 razy", "zmaleje 3 razy", "nie zmieni się", "wzrośnie √3 razy", "Napięcie na każdej grzałce rośnie √3 razy, a moc z kwadratem napięcia."),
         Q("Moc czynną odbiornika trójfazowego oblicza się ze wzoru", "P = √3 × U × I × cos φ", "P = U × I", "P = 3 × U × I × sin φ", "P = U² × R", "U to napięcie międzyprzewodowe, I prąd przewodowy."),
-        Q("Przerwa w przewodzie neutralnym przy niesymetrycznym obciążeniu sieci trójfazowej powoduje", "wzrost napięcia na części odbiorników nawet powyżej 230 V", "wyłączenie wszystkich odbiorników", "brak skutków", "zmianę częstotliwości", "Następuje przesunięcie punktu neutralnego."),
+        Q("Przerwa w przewodzie neutralnym przy niesymetrycznym obciążeniu sieci trójfazowej powoduje", "wzrost napięcia na części odbiorników", "wyłączenie wszystkich odbiorników w sieci", "spadek napięcia na wszystkich fazach", "zmianę częstotliwości napięcia sieci", "Następuje przesunięcie punktu neutralnego, napięcie może przekroczyć 230 V."),
         Q("Czajnik o mocy 2 kW pracujący 15 minut zużywa energię", "0,5 kWh", "30 kWh", "2 kWh", "0,15 kWh", "2 kW × 0,25 h."),
         Q("Podwojenie przekroju przewodu przy tej samej mocy i długości linii powoduje, że spadek napięcia", "zmaleje dwukrotnie", "wzrośnie dwukrotnie", "nie zmieni się", "zmaleje czterokrotnie", "Spadek napięcia jest odwrotnie proporcjonalny do przekroju.")
       ]
@@ -1517,14 +1545,14 @@ window.KURSY = window.KURSY || {};
 <div class="tip">Typowe zadanie praktyczne: zmontuj rozdzielnicę wg schematu i wykonaj pomiary. Najczęstsze błędy: pomieszane N za różnymi RCD, brak tulejek na linkach, niedokręcone zaciski.</div>` }
       ],
       pytania: [
-        Q("Oznaczenie przewodu YDYp oznacza przewód", "miedziany, jednodrutowy, w izolacji i powłoce PVC, płaski", "aluminiowy, wielodrutowy, okrągły", "miedziany giętki do odbiorników ruchomych", "kabel ziemny w izolacji XLPE", "Litera A oznaczałaby aluminium, L linkę."),
+        Q("Oznaczenie przewodu YDYp oznacza przewód", "miedziany jednodrutowy w izolacji i powłoce PVC, płaski", "aluminiowy jednodrutowy w izolacji i powłoce PVC, okrągły", "miedziany wielodrutowy (linka) w izolacji gumowej, płaski", "miedziany jednodrutowy w izolacji PVC, bez powłoki, okrągły", "Litera A oznaczałaby aluminium, L linkę."),
         Q("Kolor izolacji zastrzeżony wyłącznie dla przewodu ochronnego PE to", "zielono-żółty", "niebieski", "brązowy", "czarny", "Niebieski oznacza przewód neutralny N."),
         Q("Wyłącznik nadprądowy o charakterystyce B wyzwala natychmiastowo przy prądzie", "3-5 × In", "5-10 × In", "10-20 × In", "1,13 × In", "Charakterystyka C: 5-10 × In, D: 10-20 × In."),
         Q("Warunek ochrony przewodu przed przeciążeniem ma postać", "IB ≤ In ≤ Iz", "Iz ≤ In ≤ IB", "In ≥ 1,45 × Iz", "IB = Iz = In", "Prąd obciążenia mniejszy od prądu zabezpieczenia, a ten od obciążalności przewodu."),
         Q("Maksymalna impedancja pętli zwarcia dla obwodu z wyłącznikiem B10 przy U0 = 230 V wynosi", "4,6 Ω", "23 Ω", "2,3 Ω", "0,46 Ω", "Ia = 5 × 10 = 50 A, Zs = 230 / 50."),
         Q("Wybiórczość działania bezpieczników gG jest zachowana, gdy prądy znamionowe kolejnych wkładek mają stosunek co najmniej", "1,6 : 1", "1,1 : 1", "1 : 1", "10 : 1", "Np. 25 A za 40 A."),
         Q("Minimalny przekrój przewodu PEN z miedzi w instalacji ułożonej na stałe wynosi", "10 mm²", "1,5 mm²", "2,5 mm²", "4 mm²", "Dla aluminium 16 mm²."),
-        Q("Przewody neutralne obwodów zabezpieczonych wyłącznikiem różnicowoprądowym należy podłączyć", "do zacisku N tego samego wyłącznika różnicowoprądowego", "do szyny PE", "do dowolnej szyny N w rozdzielnicy", "do obudowy rozdzielnicy", "Inaczej RCD wykrywa nierównowagę prądów i wyłącza.")
+        Q("Przewody neutralne obwodów zabezpieczonych wyłącznikiem różnicowoprądowym należy podłączyć", "do zacisku N tego samego wyłącznika RCD", "do szyny PE wspólnej dla rozdzielnicy", "do dowolnej szyny N w rozdzielnicy", "do zacisku N sąsiedniego wyłącznika RCD", "Inaczej RCD wykrywa nierównowagę prądów i wyłącza.")
       ]
     },
     {
@@ -1614,10 +1642,10 @@ window.KURSY = window.KURSY || {};
 <div class="tip">Kolejność ma znaczenie: najpierw ciągłość PE, potem izolacja, a dopiero na końcu pomiary pod napięciem. Pomiar pętli bez sprawdzonej ciągłości PE może wywołać napięcie na obudowach.</div>` }
       ],
       pytania: [
-        Q("W układzie sieci TN-C-S przewód PEN", "rozdziela się na N i PE w złączu lub rozdzielnicy głównej", "występuje w całej instalacji odbiorczej", "jest izolowany od ziemi", "zastępuje przewód fazowy", "Po rozdzieleniu N i PE nie wolno ponownie łączyć."),
+        Q("W układzie sieci TN-C-S przewód PEN", "rozdziela się na N i PE w złączu", "występuje w całej instalacji odbiorczej", "jest celowo izolowany od ziemi", "zastępuje przewód fazowy L1", "Rozdzielenie następuje w złączu lub rozdzielnicy głównej. Po rozdzieleniu N i PE nie wolno ponownie łączyć."),
         Q("Maksymalny czas samoczynnego wyłączenia w układzie TN 230 V dla obwodu gniazd 16 A wynosi", "0,4 s", "5 s", "0,2 s", "1 s", "5 s dotyczy obwodów rozdzielczych i powyżej 32 A."),
         Q("Urządzenie z izolacją podwójną, oznaczone symbolem podwójnego kwadratu, ma klasę ochronności", "II", "0", "I", "III", "Nie ma zacisku ochronnego PE."),
-        Q("Wyłącznik różnicowoprądowy typu A wykrywa prądy różnicowe", "przemienne sinusoidalne i pulsujące jednokierunkowe", "tylko przemienne sinusoidalne", "tylko stałe gładkie", "tylko zwarciowe L-N", "Prądy stałe gładkie wykrywa typ B."),
+        Q("Wyłącznik różnicowoprądowy typu A wykrywa prądy różnicowe", "przemienne i pulsujące jednokierunkowe", "wyłącznie przemienne sinusoidalne", "wyłącznie stałe gładkie i wygładzone", "tylko zwarciowe między L a N", "Prądy stałe gładkie wykrywa typ B."),
         Q("Czas zadziałania wyłącznika różnicowoprądowego ogólnego typu przy prądzie 5 × IΔn nie może przekroczyć", "40 ms", "300 ms", "0,4 s", "5 s", "Przy IΔn dopuszczalne jest 300 ms."),
         Q("Pomiar rezystancji izolacji obwodu 230 V wykonuje się napięciem probierczym", "500 V DC, a wynik musi wynosić co najmniej 1 MΩ", "250 V DC, a wynik co najmniej 0,25 MΩ", "1000 V AC, a wynik co najmniej 10 MΩ", "230 V AC, a wynik co najmniej 0,5 MΩ", "Wg PN-HD 60364-6."),
         Q("Pomiar ciągłości przewodów ochronnych wykonuje się prądem o wartości co najmniej", "200 mA", "10 mA", "30 mA", "10 A", "Napięcie źródła 4-24 V."),
@@ -1916,12 +1944,12 @@ IP55   Iz.Kl. F   S1</pre>
       pytania: [
         Q("Świadectwo kwalifikacyjne uprawniające do kierowania czynnościami osób wykonujących prace eksploatacyjne to świadectwo", "D (dozór)", "E (eksploatacja)", "G2", "SEP-C", "Świadectwo E uprawnia do wykonywania prac."),
         Q("Świadectwo kwalifikacyjne grupy G1 jest ważne", "5 lat", "1 rok", "10 lat", "bezterminowo", "Po tym czasie trzeba ponownie zdać egzamin."),
-        Q("Prace w warunkach szczególnego zagrożenia wykonuje się", "na polecenie, w zespole co najmniej dwuosobowym", "jednoosobowo bez polecenia", "tylko w nocy", "wyłącznie przez poleceniodawcę", "Polecenie może być pisemne lub ustne."),
+        Q("Prace w warunkach szczególnego zagrożenia wykonuje się", "na polecenie, w zespole min. dwuosobowym", "jednoosobowo, bez wydanego polecenia", "tylko w porze nocnej, przy małym ruchu", "wyłącznie przez samego poleceniodawcę", "Polecenie może być pisemne lub ustne."),
         Q("Osoba przygotowująca miejsce pracy i dopuszczająca zespół do pracy to", "dopuszczający", "poleceniodawca", "nadzorujący", "członek zespołu", "Poleceniodawca wydaje polecenie, a nie przygotowuje miejsca."),
         Q("Po wyłączeniu napięcia i zabezpieczeniu przed ponownym załączeniem należy", "sprawdzić brak napięcia", "od razu rozpocząć pracę", "zdjąć tablice ostrzegawcze", "załączyć urządzenie na próbę", "To trzecia z pięciu zasad bezpieczeństwa."),
         Q("Zakładając uziemiacz przenośny, jego zacisk w pierwszej kolejności łączy się z", "uziomem (przewodem uziemiającym)", "przewodem fazowym", "dowolnym przewodem", "obudową wskaźnika napięcia", "Zdejmuje się go w odwrotnej kolejności."),
         Q("Rękawice dielektryczne należą do sprzętu", "izolacyjnego dodatkowego", "izolacyjnego podstawowego przy każdym napięciu", "do zabezpieczenia miejsca pracy", "pomiarowego", "Do podstawowego należą m.in. drążki i wskaźniki napięcia."),
-        Q("Oględziny urządzenia elektrycznego to czynność wykonywana", "bez demontażu, zwykle przy pracującym urządzeniu", "zawsze po wyłączeniu i demontażu", "tylko przez producenta", "tylko po awarii", "Przegląd wymaga wyłączenia i pomiarów.")
+        Q("Oględziny urządzenia elektrycznego to czynność wykonywana", "bez demontażu, zwykle w czasie pracy", "zawsze po wyłączeniu i demontażu", "wyłącznie przez serwis producenta", "tylko po wystąpieniu awarii", "Przegląd wymaga wyłączenia i pomiarów.")
       ]
     },
     {
@@ -2108,11 +2136,11 @@ IP55   Iz.Kl. F   S1</pre>
       pytania: [
         Q("Dopuszczalna temperatura dla izolacji klasy F wynosi", "155°C", "105°C", "130°C", "180°C", "A 105, E 120, B 130, F 155, H 180."),
         Q("Wzrost temperatury pracy izolacji o ok. 10 K powoduje skrócenie jej trwałości mniej więcej", "o połowę", "o 10%", "dziesięciokrotnie", "nie wpływa na trwałość", "Reguła Montsingera."),
-        Q("Oznaczenie S1 na tabliczce silnika oznacza", "pracę ciągłą ze stałym obciążeniem", "pracę dorywczą", "pracę przerywaną 40%", "stopień ochrony", "S2 to praca dorywcza, S3 przerywana okresowa."),
+        Q("Oznaczenie S1 na tabliczce silnika oznacza", "pracę ciągłą przy stałym obciążeniu", "pracę dorywczą o ograniczonym czasie", "pracę przerywaną okresową 40%", "stopień ochrony obudowy silnika", "S2 to praca dorywcza, S3 przerywana okresowa."),
         Q("Napięcie zasilania silnika indukcyjnego obniżyło się o 10%. Moment silnika zmaleje w przybliżeniu o", "19%", "10%", "5%", "50%", "Moment jest proporcjonalny do kwadratu napięcia: 0,9² = 0,81."),
         Q("Dominujące drgania o częstotliwości równej prędkości obrotowej w kierunku promieniowym wskazują na", "niewyważenie wirnika", "zwarcie w uzwojeniu stojana", "zawilgocenie izolacji", "zbyt duży poślizg", "Niewspółosiowość daje duże drgania osiowe 1x i 2x."),
         Q("Rezystancja uzwojenia miedzianego wynosiła 4,00 Ω przy 20°C, po pracy 4,80 Ω. Temperatura uzwojenia wynosi w przybliżeniu", "71°C", "24°C", "96°C", "51°C", "t2 = 1,2 × 255 - 235 = 71°C."),
-        Q("Rezystancje uzwojeń faz silnika wynoszą 2,10 Ω, 2,11 Ω i 1,80 Ω. Najbardziej prawdopodobne jest", "zwarcie międzyzwojowe w trzeciej fazie", "przerwa w trzeciej fazie", "prawidłowy stan uzwojeń", "uszkodzenie łożysk", "Przerwa dałaby rezystancję nieskończoną."),
+        Q("Rezystancje uzwojeń faz silnika wynoszą 2,10 Ω, 2,11 Ω i 1,80 Ω. Najbardziej prawdopodobne jest", "zwarcie międzyzwojowe w fazie 3", "przerwa w uzwojeniu fazy 3", "prawidłowy stan wszystkich uzwojeń", "uszkodzenie łożysk silnika", "Przerwa dałaby rezystancję nieskończoną."),
         Q("Nadmierna ilość smaru w łożysku tocznym silnika powoduje", "przegrzewanie łożyska", "spadek rezystancji izolacji uzwojeń", "zmniejszenie poślizgu", "wzrost napięcia zasilania", "Smar jest mieszany przez elementy toczne i nagrzewa się.")
       ]
     },
@@ -2205,8 +2233,8 @@ regulacja ±2 × 2,5%   ONAN</pre>
         Q("Straty mierzone w próbie stanu jałowego transformatora to głównie straty", "w żelazie (rdzeniu)", "w miedzi uzwojeń", "mechaniczne", "dielektryczne w oleju", "Straty w miedzi mierzy się w próbie zwarcia."),
         Q("Napięcie zwarcia uk transformatora wyznacza się w próbie", "zwarcia przy prądzie znamionowym", "stanu jałowego", "rezystancji izolacji", "przekładni", "Wyraża się je w procentach napięcia znamionowego."),
         Q("Prąd znamionowy transformatora 630 kVA wynosi 909 A, a uk = 6%. Prąd zwarcia na zaciskach nn wynosi w przybliżeniu", "15 kA", "909 A", "55 A", "150 kA", "Ik ≈ In / uk = 909 / 0,06."),
-        Q("Przekaźnik Buchholza w transformatorze olejowym reaguje na", "gazy wydzielające się z oleju i gwałtowny przepływ oleju", "przepięcia atmosferyczne", "asymetrię napięć sieci", "spadek częstotliwości", "Montuje się go między kadzią a konserwatorem."),
-        Q("Do pracy równoległej transformatorów konieczne są m.in.", "jednakowe grupy połączeń i przekładnie", "jednakowe masy kadzi", "różne napięcia zwarcia", "różne kolejności faz", "Różne grupy połączeń powodują zwarcie."),
+        Q("Przekaźnik Buchholza w transformatorze olejowym reaguje na", "gazy z oleju i gwałtowny przepływ oleju", "przepięcia atmosferyczne w sieci", "asymetrię napięć po stronie wtórnej", "spadek częstotliwości napięcia sieci", "Montuje się go między kadzią a konserwatorem."),
+        Q("Do pracy równoległej transformatorów konieczne są m.in.", "jednakowe grupy połączeń i przekładnie", "jednakowe masy kadzi i ilości oleju", "możliwie różne napięcia zwarcia", "różne kolejności faz po obu stronach", "Różne grupy połączeń powodują zwarcie."),
         Q("Łącznik zapewniający widoczną przerwę izolacyjną, ale nieprzeznaczony do przerywania prądu obciążenia, to", "odłącznik", "wyłącznik", "rozłącznik", "stycznik", "Otwarcie odłącznika pod obciążeniem wywołuje łuk."),
         Q("Podczas wyłączania obwodu w stacji SN w pierwszej kolejności należy otworzyć", "wyłącznik", "odłącznik szynowy", "uziemnik", "odłącznik liniowy", "Odłączniki otwiera się dopiero w stanie bezprądowym.")
       ]
@@ -2311,7 +2339,7 @@ regulacja ±2 × 2,5%   ONAN</pre>
         Q("Prędkość wentylatora zmniejszono do 50% znamionowej. Moc pobierana zmaleje w przybliżeniu do", "12,5% wartości znamionowej", "50% wartości znamionowej", "25% wartości znamionowej", "75% wartości znamionowej", "Moc jest proporcjonalna do sześcianu prędkości: 0,5³ = 0,125."),
         Q("Opłaty za pobór energii biernej indukcyjnej naliczane są zwykle, gdy współczynnik tg φ przekracza", "0,4", "1,0", "0,1", "0,93", "tg φ = 0,4 odpowiada cos φ ≈ 0,93."),
         Q("Moc czynna odbioru wynosi 200 kW, tg φ1 = 0,75, wymagane tg φ2 = 0,4. Moc baterii kondensatorów wynosi", "70 kvar", "150 kvar", "80 kvar", "35 kvar", "Qc = 200 × (0,75 - 0,40)."),
-        Q("W bateriach kondensatorów pracujących w sieci z wyższymi harmonicznymi stosuje się", "dławiki filtrujące, aby uniknąć rezonansu", "rezystory szeregowe 1 kΩ", "bezpieczniki o zwłoce 10 s", "uzwojenia pomocnicze", "Rezonans z indukcyjnością sieci może zniszczyć kondensatory.")
+        Q("W bateriach kondensatorów pracujących w sieci z wyższymi harmonicznymi stosuje się", "dławiki filtrujące przeciw rezonansowi", "rezystory szeregowe o wartości 1 kΩ", "bezpieczniki zwłoczne o czasie 10 s", "uzwojenia pomocnicze w kondensatorach", "Rezonans z indukcyjnością sieci może zniszczyć kondensatory.")
       ]
     }
   ]);
